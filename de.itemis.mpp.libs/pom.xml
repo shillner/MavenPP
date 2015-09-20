@@ -1,0 +1,121 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.itemis.mpp</groupId>
+    <artifactId>de.itemis.mpp.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../de.itemis.mpp.parent/pom.xml</relativePath>
+  </parent>
+
+  <artifactId>de.itemis.mpp.libs</artifactId>
+  <packaging>bundle</packaging>
+
+  <name>Maven++ Libraries</name>
+  <description>Provides some 3rd party libraries for the Maven++ bundles.</description>
+
+  <properties>
+    <dir.libs>lib</dir.libs>
+    <version.maven>3.3.3</version.maven>
+    <version.guava>18.0</version.guava>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-utils</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-connector-basic</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-impl</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-transport-file</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.aether</groupId>
+      <artifactId>aether-transport-http</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-aether-provider</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>${dir.libs}</directory>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${dir.libs}</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>bundle-libs</id>
+            <phase>package</phase>
+            <goals>
+              <goal>bundle</goal>
+            </goals>
+            <configuration>
+              <instructions>
+                <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                <Bundle-Name>${project.name}</Bundle-Name>
+                <Bundle-Version>${project.version}</Bundle-Version>
+                <Bundle-Vendor>Stanley Hillner</Bundle-Vendor>
+                <Embed-Dependency>*;scope=compile|runtime;inline=false</Embed-Dependency>
+                <Embed-Transitive>true</Embed-Transitive>
+                <Embed-Directory>${dir.libs}</Embed-Directory>
+                <Embed-StripGroup>true</Embed-StripGroup>
+                <Export-Package>com.google.common.*;version=${version.guava},org.apache.maven.*;version=${version.maven},org.codehaus.plexus.util.*;version=${version.plexus-utils},org.eclipse.aether.*;version=${version.aether}</Export-Package>
+                <Import-Package>!*</Import-Package>
+              </instructions>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.itemis.mpp</groupId>
+    <artifactId>de.itemis.mpp.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../de.itemis.mpp.parent/pom.xml</relativePath>
+  </parent>
+
+  <artifactId>de.itemis.mpp.ui</artifactId>
+  <packaging>eclipse-plugin</packaging>
+
+  <name>Maven++ UI</name>
+  <description>The Eclipse-based User Interface of Maven++ which provides the textual editor as well as some other features such as an outline or a compare view integration.</description>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.xtend</groupId>
+        <artifactId>xtend-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>
