@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: de.itemis.mpp.ui;singleton:=true
+Export-Package: de.itemis.mpp.ui.quickfix,de.itemis.mpp.ui.contentassi
+ st,de.itemis.mpp.ui.internal,de.itemis.mpp.ui.contentassist.antlr
+Bundle-Name: de.itemis.mpp.ui
+Bundle-Version: 1.0.0.201509041214
+Require-Bundle: de.itemis.mpp;visibility:=reexport,org.eclipse.xtext.u
+ i,org.eclipse.ui.editors;bundle-version="3.5.0",org.eclipse.ui.ide;bu
+ ndle-version="3.5.0",org.eclipse.xtext.ui.shared,org.eclipse.ui,org.e
+ clipse.xtext.builder,org.eclipse.xtext.xbase.lib,org.eclipse.xtext.co
+ mmon.types.ui,org.eclipse.xtext.ui.codetemplates.ui,org.eclipse.compa
+ re
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Activator: de.itemis.mpp.ui.internal.PomActivator
+Bundle-Vendor: My Company
+Import-Package: org.apache.log4j
+

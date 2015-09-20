@@ -1,0 +1,198 @@
+grammar de.itemis.mpp.Pom with org.eclipse.xtext.common.Terminals
+
+generate pom "http://www.itemis.de/mpp/Pom"
+
+POM:
+  imports+=POMImport*
+  parent=ParentRef?
+  artifactDefinition=ArtifactDefinition
+  modules=Modules?
+  (propertyInclusions+=PropertyInclusion* &
+  properties+=Property* &
+  dependencies=Dependencies? &
+  scm=SCM?)
+  buildSteps+=BuildStep*
+;
+
+ParentRef:
+  'parent' coordinates=Coordinates relativePath=STRING?
+;
+
+Modules:
+  'modules' names+=STRING (',' names+=STRING)*
+;
+
+ArtifactDefinition:
+  {ArtifactDefinition}
+  ('group' groupId=IDAndDot)?
+  ('artifact' artifactId=IDAndDash)?
+  ('version' version=Version)?
+  ('type' type=Text)?
+  (('name' artifactName=STRING)? &
+  ('description' description=STRING)?)
+;
+
+IDAndDot:
+  IDOrPropteryRef ('.' IDOrPropteryRef)*
+;
+
+IDAndDash:
+  ID ('-' ID)*
+;
+
+Classifier:
+  ID
+;
+
+Number:
+  INT
+;
+
+Text:
+  (ID | Number | ANY_OTHER)*
+;
+
+PropertyName:
+  (ID | '-' | '_' | '.')*
+;
+
+IDOrPropteryRef:
+  ID | '${' PropertyName '}'
+;
+
+Version:
+  //TODO: build number!
+  major=Number ('.' minor=Number ('.' incremental=Number)?)? ('-' qualifier=Text)?
+;
+
+Property:
+  'property' name=PropertyName '=' value=STRING
+;
+
+PropertyInclusion:
+  'include' pomRef=[POMImport] '.properties'
+;
+
+Dependencies:
+  {Dependencies}
+  'dependencies' '{'
+    (includes+=DependencyInclusion |
+    dependencyGroups+=DependencyGroup |
+    ungroupedDependencies+=UngroupedDependency)+
+  '}'
+;
+
+DependencyGroup:
+  scope=DependencyScope '{'
+    dependecies+=Dependency+
+  '}'
+;
+
+UngroupedDependency:
+  scope=DependencyScope? dependency=Dependency
+;
+
+Dependency:
+  (optional?='optional')? coordinates=ExtendedCoordinates
+;
+
+DependencyInclusion:
+  'include' pomRef=[POMImport] '.' scope=DependencyScope
+;
+
+SCM:
+  'scm' '{'
+    ('con' connection=STRING)? &
+    'dev' developerConncetion=STRING &
+    ('url' url=STRING)? &
+    ('tag' tag=STRING)?
+  '}'
+;
+
+Plugin:
+  'plugin' coordinates=Coordinates '{'
+    (('config' '{' configuration=PluginConfiguration '}')? &
+    executions+=PluginExecution*)
+    //TODO add dependencies and extensions!
+  '}'
+;
+
+PluginConfiguration:
+    configurationItems+=PluginConfigurationItem+
+;
+
+PluginConfigurationItem:
+  PluginConfigurationParameter | PluginConfigurationParameterList | PluginConfigurationParameterMap |
+  PluginConfigurationParameterProperties
+;
+
+PluginConfigurationParameter:
+  key=ID (value=STRING | ('{' children+=PluginConfigurationItem+ '}'))?
+;
+
+PluginConfigurationParameterList:
+  key=ID '[' values+=STRING (',' values+=STRING)* ']'
+;
+
+PluginConfigurationParameterMap:
+  key=ID '{' entries+=PluginConfigurationParameterMapEntry+ '}'
+;
+
+PluginConfigurationParameterMapEntry:
+  key=ID '->' value=STRING
+;
+
+PluginConfigurationParameterProperties:
+  key=ID '{' entries+=PluginConfigurationParameterPropertyEntry+ '}'
+;
+
+PluginConfigurationParameterPropertyEntry:
+  key=ID '=' value=STRING
+;
+
+PluginExecution:
+  'exec' 
+  (id=IDAndDash? ('in' phase=Phase)? 'with goals' goals+=IDAndDash (',' goals+=IDAndDash)* ('{' configuration=PluginConfiguration '}')?
+  | default?='default')
+;
+
+PluginInclusion:
+  'include' pomRef=[POMImport] '.' pluginCoordinates=Coordinates ('.' (executionId=IDAndDash | config?='config'))?
+;
+
+BuildStep:
+  Plugin | PluginInclusion
+;
+
+Coordinates:
+  groupId=IDAndDot ':' artifactId=IDAndDash ':' version=Version
+;
+
+ExtendedCoordinates:
+  groupId=IDAndDot ':' artifactId=IDAndDash ':' version=Version (':' type=IDAndDash (':' classifier=Classifier)?)?
+;
+
+POMImport:
+  'import' coordinates=Coordinates 'as' name=ID
+;
+
+terminal ID:
+  ('a'..'z' | 'A'..'Z') ('a'..'z' | 'A'..'Z')*
+;
+
+enum DependencyScope:
+  COMPILE='compile' | PROVIDED='provided' | RUNTIME='runtime' | SYSTEM='system' | TEST='test' | IMPORT='import'
+;
+
+enum Phase:
+  DEFAULT="default" | PRE_CLEAN='pre-clean' | CLEAN='clean' | POST_CLEAN='post-clean' | VALIDATE='validate' |
+  INITIALIZE='initialize' | GENERATE_SOURCES='generate-sources' | PROCESS_SOURCES='process-sources' |
+  GENERATE_RESOURCES='generate-resources' | PROCESS_RESOURCES='process-resources' | COMPILE='compile' |
+  PROCESS_CLASSES='process-classes' | GENERATE_TEST_SOURCES='generate-test-sources' |
+  PROCESS_TEST_SOURCES='process-test-sources' | GENERATE_TEST_RESOURCES='generate-test-resources' |
+  PROCESS_TEST_RESOURCES='process-test-resources' | TEST_COMPILE='test-compile' |
+  PROCESS_TEST_CLASSES='process-test-classes' | TEST='test' | PREPARE_PACKAGE='prepare-package' | PACKAGE='package' |
+  PRE_INTEGRATION_TEST='pre-integration-test' | INTEGRATION_TEST='integration-test' |
+  POST_INTEGRATION_TEST='post-integration-test' | VERIFY='verify' | INSTALL='install' | DEPLOY='deploy' |
+  PRE_SITE='pre-site' | SITE='site' | POST_SITE='post-site' | SITE_DEPLOY='site-deploy'
+;
