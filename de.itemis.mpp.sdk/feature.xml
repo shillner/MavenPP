@@ -19,14 +19,14 @@
          unpack="false"/>
 
    <plugin
-         id="de.itemis.mpp.mpp-aether-utils"
+         id="de.itemis.mpp.libs"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="de.itemis.mpp.libs"
+         id="de.itemis.mpp.utils.aether"
          download-size="0"
          install-size="0"
          version="0.0.0"

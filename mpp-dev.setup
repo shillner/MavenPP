@@ -1919,7 +1919,7 @@
           source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
         <detail
             key="location">
-          <value>${git.clone.mvn-dsl.location/com.hillner.mpp.targetplatform.target}</value>
+          <value>${git.clone.mpp.location/de.itemis.mpp.target}</value>
         </detail>
         <detail
             key="includeAllPlatforms">
