@@ -130,10 +130,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:12:7: ( '_' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:12:9: '_'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:12:7: ( '.' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:12:9: '.'
             {
-            match('_'); 
+            match('.'); 
 
             }
 
@@ -150,10 +150,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:13:7: ( '.' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:13:9: '.'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:13:7: ( '_' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:13:9: '_'
             {
-            match('.'); 
+            match('_'); 
 
             }
 
@@ -1591,8 +1591,8 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8654:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8654:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8838:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8838:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1603,7 +1603,7 @@ public class InternalPomLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8654:31: ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8838:31: ( 'a' .. 'z' | 'A' .. 'Z' )*
             loop1:
             do {
                 int alt1=2;
@@ -1652,10 +1652,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8656:10: ( ( '0' .. '9' )+ )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8656:12: ( '0' .. '9' )+
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8840:10: ( ( '0' .. '9' )+ )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8840:12: ( '0' .. '9' )+
             {
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8656:12: ( '0' .. '9' )+
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8840:12: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -1669,7 +1669,7 @@ public class InternalPomLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8656:13: '0' .. '9'
+            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8840:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1701,10 +1701,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1722,10 +1722,10 @@ public class InternalPomLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop3:
                     do {
                         int alt3=3;
@@ -1741,7 +1741,7 @@ public class InternalPomLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:21: '\\\\' .
+                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1749,7 +1749,7 @@ public class InternalPomLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1774,10 +1774,10 @@ public class InternalPomLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1793,7 +1793,7 @@ public class InternalPomLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:54: '\\\\' .
+                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1801,7 +1801,7 @@ public class InternalPomLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8658:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1844,12 +1844,12 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8660:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8660:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8844:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8844:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8660:24: ( options {greedy=false; } : . )*
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8844:24: ( options {greedy=false; } : . )*
             loop6:
             do {
                 int alt6=2;
@@ -1874,7 +1874,7 @@ public class InternalPomLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8660:52: .
+            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8844:52: .
             	    {
             	    matchAny(); 
 
@@ -1904,12 +1904,12 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8662:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8662:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8662:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop7:
             do {
                 int alt7=2;
@@ -1922,7 +1922,7 @@ public class InternalPomLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8662:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1942,7 +1942,7 @@ public class InternalPomLexer extends Lexer {
                 }
             } while (true);
 
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8662:40: ( ( '\\r' )? '\\n' )?
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:40: ( ( '\\r' )? '\\n' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1951,9 +1951,9 @@ public class InternalPomLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8662:41: ( '\\r' )? '\\n'
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:41: ( '\\r' )? '\\n'
                     {
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8662:41: ( '\\r' )?
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:41: ( '\\r' )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -1962,7 +1962,7 @@ public class InternalPomLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8662:41: '\\r'
+                            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1994,10 +1994,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8664:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8664:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8848:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8848:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8664:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8848:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt10=0;
             loop10:
             do {
@@ -2051,8 +2051,8 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8666:16: ( . )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8666:18: .
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8850:16: ( . )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8850:18: .
             {
             matchAny(); 
 
@@ -2625,7 +2625,7 @@ public class InternalPomLexer extends Lexer {
 
     protected DFA11 dfa11 = new DFA11(this);
     static final String DFA11_eotS =
-        "\1\uffff\1\44\1\uffff\1\47\12\52\1\uffff\2\52\1\42\3\uffff\1\52"+
+        "\1\uffff\1\44\1\46\1\uffff\12\52\1\uffff\2\52\1\42\3\uffff\1\52"+
         "\2\uffff\2\52\1\uffff\1\52\2\uffff\3\42\7\uffff\2\52\1\uffff\14"+
         "\52\1\147\6\52\1\uffff\1\52\1\162\1\52\4\uffff\1\52\2\uffff\2\52"+
         "\1\uffff\1\52\5\uffff\1\52\1\172\12\52\1\u0088\2\52\1\u008b\5\52"+
@@ -2643,7 +2643,7 @@ public class InternalPomLexer extends Lexer {
     static final String DFA11_eofS =
         "\u0144\uffff";
     static final String DFA11_minS =
-        "\1\0\1\76\1\uffff\1\160\1\154\1\141\1\165\1\143\1\141\1\155\1\145"+
+        "\1\0\1\76\1\160\1\uffff\1\154\1\141\1\165\1\143\1\141\1\155\1\145"+
         "\1\141\1\145\1\157\1\uffff\1\162\1\141\1\173\3\uffff\1\162\2\uffff"+
         "\1\170\1\151\1\uffff\1\160\2\uffff\2\0\1\52\7\uffff\1\155\1\145"+
         "\1\uffff\1\145\1\163\1\143\1\165\1\156\1\163\1\164\1\155\1\163\1"+
@@ -2671,7 +2671,7 @@ public class InternalPomLexer extends Lexer {
         "\55\1\uffff\1\101\1\uffff\1\164\1\143\1\uffff\1\55\3\uffff\1\162"+
         "\2\uffff";
     static final String DFA11_maxS =
-        "\1\uffff\1\76\1\uffff\1\160\1\157\1\162\1\165\2\171\1\156\2\145"+
+        "\1\uffff\1\76\1\160\1\uffff\1\157\1\162\1\165\2\171\1\156\2\145"+
         "\1\162\1\157\1\uffff\1\163\1\141\1\173\3\uffff\1\162\2\uffff\1\170"+
         "\1\151\1\uffff\1\160\2\uffff\2\uffff\1\57\7\uffff\1\156\1\145\1"+
         "\uffff\1\157\1\163\1\162\1\165\1\156\1\163\1\164\1\155\1\163\1\160"+
@@ -2699,9 +2699,9 @@ public class InternalPomLexer extends Lexer {
         "\55\1\uffff\1\172\1\uffff\1\164\1\163\1\uffff\1\55\3\uffff\1\163"+
         "\2\uffff";
     static final String DFA11_acceptS =
-        "\2\uffff\1\2\13\uffff\1\51\3\uffff\1\61\1\63\1\67\1\uffff\1\77"+
+        "\3\uffff\1\3\12\uffff\1\51\3\uffff\1\61\1\63\1\67\1\uffff\1\77"+
         "\1\100\2\uffff\1\105\1\uffff\1\110\1\111\3\uffff\1\115\1\116\1\101"+
-        "\1\1\1\2\1\65\1\3\2\uffff\1\110\23\uffff\1\51\3\uffff\1\60\1\61"+
+        "\1\1\1\65\1\2\1\3\2\uffff\1\110\23\uffff\1\51\3\uffff\1\60\1\61"+
         "\1\63\1\67\1\uffff\1\77\1\100\2\uffff\1\105\1\uffff\1\111\1\112"+
         "\1\113\1\114\1\115\25\uffff\1\104\12\uffff\1\106\7\uffff\1\71\15"+
         "\uffff\1\70\2\uffff\1\74\11\uffff\1\72\10\uffff\1\73\11\uffff\1"+
@@ -2717,13 +2717,13 @@ public class InternalPomLexer extends Lexer {
         "\1\1\35\uffff\1\2\1\0\u0124\uffff}>";
     static final String[] DFA11_transitionS = {
             "\11\42\2\41\2\42\1\41\22\42\1\41\1\42\1\36\1\42\1\21\2\42\1"+
-            "\37\4\42\1\16\1\1\1\3\1\40\12\35\1\32\2\42\1\23\3\42\32\34\1"+
-            "\26\1\42\1\27\1\42\1\2\1\42\1\17\1\34\1\4\1\12\1\30\1\34\1\14"+
+            "\37\4\42\1\16\1\1\1\2\1\40\12\35\1\32\2\42\1\23\3\42\32\34\1"+
+            "\26\1\42\1\27\1\42\1\3\1\42\1\17\1\34\1\4\1\12\1\30\1\34\1\14"+
             "\1\34\1\11\3\34\1\15\1\20\1\33\1\5\1\34\1\6\1\7\1\10\1\25\1"+
             "\13\1\31\3\34\1\24\1\42\1\22\uff82\42",
             "\1\43",
+            "\1\45",
             "",
-            "\1\46",
             "\1\51\2\uffff\1\50",
             "\1\55\12\uffff\1\56\2\uffff\1\54\2\uffff\1\53",
             "\1\57",
@@ -3098,9 +3098,9 @@ public class InternalPomLexer extends Lexer {
                         s = -1;
                         if ( (LA11_0=='-') ) {s = 1;}
 
-                        else if ( (LA11_0=='_') ) {s = 2;}
+                        else if ( (LA11_0=='.') ) {s = 2;}
 
-                        else if ( (LA11_0=='.') ) {s = 3;}
+                        else if ( (LA11_0=='_') ) {s = 3;}
 
                         else if ( (LA11_0=='c') ) {s = 4;}
 

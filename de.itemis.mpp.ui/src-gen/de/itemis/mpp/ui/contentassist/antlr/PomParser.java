@@ -37,6 +37,7 @@ public class PomParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getIDAndSpecialCharactersAccess().getAlternatives_1_0(), "rule__IDAndSpecialCharacters__Alternatives_1_0");
 					put(grammarAccess.getTextAccess().getAlternatives(), "rule__Text__Alternatives");
 					put(grammarAccess.getPropertyNameAccess().getAlternatives(), "rule__PropertyName__Alternatives");
 					put(grammarAccess.getIDOrPropteryRefAccess().getAlternatives(), "rule__IDOrPropteryRef__Alternatives");
@@ -63,6 +64,8 @@ public class PomParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIDAndDotAccess().getGroup_1(), "rule__IDAndDot__Group_1__0");
 					put(grammarAccess.getIDAndDashAccess().getGroup(), "rule__IDAndDash__Group__0");
 					put(grammarAccess.getIDAndDashAccess().getGroup_1(), "rule__IDAndDash__Group_1__0");
+					put(grammarAccess.getIDAndSpecialCharactersAccess().getGroup(), "rule__IDAndSpecialCharacters__Group__0");
+					put(grammarAccess.getIDAndSpecialCharactersAccess().getGroup_1(), "rule__IDAndSpecialCharacters__Group_1__0");
 					put(grammarAccess.getIDOrPropteryRefAccess().getGroup_1(), "rule__IDOrPropteryRef__Group_1__0");
 					put(grammarAccess.getVersionAccess().getGroup(), "rule__Version__Group__0");
 					put(grammarAccess.getVersionAccess().getGroup_1(), "rule__Version__Group_1__0");

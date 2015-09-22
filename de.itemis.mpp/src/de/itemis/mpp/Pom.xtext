@@ -24,8 +24,8 @@ Modules:
 
 ArtifactDefinition:
   {ArtifactDefinition}
-  ('group' groupId=IDAndDot)?
-  ('artifact' artifactId=IDAndDash)?
+  ('group' groupId=IDAndSpecialCharacters)?
+  ('artifact' artifactId=IDAndSpecialCharacters)?
   ('version' version=Version)?
   ('type' type=Text)?
   (('name' artifactName=STRING)? &
@@ -38,6 +38,10 @@ IDAndDot:
 
 IDAndDash:
   ID ('-' ID)*
+;
+
+IDAndSpecialCharacters:
+  ID (('-' | '.' | '_')* ID)*
 ;
 
 Classifier:
@@ -61,7 +65,10 @@ IDOrPropteryRef:
 ;
 
 Version:
-  //TODO: build number!
+//  NumericVersion | IDAndSpecialCharacters
+//;
+//
+//NumericVersion:
   major=Number ('.' minor=Number ('.' incremental=Number)?)? ('-' qualifier=Text)?
 ;
 

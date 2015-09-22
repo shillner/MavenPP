@@ -189,11 +189,11 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cGroupKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cGroupIdAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cGroupIdIDAndDotParserRuleCall_1_1_0 = (RuleCall)cGroupIdAssignment_1_1.eContents().get(0);
+		private final RuleCall cGroupIdIDAndSpecialCharactersParserRuleCall_1_1_0 = (RuleCall)cGroupIdAssignment_1_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cArtifactKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cArtifactIdAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cArtifactIdIDAndDashParserRuleCall_2_1_0 = (RuleCall)cArtifactIdAssignment_2_1.eContents().get(0);
+		private final RuleCall cArtifactIdIDAndSpecialCharactersParserRuleCall_2_1_0 = (RuleCall)cArtifactIdAssignment_2_1.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cVersionKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cVersionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
@@ -213,40 +213,41 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_5_1_1_0 = (RuleCall)cDescriptionAssignment_5_1_1.eContents().get(0);
 		
 		//ArtifactDefinition:
-		//	{ArtifactDefinition} ("group" groupId=IDAndDot)? ("artifact" artifactId=IDAndDash)? ("version" version=Version)?
-		//	("type" type=Text)? (("name" artifactName=STRING)? & ("description" description=STRING)?);
+		//	{ArtifactDefinition} ("group" groupId=IDAndSpecialCharacters)? ("artifact" artifactId=IDAndSpecialCharacters)?
+		//	("version" version=Version)? ("type" type=Text)? (("name" artifactName=STRING)? & ("description"
+		//	description=STRING)?);
 		@Override public ParserRule getRule() { return rule; }
 
-		//{ArtifactDefinition} ("group" groupId=IDAndDot)? ("artifact" artifactId=IDAndDash)? ("version" version=Version)? ("type"
-		//type=Text)? (("name" artifactName=STRING)? & ("description" description=STRING)?)
+		//{ArtifactDefinition} ("group" groupId=IDAndSpecialCharacters)? ("artifact" artifactId=IDAndSpecialCharacters)?
+		//("version" version=Version)? ("type" type=Text)? (("name" artifactName=STRING)? & ("description" description=STRING)?)
 		public Group getGroup() { return cGroup; }
 
 		//{ArtifactDefinition}
 		public Action getArtifactDefinitionAction_0() { return cArtifactDefinitionAction_0; }
 
-		//("group" groupId=IDAndDot)?
+		//("group" groupId=IDAndSpecialCharacters)?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"group"
 		public Keyword getGroupKeyword_1_0() { return cGroupKeyword_1_0; }
 
-		//groupId=IDAndDot
+		//groupId=IDAndSpecialCharacters
 		public Assignment getGroupIdAssignment_1_1() { return cGroupIdAssignment_1_1; }
 
-		//IDAndDot
-		public RuleCall getGroupIdIDAndDotParserRuleCall_1_1_0() { return cGroupIdIDAndDotParserRuleCall_1_1_0; }
+		//IDAndSpecialCharacters
+		public RuleCall getGroupIdIDAndSpecialCharactersParserRuleCall_1_1_0() { return cGroupIdIDAndSpecialCharactersParserRuleCall_1_1_0; }
 
-		//("artifact" artifactId=IDAndDash)?
+		//("artifact" artifactId=IDAndSpecialCharacters)?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"artifact"
 		public Keyword getArtifactKeyword_2_0() { return cArtifactKeyword_2_0; }
 
-		//artifactId=IDAndDash
+		//artifactId=IDAndSpecialCharacters
 		public Assignment getArtifactIdAssignment_2_1() { return cArtifactIdAssignment_2_1; }
 
-		//IDAndDash
-		public RuleCall getArtifactIdIDAndDashParserRuleCall_2_1_0() { return cArtifactIdIDAndDashParserRuleCall_2_1_0; }
+		//IDAndSpecialCharacters
+		public RuleCall getArtifactIdIDAndSpecialCharactersParserRuleCall_2_1_0() { return cArtifactIdIDAndSpecialCharactersParserRuleCall_2_1_0; }
 
 		//("version" version=Version)?
 		public Group getGroup_3() { return cGroup_3; }
@@ -351,6 +352,46 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"-"
 		public Keyword getHyphenMinusKeyword_1_0() { return cHyphenMinusKeyword_1_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+	}
+
+	public class IDAndSpecialCharactersElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IDAndSpecialCharacters");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives_1_0 = (Alternatives)cGroup_1.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_1_0_0 = (Keyword)cAlternatives_1_0.eContents().get(0);
+		private final Keyword cFullStopKeyword_1_0_1 = (Keyword)cAlternatives_1_0.eContents().get(1);
+		private final Keyword c_Keyword_1_0_2 = (Keyword)cAlternatives_1_0.eContents().get(2);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//IDAndSpecialCharacters:
+		//	ID (("-" | "." | "_")* ID)*;
+		@Override public ParserRule getRule() { return rule; }
+
+		//ID (("-" | "." | "_")* ID)*
+		public Group getGroup() { return cGroup; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//(("-" | "." | "_")* ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//("-" | "." | "_")*
+		public Alternatives getAlternatives_1_0() { return cAlternatives_1_0; }
+
+		//"-"
+		public Keyword getHyphenMinusKeyword_1_0_0() { return cHyphenMinusKeyword_1_0_0; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_0_1() { return cFullStopKeyword_1_0_1; }
+
+		//"_"
+		public Keyword get_Keyword_1_0_2() { return c_Keyword_1_0_2; }
 
 		//ID
 		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
@@ -482,15 +523,24 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cQualifierAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cQualifierTextParserRuleCall_2_1_0 = (RuleCall)cQualifierAssignment_2_1.eContents().get(0);
 		
-		//Version: //TODO: build number!
+		//Version: //  NumericVersion | IDAndSpecialCharacters
+		////;
+		////
+		////NumericVersion:
 		//	major=Number ("." minor=Number ("." incremental=Number)?)? ("-" qualifier=Text)?;
 		@Override public ParserRule getRule() { return rule; }
 
-		////TODO: build number!
+		////  NumericVersion | IDAndSpecialCharacters
+		////;
+		////
+		////NumericVersion:
 		//major=Number ("." minor=Number ("." incremental=Number)?)? ("-" qualifier=Text)?
 		public Group getGroup() { return cGroup; }
 
-		////TODO: build number!
+		////  NumericVersion | IDAndSpecialCharacters
+		////;
+		////
+		////NumericVersion:
 		//major=Number
 		public Assignment getMajorAssignment_0() { return cMajorAssignment_0; }
 
@@ -1945,6 +1995,7 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	private final ArtifactDefinitionElements pArtifactDefinition;
 	private final IDAndDotElements pIDAndDot;
 	private final IDAndDashElements pIDAndDash;
+	private final IDAndSpecialCharactersElements pIDAndSpecialCharacters;
 	private final ClassifierElements pClassifier;
 	private final NumberElements pNumber;
 	private final TextElements pText;
@@ -1993,6 +2044,7 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		this.pArtifactDefinition = new ArtifactDefinitionElements();
 		this.pIDAndDot = new IDAndDotElements();
 		this.pIDAndDash = new IDAndDashElements();
+		this.pIDAndSpecialCharacters = new IDAndSpecialCharactersElements();
 		this.pClassifier = new ClassifierElements();
 		this.pNumber = new NumberElements();
 		this.pText = new TextElements();
@@ -2087,8 +2139,9 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ArtifactDefinition:
-	//	{ArtifactDefinition} ("group" groupId=IDAndDot)? ("artifact" artifactId=IDAndDash)? ("version" version=Version)?
-	//	("type" type=Text)? (("name" artifactName=STRING)? & ("description" description=STRING)?);
+	//	{ArtifactDefinition} ("group" groupId=IDAndSpecialCharacters)? ("artifact" artifactId=IDAndSpecialCharacters)?
+	//	("version" version=Version)? ("type" type=Text)? (("name" artifactName=STRING)? & ("description"
+	//	description=STRING)?);
 	public ArtifactDefinitionElements getArtifactDefinitionAccess() {
 		return pArtifactDefinition;
 	}
@@ -2115,6 +2168,16 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getIDAndDashRule() {
 		return getIDAndDashAccess().getRule();
+	}
+
+	//IDAndSpecialCharacters:
+	//	ID (("-" | "." | "_")* ID)*;
+	public IDAndSpecialCharactersElements getIDAndSpecialCharactersAccess() {
+		return pIDAndSpecialCharacters;
+	}
+	
+	public ParserRule getIDAndSpecialCharactersRule() {
+		return getIDAndSpecialCharactersAccess().getRule();
 	}
 
 	//Classifier:
@@ -2167,7 +2230,10 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		return getIDOrPropteryRefAccess().getRule();
 	}
 
-	//Version: //TODO: build number!
+	//Version: //  NumericVersion | IDAndSpecialCharacters
+	////;
+	////
+	////NumericVersion:
 	//	major=Number ("." minor=Number ("." incremental=Number)?)? ("-" qualifier=Text)?;
 	public VersionElements getVersionAccess() {
 		return pVersion;

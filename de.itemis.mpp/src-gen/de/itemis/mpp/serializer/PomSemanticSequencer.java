@@ -139,8 +139,8 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
-	 *         groupId=IDAndDot? 
-	 *         artifactId=IDAndDash? 
+	 *         groupId=IDAndSpecialCharacters? 
+	 *         artifactId=IDAndSpecialCharacters? 
 	 *         version=Version? 
 	 *         type=Text? 
 	 *         artifactName=STRING? 
