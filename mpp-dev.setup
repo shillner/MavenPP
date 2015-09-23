@@ -1871,8 +1871,9 @@
       name="Git">
     <setupTask
         xsi:type="setup:VariableTask"
+        id="mpp.dev.git.github.user.id"
         name="github.user.id"
-        value=""
+        value="shillner"
         defaultValue="shillner"
         label="Github user ID">
       <description>The Github user ID</description>
