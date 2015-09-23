@@ -1873,7 +1873,7 @@
         xsi:type="setup:VariableTask"
         name="github.user.id"
         value=""
-        defaultValue=""
+        defaultValue="shillner"
         label="Github user ID">
       <description>The Github user ID</description>
     </setupTask>
@@ -1919,7 +1919,7 @@
           source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
         <detail
             key="location">
-          <value>${git.clone.mpp.location/de.itemis.mpp.target}</value>
+          <value>${git.clone.mpp.location/de.itemis.mpp.target/de.itemis.mpp.target}</value>
         </detail>
         <detail
             key="includeAllPlatforms">
