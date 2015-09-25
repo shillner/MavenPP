@@ -1906,13 +1906,16 @@
       <description>${scope.project.label}</description>
     </setupTask>
     <setupTask
-        xsi:type="projects:ProjectsImportTask"
-        disabled="true">
+        xsi:type="projects:ProjectsImportTask">
       <sourceLocator
           rootFolder="${git.clone.mpp.location}"/>
     </setupTask>
     <description>Groups all git-related actions.</description>
   </setupTask>
+  <setupTask
+      xsi:type="pde:TargetPlatformTask"
+      id="mpp.dev.target"
+      name="Maven++ Development Target Platform Definition"/>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask"
       id="mpp.dev.workingsets">
@@ -1982,7 +1985,7 @@
   <setupTask
       xsi:type="setup:CompoundTask"
       id="mpp.dev.launch"
-      predecessor="mpp.dev.workingsets //@setupTasks.6"
+      predecessor="mpp.dev.workingsets //@setupTasks.7"
       name="Launch Configurations">
     <setupTask
         xsi:type="launching:LaunchTask"
@@ -1990,10 +1993,6 @@
       <description>Generates the language infrastructure of the DSL.</description>
     </setupTask>
   </setupTask>
-  <setupTask
-      xsi:type="pde:TargetPlatformTask"
-      id="mpp.dev.target"
-      name="Maven++ Development Target Platform Definition"/>
   <stream name="master"/>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
