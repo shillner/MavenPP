@@ -5,7 +5,8 @@ Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: de.itemis.mpp.ui;singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: de.itemis.mpp;visibility:=reexport,
+Require-Bundle: de.itemis.mpp.utils.aether,
+ de.itemis.mpp;visibility:=reexport,
  org.eclipse.xtext.ui,
  org.eclipse.ui.editors;bundle-version="3.5.0",
  org.eclipse.ui.ide;bundle-version="3.5.0",
@@ -15,7 +16,8 @@ Require-Bundle: de.itemis.mpp;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.xtext.common.types.ui,
  org.eclipse.xtext.ui.codetemplates.ui,
- org.eclipse.compare
+ org.eclipse.compare,
+ de.itemis.mpp.libs
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: de.itemis.mpp.ui.quickfix,

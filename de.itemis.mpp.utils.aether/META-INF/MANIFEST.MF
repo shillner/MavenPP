@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1443041900026
+Bnd-LastModified: 1443193896339
 Build-Jdk: 1.8.0_51
 Built-By: Stanley
 Bundle-Description: Provides some Utility classes for Eclipse Aether acc

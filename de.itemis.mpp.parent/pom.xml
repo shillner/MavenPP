@@ -57,6 +57,11 @@
       </dependency>
       <dependency>
         <groupId>org.eclipse.aether</groupId>
+        <artifactId>aether-spi</artifactId>
+        <version>${version.aether}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.aether</groupId>
         <artifactId>aether-transport-file</artifactId>
         <version>${version.aether}</version>
       </dependency>

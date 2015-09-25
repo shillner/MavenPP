@@ -11,12 +11,17 @@ import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
 import org.eclipse.xtext.RuleCall
 import de.itemis.mpp.pom.POM
 import de.itemis.mpp.pom.Property
+import org.eclipse.jface.text.contentassist.ICompletionProposal
+import org.eclipse.jface.text.BadLocationException
+import de.itemis.mpp.aether.AetherQueries
 
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
  * on how to customize the content assistant.
  */
 class PomProposalProvider extends AbstractPomProposalProvider {
+  val private static PREFIX_PROPERTY_REF = "${"
+  val private static SUFFIX_PROPERTY_REF = "}"
 
   override completeVersion_Qualifier(EObject model, Assignment assignment, ContentAssistContext context,
     ICompletionProposalAcceptor acceptor) {
@@ -24,22 +29,50 @@ class PomProposalProvider extends AbstractPomProposalProvider {
     acceptor.accept(createCompletionProposal("SNAPSHOT", context))
   }
 
-//  override complete_DependencyGroup(EObject model, RuleCall ruleCall, ContentAssistContext context,
-//    ICompletionProposalAcceptor acceptor) {
-//    val POM pom = model.POM
-//
-//    //TODO handle also included properties
-//    for (Property p : pom.getProperties()) {
-//      acceptor.accept(createPropertyRefCompletionProposal(p, context))
-//    }
-//  }
+  //FIXME this is not the correct place for the groupId completion! -> this is the completion of a dependency group!!!
+  override complete_DependencyGroup(EObject model, RuleCall ruleCall, ContentAssistContext context,
+    ICompletionProposalAcceptor acceptor) {
+    val POM pom = model.POM
+    
+    //TODO complete group ids if the user has typed a fixed amount of characters (de | co | org)
+    //IDEA introduce a preference for the proposal provider for group ids!
+
+    val String prefix = context.prefix
+    if(prefix.endsWith(PREFIX_PROPERTY_REF)) {
+      for (Property p : pom.properties) {
+        acceptor.accept(createPropertyRefCompletionProposal(p, context))
+      }
+    //TODO add proposals from imported poms
+    //QUESTION Is it possible to add these proposals to a second page (hitting ctrl+space again) -> performance issues?
+    //IDEA maybe introduce a preference for the proposal provider behavior (scope of the proposal provider)
+    } else {
+      acceptor.accept(createCompletionProposal(PREFIX_PROPERTY_REF, PREFIX_PROPERTY_REF, null, context))
+    }
+  }
   
   def private dispatch POM getPOM(POM pom) {
     return pom
   }
-  
+
   def private dispatch POM getPOM(EObject o) {
     return o.eContainer.POM
+  }
+
+  def private ICompletionProposal createPropertyRefCompletionProposal(Property property, ContentAssistContext context) {
+    val String prefix = context.prefix
+    val StringBuilder sb = new StringBuilder(prefix)
+    sb.append(property.name)
+
+    try {
+      if(!SUFFIX_PROPERTY_REF.equals(context.document.get(context.offset, 1))) {
+        sb.append(SUFFIX_PROPERTY_REF)
+      }
+    } catch(BadLocationException e) {
+      sb.append(SUFFIX_PROPERTY_REF)
+    }
+    
+    return createCompletionProposal(sb.toString, PREFIX_PROPERTY_REF + property.name + SUFFIX_PROPERTY_REF, null,
+      context)
   }
 
 //
