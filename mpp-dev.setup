@@ -1876,15 +1876,6 @@
       id="mpp.dev.git"
       name="Git">
     <setupTask
-        xsi:type="setup:VariableTask"
-        id="mpp.dev.git.github.user.id"
-        name="github.user.id"
-        value="shillner"
-        defaultValue="shillner"
-        label="Github user ID">
-      <description>The Github user ID</description>
-    </setupTask>
-    <setupTask
         xsi:type="git:GitCloneTask"
         id="git.clone.mpp"
         remoteURI="shillner/MavenPP">
