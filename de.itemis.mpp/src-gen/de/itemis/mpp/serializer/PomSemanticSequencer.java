@@ -154,7 +154,7 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (groupId=IDAndDot artifactId=IDAndDash version=Version)
+	 *     (groupId=IDAndSpecialCharacters artifactId=IDAndSpecialCharacters version=Version)
 	 */
 	protected void sequence_Coordinates(EObject context, Coordinates semanticObject) {
 		if(errorAcceptor != null) {
@@ -167,8 +167,8 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getCoordinatesAccess().getGroupIdIDAndDotParserRuleCall_0_0(), semanticObject.getGroupId());
-		feeder.accept(grammarAccess.getCoordinatesAccess().getArtifactIdIDAndDashParserRuleCall_2_0(), semanticObject.getArtifactId());
+		feeder.accept(grammarAccess.getCoordinatesAccess().getGroupIdIDAndSpecialCharactersParserRuleCall_0_0(), semanticObject.getGroupId());
+		feeder.accept(grammarAccess.getCoordinatesAccess().getArtifactIdIDAndSpecialCharactersParserRuleCall_2_0(), semanticObject.getArtifactId());
 		feeder.accept(grammarAccess.getCoordinatesAccess().getVersionVersionParserRuleCall_4_0(), semanticObject.getVersion());
 		feeder.finish();
 	}

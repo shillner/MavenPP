@@ -41,7 +41,7 @@ IDAndDash:
 ;
 
 IDAndSpecialCharacters:
-  ID (('-' | '.' | '_')* ID)*
+  IDOrPropteryRef (('-' | '.' | '_')* IDOrPropteryRef)*
 ;
 
 Classifier:
@@ -57,11 +57,16 @@ Text:
 ;
 
 PropertyName:
-  (ID | '-' | '_' | '.')*
+  IDAndSpecialCharacters
+//  (ID | '-' | '_' | '.')*
 ;
 
 IDOrPropteryRef:
-  ID | '${' PropertyName '}'
+  IDOrKW | '${' PropertyName '}'
+;
+
+IDOrKW:
+  ID | 'test' | 'parent' //TODO continue the list of keywords!
 ;
 
 Version:
@@ -172,7 +177,7 @@ BuildStep:
 ;
 
 Coordinates:
-  groupId=IDAndDot ':' artifactId=IDAndDash ':' version=Version
+  groupId=IDAndSpecialCharacters ':' artifactId=IDAndSpecialCharacters ':' version=Version
 ;
 
 ExtendedCoordinates:

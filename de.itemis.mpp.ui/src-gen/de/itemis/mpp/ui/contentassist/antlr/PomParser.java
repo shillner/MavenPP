@@ -39,8 +39,8 @@ public class PomParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getIDAndSpecialCharactersAccess().getAlternatives_1_0(), "rule__IDAndSpecialCharacters__Alternatives_1_0");
 					put(grammarAccess.getTextAccess().getAlternatives(), "rule__Text__Alternatives");
-					put(grammarAccess.getPropertyNameAccess().getAlternatives(), "rule__PropertyName__Alternatives");
 					put(grammarAccess.getIDOrPropteryRefAccess().getAlternatives(), "rule__IDOrPropteryRef__Alternatives");
+					put(grammarAccess.getIDOrKWAccess().getAlternatives(), "rule__IDOrKW__Alternatives");
 					put(grammarAccess.getDependenciesAccess().getAlternatives_3(), "rule__Dependencies__Alternatives_3");
 					put(grammarAccess.getPluginConfigurationItemAccess().getAlternatives(), "rule__PluginConfigurationItem__Alternatives");
 					put(grammarAccess.getPluginConfigurationParameterAccess().getAlternatives_1(), "rule__PluginConfigurationParameter__Alternatives_1");

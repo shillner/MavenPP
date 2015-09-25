@@ -360,25 +360,25 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	public class IDAndSpecialCharactersElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IDAndSpecialCharacters");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final RuleCall cIDOrPropteryRefParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Alternatives cAlternatives_1_0 = (Alternatives)cGroup_1.eContents().get(0);
 		private final Keyword cHyphenMinusKeyword_1_0_0 = (Keyword)cAlternatives_1_0.eContents().get(0);
 		private final Keyword cFullStopKeyword_1_0_1 = (Keyword)cAlternatives_1_0.eContents().get(1);
 		private final Keyword c_Keyword_1_0_2 = (Keyword)cAlternatives_1_0.eContents().get(2);
-		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final RuleCall cIDOrPropteryRefParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		
 		//IDAndSpecialCharacters:
-		//	ID (("-" | "." | "_")* ID)*;
+		//	IDOrPropteryRef (("-" | "." | "_")* IDOrPropteryRef)*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//ID (("-" | "." | "_")* ID)*
+		//IDOrPropteryRef (("-" | "." | "_")* IDOrPropteryRef)*
 		public Group getGroup() { return cGroup; }
 
-		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+		//IDOrPropteryRef
+		public RuleCall getIDOrPropteryRefParserRuleCall_0() { return cIDOrPropteryRefParserRuleCall_0; }
 
-		//(("-" | "." | "_")* ID)*
+		//(("-" | "." | "_")* IDOrPropteryRef)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//("-" | "." | "_")*
@@ -393,8 +393,8 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		//"_"
 		public Keyword get_Keyword_1_0_2() { return c_Keyword_1_0_2; }
 
-		//ID
-		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+		//IDOrPropteryRef
+		public RuleCall getIDOrPropteryRefParserRuleCall_1_1() { return cIDOrPropteryRefParserRuleCall_1_1; }
 	}
 
 	public class ClassifierElements extends AbstractParserRuleElementFinder {
@@ -447,50 +447,35 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class PropertyNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PropertyName");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final Keyword cHyphenMinusKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
-		private final Keyword c_Keyword_2 = (Keyword)cAlternatives.eContents().get(2);
-		private final Keyword cFullStopKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final RuleCall cIDAndSpecialCharactersParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
+		////  (ID | '-' | '_' | '.')*
 		//PropertyName:
-		//	(ID | "-" | "_" | ".")*;
+		//	IDAndSpecialCharacters;
 		@Override public ParserRule getRule() { return rule; }
 
-		//(ID | "-" | "_" | ".")*
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
-
-		//"-"
-		public Keyword getHyphenMinusKeyword_1() { return cHyphenMinusKeyword_1; }
-
-		//"_"
-		public Keyword get_Keyword_2() { return c_Keyword_2; }
-
-		//"."
-		public Keyword getFullStopKeyword_3() { return cFullStopKeyword_3; }
+		//IDAndSpecialCharacters
+		public RuleCall getIDAndSpecialCharactersParserRuleCall() { return cIDAndSpecialCharactersParserRuleCall; }
 	}
 
 	public class IDOrPropteryRefElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IDOrPropteryRef");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cIDOrKWParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Keyword cDollarSignLeftCurlyBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final RuleCall cPropertyNameParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//IDOrPropteryRef:
-		//	ID | "${" PropertyName "}";
+		//	IDOrKW | "${" PropertyName "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//ID | "${" PropertyName "}"
+		//IDOrKW | "${" PropertyName "}"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+		//IDOrKW
+		public RuleCall getIDOrKWParserRuleCall_0() { return cIDOrKWParserRuleCall_0; }
 
 		//"${" PropertyName "}"
 		public Group getGroup_1() { return cGroup_1; }
@@ -503,6 +488,33 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_1_2() { return cRightCurlyBracketKeyword_1_2; }
+	}
+
+	public class IDOrKWElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IDOrKW");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Keyword cTestKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cParentKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		
+		//IDOrKW:
+		//	ID | "test" | //TODO continue the list of keywords!
+		//	"parent";
+		@Override public ParserRule getRule() { return rule; }
+
+		//ID | "test" | //TODO continue the list of keywords!
+		//"parent"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//"test"
+		public Keyword getTestKeyword_1() { return cTestKeyword_1; }
+
+		////TODO continue the list of keywords!
+		//"parent"
+		public Keyword getParentKeyword_2() { return cParentKeyword_2; }
 	}
 
 	public class VersionElements extends AbstractParserRuleElementFinder {
@@ -1498,35 +1510,35 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Coordinates");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cGroupIdAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cGroupIdIDAndDotParserRuleCall_0_0 = (RuleCall)cGroupIdAssignment_0.eContents().get(0);
+		private final RuleCall cGroupIdIDAndSpecialCharactersParserRuleCall_0_0 = (RuleCall)cGroupIdAssignment_0.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cArtifactIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cArtifactIdIDAndDashParserRuleCall_2_0 = (RuleCall)cArtifactIdAssignment_2.eContents().get(0);
+		private final RuleCall cArtifactIdIDAndSpecialCharactersParserRuleCall_2_0 = (RuleCall)cArtifactIdAssignment_2.eContents().get(0);
 		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cVersionAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cVersionVersionParserRuleCall_4_0 = (RuleCall)cVersionAssignment_4.eContents().get(0);
 		
 		//Coordinates:
-		//	groupId=IDAndDot ":" artifactId=IDAndDash ":" version=Version;
+		//	groupId=IDAndSpecialCharacters ":" artifactId=IDAndSpecialCharacters ":" version=Version;
 		@Override public ParserRule getRule() { return rule; }
 
-		//groupId=IDAndDot ":" artifactId=IDAndDash ":" version=Version
+		//groupId=IDAndSpecialCharacters ":" artifactId=IDAndSpecialCharacters ":" version=Version
 		public Group getGroup() { return cGroup; }
 
-		//groupId=IDAndDot
+		//groupId=IDAndSpecialCharacters
 		public Assignment getGroupIdAssignment_0() { return cGroupIdAssignment_0; }
 
-		//IDAndDot
-		public RuleCall getGroupIdIDAndDotParserRuleCall_0_0() { return cGroupIdIDAndDotParserRuleCall_0_0; }
+		//IDAndSpecialCharacters
+		public RuleCall getGroupIdIDAndSpecialCharactersParserRuleCall_0_0() { return cGroupIdIDAndSpecialCharactersParserRuleCall_0_0; }
 
 		//":"
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 
-		//artifactId=IDAndDash
+		//artifactId=IDAndSpecialCharacters
 		public Assignment getArtifactIdAssignment_2() { return cArtifactIdAssignment_2; }
 
-		//IDAndDash
-		public RuleCall getArtifactIdIDAndDashParserRuleCall_2_0() { return cArtifactIdIDAndDashParserRuleCall_2_0; }
+		//IDAndSpecialCharacters
+		public RuleCall getArtifactIdIDAndSpecialCharactersParserRuleCall_2_0() { return cArtifactIdIDAndSpecialCharactersParserRuleCall_2_0; }
 
 		//":"
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
@@ -2001,6 +2013,7 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	private final TextElements pText;
 	private final PropertyNameElements pPropertyName;
 	private final IDOrPropteryRefElements pIDOrPropteryRef;
+	private final IDOrKWElements pIDOrKW;
 	private final VersionElements pVersion;
 	private final PropertyElements pProperty;
 	private final PropertyInclusionElements pPropertyInclusion;
@@ -2050,6 +2063,7 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		this.pText = new TextElements();
 		this.pPropertyName = new PropertyNameElements();
 		this.pIDOrPropteryRef = new IDOrPropteryRefElements();
+		this.pIDOrKW = new IDOrKWElements();
 		this.pVersion = new VersionElements();
 		this.pProperty = new PropertyElements();
 		this.pPropertyInclusion = new PropertyInclusionElements();
@@ -2171,7 +2185,7 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//IDAndSpecialCharacters:
-	//	ID (("-" | "." | "_")* ID)*;
+	//	IDOrPropteryRef (("-" | "." | "_")* IDOrPropteryRef)*;
 	public IDAndSpecialCharactersElements getIDAndSpecialCharactersAccess() {
 		return pIDAndSpecialCharacters;
 	}
@@ -2210,8 +2224,9 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		return getTextAccess().getRule();
 	}
 
+	////  (ID | '-' | '_' | '.')*
 	//PropertyName:
-	//	(ID | "-" | "_" | ".")*;
+	//	IDAndSpecialCharacters;
 	public PropertyNameElements getPropertyNameAccess() {
 		return pPropertyName;
 	}
@@ -2221,13 +2236,24 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//IDOrPropteryRef:
-	//	ID | "${" PropertyName "}";
+	//	IDOrKW | "${" PropertyName "}";
 	public IDOrPropteryRefElements getIDOrPropteryRefAccess() {
 		return pIDOrPropteryRef;
 	}
 	
 	public ParserRule getIDOrPropteryRefRule() {
 		return getIDOrPropteryRefAccess().getRule();
+	}
+
+	//IDOrKW:
+	//	ID | "test" | //TODO continue the list of keywords!
+	//	"parent";
+	public IDOrKWElements getIDOrKWAccess() {
+		return pIDOrKW;
+	}
+	
+	public ParserRule getIDOrKWRule() {
+		return getIDOrKWAccess().getRule();
 	}
 
 	//Version: //  NumericVersion | IDAndSpecialCharacters
@@ -2450,7 +2476,7 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Coordinates:
-	//	groupId=IDAndDot ":" artifactId=IDAndDash ":" version=Version;
+	//	groupId=IDAndSpecialCharacters ":" artifactId=IDAndSpecialCharacters ":" version=Version;
 	public CoordinatesElements getCoordinatesAccess() {
 		return pCoordinates;
 	}

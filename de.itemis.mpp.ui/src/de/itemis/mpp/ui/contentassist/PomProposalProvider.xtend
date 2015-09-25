@@ -4,10 +4,105 @@
 package de.itemis.mpp.ui.contentassist
 
 import de.itemis.mpp.ui.contentassist.AbstractPomProposalProvider
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.xtext.Assignment
+import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext
+import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
+import org.eclipse.xtext.RuleCall
+import de.itemis.mpp.pom.POM
+import de.itemis.mpp.pom.Property
 
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
  * on how to customize the content assistant.
  */
 class PomProposalProvider extends AbstractPomProposalProvider {
+
+  override completeVersion_Qualifier(EObject model, Assignment assignment, ContentAssistContext context,
+    ICompletionProposalAcceptor acceptor) {
+    // TODO add context-based completion here (show qualifier strings based on available artifacts!
+    acceptor.accept(createCompletionProposal("SNAPSHOT", context))
+  }
+
+//  override complete_DependencyGroup(EObject model, RuleCall ruleCall, ContentAssistContext context,
+//    ICompletionProposalAcceptor acceptor) {
+//    val POM pom = model.POM
+//
+//    //TODO handle also included properties
+//    for (Property p : pom.getProperties()) {
+//      acceptor.accept(createPropertyRefCompletionProposal(p, context))
+//    }
+//  }
+  
+  def private dispatch POM getPOM(POM pom) {
+    return pom
+  }
+  
+  def private dispatch POM getPOM(EObject o) {
+    return o.eContainer.POM
+  }
+
+//
+//  @Override
+//  public void complete_ArtifactId(EObject model, RuleCall ruleCall,
+//      ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+//    super.complete_ArtifactId(model, ruleCall, context, acceptor);
+//  }
+//
+//  @Override
+//  public void complete_IDOrPropteryRef(EObject model, RuleCall ruleCall,
+//      ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+//    POM pom = (POM) model;
+//  }
+//
+//  @Override
+//  public void completeDependency_GroupId(EObject model,
+//      Assignment assignment, ContentAssistContext context,
+//      ICompletionProposalAcceptor acceptor) {
+//    POM pom = getPOM(model);
+//    for (Property p : pom.getProperties()) {
+//      acceptor.accept(createPropertyRefCompletionProposal(p, context));
+//    }
+//  }
+//
+//  @Override
+//  public void complete_GroupId(EObject model, RuleCall ruleCall,
+//      ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+//    super.complete_GroupId(model, ruleCall, context, acceptor);
+//  }
+//
+//  @Override
+//  public void complete_Dependencies(EObject model, RuleCall ruleCall,
+//      ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+//    super.complete_Dependencies(model, ruleCall, context, acceptor);
+//  }
+//
+//  private POM getPOM(EObject o) {
+//    if (o instanceof POM) {
+//      return (POM) o;
+//    }
+//    return getPOM(o.eContainer());
+//  }
+//
+//  private ICompletionProposal createPropertyRefCompletionProposal(
+//      Property property, ContentAssistContext context) {
+//    String prefix = context.getPrefix();
+//    StringBuilder sb = new StringBuilder(prefix);
+//    if (!prefix.endsWith("${")) {
+//      sb.append("${");
+//    } else if (!prefix.endsWith("{")) {
+//      sb.append("{");
+//    }
+//    sb.append(property.getName());
+//    
+//    try {
+//      if(!"}".equals(context.getDocument().get(context.getOffset(), 1))) {
+//        sb.append("}");
+//      }
+//    } catch (BadLocationException e) {
+//      sb.append("}");
+//    }
+//    return createCompletionProposal(sb.toString(),
+//        "${" + property.getName() + "}", null, context);
+//  }
 }

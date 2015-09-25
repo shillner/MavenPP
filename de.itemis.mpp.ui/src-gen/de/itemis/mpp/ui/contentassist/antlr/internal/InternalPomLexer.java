@@ -170,10 +170,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:14:7: ( 'compile' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:14:9: 'compile'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:14:7: ( 'test' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:14:9: 'test'
             {
-            match("compile"); 
+            match("test"); 
 
 
             }
@@ -191,10 +191,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:15:7: ( 'provided' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:15:9: 'provided'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:15:7: ( 'parent' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:15:9: 'parent'
             {
-            match("provided"); 
+            match("parent"); 
 
 
             }
@@ -212,10 +212,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:16:7: ( 'runtime' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:16:9: 'runtime'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:16:7: ( 'compile' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:16:9: 'compile'
             {
-            match("runtime"); 
+            match("compile"); 
 
 
             }
@@ -233,10 +233,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:17:7: ( 'system' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:17:9: 'system'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:17:7: ( 'provided' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:17:9: 'provided'
             {
-            match("system"); 
+            match("provided"); 
 
 
             }
@@ -254,10 +254,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:18:7: ( 'test' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:18:9: 'test'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:18:7: ( 'runtime' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:18:9: 'runtime'
             {
-            match("test"); 
+            match("runtime"); 
 
 
             }
@@ -275,10 +275,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:19:7: ( 'import' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:19:9: 'import'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:19:7: ( 'system' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:19:9: 'system'
             {
-            match("import"); 
+            match("system"); 
 
 
             }
@@ -296,10 +296,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:20:7: ( 'default' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:20:9: 'default'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:20:7: ( 'import' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:20:9: 'import'
             {
-            match("default"); 
+            match("import"); 
 
 
             }
@@ -317,10 +317,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:21:7: ( 'pre-clean' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:21:9: 'pre-clean'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:21:7: ( 'default' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:21:9: 'default'
             {
-            match("pre-clean"); 
+            match("default"); 
 
 
             }
@@ -338,10 +338,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:22:7: ( 'clean' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:22:9: 'clean'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:22:7: ( 'pre-clean' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:22:9: 'pre-clean'
             {
-            match("clean"); 
+            match("pre-clean"); 
 
 
             }
@@ -359,10 +359,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:23:7: ( 'post-clean' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:23:9: 'post-clean'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:23:7: ( 'clean' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:23:9: 'clean'
             {
-            match("post-clean"); 
+            match("clean"); 
 
 
             }
@@ -380,10 +380,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:24:7: ( 'validate' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:24:9: 'validate'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:24:7: ( 'post-clean' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:24:9: 'post-clean'
             {
-            match("validate"); 
+            match("post-clean"); 
 
 
             }
@@ -401,10 +401,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:25:7: ( 'initialize' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:25:9: 'initialize'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:25:7: ( 'validate' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:25:9: 'validate'
             {
-            match("initialize"); 
+            match("validate"); 
 
 
             }
@@ -422,10 +422,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:26:7: ( 'generate-sources' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:26:9: 'generate-sources'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:26:7: ( 'initialize' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:26:9: 'initialize'
             {
-            match("generate-sources"); 
+            match("initialize"); 
 
 
             }
@@ -443,10 +443,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:27:7: ( 'process-sources' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:27:9: 'process-sources'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:27:7: ( 'generate-sources' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:27:9: 'generate-sources'
             {
-            match("process-sources"); 
+            match("generate-sources"); 
 
 
             }
@@ -464,10 +464,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:28:7: ( 'generate-resources' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:28:9: 'generate-resources'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:28:7: ( 'process-sources' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:28:9: 'process-sources'
             {
-            match("generate-resources"); 
+            match("process-sources"); 
 
 
             }
@@ -485,10 +485,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:29:7: ( 'process-resources' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:29:9: 'process-resources'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:29:7: ( 'generate-resources' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:29:9: 'generate-resources'
             {
-            match("process-resources"); 
+            match("generate-resources"); 
 
 
             }
@@ -506,10 +506,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:30:7: ( 'process-classes' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:30:9: 'process-classes'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:30:7: ( 'process-resources' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:30:9: 'process-resources'
             {
-            match("process-classes"); 
+            match("process-resources"); 
 
 
             }
@@ -527,10 +527,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:31:7: ( 'generate-test-sources' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:31:9: 'generate-test-sources'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:31:7: ( 'process-classes' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:31:9: 'process-classes'
             {
-            match("generate-test-sources"); 
+            match("process-classes"); 
 
 
             }
@@ -548,10 +548,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:32:7: ( 'process-test-sources' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:32:9: 'process-test-sources'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:32:7: ( 'generate-test-sources' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:32:9: 'generate-test-sources'
             {
-            match("process-test-sources"); 
+            match("generate-test-sources"); 
 
 
             }
@@ -569,10 +569,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:33:7: ( 'generate-test-resources' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:33:9: 'generate-test-resources'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:33:7: ( 'process-test-sources' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:33:9: 'process-test-sources'
             {
-            match("generate-test-resources"); 
+            match("process-test-sources"); 
 
 
             }
@@ -590,10 +590,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:34:7: ( 'process-test-resources' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:34:9: 'process-test-resources'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:34:7: ( 'generate-test-resources' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:34:9: 'generate-test-resources'
             {
-            match("process-test-resources"); 
+            match("generate-test-resources"); 
 
 
             }
@@ -611,10 +611,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:35:7: ( 'test-compile' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:35:9: 'test-compile'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:35:7: ( 'process-test-resources' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:35:9: 'process-test-resources'
             {
-            match("test-compile"); 
+            match("process-test-resources"); 
 
 
             }
@@ -632,10 +632,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:36:7: ( 'process-test-classes' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:36:9: 'process-test-classes'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:36:7: ( 'test-compile' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:36:9: 'test-compile'
             {
-            match("process-test-classes"); 
+            match("test-compile"); 
 
 
             }
@@ -653,10 +653,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:37:7: ( 'prepare-package' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:37:9: 'prepare-package'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:37:7: ( 'process-test-classes' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:37:9: 'process-test-classes'
             {
-            match("prepare-package"); 
+            match("process-test-classes"); 
 
 
             }
@@ -674,10 +674,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:38:7: ( 'package' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:38:9: 'package'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:38:7: ( 'prepare-package' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:38:9: 'prepare-package'
             {
-            match("package"); 
+            match("prepare-package"); 
 
 
             }
@@ -695,10 +695,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:39:7: ( 'pre-integration-test' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:39:9: 'pre-integration-test'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:39:7: ( 'package' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:39:9: 'package'
             {
-            match("pre-integration-test"); 
+            match("package"); 
 
 
             }
@@ -716,10 +716,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:40:7: ( 'integration-test' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:40:9: 'integration-test'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:40:7: ( 'pre-integration-test' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:40:9: 'pre-integration-test'
             {
-            match("integration-test"); 
+            match("pre-integration-test"); 
 
 
             }
@@ -737,10 +737,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:41:7: ( 'post-integration-test' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:41:9: 'post-integration-test'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:41:7: ( 'integration-test' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:41:9: 'integration-test'
             {
-            match("post-integration-test"); 
+            match("integration-test"); 
 
 
             }
@@ -758,10 +758,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:42:7: ( 'verify' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:42:9: 'verify'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:42:7: ( 'post-integration-test' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:42:9: 'post-integration-test'
             {
-            match("verify"); 
+            match("post-integration-test"); 
 
 
             }
@@ -779,10 +779,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:43:7: ( 'install' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:43:9: 'install'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:43:7: ( 'verify' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:43:9: 'verify'
             {
-            match("install"); 
+            match("verify"); 
 
 
             }
@@ -800,10 +800,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:44:7: ( 'deploy' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:44:9: 'deploy'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:44:7: ( 'install' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:44:9: 'install'
             {
-            match("deploy"); 
+            match("install"); 
 
 
             }
@@ -821,10 +821,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:45:7: ( 'pre-site' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:45:9: 'pre-site'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:45:7: ( 'deploy' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:45:9: 'deploy'
             {
-            match("pre-site"); 
+            match("deploy"); 
 
 
             }
@@ -842,10 +842,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:46:7: ( 'site' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:46:9: 'site'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:46:7: ( 'pre-site' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:46:9: 'pre-site'
             {
-            match("site"); 
+            match("pre-site"); 
 
 
             }
@@ -863,10 +863,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:47:7: ( 'post-site' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:47:9: 'post-site'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:47:7: ( 'site' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:47:9: 'site'
             {
-            match("post-site"); 
+            match("site"); 
 
 
             }
@@ -884,10 +884,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:48:7: ( 'site-deploy' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:48:9: 'site-deploy'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:48:7: ( 'post-site' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:48:9: 'post-site'
             {
-            match("site-deploy"); 
+            match("post-site"); 
 
 
             }
@@ -905,10 +905,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:49:7: ( 'parent' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:49:9: 'parent'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:49:7: ( 'site-deploy' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:49:9: 'site-deploy'
             {
-            match("parent"); 
+            match("site-deploy"); 
 
 
             }
@@ -1591,8 +1591,8 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8838:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8838:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8858:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )* )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8858:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1603,7 +1603,7 @@ public class InternalPomLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8838:31: ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8858:31: ( 'a' .. 'z' | 'A' .. 'Z' )*
             loop1:
             do {
                 int alt1=2;
@@ -1652,10 +1652,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8840:10: ( ( '0' .. '9' )+ )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8840:12: ( '0' .. '9' )+
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8860:10: ( ( '0' .. '9' )+ )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8860:12: ( '0' .. '9' )+
             {
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8840:12: ( '0' .. '9' )+
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8860:12: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -1669,7 +1669,7 @@ public class InternalPomLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8840:13: '0' .. '9'
+            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8860:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1701,10 +1701,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1722,10 +1722,10 @@ public class InternalPomLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop3:
                     do {
                         int alt3=3;
@@ -1741,7 +1741,7 @@ public class InternalPomLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:21: '\\\\' .
+                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1749,7 +1749,7 @@ public class InternalPomLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1774,10 +1774,10 @@ public class InternalPomLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1793,7 +1793,7 @@ public class InternalPomLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:54: '\\\\' .
+                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1801,7 +1801,7 @@ public class InternalPomLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8842:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8862:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1844,12 +1844,12 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8844:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8844:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8864:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8864:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8844:24: ( options {greedy=false; } : . )*
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8864:24: ( options {greedy=false; } : . )*
             loop6:
             do {
                 int alt6=2;
@@ -1874,7 +1874,7 @@ public class InternalPomLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8844:52: .
+            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8864:52: .
             	    {
             	    matchAny(); 
 
@@ -1904,12 +1904,12 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8866:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8866:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8866:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop7:
             do {
                 int alt7=2;
@@ -1922,7 +1922,7 @@ public class InternalPomLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8866:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1942,7 +1942,7 @@ public class InternalPomLexer extends Lexer {
                 }
             } while (true);
 
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:40: ( ( '\\r' )? '\\n' )?
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8866:40: ( ( '\\r' )? '\\n' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1951,9 +1951,9 @@ public class InternalPomLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:41: ( '\\r' )? '\\n'
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8866:41: ( '\\r' )? '\\n'
                     {
-                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:41: ( '\\r' )?
+                    // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8866:41: ( '\\r' )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -1962,7 +1962,7 @@ public class InternalPomLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8846:41: '\\r'
+                            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8866:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1994,10 +1994,10 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8848:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8848:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8868:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8868:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8848:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8868:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt10=0;
             loop10:
             do {
@@ -2051,8 +2051,8 @@ public class InternalPomLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8850:16: ( . )
-            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8850:18: .
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8870:16: ( . )
+            // ../de.itemis.mpp.ui/src-gen/de/itemis/mpp/ui/contentassist/antlr/internal/InternalPom.g:8870:18: .
             {
             matchAny(); 
 
@@ -2625,110 +2625,110 @@ public class InternalPomLexer extends Lexer {
 
     protected DFA11 dfa11 = new DFA11(this);
     static final String DFA11_eotS =
-        "\1\uffff\1\44\1\46\1\uffff\12\52\1\uffff\2\52\1\42\3\uffff\1\52"+
-        "\2\uffff\2\52\1\uffff\1\52\2\uffff\3\42\7\uffff\2\52\1\uffff\14"+
-        "\52\1\147\6\52\1\uffff\1\52\1\162\1\52\4\uffff\1\52\2\uffff\2\52"+
-        "\1\uffff\1\52\5\uffff\1\52\1\172\12\52\1\u0088\2\52\1\u008b\5\52"+
-        "\1\uffff\3\52\1\u0095\6\52\1\uffff\1\52\1\u009e\5\52\1\uffff\4\52"+
-        "\1\uffff\7\52\1\u00b3\1\uffff\1\u00b5\1\u00b6\1\uffff\11\52\1\uffff"+
-        "\7\52\1\u00c7\1\uffff\1\u00c8\4\52\1\u00cd\3\52\3\uffff\1\52\1\uffff"+
-        "\5\52\5\uffff\15\52\1\u00e7\2\52\3\uffff\2\52\1\u00ec\1\uffff\4"+
-        "\52\3\uffff\1\52\1\u00f2\1\u00f3\1\52\1\u00f5\1\u00f6\5\52\1\u00fc"+
-        "\3\52\1\u0100\2\52\1\uffff\3\52\1\u0106\1\uffff\4\52\1\u010b\2\uffff"+
-        "\1\u010c\2\uffff\2\52\1\u010f\1\u0110\1\u0111\1\uffff\3\52\1\uffff"+
-        "\1\u0115\1\52\1\u0117\2\52\1\uffff\1\u011a\1\uffff\1\u011f\3\uffff"+
-        "\2\52\3\uffff\2\52\1\u0124\1\uffff\1\52\1\uffff\1\u0126\1\u0127"+
-        "\6\uffff\4\52\5\uffff\1\u0131\3\52\5\uffff\2\52\1\u0139\3\uffff"+
-        "\1\u013c\13\uffff";
+        "\1\uffff\1\44\1\46\1\uffff\12\53\1\uffff\2\53\1\42\3\uffff\1\53"+
+        "\2\uffff\2\53\1\uffff\1\53\2\uffff\3\42\7\uffff\3\53\1\uffff\13"+
+        "\53\1\147\6\53\1\uffff\1\53\1\162\1\53\4\uffff\1\53\2\uffff\2\53"+
+        "\1\uffff\1\53\5\uffff\2\53\1\172\7\53\1\u0086\4\53\1\u008b\5\53"+
+        "\1\uffff\3\53\1\u0095\6\53\1\uffff\1\53\1\u009e\3\53\1\u00a3\1\u00a4"+
+        "\1\uffff\5\53\1\uffff\5\53\1\uffff\3\53\1\u00b6\1\uffff\11\53\1"+
+        "\uffff\7\53\1\u00c7\1\uffff\1\u00c8\2\53\3\uffff\5\53\3\uffff\1"+
+        "\53\1\uffff\3\53\1\u00d7\2\53\2\uffff\15\53\1\u00e7\2\53\3\uffff"+
+        "\1\53\1\u00eb\5\53\3\uffff\1\u00f1\1\53\1\u00f3\1\uffff\1\53\1\u00f5"+
+        "\1\u00f6\5\53\1\u00fc\3\53\1\u0100\2\53\1\uffff\3\53\1\uffff\1\u0106"+
+        "\4\53\1\uffff\1\u010b\1\uffff\1\u010c\2\uffff\2\53\1\u010f\1\u0110"+
+        "\1\u0111\1\uffff\3\53\1\uffff\1\u0115\1\53\1\u0117\2\53\1\uffff"+
+        "\1\u011a\1\uffff\1\u011f\3\uffff\2\53\3\uffff\2\53\1\u0124\1\uffff"+
+        "\1\53\1\uffff\1\u0126\1\u0127\6\uffff\4\53\5\uffff\1\u0131\3\53"+
+        "\5\uffff\2\53\1\u0139\3\uffff\1\u013c\13\uffff";
     static final String DFA11_eofS =
         "\u0144\uffff";
     static final String DFA11_minS =
-        "\1\0\1\76\1\160\1\uffff\1\154\1\141\1\165\1\143\1\141\1\155\1\145"+
-        "\1\141\1\145\1\157\1\uffff\1\162\1\141\1\173\3\uffff\1\162\2\uffff"+
-        "\1\170\1\151\1\uffff\1\160\2\uffff\2\0\1\52\7\uffff\1\155\1\145"+
-        "\1\uffff\1\145\1\163\1\143\1\165\1\156\1\163\1\164\1\155\1\163\1"+
-        "\160\1\147\1\160\1\101\1\146\1\154\1\162\1\156\1\157\1\144\1\uffff"+
-        "\1\164\1\101\1\155\4\uffff\1\154\2\uffff\1\145\1\164\1\uffff\1\164"+
-        "\5\uffff\1\160\1\101\1\141\1\143\1\55\1\164\1\153\1\145\1\147\2"+
-        "\164\1\145\1\101\1\164\1\145\1\101\1\157\1\164\1\145\1\164\1\154"+
-        "\1\uffff\1\141\1\145\1\143\1\101\2\151\1\145\2\165\1\151\1\uffff"+
-        "\1\145\1\101\1\143\1\150\3\151\1\uffff\1\156\1\151\2\145\1\143\1"+
-        "\141\1\55\1\141\1\156\2\151\1\145\1\55\1\uffff\1\55\1\101\1\uffff"+
-        "\1\162\1\151\1\147\1\141\2\165\1\157\1\156\1\162\1\uffff\1\144\1"+
-        "\146\1\151\1\162\1\160\1\154\1\146\1\101\1\uffff\1\101\1\40\1\157"+
-        "\1\154\1\147\1\101\1\144\1\163\1\162\3\uffff\1\162\1\143\1\147\1"+
-        "\164\1\156\2\155\5\uffff\1\164\1\141\1\162\1\154\1\144\1\154\1\171"+
+        "\1\0\1\76\1\160\1\uffff\2\141\1\154\1\165\1\143\1\155\1\145\1\141"+
+        "\1\145\1\157\1\uffff\1\162\1\141\1\173\3\uffff\1\162\2\uffff\1\170"+
+        "\1\151\1\uffff\1\160\2\uffff\2\0\1\52\7\uffff\1\163\1\160\1\147"+
+        "\1\uffff\1\143\1\145\1\163\1\165\1\155\1\145\1\156\1\163\1\164\1"+
+        "\155\1\160\1\101\1\146\1\154\1\162\1\156\1\157\1\144\1\uffff\1\164"+
+        "\1\101\1\155\4\uffff\1\154\2\uffff\1\145\1\164\1\uffff\1\164\5\uffff"+
+        "\1\164\1\145\1\101\1\145\1\153\1\143\1\55\1\164\1\147\1\160\1\101"+
+        "\1\141\2\164\1\145\1\101\1\157\1\164\1\145\1\164\1\154\1\uffff\1"+
+        "\141\1\145\1\143\1\101\2\151\1\145\2\165\1\151\1\uffff\1\145\1\101"+
+        "\1\143\1\150\1\151\1\55\1\101\1\uffff\1\156\1\141\1\151\2\145\1"+
+        "\143\1\141\1\55\3\151\1\uffff\1\156\1\151\1\145\1\55\1\uffff\1\162"+
+        "\1\151\1\147\1\141\2\165\1\157\1\156\1\162\1\uffff\1\144\1\146\1"+
+        "\151\1\162\1\160\1\154\1\146\1\101\1\uffff\1\101\1\40\1\157\3\uffff"+
+        "\1\164\1\147\1\144\1\163\1\162\3\uffff\1\162\1\143\1\156\1\154\1"+
+        "\147\1\101\2\155\2\uffff\1\164\1\141\1\162\1\154\1\144\1\154\1\171"+
         "\1\144\1\151\1\141\1\171\1\157\1\141\1\101\1\145\1\141\3\uffff\1"+
-        "\156\1\145\1\101\1\uffff\1\145\1\163\1\164\1\145\3\uffff\1\145\2"+
-        "\101\1\145\2\101\1\154\1\141\1\154\1\145\1\164\1\101\1\145\1\160"+
-        "\1\164\1\101\1\156\1\164\1\uffff\1\163\1\143\1\141\1\101\1\uffff"+
-        "\1\144\1\55\1\171\1\55\1\101\2\uffff\1\101\2\uffff\1\151\1\164\3"+
-        "\101\1\uffff\1\156\1\164\1\145\1\uffff\1\101\1\145\1\101\1\164\1"+
-        "\154\1\uffff\1\101\1\143\1\101\3\uffff\1\172\1\151\3\uffff\1\143"+
+        "\156\1\101\2\145\1\163\1\164\1\145\3\uffff\1\101\1\145\1\101\1\uffff"+
+        "\1\145\2\101\1\154\1\141\1\154\1\145\1\164\1\101\1\145\1\160\1\164"+
+        "\1\101\1\156\1\164\1\uffff\1\163\1\143\1\141\1\uffff\1\101\1\144"+
+        "\1\55\1\171\1\55\1\uffff\1\101\1\uffff\1\101\2\uffff\1\151\1\164"+
+        "\3\101\1\uffff\1\156\1\164\1\145\1\uffff\1\101\1\145\1\101\1\164"+
+        "\1\154\1\uffff\1\101\1\143\1\101\3\uffff\1\172\1\151\3\uffff\1\143"+
         "\1\151\1\101\1\uffff\1\55\1\uffff\2\101\4\uffff\1\145\1\uffff\1"+
         "\145\1\157\1\151\1\157\1\uffff\1\162\2\uffff\1\163\1\101\1\156\1"+
         "\145\1\156\2\uffff\1\145\1\164\1\uffff\1\55\1\163\1\101\1\163\1"+
         "\55\1\uffff\1\101\1\uffff\1\164\1\143\1\uffff\1\55\3\uffff\1\162"+
         "\2\uffff";
     static final String DFA11_maxS =
-        "\1\uffff\1\76\1\160\1\uffff\1\157\1\162\1\165\2\171\1\156\2\145"+
-        "\1\162\1\157\1\uffff\1\163\1\141\1\173\3\uffff\1\162\2\uffff\1\170"+
-        "\1\151\1\uffff\1\160\2\uffff\2\uffff\1\57\7\uffff\1\156\1\145\1"+
-        "\uffff\1\157\1\163\1\162\1\165\1\156\1\163\1\164\1\155\1\163\1\160"+
-        "\1\147\1\160\1\172\1\166\1\154\1\162\1\156\1\157\1\144\1\uffff\1"+
-        "\164\1\172\1\155\4\uffff\1\154\2\uffff\1\145\1\164\1\uffff\1\164"+
-        "\5\uffff\1\160\1\172\1\141\1\166\1\160\1\164\1\153\1\145\1\147\2"+
-        "\164\1\145\1\172\1\164\1\145\1\172\1\157\1\164\1\145\1\164\1\154"+
+        "\1\uffff\1\76\1\160\1\uffff\1\171\1\162\1\157\1\165\1\171\1\156"+
+        "\2\145\1\162\1\157\1\uffff\1\163\1\141\1\173\3\uffff\1\162\2\uffff"+
+        "\1\170\1\151\1\uffff\1\160\2\uffff\2\uffff\1\57\7\uffff\1\163\1"+
+        "\160\1\147\1\uffff\1\162\1\157\1\163\1\165\1\156\1\145\1\156\1\163"+
+        "\1\164\1\155\1\160\1\172\1\166\1\154\1\162\1\156\1\157\1\144\1\uffff"+
+        "\1\164\1\172\1\155\4\uffff\1\154\2\uffff\1\145\1\164\1\uffff\1\164"+
+        "\5\uffff\1\164\1\145\1\172\1\145\1\153\1\166\1\160\1\164\1\147\1"+
+        "\160\1\172\1\141\2\164\1\145\1\172\1\157\1\164\1\145\1\164\1\154"+
         "\1\uffff\1\141\1\154\1\143\1\172\1\151\1\163\1\145\2\165\1\151\1"+
-        "\uffff\1\145\1\172\1\143\1\150\3\151\1\uffff\1\156\1\151\2\145\1"+
-        "\163\1\141\1\55\1\141\1\156\2\151\1\145\1\172\1\uffff\2\172\1\uffff"+
-        "\1\162\1\151\1\147\1\141\2\165\1\157\1\156\1\162\1\uffff\1\144\1"+
-        "\146\1\151\1\162\1\160\1\154\1\146\1\172\1\uffff\1\172\1\40\1\157"+
-        "\1\154\1\147\1\172\1\144\1\163\1\162\3\uffff\1\162\1\163\1\147\1"+
-        "\164\1\156\2\155\5\uffff\1\164\1\141\1\162\1\154\1\144\1\154\1\171"+
-        "\1\144\1\151\1\141\1\171\1\157\1\141\1\172\1\145\1\141\3\uffff\1"+
-        "\156\1\145\1\172\1\uffff\1\145\1\163\1\164\1\145\3\uffff\1\145\2"+
-        "\172\1\145\2\172\1\154\1\141\1\154\1\145\1\164\1\172\1\145\1\160"+
-        "\1\164\1\172\1\156\1\164\1\uffff\1\163\1\143\1\141\1\172\1\uffff"+
-        "\1\144\1\55\1\171\1\55\1\172\2\uffff\1\172\2\uffff\1\151\1\164\3"+
-        "\172\1\uffff\1\156\1\164\1\145\1\uffff\1\172\1\145\1\172\1\164\1"+
-        "\154\1\uffff\1\172\1\164\1\172\3\uffff\1\172\1\151\3\uffff\1\143"+
-        "\1\151\1\172\1\uffff\1\55\1\uffff\2\172\4\uffff\1\145\1\uffff\1"+
-        "\145\1\157\1\151\1\157\1\uffff\1\164\2\uffff\1\163\1\172\1\156\1"+
-        "\145\1\156\2\uffff\1\145\1\164\1\uffff\1\55\1\163\1\172\1\163\1"+
-        "\55\1\uffff\1\172\1\uffff\1\164\1\163\1\uffff\1\55\3\uffff\1\163"+
-        "\2\uffff";
+        "\uffff\1\145\1\172\1\143\1\150\1\151\2\172\1\uffff\1\156\1\141\1"+
+        "\151\2\145\1\163\1\141\1\55\3\151\1\uffff\1\156\1\151\1\145\1\172"+
+        "\1\uffff\1\162\1\151\1\147\1\141\2\165\1\157\1\156\1\162\1\uffff"+
+        "\1\144\1\146\1\151\1\162\1\160\1\154\1\146\1\172\1\uffff\1\172\1"+
+        "\40\1\157\3\uffff\1\164\1\147\1\144\1\163\1\162\3\uffff\1\162\1"+
+        "\163\1\156\1\154\1\147\1\172\2\155\2\uffff\1\164\1\141\1\162\1\154"+
+        "\1\144\1\154\1\171\1\144\1\151\1\141\1\171\1\157\1\141\1\172\1\145"+
+        "\1\141\3\uffff\1\156\1\172\2\145\1\163\1\164\1\145\3\uffff\1\172"+
+        "\1\145\1\172\1\uffff\1\145\2\172\1\154\1\141\1\154\1\145\1\164\1"+
+        "\172\1\145\1\160\1\164\1\172\1\156\1\164\1\uffff\1\163\1\143\1\141"+
+        "\1\uffff\1\172\1\144\1\55\1\171\1\55\1\uffff\1\172\1\uffff\1\172"+
+        "\2\uffff\1\151\1\164\3\172\1\uffff\1\156\1\164\1\145\1\uffff\1\172"+
+        "\1\145\1\172\1\164\1\154\1\uffff\1\172\1\164\1\172\3\uffff\1\172"+
+        "\1\151\3\uffff\1\143\1\151\1\172\1\uffff\1\55\1\uffff\2\172\4\uffff"+
+        "\1\145\1\uffff\1\145\1\157\1\151\1\157\1\uffff\1\164\2\uffff\1\163"+
+        "\1\172\1\156\1\145\1\156\2\uffff\1\145\1\164\1\uffff\1\55\1\163"+
+        "\1\172\1\163\1\55\1\uffff\1\172\1\uffff\1\164\1\163\1\uffff\1\55"+
+        "\3\uffff\1\163\2\uffff";
     static final String DFA11_acceptS =
         "\3\uffff\1\3\12\uffff\1\51\3\uffff\1\61\1\63\1\67\1\uffff\1\77"+
         "\1\100\2\uffff\1\105\1\uffff\1\110\1\111\3\uffff\1\115\1\116\1\101"+
-        "\1\1\1\65\1\2\1\3\2\uffff\1\110\23\uffff\1\51\3\uffff\1\60\1\61"+
+        "\1\1\1\65\1\2\1\3\3\uffff\1\110\22\uffff\1\51\3\uffff\1\60\1\61"+
         "\1\63\1\67\1\uffff\1\77\1\100\2\uffff\1\105\1\uffff\1\111\1\112"+
-        "\1\113\1\114\1\115\25\uffff\1\104\12\uffff\1\106\7\uffff\1\71\15"+
-        "\uffff\1\70\2\uffff\1\74\11\uffff\1\72\10\uffff\1\73\11\uffff\1"+
-        "\13\1\35\1\43\7\uffff\1\46\1\44\1\31\1\10\1\55\20\uffff\1\56\1\102"+
-        "\1\103\3\uffff\1\14\4\uffff\1\15\1\37\1\45\22\uffff\1\52\4\uffff"+
-        "\1\76\5\uffff\1\47\1\75\1\uffff\1\7\1\11\5\uffff\1\42\3\uffff\1"+
-        "\40\5\uffff\1\4\3\uffff\1\33\1\34\1\6\2\uffff\1\41\1\64\1\12\3\uffff"+
-        "\1\54\1\uffff\1\50\2\uffff\1\5\1\21\1\23\1\24\1\uffff\1\62\4\uffff"+
-        "\1\16\1\uffff\1\53\1\107\5\uffff\1\20\1\22\2\uffff\1\17\5\uffff"+
-        "\1\36\1\uffff\1\57\2\uffff\1\66\1\uffff\1\26\1\30\1\32\1\uffff\1"+
-        "\25\1\27";
+        "\1\113\1\114\1\115\25\uffff\1\104\12\uffff\1\106\7\uffff\1\74\13"+
+        "\uffff\1\71\4\uffff\1\70\11\uffff\1\72\10\uffff\1\73\3\uffff\1\32"+
+        "\1\4\1\55\5\uffff\1\14\1\36\1\44\10\uffff\1\47\1\45\20\uffff\1\56"+
+        "\1\102\1\103\7\uffff\1\16\1\40\1\46\3\uffff\1\15\17\uffff\1\52\3"+
+        "\uffff\1\5\5\uffff\1\75\1\uffff\1\76\1\uffff\1\11\1\12\5\uffff\1"+
+        "\43\3\uffff\1\41\5\uffff\1\35\3\uffff\1\34\1\6\1\10\2\uffff\1\42"+
+        "\1\64\1\13\3\uffff\1\54\1\uffff\1\50\2\uffff\1\7\1\22\1\24\1\25"+
+        "\1\uffff\1\62\4\uffff\1\17\1\uffff\1\53\1\107\5\uffff\1\21\1\23"+
+        "\2\uffff\1\20\5\uffff\1\37\1\uffff\1\57\2\uffff\1\66\1\uffff\1\27"+
+        "\1\31\1\33\1\uffff\1\26\1\30";
     static final String DFA11_specialS =
-        "\1\1\35\uffff\1\2\1\0\u0124\uffff}>";
+        "\1\0\35\uffff\1\2\1\1\u0124\uffff}>";
     static final String[] DFA11_transitionS = {
             "\11\42\2\41\2\42\1\41\22\42\1\41\1\42\1\36\1\42\1\21\2\42\1"+
             "\37\4\42\1\16\1\1\1\2\1\40\12\35\1\32\2\42\1\23\3\42\32\34\1"+
-            "\26\1\42\1\27\1\42\1\3\1\42\1\17\1\34\1\4\1\12\1\30\1\34\1\14"+
-            "\1\34\1\11\3\34\1\15\1\20\1\33\1\5\1\34\1\6\1\7\1\10\1\25\1"+
+            "\26\1\42\1\27\1\42\1\3\1\42\1\17\1\34\1\6\1\12\1\30\1\34\1\14"+
+            "\1\34\1\11\3\34\1\15\1\20\1\33\1\5\1\34\1\7\1\10\1\4\1\25\1"+
             "\13\1\31\3\34\1\24\1\42\1\22\uff82\42",
             "\1\43",
             "\1\45",
             "",
-            "\1\51\2\uffff\1\50",
-            "\1\55\12\uffff\1\56\2\uffff\1\54\2\uffff\1\53",
-            "\1\57",
-            "\1\62\5\uffff\1\61\17\uffff\1\60",
-            "\1\65\3\uffff\1\63\23\uffff\1\64",
+            "\1\52\3\uffff\1\50\23\uffff\1\51",
+            "\1\54\12\uffff\1\57\2\uffff\1\56\2\uffff\1\55",
+            "\1\61\2\uffff\1\60",
+            "\1\62",
+            "\1\65\5\uffff\1\64\17\uffff\1\63",
             "\1\66\1\67",
             "\1\70",
             "\1\71\3\uffff\1\72",
@@ -2760,22 +2760,22 @@ public class InternalPomLexer extends Lexer {
             "",
             "",
             "",
-            "\1\122\1\123",
+            "\1\122",
+            "\1\123",
             "\1\124",
             "",
-            "\1\126\11\uffff\1\125",
-            "\1\127",
-            "\1\130\16\uffff\1\131",
+            "\1\126\16\uffff\1\125",
+            "\1\130\11\uffff\1\127",
+            "\1\131",
             "\1\132",
-            "\1\133",
-            "\1\134",
+            "\1\133\1\134",
             "\1\135",
             "\1\136",
             "\1\137",
             "\1\140",
             "\1\141",
             "\1\142",
-            "\32\52\6\uffff\2\52\1\146\5\52\1\143\11\52\1\145\1\144\6\52",
+            "\32\53\6\uffff\2\53\1\146\5\53\1\143\11\53\1\145\1\144\6\53",
             "\1\150\11\uffff\1\151\2\uffff\1\152\2\uffff\1\153",
             "\1\154",
             "\1\155",
@@ -2784,7 +2784,7 @@ public class InternalPomLexer extends Lexer {
             "\1\160",
             "",
             "\1\161",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\163",
             "",
             "",
@@ -2803,21 +2803,21 @@ public class InternalPomLexer extends Lexer {
             "",
             "",
             "\1\170",
-            "\32\52\6\uffff\5\52\1\171\24\52",
+            "\1\171",
+            "\32\53\6\uffff\32\53",
             "\1\173",
-            "\1\175\14\uffff\1\176\5\uffff\1\174",
-            "\1\177\102\uffff\1\u0080",
-            "\1\u0081",
+            "\1\174",
+            "\1\176\14\uffff\1\177\5\uffff\1\175",
+            "\1\u0080\102\uffff\1\u0081",
             "\1\u0082",
             "\1\u0083",
             "\1\u0084",
-            "\1\u0085",
-            "\1\u0086",
+            "\32\53\6\uffff\5\53\1\u0085\24\53",
             "\1\u0087",
-            "\32\52\6\uffff\32\52",
+            "\1\u0088",
             "\1\u0089",
             "\1\u008a",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u008c",
             "\1\u008d",
             "\1\u008e",
@@ -2827,7 +2827,7 @@ public class InternalPomLexer extends Lexer {
             "\1\u0091",
             "\1\u0093\6\uffff\1\u0092",
             "\1\u0094",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u0096",
             "\1\u0097\11\uffff\1\u0098",
             "\1\u0099",
@@ -2836,29 +2836,29 @@ public class InternalPomLexer extends Lexer {
             "\1\u009c",
             "",
             "\1\u009d",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u009f",
             "\1\u00a0",
             "\1\u00a1",
-            "\1\u00a2",
-            "\1\u00a3",
+            "\1\u00a2\23\uffff\32\53\6\uffff\32\53",
+            "\32\53\6\uffff\32\53",
             "",
-            "\1\u00a4",
             "\1\u00a5",
             "\1\u00a6",
             "\1\u00a7",
-            "\1\u00a8\5\uffff\1\u00a9\11\uffff\1\u00aa",
-            "\1\u00ab",
-            "\1\u00ac",
+            "\1\u00a8",
+            "\1\u00a9",
+            "\1\u00aa\5\uffff\1\u00ab\11\uffff\1\u00ac",
             "\1\u00ad",
             "\1\u00ae",
             "\1\u00af",
             "\1\u00b0",
             "\1\u00b1",
-            "\1\u00b2\23\uffff\32\52\6\uffff\32\52",
             "",
-            "\1\u00b4\23\uffff\32\52\6\uffff\32\52",
-            "\32\52\6\uffff\32\52",
+            "\1\u00b2",
+            "\1\u00b3",
+            "\1\u00b4",
+            "\1\u00b5\23\uffff\32\53\6\uffff\32\53",
             "",
             "\1\u00b7",
             "\1\u00b8",
@@ -2877,30 +2877,30 @@ public class InternalPomLexer extends Lexer {
             "\1\u00c4",
             "\1\u00c5",
             "\1\u00c6",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u00c9",
             "\1\u00ca",
+            "",
+            "",
+            "",
             "\1\u00cb",
             "\1\u00cc",
-            "\32\52\6\uffff\32\52",
+            "\1\u00cd",
             "\1\u00ce",
             "\1\u00cf",
+            "",
+            "",
+            "",
             "\1\u00d0",
-            "",
-            "",
-            "",
-            "\1\u00d1",
-            "\1\u00d2\5\uffff\1\u00d3\11\uffff\1\u00d4",
+            "\1\u00d1\5\uffff\1\u00d2\11\uffff\1\u00d3",
+            "\1\u00d4",
             "\1\u00d5",
             "\1\u00d6",
-            "\1\u00d7",
+            "\32\53\6\uffff\32\53",
             "\1\u00d8",
             "\1\u00d9",
-            "",
-            "",
-            "",
             "",
             "",
             "\1\u00da",
@@ -2916,16 +2916,15 @@ public class InternalPomLexer extends Lexer {
             "\1\u00e4",
             "\1\u00e5",
             "\1\u00e6",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u00e8",
             "\1\u00e9",
             "",
             "",
             "",
             "\1\u00ea",
-            "\1\u00eb",
-            "\32\52\6\uffff\32\52",
-            "",
+            "\32\53\6\uffff\32\53",
+            "\1\u00ec",
             "\1\u00ed",
             "\1\u00ee",
             "\1\u00ef",
@@ -2933,59 +2932,60 @@ public class InternalPomLexer extends Lexer {
             "",
             "",
             "",
-            "\1\u00f1",
-            "\32\52\6\uffff\32\52",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
+            "\1\u00f2",
+            "\32\53\6\uffff\32\53",
+            "",
             "\1\u00f4",
-            "\32\52\6\uffff\32\52",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
+            "\32\53\6\uffff\32\53",
             "\1\u00f7",
             "\1\u00f8",
             "\1\u00f9",
             "\1\u00fa",
             "\1\u00fb",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u00fd",
             "\1\u00fe",
             "\1\u00ff",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u0101",
             "\1\u0102",
             "",
             "\1\u0103",
             "\1\u0104",
             "\1\u0105",
-            "\32\52\6\uffff\32\52",
             "",
+            "\32\53\6\uffff\32\53",
             "\1\u0107",
             "\1\u0108",
             "\1\u0109",
             "\1\u010a",
-            "\32\52\6\uffff\32\52",
             "",
+            "\32\53\6\uffff\32\53",
             "",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "",
             "",
             "\1\u010d",
             "\1\u010e",
-            "\32\52\6\uffff\32\52",
-            "\32\52\6\uffff\32\52",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
+            "\32\53\6\uffff\32\53",
+            "\32\53\6\uffff\32\53",
             "",
             "\1\u0112",
             "\1\u0113",
             "\1\u0114",
             "",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u0116",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u0118",
             "\1\u0119",
             "",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u011d\16\uffff\1\u011c\1\u011b\1\u011e",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "",
             "",
             "",
@@ -2996,12 +2996,12 @@ public class InternalPomLexer extends Lexer {
             "",
             "\1\u0122",
             "\1\u0123",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "",
             "\1\u0125",
             "",
-            "\32\52\6\uffff\32\52",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
+            "\32\53\6\uffff\32\53",
             "",
             "",
             "",
@@ -3017,7 +3017,7 @@ public class InternalPomLexer extends Lexer {
             "",
             "",
             "\1\u0130",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u0132",
             "\1\u0133",
             "\1\u0134",
@@ -3028,11 +3028,11 @@ public class InternalPomLexer extends Lexer {
             "",
             "\1\u0137",
             "\1\u0138",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "\1\u013a",
             "\1\u013b",
             "",
-            "\32\52\6\uffff\32\52",
+            "\32\53\6\uffff\32\53",
             "",
             "\1\u013d",
             "\1\u0140\16\uffff\1\u013f\1\u013e",
@@ -3083,16 +3083,6 @@ public class InternalPomLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA11_31 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA11_31>='\u0000' && LA11_31<='\uFFFF')) ) {s = 78;}
-
-                        else s = 34;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA11_0 = input.LA(1);
 
                         s = -1;
@@ -3102,15 +3092,15 @@ public class InternalPomLexer extends Lexer {
 
                         else if ( (LA11_0=='_') ) {s = 3;}
 
-                        else if ( (LA11_0=='c') ) {s = 4;}
+                        else if ( (LA11_0=='t') ) {s = 4;}
 
                         else if ( (LA11_0=='p') ) {s = 5;}
 
-                        else if ( (LA11_0=='r') ) {s = 6;}
+                        else if ( (LA11_0=='c') ) {s = 6;}
 
-                        else if ( (LA11_0=='s') ) {s = 7;}
+                        else if ( (LA11_0=='r') ) {s = 7;}
 
-                        else if ( (LA11_0=='t') ) {s = 8;}
+                        else if ( (LA11_0=='s') ) {s = 8;}
 
                         else if ( (LA11_0=='i') ) {s = 9;}
 
@@ -3163,6 +3153,16 @@ public class InternalPomLexer extends Lexer {
                         else if ( ((LA11_0>='\t' && LA11_0<='\n')||LA11_0=='\r'||LA11_0==' ') ) {s = 33;}
 
                         else if ( ((LA11_0>='\u0000' && LA11_0<='\b')||(LA11_0>='\u000B' && LA11_0<='\f')||(LA11_0>='\u000E' && LA11_0<='\u001F')||LA11_0=='!'||LA11_0=='#'||(LA11_0>='%' && LA11_0<='&')||(LA11_0>='(' && LA11_0<='+')||(LA11_0>=';' && LA11_0<='<')||(LA11_0>='>' && LA11_0<='@')||LA11_0=='\\'||LA11_0=='^'||LA11_0=='`'||LA11_0=='|'||(LA11_0>='~' && LA11_0<='\uFFFF')) ) {s = 34;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA11_31 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA11_31>='\u0000' && LA11_31<='\uFFFF')) ) {s = 78;}
+
+                        else s = 34;
 
                         if ( s>=0 ) return s;
                         break;
