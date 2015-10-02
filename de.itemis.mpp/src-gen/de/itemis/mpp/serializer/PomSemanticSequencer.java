@@ -222,7 +222,7 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (groupId=IDAndDot artifactId=IDAndDash version=Version (type=IDAndDash classifier=Classifier?)?)
+	 *     (groupId=IDAndSpecialCharacters artifactId=IDAndSpecialCharacters version=Version (type=ID classifier=Classifier?)?)
 	 */
 	protected void sequence_ExtendedCoordinates(EObject context, ExtendedCoordinates semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -370,7 +370,7 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((id=IDAndDash? phase=Phase? goals+=IDAndDash goals+=IDAndDash* configuration=PluginConfiguration?) | default?='default')
+	 *     ((id=IDAndDash? phase=Phase? goals+=IDAndSpecialCharacters goals+=IDAndDash* configuration=PluginConfiguration?) | default?='default')
 	 */
 	protected void sequence_PluginExecution(EObject context, PluginExecution semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -450,7 +450,7 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (major=Number (minor=Number incremental=Number?)? qualifier=Text?)
+	 *     ((major=Number (minor=Number incremental=Number?)? qualifier=Text?) | propertyRef=PropertyRef)
 	 */
 	protected void sequence_Version(EObject context, Version semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

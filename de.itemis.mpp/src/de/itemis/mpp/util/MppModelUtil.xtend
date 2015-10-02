@@ -9,8 +9,11 @@ import com.google.common.base.MoreObjects
 
 class MppModelUtil {
   def public String convertToString(Version version) {
+    if(version.propertyRef != null) {
+      return version.propertyRef
+    }
+    
     val sb = new StringBuilder(version.major)
-
     if(version.minor != null) {
       sb.append('.').append(version.minor)
       if(version.incremental != null) {

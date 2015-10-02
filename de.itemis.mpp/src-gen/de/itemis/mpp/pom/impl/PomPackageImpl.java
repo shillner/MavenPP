@@ -597,6 +597,16 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getVersion_PropertyRef()
+  {
+    return (EAttribute)versionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getProperty()
   {
     return propertyEClass;
@@ -1413,6 +1423,7 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     createEAttribute(versionEClass, VERSION__MINOR);
     createEAttribute(versionEClass, VERSION__INCREMENTAL);
     createEAttribute(versionEClass, VERSION__QUALIFIER);
+    createEAttribute(versionEClass, VERSION__PROPERTY_REF);
 
     propertyEClass = createEClass(PROPERTY);
     createEAttribute(propertyEClass, PROPERTY__NAME);
@@ -1584,6 +1595,7 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     initEAttribute(getVersion_Minor(), ecorePackage.getEString(), "minor", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVersion_Incremental(), ecorePackage.getEString(), "incremental", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVersion_Qualifier(), ecorePackage.getEString(), "qualifier", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVersion_PropertyRef(), ecorePackage.getEString(), "propertyRef", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProperty_Name(), ecorePackage.getEString(), "name", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

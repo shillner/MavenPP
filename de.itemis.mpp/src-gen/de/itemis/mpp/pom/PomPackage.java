@@ -342,13 +342,22 @@ public interface PomPackage extends EPackage
   int VERSION__QUALIFIER = 3;
 
   /**
+   * The feature id for the '<em><b>Property Ref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VERSION__PROPERTY_REF = 4;
+
+  /**
    * The number of structural features of the '<em>Version</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VERSION_FEATURE_COUNT = 4;
+  int VERSION_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.impl.PropertyImpl <em>Property</em>}' class.
@@ -1596,6 +1605,17 @@ public interface PomPackage extends EPackage
   EAttribute getVersion_Qualifier();
 
   /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.Version#getPropertyRef <em>Property Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Property Ref</em>'.
+   * @see de.itemis.mpp.pom.Version#getPropertyRef()
+   * @see #getVersion()
+   * @generated
+   */
+  EAttribute getVersion_PropertyRef();
+
+  /**
    * Returns the meta object for class '{@link de.itemis.mpp.pom.Property <em>Property</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2654,6 +2674,14 @@ public interface PomPackage extends EPackage
      * @generated
      */
     EAttribute VERSION__QUALIFIER = eINSTANCE.getVersion_Qualifier();
+
+    /**
+     * The meta object literal for the '<em><b>Property Ref</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VERSION__PROPERTY_REF = eINSTANCE.getVersion_PropertyRef();
 
     /**
      * The meta object literal for the '{@link de.itemis.mpp.pom.impl.PropertyImpl <em>Property</em>}' class.

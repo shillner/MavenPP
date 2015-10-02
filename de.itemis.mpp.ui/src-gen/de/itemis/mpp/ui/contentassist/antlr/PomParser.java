@@ -37,10 +37,12 @@ public class PomParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getIDAndSpecialCharactersAccess().getAlternatives_1_0(), "rule__IDAndSpecialCharacters__Alternatives_1_0");
+					put(grammarAccess.getIDAndSpecialCharactersAccess().getAlternatives_1_0_0(), "rule__IDAndSpecialCharacters__Alternatives_1_0_0");
+					put(grammarAccess.getIDOrPropteryRefAndSpecialCharactersAccess().getAlternatives_1_0(), "rule__IDOrPropteryRefAndSpecialCharacters__Alternatives_1_0");
 					put(grammarAccess.getTextAccess().getAlternatives(), "rule__Text__Alternatives");
 					put(grammarAccess.getIDOrPropteryRefAccess().getAlternatives(), "rule__IDOrPropteryRef__Alternatives");
 					put(grammarAccess.getIDOrKWAccess().getAlternatives(), "rule__IDOrKW__Alternatives");
+					put(grammarAccess.getVersionAccess().getAlternatives(), "rule__Version__Alternatives");
 					put(grammarAccess.getDependenciesAccess().getAlternatives_3(), "rule__Dependencies__Alternatives_3");
 					put(grammarAccess.getPluginConfigurationItemAccess().getAlternatives(), "rule__PluginConfigurationItem__Alternatives");
 					put(grammarAccess.getPluginConfigurationParameterAccess().getAlternatives_1(), "rule__PluginConfigurationParameter__Alternatives_1");
@@ -66,11 +68,14 @@ public class PomParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIDAndDashAccess().getGroup_1(), "rule__IDAndDash__Group_1__0");
 					put(grammarAccess.getIDAndSpecialCharactersAccess().getGroup(), "rule__IDAndSpecialCharacters__Group__0");
 					put(grammarAccess.getIDAndSpecialCharactersAccess().getGroup_1(), "rule__IDAndSpecialCharacters__Group_1__0");
-					put(grammarAccess.getIDOrPropteryRefAccess().getGroup_1(), "rule__IDOrPropteryRef__Group_1__0");
-					put(grammarAccess.getVersionAccess().getGroup(), "rule__Version__Group__0");
-					put(grammarAccess.getVersionAccess().getGroup_1(), "rule__Version__Group_1__0");
-					put(grammarAccess.getVersionAccess().getGroup_1_2(), "rule__Version__Group_1_2__0");
-					put(grammarAccess.getVersionAccess().getGroup_2(), "rule__Version__Group_2__0");
+					put(grammarAccess.getIDAndSpecialCharactersAccess().getGroup_1_0(), "rule__IDAndSpecialCharacters__Group_1_0__0");
+					put(grammarAccess.getIDOrPropteryRefAndSpecialCharactersAccess().getGroup(), "rule__IDOrPropteryRefAndSpecialCharacters__Group__0");
+					put(grammarAccess.getIDOrPropteryRefAndSpecialCharactersAccess().getGroup_1(), "rule__IDOrPropteryRefAndSpecialCharacters__Group_1__0");
+					put(grammarAccess.getPropertyRefAccess().getGroup(), "rule__PropertyRef__Group__0");
+					put(grammarAccess.getVersionAccess().getGroup_0(), "rule__Version__Group_0__0");
+					put(grammarAccess.getVersionAccess().getGroup_0_1(), "rule__Version__Group_0_1__0");
+					put(grammarAccess.getVersionAccess().getGroup_0_1_2(), "rule__Version__Group_0_1_2__0");
+					put(grammarAccess.getVersionAccess().getGroup_0_2(), "rule__Version__Group_0_2__0");
 					put(grammarAccess.getPropertyAccess().getGroup(), "rule__Property__Group__0");
 					put(grammarAccess.getPropertyInclusionAccess().getGroup(), "rule__PropertyInclusion__Group__0");
 					put(grammarAccess.getDependenciesAccess().getGroup(), "rule__Dependencies__Group__0");
@@ -125,10 +130,11 @@ public class PomParser extends AbstractContentAssistParser {
 					put(grammarAccess.getArtifactDefinitionAccess().getTypeAssignment_4_1(), "rule__ArtifactDefinition__TypeAssignment_4_1");
 					put(grammarAccess.getArtifactDefinitionAccess().getArtifactNameAssignment_5_0_1(), "rule__ArtifactDefinition__ArtifactNameAssignment_5_0_1");
 					put(grammarAccess.getArtifactDefinitionAccess().getDescriptionAssignment_5_1_1(), "rule__ArtifactDefinition__DescriptionAssignment_5_1_1");
-					put(grammarAccess.getVersionAccess().getMajorAssignment_0(), "rule__Version__MajorAssignment_0");
-					put(grammarAccess.getVersionAccess().getMinorAssignment_1_1(), "rule__Version__MinorAssignment_1_1");
-					put(grammarAccess.getVersionAccess().getIncrementalAssignment_1_2_1(), "rule__Version__IncrementalAssignment_1_2_1");
-					put(grammarAccess.getVersionAccess().getQualifierAssignment_2_1(), "rule__Version__QualifierAssignment_2_1");
+					put(grammarAccess.getVersionAccess().getMajorAssignment_0_0(), "rule__Version__MajorAssignment_0_0");
+					put(grammarAccess.getVersionAccess().getMinorAssignment_0_1_1(), "rule__Version__MinorAssignment_0_1_1");
+					put(grammarAccess.getVersionAccess().getIncrementalAssignment_0_1_2_1(), "rule__Version__IncrementalAssignment_0_1_2_1");
+					put(grammarAccess.getVersionAccess().getQualifierAssignment_0_2_1(), "rule__Version__QualifierAssignment_0_2_1");
+					put(grammarAccess.getVersionAccess().getPropertyRefAssignment_1(), "rule__Version__PropertyRefAssignment_1");
 					put(grammarAccess.getPropertyAccess().getNameAssignment_1(), "rule__Property__NameAssignment_1");
 					put(grammarAccess.getPropertyAccess().getValueAssignment_3(), "rule__Property__ValueAssignment_3");
 					put(grammarAccess.getPropertyInclusionAccess().getPomRefAssignment_1(), "rule__PropertyInclusion__PomRefAssignment_1");

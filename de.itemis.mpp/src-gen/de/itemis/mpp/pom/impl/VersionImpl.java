@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.itemis.mpp.pom.impl.VersionImpl#getMinor <em>Minor</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.VersionImpl#getIncremental <em>Incremental</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.VersionImpl#getQualifier <em>Qualifier</em>}</li>
+ *   <li>{@link de.itemis.mpp.pom.impl.VersionImpl#getPropertyRef <em>Property Ref</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,6 +110,26 @@ public class VersionImpl extends MinimalEObjectImpl.Container implements Version
    * @ordered
    */
   protected String qualifier = QUALIFIER_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getPropertyRef() <em>Property Ref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPropertyRef()
+   * @generated
+   * @ordered
+   */
+  protected static final String PROPERTY_REF_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getPropertyRef() <em>Property Ref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPropertyRef()
+   * @generated
+   * @ordered
+   */
+  protected String propertyRef = PROPERTY_REF_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -228,6 +249,29 @@ public class VersionImpl extends MinimalEObjectImpl.Container implements Version
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getPropertyRef()
+  {
+    return propertyRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPropertyRef(String newPropertyRef)
+  {
+    String oldPropertyRef = propertyRef;
+    propertyRef = newPropertyRef;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PomPackage.VERSION__PROPERTY_REF, oldPropertyRef, propertyRef));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -241,6 +285,8 @@ public class VersionImpl extends MinimalEObjectImpl.Container implements Version
         return getIncremental();
       case PomPackage.VERSION__QUALIFIER:
         return getQualifier();
+      case PomPackage.VERSION__PROPERTY_REF:
+        return getPropertyRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -266,6 +312,9 @@ public class VersionImpl extends MinimalEObjectImpl.Container implements Version
         return;
       case PomPackage.VERSION__QUALIFIER:
         setQualifier((String)newValue);
+        return;
+      case PomPackage.VERSION__PROPERTY_REF:
+        setPropertyRef((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -293,6 +342,9 @@ public class VersionImpl extends MinimalEObjectImpl.Container implements Version
       case PomPackage.VERSION__QUALIFIER:
         setQualifier(QUALIFIER_EDEFAULT);
         return;
+      case PomPackage.VERSION__PROPERTY_REF:
+        setPropertyRef(PROPERTY_REF_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -315,6 +367,8 @@ public class VersionImpl extends MinimalEObjectImpl.Container implements Version
         return INCREMENTAL_EDEFAULT == null ? incremental != null : !INCREMENTAL_EDEFAULT.equals(incremental);
       case PomPackage.VERSION__QUALIFIER:
         return QUALIFIER_EDEFAULT == null ? qualifier != null : !QUALIFIER_EDEFAULT.equals(qualifier);
+      case PomPackage.VERSION__PROPERTY_REF:
+        return PROPERTY_REF_EDEFAULT == null ? propertyRef != null : !PROPERTY_REF_EDEFAULT.equals(propertyRef);
     }
     return super.eIsSet(featureID);
   }
@@ -338,6 +392,8 @@ public class VersionImpl extends MinimalEObjectImpl.Container implements Version
     result.append(incremental);
     result.append(", qualifier: ");
     result.append(qualifier);
+    result.append(", propertyRef: ");
+    result.append(propertyRef);
     result.append(')');
     return result.toString();
   }

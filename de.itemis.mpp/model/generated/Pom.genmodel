@@ -79,6 +79,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Version/minor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Version/incremental"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Version/qualifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Version/propertyRef"/>
     </genClasses>
     <genClasses ecoreClass="Pom.ecore#//Property">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Property/name"/>

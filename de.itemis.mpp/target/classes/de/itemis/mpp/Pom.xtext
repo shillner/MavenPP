@@ -32,15 +32,19 @@ ArtifactDefinition:
   ('description' description=STRING)?)
 ;
 
-IDAndDot:
+IDAndDot hidden():
   IDOrPropteryRef ('.' IDOrPropteryRef)*
 ;
 
-IDAndDash:
+IDAndDash hidden():
   ID ('-' ID)*
 ;
 
-IDAndSpecialCharacters:
+IDAndSpecialCharacters hidden():
+  IDOrKW (=>('-' | '.' | '_') IDOrKW)*
+;
+
+IDOrPropteryRefAndSpecialCharacters hidden():
   IDOrPropteryRef (('-' | '.' | '_')* IDOrPropteryRef)*
 ;
 
@@ -58,15 +62,18 @@ Text:
 
 PropertyName:
   IDAndSpecialCharacters
-//  (ID | '-' | '_' | '.')*
+;
+
+PropertyRef:
+  '${' PropertyName '}'
 ;
 
 IDOrPropteryRef:
-  IDOrKW | '${' PropertyName '}'
+  IDOrKW | PropertyRef
 ;
 
 IDOrKW:
-  ID | 'test' | 'parent' //TODO continue the list of keywords!
+  ID | 'test' | 'parent' | 'version' | 'exec' | 'clean' | 'plugin' | 'compile' //TODO continue the list of keywords!
 ;
 
 Version:
@@ -74,7 +81,7 @@ Version:
 //;
 //
 //NumericVersion:
-  major=Number ('.' minor=Number ('.' incremental=Number)?)? ('-' qualifier=Text)?
+  (major=Number ('.' minor=Number ('.' incremental=Number)?)? ('-' qualifier=Text)?) | (propertyRef=PropertyRef)
 ;
 
 Property:
@@ -82,7 +89,7 @@ Property:
 ;
 
 PropertyInclusion:
-  'include' pomRef=[POMImport] '.properties'
+  'include' pomRef=[POMImport] '.' 'properties'
 ;
 
 Dependencies:
@@ -164,7 +171,7 @@ PluginConfigurationParameterPropertyEntry:
 
 PluginExecution:
   'exec' 
-  (id=IDAndDash? ('in' phase=Phase)? 'with goals' goals+=IDAndDash (',' goals+=IDAndDash)* ('{' configuration=PluginConfiguration '}')?
+  (id=IDAndDash? ('in' phase=Phase)? 'with goals' goals+=IDAndSpecialCharacters (',' goals+=IDAndDash)* ('{' configuration=PluginConfiguration '}')?
   | default?='default')
 ;
 
@@ -181,7 +188,7 @@ Coordinates:
 ;
 
 ExtendedCoordinates:
-  groupId=IDAndDot ':' artifactId=IDAndDash ':' version=Version (':' type=IDAndDash (':' classifier=Classifier)?)?
+  groupId=IDAndSpecialCharacters ':' artifactId=IDAndSpecialCharacters ':' version=Version (':' type=ID (':' classifier=Classifier)?)?
 ;
 
 POMImport:
@@ -197,7 +204,7 @@ enum DependencyScope:
 ;
 
 enum Phase:
-  DEFAULT="default" | PRE_CLEAN='pre-clean' | CLEAN='clean' | POST_CLEAN='post-clean' | VALIDATE='validate' |
+  DEFAULT='default' | PRE_CLEAN='pre-clean' | CLEAN='clean' | POST_CLEAN='post-clean' | VALIDATE='validate' |
   INITIALIZE='initialize' | GENERATE_SOURCES='generate-sources' | PROCESS_SOURCES='process-sources' |
   GENERATE_RESOURCES='generate-resources' | PROCESS_RESOURCES='process-resources' | COMPILE='compile' |
   PROCESS_CLASSES='process-classes' | GENERATE_TEST_SOURCES='generate-test-sources' |

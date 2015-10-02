@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.itemis.mpp.pom.Version#getMinor <em>Minor</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.Version#getIncremental <em>Incremental</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.Version#getQualifier <em>Qualifier</em>}</li>
+ *   <li>{@link de.itemis.mpp.pom.Version#getPropertyRef <em>Property Ref</em>}</li>
  * </ul>
  *
  * @see de.itemis.mpp.pom.PomPackage#getVersion()
@@ -128,5 +129,31 @@ public interface Version extends EObject
    * @generated
    */
   void setQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Property Ref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Property Ref</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Property Ref</em>' attribute.
+   * @see #setPropertyRef(String)
+   * @see de.itemis.mpp.pom.PomPackage#getVersion_PropertyRef()
+   * @model
+   * @generated
+   */
+  String getPropertyRef();
+
+  /**
+   * Sets the value of the '{@link de.itemis.mpp.pom.Version#getPropertyRef <em>Property Ref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Property Ref</em>' attribute.
+   * @see #getPropertyRef()
+   * @generated
+   */
+  void setPropertyRef(String value);
 
 } // Version
