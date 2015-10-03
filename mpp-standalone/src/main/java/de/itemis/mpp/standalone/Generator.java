@@ -1,5 +1,6 @@
 package de.itemis.mpp.standalone;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,10 +31,10 @@ public class Generator {
   @Inject
   private JavaIoFileSystemAccess fileAccess;
 
-  public void generate(String inputPath) {
+  public void generate(File inputFile) {
     // load the resource
     ResourceSet set = this.resourceSetProvider.get();
-    Resource resource = set.getResource(URI.createURI(inputPath), true);
+    Resource resource = set.getResource(URI.createFileURI(inputFile.getAbsolutePath()), true);
 
     // validate the resource
     List<Issue> list = this.validator.validate(resource, CheckMode.ALL, CancelIndicator.NullImpl);
