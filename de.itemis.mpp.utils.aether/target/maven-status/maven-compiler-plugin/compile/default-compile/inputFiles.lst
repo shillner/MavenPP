@@ -1,4 +1,5 @@
-C:\Users\Stanley\itemis\p1\Maven++\test\repo\de.itemis.mpp.utils.aether\src\main\java\de\itemis\mpp\aether\ArtifactResolver.java
-C:\Users\Stanley\itemis\p1\Maven++\test\repo\de.itemis.mpp.utils.aether\src\main\java\de\itemis\mpp\aether\AetherQueries.java
-C:\Users\Stanley\itemis\p1\Maven++\test\repo\de.itemis.mpp.utils.aether\src\main\java\de\itemis\mpp\aether\internal\util\RepositorySystemFactory.java
-C:\Users\Stanley\itemis\p1\Maven++\test\repo\de.itemis.mpp.utils.aether\src\main\java\de\itemis\mpp\aether\internal\util\AetherBootstrap.java
+C:\Users\Stanley\itemis\p1\Maven++\repo\de.itemis.mpp.utils.aether\src\main\java\de\itemis\mpp\aether\AetherQueries.java
+C:\Users\Stanley\itemis\p1\Maven++\repo\de.itemis.mpp.utils.aether\src\main\java\de\itemis\mpp\aether\internal\util\RepositorySystemFactory.java
+C:\Users\Stanley\itemis\p1\Maven++\repo\de.itemis.mpp.utils.aether\src\main\java\de\itemis\mpp\aether\internal\util\MavenSettingsUtil.java
+C:\Users\Stanley\itemis\p1\Maven++\repo\de.itemis.mpp.utils.aether\src\main\java\de\itemis\mpp\aether\ArtifactResolver.java
+C:\Users\Stanley\itemis\p1\Maven++\repo\de.itemis.mpp.utils.aether\src\main\java\de\itemis\mpp\aether\internal\util\AetherBootstrap.java
