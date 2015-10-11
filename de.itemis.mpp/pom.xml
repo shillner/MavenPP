@@ -14,7 +14,7 @@
 
   <name>Maven++ Core</name>
   <description>The Xtext-based core project of Maven++ that provides the grammar, lexer, parser and generator.</description>
-  
+
   <dependencies>
     <dependency>
       <groupId>de.itemis.mpp</groupId>
@@ -23,7 +23,7 @@
       <type>bundle</type>
     </dependency>
   </dependencies>
-  
+
   <build>
     <plugins>
       <plugin>

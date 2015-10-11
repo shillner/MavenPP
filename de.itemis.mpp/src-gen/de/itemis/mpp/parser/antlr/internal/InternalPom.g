@@ -277,6 +277,36 @@ rulePOM returns [EObject current=null]
 	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPOMAccess().getUnorderedGroup_4());
 	 				}
  				)
+			)  |
+
+			( 
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getPOMAccess().getUnorderedGroup_4(), 4)}?=>(
+					{ 
+	 				  getUnorderedGroupHelper().select(grammarAccess.getPOMAccess().getUnorderedGroup_4(), 4);
+	 				}
+					({true}?=>(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getPOMAccess().getRepositoriesRepositoryParserRuleCall_4_4_0()); 
+	    }
+		lv_repositories_9_0=ruleRepository		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPOMRule());
+	        }
+       		add(
+       			$current, 
+       			"repositories",
+        		lv_repositories_9_0, 
+        		"Repository");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))+
+					{ 
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPOMAccess().getUnorderedGroup_4());
+	 				}
+ 				)
 			)  
 
 		)*	
@@ -291,14 +321,14 @@ rulePOM returns [EObject current=null]
 		{ 
 	        newCompositeNode(grammarAccess.getPOMAccess().getBuildStepsBuildStepParserRuleCall_5_0()); 
 	    }
-		lv_buildSteps_9_0=ruleBuildStep		{
+		lv_buildSteps_10_0=ruleBuildStep		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPOMRule());
 	        }
        		add(
        			$current, 
        			"buildSteps",
-        		lv_buildSteps_9_0, 
+        		lv_buildSteps_10_0, 
         		"BuildStep");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -2526,56 +2556,42 @@ rulePluginExecution returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getPluginExecutionAccess().getInKeyword_1_0_1_0());
     }
+	otherlv_3='phase' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getPluginExecutionAccess().getPhaseKeyword_1_0_1_1());
+    }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPluginExecutionAccess().getPhasePhaseEnumRuleCall_1_0_1_1_0()); 
+	        newCompositeNode(grammarAccess.getPluginExecutionAccess().getPhasePhaseEnumRuleCall_1_0_1_2_0()); 
 	    }
-		lv_phase_3_0=rulePhase		{
+		lv_phase_4_0=rulePhase		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPluginExecutionRule());
 	        }
        		set(
        			$current, 
        			"phase",
-        		lv_phase_3_0, 
+        		lv_phase_4_0, 
         		"Phase");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?	otherlv_4='with goals' 
+))?	otherlv_5='with' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getPluginExecutionAccess().getWithGoalsKeyword_1_0_2());
+    	newLeafNode(otherlv_5, grammarAccess.getPluginExecutionAccess().getWithKeyword_1_0_2());
+    }
+	otherlv_6='goals' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getPluginExecutionAccess().getGoalsKeyword_1_0_3());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPluginExecutionAccess().getGoalsIDAndSpecialCharactersParserRuleCall_1_0_3_0()); 
+	        newCompositeNode(grammarAccess.getPluginExecutionAccess().getGoalsIDAndSpecialCharactersParserRuleCall_1_0_4_0()); 
 	    }
-		lv_goals_5_0=ruleIDAndSpecialCharacters		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getPluginExecutionRule());
-	        }
-       		add(
-       			$current, 
-       			"goals",
-        		lv_goals_5_0, 
-        		"IDAndSpecialCharacters");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(	otherlv_6=',' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getPluginExecutionAccess().getCommaKeyword_1_0_4_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getPluginExecutionAccess().getGoalsIDAndDashParserRuleCall_1_0_4_1_0()); 
-	    }
-		lv_goals_7_0=ruleIDAndDash		{
+		lv_goals_7_0=ruleIDAndSpecialCharacters		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPluginExecutionRule());
 	        }
@@ -2583,43 +2599,65 @@ rulePluginExecution returns [EObject current=null]
        			$current, 
        			"goals",
         		lv_goals_7_0, 
+        		"IDAndSpecialCharacters");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_8=',' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getPluginExecutionAccess().getCommaKeyword_1_0_5_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getPluginExecutionAccess().getGoalsIDAndDashParserRuleCall_1_0_5_1_0()); 
+	    }
+		lv_goals_9_0=ruleIDAndDash		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPluginExecutionRule());
+	        }
+       		add(
+       			$current, 
+       			"goals",
+        		lv_goals_9_0, 
         		"IDAndDash");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*(	otherlv_8='{' 
+))*(	otherlv_10='{' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getPluginExecutionAccess().getLeftCurlyBracketKeyword_1_0_5_0());
+    	newLeafNode(otherlv_10, grammarAccess.getPluginExecutionAccess().getLeftCurlyBracketKeyword_1_0_6_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPluginExecutionAccess().getConfigurationPluginConfigurationParserRuleCall_1_0_5_1_0()); 
+	        newCompositeNode(grammarAccess.getPluginExecutionAccess().getConfigurationPluginConfigurationParserRuleCall_1_0_6_1_0()); 
 	    }
-		lv_configuration_9_0=rulePluginConfiguration		{
+		lv_configuration_11_0=rulePluginConfiguration		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPluginExecutionRule());
 	        }
        		set(
        			$current, 
        			"configuration",
-        		lv_configuration_9_0, 
+        		lv_configuration_11_0, 
         		"PluginConfiguration");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_10='}' 
+)	otherlv_12='}' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getPluginExecutionAccess().getRightCurlyBracketKeyword_1_0_5_2());
+    	newLeafNode(otherlv_12, grammarAccess.getPluginExecutionAccess().getRightCurlyBracketKeyword_1_0_6_2());
     }
 )?)
     |(
 (
-		lv_default_11_0=	'default' 
+		lv_default_13_0=	'default' 
     {
-        newLeafNode(lv_default_11_0, grammarAccess.getPluginExecutionAccess().getDefaultDefaultKeyword_1_1_0());
+        newLeafNode(lv_default_13_0, grammarAccess.getPluginExecutionAccess().getDefaultDefaultKeyword_1_1_0());
     }
  
 	    {
@@ -3050,6 +3088,350 @@ rulePOMImport returns [EObject current=null]
 
 
 
+// Entry rule entryRuleRepository
+entryRuleRepository returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getRepositoryRule()); }
+	 iv_ruleRepository=ruleRepository 
+	 { $current=$iv_ruleRepository.current; } 
+	 EOF 
+;
+
+// Rule Repository
+ruleRepository returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((	otherlv_0='repository' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getRepositoryAccess().getRepositoryKeyword_0_0());
+    }
+
+    |(
+(
+		lv_pluginRepositroy_1_0=	'plugin-repository' 
+    {
+        newLeafNode(lv_pluginRepositroy_1_0, grammarAccess.getRepositoryAccess().getPluginRepositroyPluginRepositoryKeyword_0_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRepositoryRule());
+	        }
+       		setWithLastConsumed($current, "pluginRepositroy", true, "plugin-repository");
+	    }
+
+)
+))(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getRepositoryAccess().getIdIDAndSpecialCharactersParserRuleCall_1_0()); 
+	    }
+		lv_id_2_0=ruleIDAndSpecialCharacters		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getRepositoryRule());
+	        }
+       		set(
+       			$current, 
+       			"id",
+        		lv_id_2_0, 
+        		"IDAndSpecialCharacters");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_3='at' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getRepositoryAccess().getAtKeyword_2());
+    }
+(
+(
+		lv_url_4_0=RULE_STRING
+		{
+			newLeafNode(lv_url_4_0, grammarAccess.getRepositoryAccess().getUrlSTRINGTerminalRuleCall_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRepositoryRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"url",
+        		lv_url_4_0, 
+        		"STRING");
+	    }
+
+)
+)(	otherlv_5='{' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getRepositoryAccess().getLeftCurlyBracketKeyword_4_0());
+    }
+(
+
+(
+	{ 
+	  getUnorderedGroupHelper().enter(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1());
+	}
+	(
+		(
+
+			( 
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 0)}?=>(
+					{ 
+	 				  getUnorderedGroupHelper().select(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 0);
+	 				}
+					({true}?=>(	otherlv_7='name' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getRepositoryAccess().getNameKeyword_4_1_0_0());
+    }
+(
+(
+		lv_name_8_0=RULE_STRING
+		{
+			newLeafNode(lv_name_8_0, grammarAccess.getRepositoryAccess().getNameSTRINGTerminalRuleCall_4_1_0_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRepositoryRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_8_0, 
+        		"STRING");
+	    }
+
+)
+)))
+					{ 
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1());
+	 				}
+ 				)
+			)  |
+
+			( 
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 1)}?=>(
+					{ 
+	 				  getUnorderedGroupHelper().select(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 1);
+	 				}
+					({true}?=>(	otherlv_9='layout' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getRepositoryAccess().getLayoutKeyword_4_1_1_0());
+    }
+(
+(
+		lv_layout_10_0=RULE_STRING
+		{
+			newLeafNode(lv_layout_10_0, grammarAccess.getRepositoryAccess().getLayoutSTRINGTerminalRuleCall_4_1_1_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRepositoryRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"layout",
+        		lv_layout_10_0, 
+        		"STRING");
+	    }
+
+)
+)))
+					{ 
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1());
+	 				}
+ 				)
+			)  
+
+		)*	
+	)
+)
+	{ 
+	  getUnorderedGroupHelper().leave(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1());
+	}
+
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getRepositoryAccess().getPoliciesRepositoryPolicyParserRuleCall_4_2_0()); 
+	    }
+		lv_policies_11_0=ruleRepositoryPolicy		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getRepositoryRule());
+	        }
+       		add(
+       			$current, 
+       			"policies",
+        		lv_policies_11_0, 
+        		"RepositoryPolicy");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)+	otherlv_12='}' 
+    {
+    	newLeafNode(otherlv_12, grammarAccess.getRepositoryAccess().getRightCurlyBracketKeyword_4_3());
+    }
+)?)
+;
+
+
+
+
+
+// Entry rule entryRuleRepositoryPolicy
+entryRuleRepositoryPolicy returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getRepositoryPolicyRule()); }
+	 iv_ruleRepositoryPolicy=ruleRepositoryPolicy 
+	 { $current=$iv_ruleRepositoryPolicy.current; } 
+	 EOF 
+;
+
+// Rule RepositoryPolicy
+ruleRepositoryPolicy returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_disabled_0_0=	'do not' 
+    {
+        newLeafNode(lv_disabled_0_0, grammarAccess.getRepositoryPolicyAccess().getDisabledDoNotKeyword_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRepositoryPolicyRule());
+	        }
+       		setWithLastConsumed($current, "disabled", true, "do not");
+	    }
+
+)
+)?	otherlv_1='fetch' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getRepositoryPolicyAccess().getFetchKeyword_1());
+    }
+((
+(
+		lv_releases_2_0=	'releases' 
+    {
+        newLeafNode(lv_releases_2_0, grammarAccess.getRepositoryPolicyAccess().getReleasesReleasesKeyword_2_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRepositoryPolicyRule());
+	        }
+       		setWithLastConsumed($current, "releases", true, "releases");
+	    }
+
+)
+)
+    |(
+(
+		lv_snapshots_3_0=	'snapshots' 
+    {
+        newLeafNode(lv_snapshots_3_0, grammarAccess.getRepositoryPolicyAccess().getSnapshotsSnapshotsKeyword_2_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRepositoryPolicyRule());
+	        }
+       		setWithLastConsumed($current, "snapshots", true, "snapshots");
+	    }
+
+)
+))(	otherlv_4=',' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getRepositoryPolicyAccess().getCommaKeyword_3_0());
+    }
+	otherlv_5='update' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getRepositoryPolicyAccess().getUpdateKeyword_3_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getRepositoryPolicyAccess().getUpdatePolicyRepositoryUpdatePolicyEnumRuleCall_3_2_0()); 
+	    }
+		lv_updatePolicy_6_0=ruleRepositoryUpdatePolicy		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getRepositoryPolicyRule());
+	        }
+       		set(
+       			$current, 
+       			"updatePolicy",
+        		lv_updatePolicy_6_0, 
+        		"RepositoryUpdatePolicy");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_7='with' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getRepositoryPolicyAccess().getWithKeyword_3_3_0());
+    }
+	otherlv_8='interval' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getRepositoryPolicyAccess().getIntervalKeyword_3_3_1());
+    }
+	otherlv_9='=' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getRepositoryPolicyAccess().getEqualsSignKeyword_3_3_2());
+    }
+(
+(
+		lv_updateInterval_10_0=RULE_INT
+		{
+			newLeafNode(lv_updateInterval_10_0, grammarAccess.getRepositoryPolicyAccess().getUpdateIntervalINTTerminalRuleCall_3_3_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRepositoryPolicyRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"updateInterval",
+        		lv_updateInterval_10_0, 
+        		"INT");
+	    }
+
+)
+))?)?(	otherlv_11=',' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getRepositoryPolicyAccess().getCommaKeyword_4_0());
+    }
+	otherlv_12='checksumPolicy' 
+    {
+    	newLeafNode(otherlv_12, grammarAccess.getRepositoryPolicyAccess().getChecksumPolicyKeyword_4_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getRepositoryPolicyAccess().getChecksumPolicyChecksumPolicyEnumRuleCall_4_2_0()); 
+	    }
+		lv_checksumPolicy_13_0=ruleChecksumPolicy		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getRepositoryPolicyRule());
+	        }
+       		set(
+       			$current, 
+       			"checksumPolicy",
+        		lv_checksumPolicy_13_0, 
+        		"ChecksumPolicy");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?)
+;
+
+
+
+
+
 // Rule DependencyScope
 ruleDependencyScope returns [Enumerator current=null] 
     @init { enterRule(); }
@@ -3281,6 +3663,62 @@ rulePhase returns [Enumerator current=null]
 	{
         $current = grammarAccess.getPhaseAccess().getSITE_DEPLOYEnumLiteralDeclaration_30().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_30, grammarAccess.getPhaseAccess().getSITE_DEPLOYEnumLiteralDeclaration_30()); 
+    }
+));
+
+
+
+// Rule RepositoryUpdatePolicy
+ruleRepositoryUpdatePolicy returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='daily' 
+	{
+        $current = grammarAccess.getRepositoryUpdatePolicyAccess().getDAILYEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getRepositoryUpdatePolicyAccess().getDAILYEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='always' 
+	{
+        $current = grammarAccess.getRepositoryUpdatePolicyAccess().getALWAYSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getRepositoryUpdatePolicyAccess().getALWAYSEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='never' 
+	{
+        $current = grammarAccess.getRepositoryUpdatePolicyAccess().getNEVEREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getRepositoryUpdatePolicyAccess().getNEVEREnumLiteralDeclaration_2()); 
+    }
+)
+    |(	enumLiteral_3='interval' 
+	{
+        $current = grammarAccess.getRepositoryUpdatePolicyAccess().getINTERVALEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getRepositoryUpdatePolicyAccess().getINTERVALEnumLiteralDeclaration_3()); 
+    }
+));
+
+
+
+// Rule ChecksumPolicy
+ruleChecksumPolicy returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='ignore' 
+	{
+        $current = grammarAccess.getChecksumPolicyAccess().getIGNOREEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getChecksumPolicyAccess().getIGNOREEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='warn' 
+	{
+        $current = grammarAccess.getChecksumPolicyAccess().getWARNEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getChecksumPolicyAccess().getWARNEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='fail' 
+	{
+        $current = grammarAccess.getChecksumPolicyAccess().getFAILEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getChecksumPolicyAccess().getFAILEnumLiteralDeclaration_2()); 
     }
 ));
 

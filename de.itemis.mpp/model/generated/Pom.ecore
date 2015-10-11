@@ -17,6 +17,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="dependencies" eType="#//Dependencies"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scm" eType="#//SCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repositories" upperBound="-1"
+        eType="#//Repository" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="buildSteps" upperBound="-1"
         eType="#//BuildStep" containment="true"/>
   </eClassifiers>
@@ -162,6 +164,23 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pluginRepositroy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="policies" upperBound="-1"
+        eType="#//RepositoryPolicy" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RepositoryPolicy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="disabled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="releases" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="snapshots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updatePolicy" eType="#//RepositoryUpdatePolicy"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checksumPolicy" eType="#//ChecksumPolicy"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DependencyScope">
     <eLiterals name="COMPILE" literal="compile"/>
     <eLiterals name="PROVIDED" value="1" literal="provided"/>
@@ -202,5 +221,16 @@
     <eLiterals name="SITE" value="28" literal="site"/>
     <eLiterals name="POST_SITE" value="29" literal="post-site"/>
     <eLiterals name="SITE_DEPLOY" value="30" literal="site-deploy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RepositoryUpdatePolicy">
+    <eLiterals name="DAILY" literal="daily"/>
+    <eLiterals name="ALWAYS" value="1" literal="always"/>
+    <eLiterals name="NEVER" value="2" literal="never"/>
+    <eLiterals name="INTERVAL" value="3" literal="interval"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ChecksumPolicy">
+    <eLiterals name="IGNORE" literal="ignore"/>
+    <eLiterals name="WARN" value="1" literal="warn"/>
+    <eLiterals name="FAIL" value="2" literal="fail"/>
   </eClassifiers>
 </ecore:EPackage>

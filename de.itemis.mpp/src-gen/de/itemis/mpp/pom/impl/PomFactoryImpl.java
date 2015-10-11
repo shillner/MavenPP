@@ -93,6 +93,8 @@ public class PomFactoryImpl extends EFactoryImpl implements PomFactory
       case PomPackage.COORDINATES: return createCoordinates();
       case PomPackage.EXTENDED_COORDINATES: return createExtendedCoordinates();
       case PomPackage.POM_IMPORT: return createPOMImport();
+      case PomPackage.REPOSITORY: return createRepository();
+      case PomPackage.REPOSITORY_POLICY: return createRepositoryPolicy();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -112,6 +114,10 @@ public class PomFactoryImpl extends EFactoryImpl implements PomFactory
         return createDependencyScopeFromString(eDataType, initialValue);
       case PomPackage.PHASE:
         return createPhaseFromString(eDataType, initialValue);
+      case PomPackage.REPOSITORY_UPDATE_POLICY:
+        return createRepositoryUpdatePolicyFromString(eDataType, initialValue);
+      case PomPackage.CHECKSUM_POLICY:
+        return createChecksumPolicyFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -131,6 +137,10 @@ public class PomFactoryImpl extends EFactoryImpl implements PomFactory
         return convertDependencyScopeToString(eDataType, instanceValue);
       case PomPackage.PHASE:
         return convertPhaseToString(eDataType, instanceValue);
+      case PomPackage.REPOSITORY_UPDATE_POLICY:
+        return convertRepositoryUpdatePolicyToString(eDataType, instanceValue);
+      case PomPackage.CHECKSUM_POLICY:
+        return convertChecksumPolicyToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -449,6 +459,28 @@ public class PomFactoryImpl extends EFactoryImpl implements PomFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Repository createRepository()
+  {
+    RepositoryImpl repository = new RepositoryImpl();
+    return repository;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RepositoryPolicy createRepositoryPolicy()
+  {
+    RepositoryPolicyImpl repositoryPolicy = new RepositoryPolicyImpl();
+    return repositoryPolicy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public DependencyScope createDependencyScopeFromString(EDataType eDataType, String initialValue)
   {
     DependencyScope result = DependencyScope.get(initialValue);
@@ -484,6 +516,50 @@ public class PomFactoryImpl extends EFactoryImpl implements PomFactory
    * @generated
    */
   public String convertPhaseToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RepositoryUpdatePolicy createRepositoryUpdatePolicyFromString(EDataType eDataType, String initialValue)
+  {
+    RepositoryUpdatePolicy result = RepositoryUpdatePolicy.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertRepositoryUpdatePolicyToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ChecksumPolicy createChecksumPolicyFromString(EDataType eDataType, String initialValue)
+  {
+    ChecksumPolicy result = ChecksumPolicy.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertChecksumPolicyToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

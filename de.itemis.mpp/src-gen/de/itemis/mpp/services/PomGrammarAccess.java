@@ -38,18 +38,20 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDependenciesDependenciesParserRuleCall_4_2_0 = (RuleCall)cDependenciesAssignment_4_2.eContents().get(0);
 		private final Assignment cScmAssignment_4_3 = (Assignment)cUnorderedGroup_4.eContents().get(3);
 		private final RuleCall cScmSCMParserRuleCall_4_3_0 = (RuleCall)cScmAssignment_4_3.eContents().get(0);
+		private final Assignment cRepositoriesAssignment_4_4 = (Assignment)cUnorderedGroup_4.eContents().get(4);
+		private final RuleCall cRepositoriesRepositoryParserRuleCall_4_4_0 = (RuleCall)cRepositoriesAssignment_4_4.eContents().get(0);
 		private final Assignment cBuildStepsAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cBuildStepsBuildStepParserRuleCall_5_0 = (RuleCall)cBuildStepsAssignment_5.eContents().get(0);
 		
 		//POM:
 		//	imports+=POMImport* parent=ParentRef? artifactDefinition=ArtifactDefinition modules=Modules?
-		//	(propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM?)
-		//	buildSteps+=BuildStep*;
+		//	(propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM? &
+		//	repositories+=Repository*) buildSteps+=BuildStep*;
 		@Override public ParserRule getRule() { return rule; }
 
 		//imports+=POMImport* parent=ParentRef? artifactDefinition=ArtifactDefinition modules=Modules?
-		//(propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM?)
-		//buildSteps+=BuildStep*
+		//(propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM? &
+		//repositories+=Repository*) buildSteps+=BuildStep*
 		public Group getGroup() { return cGroup; }
 
 		//imports+=POMImport*
@@ -76,7 +78,8 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		//Modules
 		public RuleCall getModulesModulesParserRuleCall_3_0() { return cModulesModulesParserRuleCall_3_0; }
 
-		//propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM?
+		//propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM? &
+		//repositories+=Repository*
 		public UnorderedGroup getUnorderedGroup_4() { return cUnorderedGroup_4; }
 
 		//propertyInclusions+=PropertyInclusion*
@@ -102,6 +105,12 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 
 		//SCM
 		public RuleCall getScmSCMParserRuleCall_4_3_0() { return cScmSCMParserRuleCall_4_3_0; }
+
+		//repositories+=Repository*
+		public Assignment getRepositoriesAssignment_4_4() { return cRepositoriesAssignment_4_4; }
+
+		//Repository
+		public RuleCall getRepositoriesRepositoryParserRuleCall_4_4_0() { return cRepositoriesRepositoryParserRuleCall_4_4_0; }
 
 		//buildSteps+=BuildStep*
 		public Assignment getBuildStepsAssignment_5() { return cBuildStepsAssignment_5; }
@@ -1408,40 +1417,42 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cIdIDAndDashParserRuleCall_1_0_0_0 = (RuleCall)cIdAssignment_1_0_0.eContents().get(0);
 		private final Group cGroup_1_0_1 = (Group)cGroup_1_0.eContents().get(1);
 		private final Keyword cInKeyword_1_0_1_0 = (Keyword)cGroup_1_0_1.eContents().get(0);
-		private final Assignment cPhaseAssignment_1_0_1_1 = (Assignment)cGroup_1_0_1.eContents().get(1);
-		private final RuleCall cPhasePhaseEnumRuleCall_1_0_1_1_0 = (RuleCall)cPhaseAssignment_1_0_1_1.eContents().get(0);
-		private final Keyword cWithGoalsKeyword_1_0_2 = (Keyword)cGroup_1_0.eContents().get(2);
-		private final Assignment cGoalsAssignment_1_0_3 = (Assignment)cGroup_1_0.eContents().get(3);
-		private final RuleCall cGoalsIDAndSpecialCharactersParserRuleCall_1_0_3_0 = (RuleCall)cGoalsAssignment_1_0_3.eContents().get(0);
-		private final Group cGroup_1_0_4 = (Group)cGroup_1_0.eContents().get(4);
-		private final Keyword cCommaKeyword_1_0_4_0 = (Keyword)cGroup_1_0_4.eContents().get(0);
-		private final Assignment cGoalsAssignment_1_0_4_1 = (Assignment)cGroup_1_0_4.eContents().get(1);
-		private final RuleCall cGoalsIDAndDashParserRuleCall_1_0_4_1_0 = (RuleCall)cGoalsAssignment_1_0_4_1.eContents().get(0);
+		private final Keyword cPhaseKeyword_1_0_1_1 = (Keyword)cGroup_1_0_1.eContents().get(1);
+		private final Assignment cPhaseAssignment_1_0_1_2 = (Assignment)cGroup_1_0_1.eContents().get(2);
+		private final RuleCall cPhasePhaseEnumRuleCall_1_0_1_2_0 = (RuleCall)cPhaseAssignment_1_0_1_2.eContents().get(0);
+		private final Keyword cWithKeyword_1_0_2 = (Keyword)cGroup_1_0.eContents().get(2);
+		private final Keyword cGoalsKeyword_1_0_3 = (Keyword)cGroup_1_0.eContents().get(3);
+		private final Assignment cGoalsAssignment_1_0_4 = (Assignment)cGroup_1_0.eContents().get(4);
+		private final RuleCall cGoalsIDAndSpecialCharactersParserRuleCall_1_0_4_0 = (RuleCall)cGoalsAssignment_1_0_4.eContents().get(0);
 		private final Group cGroup_1_0_5 = (Group)cGroup_1_0.eContents().get(5);
-		private final Keyword cLeftCurlyBracketKeyword_1_0_5_0 = (Keyword)cGroup_1_0_5.eContents().get(0);
-		private final Assignment cConfigurationAssignment_1_0_5_1 = (Assignment)cGroup_1_0_5.eContents().get(1);
-		private final RuleCall cConfigurationPluginConfigurationParserRuleCall_1_0_5_1_0 = (RuleCall)cConfigurationAssignment_1_0_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_1_0_5_2 = (Keyword)cGroup_1_0_5.eContents().get(2);
+		private final Keyword cCommaKeyword_1_0_5_0 = (Keyword)cGroup_1_0_5.eContents().get(0);
+		private final Assignment cGoalsAssignment_1_0_5_1 = (Assignment)cGroup_1_0_5.eContents().get(1);
+		private final RuleCall cGoalsIDAndDashParserRuleCall_1_0_5_1_0 = (RuleCall)cGoalsAssignment_1_0_5_1.eContents().get(0);
+		private final Group cGroup_1_0_6 = (Group)cGroup_1_0.eContents().get(6);
+		private final Keyword cLeftCurlyBracketKeyword_1_0_6_0 = (Keyword)cGroup_1_0_6.eContents().get(0);
+		private final Assignment cConfigurationAssignment_1_0_6_1 = (Assignment)cGroup_1_0_6.eContents().get(1);
+		private final RuleCall cConfigurationPluginConfigurationParserRuleCall_1_0_6_1_0 = (RuleCall)cConfigurationAssignment_1_0_6_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_0_6_2 = (Keyword)cGroup_1_0_6.eContents().get(2);
 		private final Assignment cDefaultAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
 		private final Keyword cDefaultDefaultKeyword_1_1_0 = (Keyword)cDefaultAssignment_1_1.eContents().get(0);
 		
 		//PluginExecution:
-		//	"exec" (id=IDAndDash? ("in" phase=Phase)? "with goals" goals+=IDAndSpecialCharacters ("," goals+=IDAndDash)* ("{"
-		//	configuration=PluginConfiguration "}")? | default?="default");
+		//	"exec" (id=IDAndDash? ("in" "phase" phase=Phase)? "with" "goals" goals+=IDAndSpecialCharacters (","
+		//	goals+=IDAndDash)* ("{" configuration=PluginConfiguration "}")? | default?="default");
 		@Override public ParserRule getRule() { return rule; }
 
-		//"exec" (id=IDAndDash? ("in" phase=Phase)? "with goals" goals+=IDAndSpecialCharacters ("," goals+=IDAndDash)* ("{"
-		//configuration=PluginConfiguration "}")? | default?="default")
+		//"exec" (id=IDAndDash? ("in" "phase" phase=Phase)? "with" "goals" goals+=IDAndSpecialCharacters ("," goals+=IDAndDash)*
+		//("{" configuration=PluginConfiguration "}")? | default?="default")
 		public Group getGroup() { return cGroup; }
 
 		//"exec"
 		public Keyword getExecKeyword_0() { return cExecKeyword_0; }
 
-		//id=IDAndDash? ("in" phase=Phase)? "with goals" goals+=IDAndSpecialCharacters ("," goals+=IDAndDash)* ("{"
+		//id=IDAndDash? ("in" "phase" phase=Phase)? "with" "goals" goals+=IDAndSpecialCharacters ("," goals+=IDAndDash)* ("{"
 		//configuration=PluginConfiguration "}")? | default?="default"
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
-		//id=IDAndDash? ("in" phase=Phase)? "with goals" goals+=IDAndSpecialCharacters ("," goals+=IDAndDash)* ("{"
+		//id=IDAndDash? ("in" "phase" phase=Phase)? "with" "goals" goals+=IDAndSpecialCharacters ("," goals+=IDAndDash)* ("{"
 		//configuration=PluginConfiguration "}")?
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
@@ -1451,53 +1462,59 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		//IDAndDash
 		public RuleCall getIdIDAndDashParserRuleCall_1_0_0_0() { return cIdIDAndDashParserRuleCall_1_0_0_0; }
 
-		//("in" phase=Phase)?
+		//("in" "phase" phase=Phase)?
 		public Group getGroup_1_0_1() { return cGroup_1_0_1; }
 
 		//"in"
 		public Keyword getInKeyword_1_0_1_0() { return cInKeyword_1_0_1_0; }
 
+		//"phase"
+		public Keyword getPhaseKeyword_1_0_1_1() { return cPhaseKeyword_1_0_1_1; }
+
 		//phase=Phase
-		public Assignment getPhaseAssignment_1_0_1_1() { return cPhaseAssignment_1_0_1_1; }
+		public Assignment getPhaseAssignment_1_0_1_2() { return cPhaseAssignment_1_0_1_2; }
 
 		//Phase
-		public RuleCall getPhasePhaseEnumRuleCall_1_0_1_1_0() { return cPhasePhaseEnumRuleCall_1_0_1_1_0; }
+		public RuleCall getPhasePhaseEnumRuleCall_1_0_1_2_0() { return cPhasePhaseEnumRuleCall_1_0_1_2_0; }
 
-		//"with goals"
-		public Keyword getWithGoalsKeyword_1_0_2() { return cWithGoalsKeyword_1_0_2; }
+		//"with"
+		public Keyword getWithKeyword_1_0_2() { return cWithKeyword_1_0_2; }
+
+		//"goals"
+		public Keyword getGoalsKeyword_1_0_3() { return cGoalsKeyword_1_0_3; }
 
 		//goals+=IDAndSpecialCharacters
-		public Assignment getGoalsAssignment_1_0_3() { return cGoalsAssignment_1_0_3; }
+		public Assignment getGoalsAssignment_1_0_4() { return cGoalsAssignment_1_0_4; }
 
 		//IDAndSpecialCharacters
-		public RuleCall getGoalsIDAndSpecialCharactersParserRuleCall_1_0_3_0() { return cGoalsIDAndSpecialCharactersParserRuleCall_1_0_3_0; }
+		public RuleCall getGoalsIDAndSpecialCharactersParserRuleCall_1_0_4_0() { return cGoalsIDAndSpecialCharactersParserRuleCall_1_0_4_0; }
 
 		//("," goals+=IDAndDash)*
-		public Group getGroup_1_0_4() { return cGroup_1_0_4; }
-
-		//","
-		public Keyword getCommaKeyword_1_0_4_0() { return cCommaKeyword_1_0_4_0; }
-
-		//goals+=IDAndDash
-		public Assignment getGoalsAssignment_1_0_4_1() { return cGoalsAssignment_1_0_4_1; }
-
-		//IDAndDash
-		public RuleCall getGoalsIDAndDashParserRuleCall_1_0_4_1_0() { return cGoalsIDAndDashParserRuleCall_1_0_4_1_0; }
-
-		//("{" configuration=PluginConfiguration "}")?
 		public Group getGroup_1_0_5() { return cGroup_1_0_5; }
 
+		//","
+		public Keyword getCommaKeyword_1_0_5_0() { return cCommaKeyword_1_0_5_0; }
+
+		//goals+=IDAndDash
+		public Assignment getGoalsAssignment_1_0_5_1() { return cGoalsAssignment_1_0_5_1; }
+
+		//IDAndDash
+		public RuleCall getGoalsIDAndDashParserRuleCall_1_0_5_1_0() { return cGoalsIDAndDashParserRuleCall_1_0_5_1_0; }
+
+		//("{" configuration=PluginConfiguration "}")?
+		public Group getGroup_1_0_6() { return cGroup_1_0_6; }
+
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1_0_5_0() { return cLeftCurlyBracketKeyword_1_0_5_0; }
+		public Keyword getLeftCurlyBracketKeyword_1_0_6_0() { return cLeftCurlyBracketKeyword_1_0_6_0; }
 
 		//configuration=PluginConfiguration
-		public Assignment getConfigurationAssignment_1_0_5_1() { return cConfigurationAssignment_1_0_5_1; }
+		public Assignment getConfigurationAssignment_1_0_6_1() { return cConfigurationAssignment_1_0_6_1; }
 
 		//PluginConfiguration
-		public RuleCall getConfigurationPluginConfigurationParserRuleCall_1_0_5_1_0() { return cConfigurationPluginConfigurationParserRuleCall_1_0_5_1_0; }
+		public RuleCall getConfigurationPluginConfigurationParserRuleCall_1_0_6_1_0() { return cConfigurationPluginConfigurationParserRuleCall_1_0_6_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_1_0_5_2() { return cRightCurlyBracketKeyword_1_0_5_2; }
+		public Keyword getRightCurlyBracketKeyword_1_0_6_2() { return cRightCurlyBracketKeyword_1_0_6_2; }
 
 		//default?="default"
 		public Assignment getDefaultAssignment_1_1() { return cDefaultAssignment_1_1; }
@@ -1750,6 +1767,224 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+	}
+
+	public class RepositoryElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Repository");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final Keyword cRepositoryKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
+		private final Assignment cPluginRepositroyAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final Keyword cPluginRepositroyPluginRepositoryKeyword_0_1_0 = (Keyword)cPluginRepositroyAssignment_0_1.eContents().get(0);
+		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cIdIDAndSpecialCharactersParserRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
+		private final Keyword cAtKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cUrlAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cUrlSTRINGTerminalRuleCall_3_0 = (RuleCall)cUrlAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cLeftCurlyBracketKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_4_1 = (UnorderedGroup)cGroup_4.eContents().get(1);
+		private final Group cGroup_4_1_0 = (Group)cUnorderedGroup_4_1.eContents().get(0);
+		private final Keyword cNameKeyword_4_1_0_0 = (Keyword)cGroup_4_1_0.eContents().get(0);
+		private final Assignment cNameAssignment_4_1_0_1 = (Assignment)cGroup_4_1_0.eContents().get(1);
+		private final RuleCall cNameSTRINGTerminalRuleCall_4_1_0_1_0 = (RuleCall)cNameAssignment_4_1_0_1.eContents().get(0);
+		private final Group cGroup_4_1_1 = (Group)cUnorderedGroup_4_1.eContents().get(1);
+		private final Keyword cLayoutKeyword_4_1_1_0 = (Keyword)cGroup_4_1_1.eContents().get(0);
+		private final Assignment cLayoutAssignment_4_1_1_1 = (Assignment)cGroup_4_1_1.eContents().get(1);
+		private final RuleCall cLayoutSTRINGTerminalRuleCall_4_1_1_1_0 = (RuleCall)cLayoutAssignment_4_1_1_1.eContents().get(0);
+		private final Assignment cPoliciesAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cPoliciesRepositoryPolicyParserRuleCall_4_2_0 = (RuleCall)cPoliciesAssignment_4_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
+		
+		//Repository:
+		//	("repository" | pluginRepositroy?="plugin-repository") id=IDAndSpecialCharacters "at" url=STRING ("{" (("name"
+		//	name=STRING)? & ("layout" layout=STRING)?) policies+=RepositoryPolicy+ "}")?;
+		@Override public ParserRule getRule() { return rule; }
+
+		//("repository" | pluginRepositroy?="plugin-repository") id=IDAndSpecialCharacters "at" url=STRING ("{" (("name"
+		//name=STRING)? & ("layout" layout=STRING)?) policies+=RepositoryPolicy+ "}")?
+		public Group getGroup() { return cGroup; }
+
+		//"repository" | pluginRepositroy?="plugin-repository"
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+
+		//"repository"
+		public Keyword getRepositoryKeyword_0_0() { return cRepositoryKeyword_0_0; }
+
+		//pluginRepositroy?="plugin-repository"
+		public Assignment getPluginRepositroyAssignment_0_1() { return cPluginRepositroyAssignment_0_1; }
+
+		//"plugin-repository"
+		public Keyword getPluginRepositroyPluginRepositoryKeyword_0_1_0() { return cPluginRepositroyPluginRepositoryKeyword_0_1_0; }
+
+		//id=IDAndSpecialCharacters
+		public Assignment getIdAssignment_1() { return cIdAssignment_1; }
+
+		//IDAndSpecialCharacters
+		public RuleCall getIdIDAndSpecialCharactersParserRuleCall_1_0() { return cIdIDAndSpecialCharactersParserRuleCall_1_0; }
+
+		//"at"
+		public Keyword getAtKeyword_2() { return cAtKeyword_2; }
+
+		//url=STRING
+		public Assignment getUrlAssignment_3() { return cUrlAssignment_3; }
+
+		//STRING
+		public RuleCall getUrlSTRINGTerminalRuleCall_3_0() { return cUrlSTRINGTerminalRuleCall_3_0; }
+
+		//("{" (("name" name=STRING)? & ("layout" layout=STRING)?) policies+=RepositoryPolicy+ "}")?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_4_0() { return cLeftCurlyBracketKeyword_4_0; }
+
+		//("name" name=STRING)? & ("layout" layout=STRING)?
+		public UnorderedGroup getUnorderedGroup_4_1() { return cUnorderedGroup_4_1; }
+
+		//("name" name=STRING)?
+		public Group getGroup_4_1_0() { return cGroup_4_1_0; }
+
+		//"name"
+		public Keyword getNameKeyword_4_1_0_0() { return cNameKeyword_4_1_0_0; }
+
+		//name=STRING
+		public Assignment getNameAssignment_4_1_0_1() { return cNameAssignment_4_1_0_1; }
+
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_4_1_0_1_0() { return cNameSTRINGTerminalRuleCall_4_1_0_1_0; }
+
+		//("layout" layout=STRING)?
+		public Group getGroup_4_1_1() { return cGroup_4_1_1; }
+
+		//"layout"
+		public Keyword getLayoutKeyword_4_1_1_0() { return cLayoutKeyword_4_1_1_0; }
+
+		//layout=STRING
+		public Assignment getLayoutAssignment_4_1_1_1() { return cLayoutAssignment_4_1_1_1; }
+
+		//STRING
+		public RuleCall getLayoutSTRINGTerminalRuleCall_4_1_1_1_0() { return cLayoutSTRINGTerminalRuleCall_4_1_1_1_0; }
+
+		//policies+=RepositoryPolicy+
+		public Assignment getPoliciesAssignment_4_2() { return cPoliciesAssignment_4_2; }
+
+		//RepositoryPolicy
+		public RuleCall getPoliciesRepositoryPolicyParserRuleCall_4_2_0() { return cPoliciesRepositoryPolicyParserRuleCall_4_2_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4_3() { return cRightCurlyBracketKeyword_4_3; }
+	}
+
+	public class RepositoryPolicyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RepositoryPolicy");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cDisabledAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cDisabledDoNotKeyword_0_0 = (Keyword)cDisabledAssignment_0.eContents().get(0);
+		private final Keyword cFetchKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Assignment cReleasesAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final Keyword cReleasesReleasesKeyword_2_0_0 = (Keyword)cReleasesAssignment_2_0.eContents().get(0);
+		private final Assignment cSnapshotsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final Keyword cSnapshotsSnapshotsKeyword_2_1_0 = (Keyword)cSnapshotsAssignment_2_1.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cUpdateKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cUpdatePolicyAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cUpdatePolicyRepositoryUpdatePolicyEnumRuleCall_3_2_0 = (RuleCall)cUpdatePolicyAssignment_3_2.eContents().get(0);
+		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
+		private final Keyword cWithKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
+		private final Keyword cIntervalKeyword_3_3_1 = (Keyword)cGroup_3_3.eContents().get(1);
+		private final Keyword cEqualsSignKeyword_3_3_2 = (Keyword)cGroup_3_3.eContents().get(2);
+		private final Assignment cUpdateIntervalAssignment_3_3_3 = (Assignment)cGroup_3_3.eContents().get(3);
+		private final RuleCall cUpdateIntervalINTTerminalRuleCall_3_3_3_0 = (RuleCall)cUpdateIntervalAssignment_3_3_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cChecksumPolicyKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cChecksumPolicyAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cChecksumPolicyChecksumPolicyEnumRuleCall_4_2_0 = (RuleCall)cChecksumPolicyAssignment_4_2.eContents().get(0);
+		
+		//RepositoryPolicy:
+		//	disabled?="do not"? "fetch" (releases?="releases" | snapshots?="snapshots") ("," "update"
+		//	updatePolicy=RepositoryUpdatePolicy ("with" "interval" "=" updateInterval=INT)?)? ("," "checksumPolicy"
+		//	checksumPolicy=ChecksumPolicy)?;
+		@Override public ParserRule getRule() { return rule; }
+
+		//disabled?="do not"? "fetch" (releases?="releases" | snapshots?="snapshots") ("," "update"
+		//updatePolicy=RepositoryUpdatePolicy ("with" "interval" "=" updateInterval=INT)?)? ("," "checksumPolicy"
+		//checksumPolicy=ChecksumPolicy)?
+		public Group getGroup() { return cGroup; }
+
+		//disabled?="do not"?
+		public Assignment getDisabledAssignment_0() { return cDisabledAssignment_0; }
+
+		//"do not"
+		public Keyword getDisabledDoNotKeyword_0_0() { return cDisabledDoNotKeyword_0_0; }
+
+		//"fetch"
+		public Keyword getFetchKeyword_1() { return cFetchKeyword_1; }
+
+		//releases?="releases" | snapshots?="snapshots"
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+
+		//releases?="releases"
+		public Assignment getReleasesAssignment_2_0() { return cReleasesAssignment_2_0; }
+
+		//"releases"
+		public Keyword getReleasesReleasesKeyword_2_0_0() { return cReleasesReleasesKeyword_2_0_0; }
+
+		//snapshots?="snapshots"
+		public Assignment getSnapshotsAssignment_2_1() { return cSnapshotsAssignment_2_1; }
+
+		//"snapshots"
+		public Keyword getSnapshotsSnapshotsKeyword_2_1_0() { return cSnapshotsSnapshotsKeyword_2_1_0; }
+
+		//("," "update" updatePolicy=RepositoryUpdatePolicy ("with" "interval" "=" updateInterval=INT)?)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//","
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+
+		//"update"
+		public Keyword getUpdateKeyword_3_1() { return cUpdateKeyword_3_1; }
+
+		//updatePolicy=RepositoryUpdatePolicy
+		public Assignment getUpdatePolicyAssignment_3_2() { return cUpdatePolicyAssignment_3_2; }
+
+		//RepositoryUpdatePolicy
+		public RuleCall getUpdatePolicyRepositoryUpdatePolicyEnumRuleCall_3_2_0() { return cUpdatePolicyRepositoryUpdatePolicyEnumRuleCall_3_2_0; }
+
+		//("with" "interval" "=" updateInterval=INT)?
+		public Group getGroup_3_3() { return cGroup_3_3; }
+
+		//"with"
+		public Keyword getWithKeyword_3_3_0() { return cWithKeyword_3_3_0; }
+
+		//"interval"
+		public Keyword getIntervalKeyword_3_3_1() { return cIntervalKeyword_3_3_1; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_3_3_2() { return cEqualsSignKeyword_3_3_2; }
+
+		//updateInterval=INT
+		public Assignment getUpdateIntervalAssignment_3_3_3() { return cUpdateIntervalAssignment_3_3_3; }
+
+		//INT
+		public RuleCall getUpdateIntervalINTTerminalRuleCall_3_3_3_0() { return cUpdateIntervalINTTerminalRuleCall_3_3_3_0; }
+
+		//("," "checksumPolicy" checksumPolicy=ChecksumPolicy)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//","
+		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
+
+		//"checksumPolicy"
+		public Keyword getChecksumPolicyKeyword_4_1() { return cChecksumPolicyKeyword_4_1; }
+
+		//checksumPolicy=ChecksumPolicy
+		public Assignment getChecksumPolicyAssignment_4_2() { return cChecksumPolicyAssignment_4_2; }
+
+		//ChecksumPolicy
+		public RuleCall getChecksumPolicyChecksumPolicyEnumRuleCall_4_2_0() { return cChecksumPolicyChecksumPolicyEnumRuleCall_4_2_0; }
 	}
 	
 	
@@ -2090,6 +2325,86 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		//"site-deploy"
 		public Keyword getSITE_DEPLOYSiteDeployKeyword_30_0() { return cSITE_DEPLOYSiteDeployKeyword_30_0; }
 	}
+
+	public class RepositoryUpdatePolicyElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "RepositoryUpdatePolicy");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cDAILYEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cDAILYDailyKeyword_0_0 = (Keyword)cDAILYEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cALWAYSEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cALWAYSAlwaysKeyword_1_0 = (Keyword)cALWAYSEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cNEVEREnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cNEVERNeverKeyword_2_0 = (Keyword)cNEVEREnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cINTERVALEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cINTERVALIntervalKeyword_3_0 = (Keyword)cINTERVALEnumLiteralDeclaration_3.eContents().get(0);
+		
+		//enum RepositoryUpdatePolicy:
+		//	DAILY="daily" | ALWAYS="always" | NEVER="never" | INTERVAL="interval";
+		public EnumRule getRule() { return rule; }
+
+		//DAILY="daily" | ALWAYS="always" | NEVER="never" | INTERVAL="interval"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//DAILY="daily"
+		public EnumLiteralDeclaration getDAILYEnumLiteralDeclaration_0() { return cDAILYEnumLiteralDeclaration_0; }
+
+		//"daily"
+		public Keyword getDAILYDailyKeyword_0_0() { return cDAILYDailyKeyword_0_0; }
+
+		//ALWAYS="always"
+		public EnumLiteralDeclaration getALWAYSEnumLiteralDeclaration_1() { return cALWAYSEnumLiteralDeclaration_1; }
+
+		//"always"
+		public Keyword getALWAYSAlwaysKeyword_1_0() { return cALWAYSAlwaysKeyword_1_0; }
+
+		//NEVER="never"
+		public EnumLiteralDeclaration getNEVEREnumLiteralDeclaration_2() { return cNEVEREnumLiteralDeclaration_2; }
+
+		//"never"
+		public Keyword getNEVERNeverKeyword_2_0() { return cNEVERNeverKeyword_2_0; }
+
+		//INTERVAL="interval"
+		public EnumLiteralDeclaration getINTERVALEnumLiteralDeclaration_3() { return cINTERVALEnumLiteralDeclaration_3; }
+
+		//"interval"
+		public Keyword getINTERVALIntervalKeyword_3_0() { return cINTERVALIntervalKeyword_3_0; }
+	}
+
+	public class ChecksumPolicyElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ChecksumPolicy");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cIGNOREEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cIGNOREIgnoreKeyword_0_0 = (Keyword)cIGNOREEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cWARNEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cWARNWarnKeyword_1_0 = (Keyword)cWARNEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cFAILEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cFAILFailKeyword_2_0 = (Keyword)cFAILEnumLiteralDeclaration_2.eContents().get(0);
+		
+		//enum ChecksumPolicy:
+		//	IGNORE="ignore" | WARN="warn" | FAIL="fail";
+		public EnumRule getRule() { return rule; }
+
+		//IGNORE="ignore" | WARN="warn" | FAIL="fail"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//IGNORE="ignore"
+		public EnumLiteralDeclaration getIGNOREEnumLiteralDeclaration_0() { return cIGNOREEnumLiteralDeclaration_0; }
+
+		//"ignore"
+		public Keyword getIGNOREIgnoreKeyword_0_0() { return cIGNOREIgnoreKeyword_0_0; }
+
+		//WARN="warn"
+		public EnumLiteralDeclaration getWARNEnumLiteralDeclaration_1() { return cWARNEnumLiteralDeclaration_1; }
+
+		//"warn"
+		public Keyword getWARNWarnKeyword_1_0() { return cWARNWarnKeyword_1_0; }
+
+		//FAIL="fail"
+		public EnumLiteralDeclaration getFAILEnumLiteralDeclaration_2() { return cFAILEnumLiteralDeclaration_2; }
+
+		//"fail"
+		public Keyword getFAILFailKeyword_2_0() { return cFAILFailKeyword_2_0; }
+	}
 	
 	private final POMElements pPOM;
 	private final ParentRefElements pParentRef;
@@ -2130,9 +2445,13 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	private final CoordinatesElements pCoordinates;
 	private final ExtendedCoordinatesElements pExtendedCoordinates;
 	private final POMImportElements pPOMImport;
+	private final RepositoryElements pRepository;
+	private final RepositoryPolicyElements pRepositoryPolicy;
 	private final TerminalRule tID;
 	private final DependencyScopeElements unknownRuleDependencyScope;
 	private final PhaseElements unknownRulePhase;
+	private final RepositoryUpdatePolicyElements unknownRuleRepositoryUpdatePolicy;
+	private final ChecksumPolicyElements unknownRuleChecksumPolicy;
 	
 	private final Grammar grammar;
 
@@ -2182,9 +2501,13 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		this.pCoordinates = new CoordinatesElements();
 		this.pExtendedCoordinates = new ExtendedCoordinatesElements();
 		this.pPOMImport = new POMImportElements();
+		this.pRepository = new RepositoryElements();
+		this.pRepositoryPolicy = new RepositoryPolicyElements();
 		this.tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ID");
 		this.unknownRuleDependencyScope = new DependencyScopeElements();
 		this.unknownRulePhase = new PhaseElements();
+		this.unknownRuleRepositoryUpdatePolicy = new RepositoryUpdatePolicyElements();
+		this.unknownRuleChecksumPolicy = new ChecksumPolicyElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -2216,8 +2539,8 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//POM:
 	//	imports+=POMImport* parent=ParentRef? artifactDefinition=ArtifactDefinition modules=Modules?
-	//	(propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM?)
-	//	buildSteps+=BuildStep*;
+	//	(propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM? &
+	//	repositories+=Repository*) buildSteps+=BuildStep*;
 	public POMElements getPOMAccess() {
 		return pPOM;
 	}
@@ -2559,8 +2882,8 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//PluginExecution:
-	//	"exec" (id=IDAndDash? ("in" phase=Phase)? "with goals" goals+=IDAndSpecialCharacters ("," goals+=IDAndDash)* ("{"
-	//	configuration=PluginConfiguration "}")? | default?="default");
+	//	"exec" (id=IDAndDash? ("in" "phase" phase=Phase)? "with" "goals" goals+=IDAndSpecialCharacters (","
+	//	goals+=IDAndDash)* ("{" configuration=PluginConfiguration "}")? | default?="default");
 	public PluginExecutionElements getPluginExecutionAccess() {
 		return pPluginExecution;
 	}
@@ -2620,6 +2943,29 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		return getPOMImportAccess().getRule();
 	}
 
+	//Repository:
+	//	("repository" | pluginRepositroy?="plugin-repository") id=IDAndSpecialCharacters "at" url=STRING ("{" (("name"
+	//	name=STRING)? & ("layout" layout=STRING)?) policies+=RepositoryPolicy+ "}")?;
+	public RepositoryElements getRepositoryAccess() {
+		return pRepository;
+	}
+	
+	public ParserRule getRepositoryRule() {
+		return getRepositoryAccess().getRule();
+	}
+
+	//RepositoryPolicy:
+	//	disabled?="do not"? "fetch" (releases?="releases" | snapshots?="snapshots") ("," "update"
+	//	updatePolicy=RepositoryUpdatePolicy ("with" "interval" "=" updateInterval=INT)?)? ("," "checksumPolicy"
+	//	checksumPolicy=ChecksumPolicy)?;
+	public RepositoryPolicyElements getRepositoryPolicyAccess() {
+		return pRepositoryPolicy;
+	}
+	
+	public ParserRule getRepositoryPolicyRule() {
+		return getRepositoryPolicyAccess().getRule();
+	}
+
 	//terminal ID:
 	//	("a".."z" | "A".."Z") ("a".."z" | "A".."Z")*;
 	public TerminalRule getIDRule() {
@@ -2653,6 +2999,26 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getPhaseRule() {
 		return getPhaseAccess().getRule();
+	}
+
+	//enum RepositoryUpdatePolicy:
+	//	DAILY="daily" | ALWAYS="always" | NEVER="never" | INTERVAL="interval";
+	public RepositoryUpdatePolicyElements getRepositoryUpdatePolicyAccess() {
+		return unknownRuleRepositoryUpdatePolicy;
+	}
+	
+	public EnumRule getRepositoryUpdatePolicyRule() {
+		return getRepositoryUpdatePolicyAccess().getRule();
+	}
+
+	//enum ChecksumPolicy:
+	//	IGNORE="ignore" | WARN="warn" | FAIL="fail";
+	public ChecksumPolicyElements getChecksumPolicyAccess() {
+		return unknownRuleChecksumPolicy;
+	}
+	
+	public EnumRule getChecksumPolicyRule() {
+		return getChecksumPolicyAccess().getRule();
 	}
 
 	//terminal INT returns ecore::EInt:

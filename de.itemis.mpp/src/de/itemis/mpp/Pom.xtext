@@ -10,7 +10,8 @@ POM:
   (propertyInclusions+=PropertyInclusion* &
   properties+=Property* &
   dependencies=Dependencies? &
-  scm=SCM?)
+  scm=SCM? &
+  repositories+=Repository*)
   buildSteps+=BuildStep*
 ;
 
@@ -171,7 +172,7 @@ PluginConfigurationParameterPropertyEntry:
 
 PluginExecution:
   'exec' 
-  (id=IDAndDash? ('in' phase=Phase)? 'with goals' goals+=IDAndSpecialCharacters (',' goals+=IDAndDash)* ('{' configuration=PluginConfiguration '}')?
+  (id=IDAndDash? ('in' 'phase' phase=Phase)? 'with' 'goals' goals+=IDAndSpecialCharacters (',' goals+=IDAndDash)* ('{' configuration=PluginConfiguration '}')?
   | default?='default')
 ;
 
@@ -195,6 +196,20 @@ POMImport:
   'import' coordinates=Coordinates 'as' name=ID
 ;
 
+Repository:
+  ('repository' | pluginRepositroy?='plugin-repository') id=IDAndSpecialCharacters 'at' url=STRING
+  ('{'
+    (('name' name=STRING)? &
+    ('layout' layout=STRING)?) 
+    policies+=RepositoryPolicy+
+   '}'
+  )?
+;
+
+RepositoryPolicy:
+  (disabled?='do not')? 'fetch' (releases?='releases' | snapshots?='snapshots') (',' 'update' updatePolicy=RepositoryUpdatePolicy ('with' 'interval' '=' updateInterval=INT)?)? (',' 'checksumPolicy' checksumPolicy=ChecksumPolicy)?
+;
+
 terminal ID:
   ('a'..'z' | 'A'..'Z') ('a'..'z' | 'A'..'Z')*
 ;
@@ -214,4 +229,12 @@ enum Phase:
   PRE_INTEGRATION_TEST='pre-integration-test' | INTEGRATION_TEST='integration-test' |
   POST_INTEGRATION_TEST='post-integration-test' | VERIFY='verify' | INSTALL='install' | DEPLOY='deploy' |
   PRE_SITE='pre-site' | SITE='site' | POST_SITE='post-site' | SITE_DEPLOY='site-deploy'
+;
+
+enum RepositoryUpdatePolicy:
+  DAILY='daily' | ALWAYS='always' | NEVER='never' | INTERVAL='interval'
+;
+
+enum ChecksumPolicy:
+  IGNORE='ignore' | WARN='warn' | FAIL='fail'
 ;

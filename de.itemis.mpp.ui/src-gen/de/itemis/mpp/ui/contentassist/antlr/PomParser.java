@@ -49,8 +49,12 @@ public class PomParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPluginExecutionAccess().getAlternatives_1(), "rule__PluginExecution__Alternatives_1");
 					put(grammarAccess.getPluginInclusionAccess().getAlternatives_4_1(), "rule__PluginInclusion__Alternatives_4_1");
 					put(grammarAccess.getBuildStepAccess().getAlternatives(), "rule__BuildStep__Alternatives");
+					put(grammarAccess.getRepositoryAccess().getAlternatives_0(), "rule__Repository__Alternatives_0");
+					put(grammarAccess.getRepositoryPolicyAccess().getAlternatives_2(), "rule__RepositoryPolicy__Alternatives_2");
 					put(grammarAccess.getDependencyScopeAccess().getAlternatives(), "rule__DependencyScope__Alternatives");
 					put(grammarAccess.getPhaseAccess().getAlternatives(), "rule__Phase__Alternatives");
+					put(grammarAccess.getRepositoryUpdatePolicyAccess().getAlternatives(), "rule__RepositoryUpdatePolicy__Alternatives");
+					put(grammarAccess.getChecksumPolicyAccess().getAlternatives(), "rule__ChecksumPolicy__Alternatives");
 					put(grammarAccess.getPOMAccess().getGroup(), "rule__POM__Group__0");
 					put(grammarAccess.getParentRefAccess().getGroup(), "rule__ParentRef__Group__0");
 					put(grammarAccess.getModulesAccess().getGroup(), "rule__Modules__Group__0");
@@ -102,8 +106,8 @@ public class PomParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPluginExecutionAccess().getGroup(), "rule__PluginExecution__Group__0");
 					put(grammarAccess.getPluginExecutionAccess().getGroup_1_0(), "rule__PluginExecution__Group_1_0__0");
 					put(grammarAccess.getPluginExecutionAccess().getGroup_1_0_1(), "rule__PluginExecution__Group_1_0_1__0");
-					put(grammarAccess.getPluginExecutionAccess().getGroup_1_0_4(), "rule__PluginExecution__Group_1_0_4__0");
 					put(grammarAccess.getPluginExecutionAccess().getGroup_1_0_5(), "rule__PluginExecution__Group_1_0_5__0");
+					put(grammarAccess.getPluginExecutionAccess().getGroup_1_0_6(), "rule__PluginExecution__Group_1_0_6__0");
 					put(grammarAccess.getPluginInclusionAccess().getGroup(), "rule__PluginInclusion__Group__0");
 					put(grammarAccess.getPluginInclusionAccess().getGroup_4(), "rule__PluginInclusion__Group_4__0");
 					put(grammarAccess.getCoordinatesAccess().getGroup(), "rule__Coordinates__Group__0");
@@ -111,6 +115,14 @@ public class PomParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExtendedCoordinatesAccess().getGroup_5(), "rule__ExtendedCoordinates__Group_5__0");
 					put(grammarAccess.getExtendedCoordinatesAccess().getGroup_5_2(), "rule__ExtendedCoordinates__Group_5_2__0");
 					put(grammarAccess.getPOMImportAccess().getGroup(), "rule__POMImport__Group__0");
+					put(grammarAccess.getRepositoryAccess().getGroup(), "rule__Repository__Group__0");
+					put(grammarAccess.getRepositoryAccess().getGroup_4(), "rule__Repository__Group_4__0");
+					put(grammarAccess.getRepositoryAccess().getGroup_4_1_0(), "rule__Repository__Group_4_1_0__0");
+					put(grammarAccess.getRepositoryAccess().getGroup_4_1_1(), "rule__Repository__Group_4_1_1__0");
+					put(grammarAccess.getRepositoryPolicyAccess().getGroup(), "rule__RepositoryPolicy__Group__0");
+					put(grammarAccess.getRepositoryPolicyAccess().getGroup_3(), "rule__RepositoryPolicy__Group_3__0");
+					put(grammarAccess.getRepositoryPolicyAccess().getGroup_3_3(), "rule__RepositoryPolicy__Group_3_3__0");
+					put(grammarAccess.getRepositoryPolicyAccess().getGroup_4(), "rule__RepositoryPolicy__Group_4__0");
 					put(grammarAccess.getPOMAccess().getImportsAssignment_0(), "rule__POM__ImportsAssignment_0");
 					put(grammarAccess.getPOMAccess().getParentAssignment_1(), "rule__POM__ParentAssignment_1");
 					put(grammarAccess.getPOMAccess().getArtifactDefinitionAssignment_2(), "rule__POM__ArtifactDefinitionAssignment_2");
@@ -119,6 +131,7 @@ public class PomParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPOMAccess().getPropertiesAssignment_4_1(), "rule__POM__PropertiesAssignment_4_1");
 					put(grammarAccess.getPOMAccess().getDependenciesAssignment_4_2(), "rule__POM__DependenciesAssignment_4_2");
 					put(grammarAccess.getPOMAccess().getScmAssignment_4_3(), "rule__POM__ScmAssignment_4_3");
+					put(grammarAccess.getPOMAccess().getRepositoriesAssignment_4_4(), "rule__POM__RepositoriesAssignment_4_4");
 					put(grammarAccess.getPOMAccess().getBuildStepsAssignment_5(), "rule__POM__BuildStepsAssignment_5");
 					put(grammarAccess.getParentRefAccess().getCoordinatesAssignment_1(), "rule__ParentRef__CoordinatesAssignment_1");
 					put(grammarAccess.getParentRefAccess().getRelativePathAssignment_2(), "rule__ParentRef__RelativePathAssignment_2");
@@ -172,10 +185,10 @@ public class PomParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPluginConfigurationParameterPropertyEntryAccess().getKeyAssignment_0(), "rule__PluginConfigurationParameterPropertyEntry__KeyAssignment_0");
 					put(grammarAccess.getPluginConfigurationParameterPropertyEntryAccess().getValueAssignment_2(), "rule__PluginConfigurationParameterPropertyEntry__ValueAssignment_2");
 					put(grammarAccess.getPluginExecutionAccess().getIdAssignment_1_0_0(), "rule__PluginExecution__IdAssignment_1_0_0");
-					put(grammarAccess.getPluginExecutionAccess().getPhaseAssignment_1_0_1_1(), "rule__PluginExecution__PhaseAssignment_1_0_1_1");
-					put(grammarAccess.getPluginExecutionAccess().getGoalsAssignment_1_0_3(), "rule__PluginExecution__GoalsAssignment_1_0_3");
-					put(grammarAccess.getPluginExecutionAccess().getGoalsAssignment_1_0_4_1(), "rule__PluginExecution__GoalsAssignment_1_0_4_1");
-					put(grammarAccess.getPluginExecutionAccess().getConfigurationAssignment_1_0_5_1(), "rule__PluginExecution__ConfigurationAssignment_1_0_5_1");
+					put(grammarAccess.getPluginExecutionAccess().getPhaseAssignment_1_0_1_2(), "rule__PluginExecution__PhaseAssignment_1_0_1_2");
+					put(grammarAccess.getPluginExecutionAccess().getGoalsAssignment_1_0_4(), "rule__PluginExecution__GoalsAssignment_1_0_4");
+					put(grammarAccess.getPluginExecutionAccess().getGoalsAssignment_1_0_5_1(), "rule__PluginExecution__GoalsAssignment_1_0_5_1");
+					put(grammarAccess.getPluginExecutionAccess().getConfigurationAssignment_1_0_6_1(), "rule__PluginExecution__ConfigurationAssignment_1_0_6_1");
 					put(grammarAccess.getPluginExecutionAccess().getDefaultAssignment_1_1(), "rule__PluginExecution__DefaultAssignment_1_1");
 					put(grammarAccess.getPluginInclusionAccess().getPomRefAssignment_1(), "rule__PluginInclusion__PomRefAssignment_1");
 					put(grammarAccess.getPluginInclusionAccess().getPluginCoordinatesAssignment_3(), "rule__PluginInclusion__PluginCoordinatesAssignment_3");
@@ -191,10 +204,23 @@ public class PomParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExtendedCoordinatesAccess().getClassifierAssignment_5_2_1(), "rule__ExtendedCoordinates__ClassifierAssignment_5_2_1");
 					put(grammarAccess.getPOMImportAccess().getCoordinatesAssignment_1(), "rule__POMImport__CoordinatesAssignment_1");
 					put(grammarAccess.getPOMImportAccess().getNameAssignment_3(), "rule__POMImport__NameAssignment_3");
+					put(grammarAccess.getRepositoryAccess().getPluginRepositroyAssignment_0_1(), "rule__Repository__PluginRepositroyAssignment_0_1");
+					put(grammarAccess.getRepositoryAccess().getIdAssignment_1(), "rule__Repository__IdAssignment_1");
+					put(grammarAccess.getRepositoryAccess().getUrlAssignment_3(), "rule__Repository__UrlAssignment_3");
+					put(grammarAccess.getRepositoryAccess().getNameAssignment_4_1_0_1(), "rule__Repository__NameAssignment_4_1_0_1");
+					put(grammarAccess.getRepositoryAccess().getLayoutAssignment_4_1_1_1(), "rule__Repository__LayoutAssignment_4_1_1_1");
+					put(grammarAccess.getRepositoryAccess().getPoliciesAssignment_4_2(), "rule__Repository__PoliciesAssignment_4_2");
+					put(grammarAccess.getRepositoryPolicyAccess().getDisabledAssignment_0(), "rule__RepositoryPolicy__DisabledAssignment_0");
+					put(grammarAccess.getRepositoryPolicyAccess().getReleasesAssignment_2_0(), "rule__RepositoryPolicy__ReleasesAssignment_2_0");
+					put(grammarAccess.getRepositoryPolicyAccess().getSnapshotsAssignment_2_1(), "rule__RepositoryPolicy__SnapshotsAssignment_2_1");
+					put(grammarAccess.getRepositoryPolicyAccess().getUpdatePolicyAssignment_3_2(), "rule__RepositoryPolicy__UpdatePolicyAssignment_3_2");
+					put(grammarAccess.getRepositoryPolicyAccess().getUpdateIntervalAssignment_3_3_3(), "rule__RepositoryPolicy__UpdateIntervalAssignment_3_3_3");
+					put(grammarAccess.getRepositoryPolicyAccess().getChecksumPolicyAssignment_4_2(), "rule__RepositoryPolicy__ChecksumPolicyAssignment_4_2");
 					put(grammarAccess.getPOMAccess().getUnorderedGroup_4(), "rule__POM__UnorderedGroup_4");
 					put(grammarAccess.getArtifactDefinitionAccess().getUnorderedGroup_5(), "rule__ArtifactDefinition__UnorderedGroup_5");
 					put(grammarAccess.getSCMAccess().getUnorderedGroup(), "rule__SCM__UnorderedGroup");
 					put(grammarAccess.getPluginAccess().getUnorderedGroup_3(), "rule__Plugin__UnorderedGroup_3");
+					put(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), "rule__Repository__UnorderedGroup_4_1");
 				}
 			};
 		}

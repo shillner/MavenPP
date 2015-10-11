@@ -4,6 +4,7 @@ package de.itemis.mpp.pom.impl;
 
 import de.itemis.mpp.pom.ArtifactDefinition;
 import de.itemis.mpp.pom.BuildStep;
+import de.itemis.mpp.pom.ChecksumPolicy;
 import de.itemis.mpp.pom.Coordinates;
 import de.itemis.mpp.pom.Dependencies;
 import de.itemis.mpp.pom.Dependency;
@@ -30,6 +31,9 @@ import de.itemis.mpp.pom.PomFactory;
 import de.itemis.mpp.pom.PomPackage;
 import de.itemis.mpp.pom.Property;
 import de.itemis.mpp.pom.PropertyInclusion;
+import de.itemis.mpp.pom.Repository;
+import de.itemis.mpp.pom.RepositoryPolicy;
+import de.itemis.mpp.pom.RepositoryUpdatePolicy;
 import de.itemis.mpp.pom.UngroupedDependency;
 import de.itemis.mpp.pom.Version;
 
@@ -250,6 +254,20 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass repositoryEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass repositoryPolicyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum dependencyScopeEEnum = null;
 
   /**
@@ -258,6 +276,20 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * @generated
    */
   private EEnum phaseEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum repositoryUpdatePolicyEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum checksumPolicyEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -417,9 +449,19 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPOM_BuildSteps()
+  public EReference getPOM_Repositories()
   {
     return (EReference)pomEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPOM_BuildSteps()
+  {
+    return (EReference)pomEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -1347,6 +1389,146 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getRepository()
+  {
+    return repositoryEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepository_PluginRepositroy()
+  {
+    return (EAttribute)repositoryEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepository_Id()
+  {
+    return (EAttribute)repositoryEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepository_Url()
+  {
+    return (EAttribute)repositoryEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepository_Name()
+  {
+    return (EAttribute)repositoryEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepository_Layout()
+  {
+    return (EAttribute)repositoryEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRepository_Policies()
+  {
+    return (EReference)repositoryEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRepositoryPolicy()
+  {
+    return repositoryPolicyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepositoryPolicy_Disabled()
+  {
+    return (EAttribute)repositoryPolicyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepositoryPolicy_Releases()
+  {
+    return (EAttribute)repositoryPolicyEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepositoryPolicy_Snapshots()
+  {
+    return (EAttribute)repositoryPolicyEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepositoryPolicy_UpdatePolicy()
+  {
+    return (EAttribute)repositoryPolicyEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepositoryPolicy_UpdateInterval()
+  {
+    return (EAttribute)repositoryPolicyEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRepositoryPolicy_ChecksumPolicy()
+  {
+    return (EAttribute)repositoryPolicyEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getDependencyScope()
   {
     return dependencyScopeEEnum;
@@ -1360,6 +1542,26 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
   public EEnum getPhase()
   {
     return phaseEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getRepositoryUpdatePolicy()
+  {
+    return repositoryUpdatePolicyEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getChecksumPolicy()
+  {
+    return checksumPolicyEEnum;
   }
 
   /**
@@ -1401,6 +1603,7 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     createEReference(pomEClass, POM__PROPERTIES);
     createEReference(pomEClass, POM__DEPENDENCIES);
     createEReference(pomEClass, POM__SCM);
+    createEReference(pomEClass, POM__REPOSITORIES);
     createEReference(pomEClass, POM__BUILD_STEPS);
 
     parentRefEClass = createEClass(PARENT_REF);
@@ -1522,9 +1725,27 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     createEReference(pomImportEClass, POM_IMPORT__COORDINATES);
     createEAttribute(pomImportEClass, POM_IMPORT__NAME);
 
+    repositoryEClass = createEClass(REPOSITORY);
+    createEAttribute(repositoryEClass, REPOSITORY__PLUGIN_REPOSITROY);
+    createEAttribute(repositoryEClass, REPOSITORY__ID);
+    createEAttribute(repositoryEClass, REPOSITORY__URL);
+    createEAttribute(repositoryEClass, REPOSITORY__NAME);
+    createEAttribute(repositoryEClass, REPOSITORY__LAYOUT);
+    createEReference(repositoryEClass, REPOSITORY__POLICIES);
+
+    repositoryPolicyEClass = createEClass(REPOSITORY_POLICY);
+    createEAttribute(repositoryPolicyEClass, REPOSITORY_POLICY__DISABLED);
+    createEAttribute(repositoryPolicyEClass, REPOSITORY_POLICY__RELEASES);
+    createEAttribute(repositoryPolicyEClass, REPOSITORY_POLICY__SNAPSHOTS);
+    createEAttribute(repositoryPolicyEClass, REPOSITORY_POLICY__UPDATE_POLICY);
+    createEAttribute(repositoryPolicyEClass, REPOSITORY_POLICY__UPDATE_INTERVAL);
+    createEAttribute(repositoryPolicyEClass, REPOSITORY_POLICY__CHECKSUM_POLICY);
+
     // Create enums
     dependencyScopeEEnum = createEEnum(DEPENDENCY_SCOPE);
     phaseEEnum = createEEnum(PHASE);
+    repositoryUpdatePolicyEEnum = createEEnum(REPOSITORY_UPDATE_POLICY);
+    checksumPolicyEEnum = createEEnum(CHECKSUM_POLICY);
   }
 
   /**
@@ -1573,6 +1794,7 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     initEReference(getPOM_Properties(), this.getProperty(), null, "properties", null, 0, -1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPOM_Dependencies(), this.getDependencies(), null, "dependencies", null, 0, 1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPOM_Scm(), this.getSCM(), null, "scm", null, 0, 1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPOM_Repositories(), this.getRepository(), null, "repositories", null, 0, -1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPOM_BuildSteps(), this.getBuildStep(), null, "buildSteps", null, 0, -1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parentRefEClass, ParentRef.class, "ParentRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1694,6 +1916,22 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     initEReference(getPOMImport_Coordinates(), this.getCoordinates(), null, "coordinates", null, 0, 1, POMImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPOMImport_Name(), ecorePackage.getEString(), "name", null, 0, 1, POMImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(repositoryEClass, Repository.class, "Repository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRepository_PluginRepositroy(), ecorePackage.getEBoolean(), "pluginRepositroy", null, 0, 1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRepository_Id(), ecorePackage.getEString(), "id", null, 0, 1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRepository_Url(), ecorePackage.getEString(), "url", null, 0, 1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRepository_Name(), ecorePackage.getEString(), "name", null, 0, 1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRepository_Layout(), ecorePackage.getEString(), "layout", null, 0, 1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRepository_Policies(), this.getRepositoryPolicy(), null, "policies", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(repositoryPolicyEClass, RepositoryPolicy.class, "RepositoryPolicy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRepositoryPolicy_Disabled(), ecorePackage.getEBoolean(), "disabled", null, 0, 1, RepositoryPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRepositoryPolicy_Releases(), ecorePackage.getEBoolean(), "releases", null, 0, 1, RepositoryPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRepositoryPolicy_Snapshots(), ecorePackage.getEBoolean(), "snapshots", null, 0, 1, RepositoryPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRepositoryPolicy_UpdatePolicy(), this.getRepositoryUpdatePolicy(), "updatePolicy", null, 0, 1, RepositoryPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRepositoryPolicy_UpdateInterval(), ecorePackage.getEInt(), "updateInterval", null, 0, 1, RepositoryPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRepositoryPolicy_ChecksumPolicy(), this.getChecksumPolicy(), "checksumPolicy", null, 0, 1, RepositoryPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     // Initialize enums and add enum literals
     initEEnum(dependencyScopeEEnum, DependencyScope.class, "DependencyScope");
     addEEnumLiteral(dependencyScopeEEnum, DependencyScope.COMPILE);
@@ -1735,6 +1973,17 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     addEEnumLiteral(phaseEEnum, Phase.SITE);
     addEEnumLiteral(phaseEEnum, Phase.POST_SITE);
     addEEnumLiteral(phaseEEnum, Phase.SITE_DEPLOY);
+
+    initEEnum(repositoryUpdatePolicyEEnum, RepositoryUpdatePolicy.class, "RepositoryUpdatePolicy");
+    addEEnumLiteral(repositoryUpdatePolicyEEnum, RepositoryUpdatePolicy.DAILY);
+    addEEnumLiteral(repositoryUpdatePolicyEEnum, RepositoryUpdatePolicy.ALWAYS);
+    addEEnumLiteral(repositoryUpdatePolicyEEnum, RepositoryUpdatePolicy.NEVER);
+    addEEnumLiteral(repositoryUpdatePolicyEEnum, RepositoryUpdatePolicy.INTERVAL);
+
+    initEEnum(checksumPolicyEEnum, ChecksumPolicy.class, "ChecksumPolicy");
+    addEEnumLiteral(checksumPolicyEEnum, ChecksumPolicy.IGNORE);
+    addEEnumLiteral(checksumPolicyEEnum, ChecksumPolicy.WARN);
+    addEEnumLiteral(checksumPolicyEEnum, ChecksumPolicy.FAIL);
 
     // Create resource
     createResource(eNS_URI);

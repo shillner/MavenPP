@@ -274,6 +274,20 @@ public class PomSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PomPackage.REPOSITORY:
+      {
+        Repository repository = (Repository)theEObject;
+        T result = caseRepository(repository);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PomPackage.REPOSITORY_POLICY:
+      {
+        RepositoryPolicy repositoryPolicy = (RepositoryPolicy)theEObject;
+        T result = caseRepositoryPolicy(repositoryPolicy);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -722,6 +736,38 @@ public class PomSwitch<T> extends Switch<T>
    * @generated
    */
   public T casePOMImport(POMImport object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Repository</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Repository</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRepository(Repository object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Repository Policy</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Repository Policy</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRepositoryPolicy(RepositoryPolicy object)
   {
     return null;
   }

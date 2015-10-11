@@ -48,6 +48,17 @@
       <genEnumLiterals ecoreEnumLiteral="Pom.ecore#//Phase/POST_SITE"/>
       <genEnumLiterals ecoreEnumLiteral="Pom.ecore#//Phase/SITE_DEPLOY"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Pom.ecore#//RepositoryUpdatePolicy">
+      <genEnumLiterals ecoreEnumLiteral="Pom.ecore#//RepositoryUpdatePolicy/DAILY"/>
+      <genEnumLiterals ecoreEnumLiteral="Pom.ecore#//RepositoryUpdatePolicy/ALWAYS"/>
+      <genEnumLiterals ecoreEnumLiteral="Pom.ecore#//RepositoryUpdatePolicy/NEVER"/>
+      <genEnumLiterals ecoreEnumLiteral="Pom.ecore#//RepositoryUpdatePolicy/INTERVAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Pom.ecore#//ChecksumPolicy">
+      <genEnumLiterals ecoreEnumLiteral="Pom.ecore#//ChecksumPolicy/IGNORE"/>
+      <genEnumLiterals ecoreEnumLiteral="Pom.ecore#//ChecksumPolicy/WARN"/>
+      <genEnumLiterals ecoreEnumLiteral="Pom.ecore#//ChecksumPolicy/FAIL"/>
+    </genEnums>
     <genClasses ecoreClass="Pom.ecore#//POM">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/imports"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/parent"/>
@@ -57,6 +68,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/properties"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/dependencies"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/scm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/repositories"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/buildSteps"/>
     </genClasses>
     <genClasses ecoreClass="Pom.ecore#//ParentRef">
@@ -176,6 +188,22 @@
     <genClasses ecoreClass="Pom.ecore#//POMImport">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POMImport/coordinates"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//POMImport/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Pom.ecore#//Repository">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Repository/pluginRepositroy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Repository/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Repository/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Repository/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Repository/layout"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//Repository/policies"/>
+    </genClasses>
+    <genClasses ecoreClass="Pom.ecore#//RepositoryPolicy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//RepositoryPolicy/disabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//RepositoryPolicy/releases"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//RepositoryPolicy/snapshots"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//RepositoryPolicy/updatePolicy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//RepositoryPolicy/updateInterval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//RepositoryPolicy/checksumPolicy"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

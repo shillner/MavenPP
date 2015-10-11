@@ -17,6 +17,7 @@ import de.itemis.mpp.generator.processors.MppArtifactProcessor;
 import de.itemis.mpp.generator.processors.MppBuildStepProcessor;
 import de.itemis.mpp.generator.processors.MppDependencyProcessor;
 import de.itemis.mpp.generator.processors.MppPropertiesProcessor;
+import de.itemis.mpp.generator.processors.MppRepoProcessor;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -41,5 +42,7 @@ public class PomRuntimeModule extends de.itemis.mpp.AbstractPomRuntimeModule {
         .to(MppBuildStepProcessor.class);
     binder.bind(MppModelProcessor.class).annotatedWith(Names.named(MppModelProcessor.DEPENDENCIES))
         .to(MppDependencyProcessor.class);
+    binder.bind(MppModelProcessor.class).annotatedWith(Names.named(MppModelProcessor.REPOSITORIES))
+        .to(MppRepoProcessor.class);
   }
 }

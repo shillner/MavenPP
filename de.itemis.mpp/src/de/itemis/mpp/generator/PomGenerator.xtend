@@ -36,6 +36,10 @@ class PomGenerator implements IGenerator {
   @Inject
   @Named(MppModelProcessor.PROPERTIES)
   var MppModelProcessor propertiesProcessor
+  
+  @Inject
+  @Named(MppModelProcessor.REPOSITORIES)
+  var MppModelProcessor repositoriesProcessor
 
   override void doGenerate(Resource resource, IFileSystemAccess fsa) {
     val project = new MavenProject
@@ -45,6 +49,7 @@ class PomGenerator implements IGenerator {
     val POM pom = resource.allContents.next as POM
     artifactProcessor.process(pom, model)
     propertiesProcessor.process(pom, model)
+    repositoriesProcessor.process(pom, model)
     dependencyProcessor.process(pom, model)
     buildStepProcessor.process(pom, model)
 

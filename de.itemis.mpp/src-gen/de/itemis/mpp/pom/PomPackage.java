@@ -140,13 +140,22 @@ public interface PomPackage extends EPackage
   int POM__SCM = 7;
 
   /**
+   * The feature id for the '<em><b>Repositories</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POM__REPOSITORIES = 8;
+
+  /**
    * The feature id for the '<em><b>Build Steps</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int POM__BUILD_STEPS = 8;
+  int POM__BUILD_STEPS = 9;
 
   /**
    * The number of structural features of the '<em>POM</em>' class.
@@ -155,7 +164,7 @@ public interface PomPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POM_FEATURE_COUNT = 9;
+  int POM_FEATURE_COUNT = 10;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.impl.ParentRefImpl <em>Parent Ref</em>}' class.
@@ -1292,6 +1301,152 @@ public interface PomPackage extends EPackage
   int POM_IMPORT_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link de.itemis.mpp.pom.impl.RepositoryImpl <em>Repository</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.itemis.mpp.pom.impl.RepositoryImpl
+   * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepository()
+   * @generated
+   */
+  int REPOSITORY = 28;
+
+  /**
+   * The feature id for the '<em><b>Plugin Repositroy</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY__PLUGIN_REPOSITROY = 0;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY__ID = 1;
+
+  /**
+   * The feature id for the '<em><b>Url</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY__URL = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY__NAME = 3;
+
+  /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY__LAYOUT = 4;
+
+  /**
+   * The feature id for the '<em><b>Policies</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY__POLICIES = 5;
+
+  /**
+   * The number of structural features of the '<em>Repository</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link de.itemis.mpp.pom.impl.RepositoryPolicyImpl <em>Repository Policy</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.itemis.mpp.pom.impl.RepositoryPolicyImpl
+   * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepositoryPolicy()
+   * @generated
+   */
+  int REPOSITORY_POLICY = 29;
+
+  /**
+   * The feature id for the '<em><b>Disabled</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY_POLICY__DISABLED = 0;
+
+  /**
+   * The feature id for the '<em><b>Releases</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY_POLICY__RELEASES = 1;
+
+  /**
+   * The feature id for the '<em><b>Snapshots</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY_POLICY__SNAPSHOTS = 2;
+
+  /**
+   * The feature id for the '<em><b>Update Policy</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY_POLICY__UPDATE_POLICY = 3;
+
+  /**
+   * The feature id for the '<em><b>Update Interval</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY_POLICY__UPDATE_INTERVAL = 4;
+
+  /**
+   * The feature id for the '<em><b>Checksum Policy</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY_POLICY__CHECKSUM_POLICY = 5;
+
+  /**
+   * The number of structural features of the '<em>Repository Policy</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPOSITORY_POLICY_FEATURE_COUNT = 6;
+
+  /**
    * The meta object id for the '{@link de.itemis.mpp.pom.DependencyScope <em>Dependency Scope</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1299,7 +1454,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getDependencyScope()
    * @generated
    */
-  int DEPENDENCY_SCOPE = 28;
+  int DEPENDENCY_SCOPE = 30;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.Phase <em>Phase</em>}' enum.
@@ -1309,7 +1464,27 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPhase()
    * @generated
    */
-  int PHASE = 29;
+  int PHASE = 31;
+
+  /**
+   * The meta object id for the '{@link de.itemis.mpp.pom.RepositoryUpdatePolicy <em>Repository Update Policy</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.itemis.mpp.pom.RepositoryUpdatePolicy
+   * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepositoryUpdatePolicy()
+   * @generated
+   */
+  int REPOSITORY_UPDATE_POLICY = 32;
+
+  /**
+   * The meta object id for the '{@link de.itemis.mpp.pom.ChecksumPolicy <em>Checksum Policy</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.itemis.mpp.pom.ChecksumPolicy
+   * @see de.itemis.mpp.pom.impl.PomPackageImpl#getChecksumPolicy()
+   * @generated
+   */
+  int CHECKSUM_POLICY = 33;
 
 
   /**
@@ -1409,6 +1584,17 @@ public interface PomPackage extends EPackage
    * @generated
    */
   EReference getPOM_Scm();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.itemis.mpp.pom.POM#getRepositories <em>Repositories</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Repositories</em>'.
+   * @see de.itemis.mpp.pom.POM#getRepositories()
+   * @see #getPOM()
+   * @generated
+   */
+  EReference getPOM_Repositories();
 
   /**
    * Returns the meta object for the containment reference list '{@link de.itemis.mpp.pom.POM#getBuildSteps <em>Build Steps</em>}'.
@@ -2407,6 +2593,158 @@ public interface PomPackage extends EPackage
   EAttribute getPOMImport_Name();
 
   /**
+   * Returns the meta object for class '{@link de.itemis.mpp.pom.Repository <em>Repository</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Repository</em>'.
+   * @see de.itemis.mpp.pom.Repository
+   * @generated
+   */
+  EClass getRepository();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.Repository#isPluginRepositroy <em>Plugin Repositroy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Plugin Repositroy</em>'.
+   * @see de.itemis.mpp.pom.Repository#isPluginRepositroy()
+   * @see #getRepository()
+   * @generated
+   */
+  EAttribute getRepository_PluginRepositroy();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.Repository#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see de.itemis.mpp.pom.Repository#getId()
+   * @see #getRepository()
+   * @generated
+   */
+  EAttribute getRepository_Id();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.Repository#getUrl <em>Url</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Url</em>'.
+   * @see de.itemis.mpp.pom.Repository#getUrl()
+   * @see #getRepository()
+   * @generated
+   */
+  EAttribute getRepository_Url();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.Repository#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.itemis.mpp.pom.Repository#getName()
+   * @see #getRepository()
+   * @generated
+   */
+  EAttribute getRepository_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.Repository#getLayout <em>Layout</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Layout</em>'.
+   * @see de.itemis.mpp.pom.Repository#getLayout()
+   * @see #getRepository()
+   * @generated
+   */
+  EAttribute getRepository_Layout();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.itemis.mpp.pom.Repository#getPolicies <em>Policies</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Policies</em>'.
+   * @see de.itemis.mpp.pom.Repository#getPolicies()
+   * @see #getRepository()
+   * @generated
+   */
+  EReference getRepository_Policies();
+
+  /**
+   * Returns the meta object for class '{@link de.itemis.mpp.pom.RepositoryPolicy <em>Repository Policy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Repository Policy</em>'.
+   * @see de.itemis.mpp.pom.RepositoryPolicy
+   * @generated
+   */
+  EClass getRepositoryPolicy();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.RepositoryPolicy#isDisabled <em>Disabled</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Disabled</em>'.
+   * @see de.itemis.mpp.pom.RepositoryPolicy#isDisabled()
+   * @see #getRepositoryPolicy()
+   * @generated
+   */
+  EAttribute getRepositoryPolicy_Disabled();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.RepositoryPolicy#isReleases <em>Releases</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Releases</em>'.
+   * @see de.itemis.mpp.pom.RepositoryPolicy#isReleases()
+   * @see #getRepositoryPolicy()
+   * @generated
+   */
+  EAttribute getRepositoryPolicy_Releases();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.RepositoryPolicy#isSnapshots <em>Snapshots</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Snapshots</em>'.
+   * @see de.itemis.mpp.pom.RepositoryPolicy#isSnapshots()
+   * @see #getRepositoryPolicy()
+   * @generated
+   */
+  EAttribute getRepositoryPolicy_Snapshots();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.RepositoryPolicy#getUpdatePolicy <em>Update Policy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Update Policy</em>'.
+   * @see de.itemis.mpp.pom.RepositoryPolicy#getUpdatePolicy()
+   * @see #getRepositoryPolicy()
+   * @generated
+   */
+  EAttribute getRepositoryPolicy_UpdatePolicy();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.RepositoryPolicy#getUpdateInterval <em>Update Interval</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Update Interval</em>'.
+   * @see de.itemis.mpp.pom.RepositoryPolicy#getUpdateInterval()
+   * @see #getRepositoryPolicy()
+   * @generated
+   */
+  EAttribute getRepositoryPolicy_UpdateInterval();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.RepositoryPolicy#getChecksumPolicy <em>Checksum Policy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Checksum Policy</em>'.
+   * @see de.itemis.mpp.pom.RepositoryPolicy#getChecksumPolicy()
+   * @see #getRepositoryPolicy()
+   * @generated
+   */
+  EAttribute getRepositoryPolicy_ChecksumPolicy();
+
+  /**
    * Returns the meta object for enum '{@link de.itemis.mpp.pom.DependencyScope <em>Dependency Scope</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2425,6 +2763,26 @@ public interface PomPackage extends EPackage
    * @generated
    */
   EEnum getPhase();
+
+  /**
+   * Returns the meta object for enum '{@link de.itemis.mpp.pom.RepositoryUpdatePolicy <em>Repository Update Policy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Repository Update Policy</em>'.
+   * @see de.itemis.mpp.pom.RepositoryUpdatePolicy
+   * @generated
+   */
+  EEnum getRepositoryUpdatePolicy();
+
+  /**
+   * Returns the meta object for enum '{@link de.itemis.mpp.pom.ChecksumPolicy <em>Checksum Policy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Checksum Policy</em>'.
+   * @see de.itemis.mpp.pom.ChecksumPolicy
+   * @generated
+   */
+  EEnum getChecksumPolicy();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -2522,6 +2880,14 @@ public interface PomPackage extends EPackage
      * @generated
      */
     EReference POM__SCM = eINSTANCE.getPOM_Scm();
+
+    /**
+     * The meta object literal for the '<em><b>Repositories</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POM__REPOSITORIES = eINSTANCE.getPOM_Repositories();
 
     /**
      * The meta object literal for the '<em><b>Build Steps</b></em>' containment reference list feature.
@@ -3322,6 +3688,122 @@ public interface PomPackage extends EPackage
     EAttribute POM_IMPORT__NAME = eINSTANCE.getPOMImport_Name();
 
     /**
+     * The meta object literal for the '{@link de.itemis.mpp.pom.impl.RepositoryImpl <em>Repository</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.itemis.mpp.pom.impl.RepositoryImpl
+     * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepository()
+     * @generated
+     */
+    EClass REPOSITORY = eINSTANCE.getRepository();
+
+    /**
+     * The meta object literal for the '<em><b>Plugin Repositroy</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY__PLUGIN_REPOSITROY = eINSTANCE.getRepository_PluginRepositroy();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY__ID = eINSTANCE.getRepository_Id();
+
+    /**
+     * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY__URL = eINSTANCE.getRepository_Url();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY__NAME = eINSTANCE.getRepository_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Layout</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY__LAYOUT = eINSTANCE.getRepository_Layout();
+
+    /**
+     * The meta object literal for the '<em><b>Policies</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REPOSITORY__POLICIES = eINSTANCE.getRepository_Policies();
+
+    /**
+     * The meta object literal for the '{@link de.itemis.mpp.pom.impl.RepositoryPolicyImpl <em>Repository Policy</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.itemis.mpp.pom.impl.RepositoryPolicyImpl
+     * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepositoryPolicy()
+     * @generated
+     */
+    EClass REPOSITORY_POLICY = eINSTANCE.getRepositoryPolicy();
+
+    /**
+     * The meta object literal for the '<em><b>Disabled</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY_POLICY__DISABLED = eINSTANCE.getRepositoryPolicy_Disabled();
+
+    /**
+     * The meta object literal for the '<em><b>Releases</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY_POLICY__RELEASES = eINSTANCE.getRepositoryPolicy_Releases();
+
+    /**
+     * The meta object literal for the '<em><b>Snapshots</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY_POLICY__SNAPSHOTS = eINSTANCE.getRepositoryPolicy_Snapshots();
+
+    /**
+     * The meta object literal for the '<em><b>Update Policy</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY_POLICY__UPDATE_POLICY = eINSTANCE.getRepositoryPolicy_UpdatePolicy();
+
+    /**
+     * The meta object literal for the '<em><b>Update Interval</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY_POLICY__UPDATE_INTERVAL = eINSTANCE.getRepositoryPolicy_UpdateInterval();
+
+    /**
+     * The meta object literal for the '<em><b>Checksum Policy</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REPOSITORY_POLICY__CHECKSUM_POLICY = eINSTANCE.getRepositoryPolicy_ChecksumPolicy();
+
+    /**
      * The meta object literal for the '{@link de.itemis.mpp.pom.DependencyScope <em>Dependency Scope</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3340,6 +3822,26 @@ public interface PomPackage extends EPackage
      * @generated
      */
     EEnum PHASE = eINSTANCE.getPhase();
+
+    /**
+     * The meta object literal for the '{@link de.itemis.mpp.pom.RepositoryUpdatePolicy <em>Repository Update Policy</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.itemis.mpp.pom.RepositoryUpdatePolicy
+     * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepositoryUpdatePolicy()
+     * @generated
+     */
+    EEnum REPOSITORY_UPDATE_POLICY = eINSTANCE.getRepositoryUpdatePolicy();
+
+    /**
+     * The meta object literal for the '{@link de.itemis.mpp.pom.ChecksumPolicy <em>Checksum Policy</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.itemis.mpp.pom.ChecksumPolicy
+     * @see de.itemis.mpp.pom.impl.PomPackageImpl#getChecksumPolicy()
+     * @generated
+     */
+    EEnum CHECKSUM_POLICY = eINSTANCE.getChecksumPolicy();
 
   }
 

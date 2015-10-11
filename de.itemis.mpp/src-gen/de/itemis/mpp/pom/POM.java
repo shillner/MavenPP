@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.itemis.mpp.pom.POM#getProperties <em>Properties</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.POM#getDependencies <em>Dependencies</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.POM#getScm <em>Scm</em>}</li>
+ *   <li>{@link de.itemis.mpp.pom.POM#getRepositories <em>Repositories</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.POM#getBuildSteps <em>Build Steps</em>}</li>
  * </ul>
  *
@@ -209,6 +210,22 @@ public interface POM extends EObject
    * @generated
    */
   void setScm(SCM value);
+
+  /**
+   * Returns the value of the '<em><b>Repositories</b></em>' containment reference list.
+   * The list contents are of type {@link de.itemis.mpp.pom.Repository}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Repositories</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Repositories</em>' containment reference list.
+   * @see de.itemis.mpp.pom.PomPackage#getPOM_Repositories()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Repository> getRepositories();
 
   /**
    * Returns the value of the '<em><b>Build Steps</b></em>' containment reference list.

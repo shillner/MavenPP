@@ -12,6 +12,7 @@ import de.itemis.mpp.pom.ParentRef;
 import de.itemis.mpp.pom.PomPackage;
 import de.itemis.mpp.pom.Property;
 import de.itemis.mpp.pom.PropertyInclusion;
+import de.itemis.mpp.pom.Repository;
 import de.itemis.mpp.pom.SCM;
 
 import java.util.Collection;
@@ -46,6 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getDependencies <em>Dependencies</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getScm <em>Scm</em>}</li>
+ *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getRepositories <em>Repositories</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getBuildSteps <em>Build Steps</em>}</li>
  * </ul>
  *
@@ -132,6 +134,16 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
    * @ordered
    */
   protected SCM scm;
+
+  /**
+   * The cached value of the '{@link #getRepositories() <em>Repositories</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRepositories()
+   * @generated
+   * @ordered
+   */
+  protected EList<Repository> repositories;
 
   /**
    * The cached value of the '{@link #getBuildSteps() <em>Build Steps</em>}' containment reference list.
@@ -451,6 +463,20 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Repository> getRepositories()
+  {
+    if (repositories == null)
+    {
+      repositories = new EObjectContainmentEList<Repository>(Repository.class, this, PomPackage.POM__REPOSITORIES);
+    }
+    return repositories;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<BuildStep> getBuildSteps()
   {
     if (buildSteps == null)
@@ -486,6 +512,8 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
         return basicSetDependencies(null, msgs);
       case PomPackage.POM__SCM:
         return basicSetScm(null, msgs);
+      case PomPackage.POM__REPOSITORIES:
+        return ((InternalEList<?>)getRepositories()).basicRemove(otherEnd, msgs);
       case PomPackage.POM__BUILD_STEPS:
         return ((InternalEList<?>)getBuildSteps()).basicRemove(otherEnd, msgs);
     }
@@ -518,6 +546,8 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
         return getDependencies();
       case PomPackage.POM__SCM:
         return getScm();
+      case PomPackage.POM__REPOSITORIES:
+        return getRepositories();
       case PomPackage.POM__BUILD_STEPS:
         return getBuildSteps();
     }
@@ -562,6 +592,10 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
       case PomPackage.POM__SCM:
         setScm((SCM)newValue);
         return;
+      case PomPackage.POM__REPOSITORIES:
+        getRepositories().clear();
+        getRepositories().addAll((Collection<? extends Repository>)newValue);
+        return;
       case PomPackage.POM__BUILD_STEPS:
         getBuildSteps().clear();
         getBuildSteps().addAll((Collection<? extends BuildStep>)newValue);
@@ -604,6 +638,9 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
       case PomPackage.POM__SCM:
         setScm((SCM)null);
         return;
+      case PomPackage.POM__REPOSITORIES:
+        getRepositories().clear();
+        return;
       case PomPackage.POM__BUILD_STEPS:
         getBuildSteps().clear();
         return;
@@ -637,6 +674,8 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
         return dependencies != null;
       case PomPackage.POM__SCM:
         return scm != null;
+      case PomPackage.POM__REPOSITORIES:
+        return repositories != null && !repositories.isEmpty();
       case PomPackage.POM__BUILD_STEPS:
         return buildSteps != null && !buildSteps.isEmpty();
     }

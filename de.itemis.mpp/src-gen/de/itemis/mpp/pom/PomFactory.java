@@ -275,6 +275,24 @@ public interface PomFactory extends EFactory
   POMImport createPOMImport();
 
   /**
+   * Returns a new object of class '<em>Repository</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Repository</em>'.
+   * @generated
+   */
+  Repository createRepository();
+
+  /**
+   * Returns a new object of class '<em>Repository Policy</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Repository Policy</em>'.
+   * @generated
+   */
+  RepositoryPolicy createRepositoryPolicy();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

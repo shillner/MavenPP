@@ -215,6 +215,16 @@ public class PomAdapterFactory extends AdapterFactoryImpl
         return createPOMImportAdapter();
       }
       @Override
+      public Adapter caseRepository(Repository object)
+      {
+        return createRepositoryAdapter();
+      }
+      @Override
+      public Adapter caseRepositoryPolicy(RepositoryPolicy object)
+      {
+        return createRepositoryPolicyAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -652,6 +662,36 @@ public class PomAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPOMImportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.itemis.mpp.pom.Repository <em>Repository</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.itemis.mpp.pom.Repository
+   * @generated
+   */
+  public Adapter createRepositoryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.itemis.mpp.pom.RepositoryPolicy <em>Repository Policy</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.itemis.mpp.pom.RepositoryPolicy
+   * @generated
+   */
+  public Adapter createRepositoryPolicyAdapter()
   {
     return null;
   }

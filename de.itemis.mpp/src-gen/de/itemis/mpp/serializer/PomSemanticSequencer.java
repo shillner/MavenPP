@@ -29,6 +29,8 @@ import de.itemis.mpp.pom.PluginInclusion;
 import de.itemis.mpp.pom.PomPackage;
 import de.itemis.mpp.pom.Property;
 import de.itemis.mpp.pom.PropertyInclusion;
+import de.itemis.mpp.pom.Repository;
+import de.itemis.mpp.pom.RepositoryPolicy;
 import de.itemis.mpp.pom.SCM;
 import de.itemis.mpp.pom.UngroupedDependency;
 import de.itemis.mpp.pom.Version;
@@ -122,6 +124,12 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case PomPackage.PROPERTY_INCLUSION:
 				sequence_PropertyInclusion(context, (PropertyInclusion) semanticObject); 
+				return; 
+			case PomPackage.REPOSITORY:
+				sequence_Repository(context, (Repository) semanticObject); 
+				return; 
+			case PomPackage.REPOSITORY_POLICY:
+				sequence_RepositoryPolicy(context, (RepositoryPolicy) semanticObject); 
 				return; 
 			case PomPackage.SCM:
 				sequence_SCM(context, (SCM) semanticObject); 
@@ -268,6 +276,7 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         properties+=Property* 
 	 *         dependencies=Dependencies? 
 	 *         scm=SCM? 
+	 *         repositories+=Repository* 
 	 *         buildSteps+=BuildStep*
 	 *     )
 	 */
@@ -427,6 +436,29 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getPropertyAccess().getNamePropertyNameParserRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getPropertyAccess().getValueSTRINGTerminalRuleCall_3_0(), semanticObject.getValue());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         disabled?='do not'? 
+	 *         (releases?='releases' | snapshots?='snapshots') 
+	 *         (updatePolicy=RepositoryUpdatePolicy updateInterval=INT?)? 
+	 *         checksumPolicy=ChecksumPolicy?
+	 *     )
+	 */
+	protected void sequence_RepositoryPolicy(EObject context, RepositoryPolicy semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (pluginRepositroy?='plugin-repository'? id=IDAndSpecialCharacters url=STRING (name=STRING? layout=STRING? policies+=RepositoryPolicy+)?)
+	 */
+	protected void sequence_Repository(EObject context, Repository semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
