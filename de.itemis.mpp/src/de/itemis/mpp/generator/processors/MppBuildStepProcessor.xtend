@@ -18,9 +18,11 @@ class MppBuildStepProcessor implements MppModelProcessor {
   @Inject
   var extension MppModelUtil modelUtil
   var Model model
+  var POM pom
 
   override process(POM pom, Model model) {
     this.model = model
+    this.pom = pom
     if(pom.buildSteps != null) {
       processBuildSteps(pom.buildSteps)
     }
@@ -65,7 +67,7 @@ class MppBuildStepProcessor implements MppModelProcessor {
   def dispatch void processStep(PluginInclusion pluginInclusion) {
     val coordinates = pluginInclusion.pomRef.coordinates
     val resolvedArtifact = ArtifactResolver.resolveArtifact(coordinates.groupId, coordinates.artifactId,
-      coordinates.version.convertToString, Optional.of("pom"), Optional.<String>absent)
+      coordinates.version.convertToString, Optional.of("pom"), Optional.<String>absent, Optional.of(pom.projectRepositories))
 
     if(resolvedArtifact.present) {
       val importedModel = MavenModelUtil.loadModel(resolvedArtifact.get.absolutePath)

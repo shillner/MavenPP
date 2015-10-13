@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1443193895720
+Bnd-LastModified: 1444760314434
 Build-Jdk: 1.8.0_51
 Built-By: Stanley
 Bundle-ClassPath: .,lib/guava-18.0.jar,lib/maven-core-3.3.3.jar,lib/mave

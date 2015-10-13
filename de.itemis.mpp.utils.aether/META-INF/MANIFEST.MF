@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1444480818612
+Bnd-LastModified: 1444760318510
 Build-Jdk: 1.8.0_51
 Built-By: Stanley
 Bundle-Description: Provides some Utility classes for Eclipse Aether acc
@@ -10,8 +10,8 @@ Bundle-SymbolicName: de.itemis.mpp.utils.aether
 Bundle-Vendor: Stanley Hillner
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
-Export-Package: de.itemis.mpp.aether;version="1.0.0";uses:="com.google.c
- ommon.base"
+Export-Package: de.itemis.mpp.aether;uses:="com.google.common.base";vers
+ ion="1.0.0.SNAPSHOT"
 Import-Package: com.google.common.base;version="[18.0,19)",com.google.co
  mmon.collect;version="[18.0,19)",org.apache.maven.repository.internal,o
  rg.apache.maven.settings,org.apache.maven.settings.building,org.eclipse
@@ -22,6 +22,5 @@ Import-Package: com.google.common.base;version="[18.0,19)",com.google.co
  i.connector;version="[1.0,2)",org.eclipse.aether.spi.connector.transpor
  t;version="[1.0,2)",org.eclipse.aether.transport.file;version="[1.0,2)"
  ,org.eclipse.aether.transport.http;version="[1.0,2)"
-Originally-Created-By: Apache Maven Bundle Plugin
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
 Tool: Bnd-2.4.1.201501161923

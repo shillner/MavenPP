@@ -26,14 +26,16 @@ class MppDependencyProcessor implements MppModelProcessor {
   var extension MavenModelUtil mavenModelUtil
 
   var Model model
+  var POM pom
 
   override process(POM pom, Model model) {
-    this.model = model;
+    this.model = model
+    this.pom = pom
     processDependencies(pom.dependencies)
   }
 
   def void processDependencies(Dependencies dependencies) {
-    val Set<String> projectDependencies = Sets.newHashSet();
+    val Set<String> projectDependencies = Sets.newHashSet()
     // TODO synchronize dependencies in another way (check also scopes and remove redundant ones)
     if(dependencies != null) {
       for (UngroupedDependency dep : dependencies.ungroupedDependencies) {
@@ -57,10 +59,10 @@ class MppDependencyProcessor implements MppModelProcessor {
       for (DependencyInclusion inclusion : dependencies.includes) {
         val coordinates = inclusion.pomRef.coordinates
         val resolvedArtifact = ArtifactResolver.resolveArtifact(coordinates.groupId, coordinates.artifactId,
-          coordinates.version.convertToString, Optional.of("pom"), Optional.<String>absent)
+          coordinates.version.convertToString, Optional.of("pom"), Optional.<String>absent, Optional.of(pom.projectRepositories))
 
         if(resolvedArtifact.present) {
-          val importedModel = MavenModelUtil.loadModel(resolvedArtifact.get.absolutePath);
+          val importedModel = MavenModelUtil.loadModel(resolvedArtifact.get.absolutePath)
           if(importedModel.present) {
             for (org.apache.maven.model.Dependency d : importedModel.get.dependencies) {
               if(Objects.equal(inclusion.scope.literal, d.dependencyScope)) {

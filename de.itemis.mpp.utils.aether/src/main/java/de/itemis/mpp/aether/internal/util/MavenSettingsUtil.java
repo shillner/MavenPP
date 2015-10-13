@@ -71,7 +71,7 @@ public class MavenSettingsUtil {
     return new LocalRepository(localRepoPath);
   }
 
-  public static List<RemoteRepository> getRemoteRepositories(Settings settings) {
+  public static List<RemoteRepository> getRemoteRepositories(Settings settings, List<Repository> customRepositories) {
     List<RemoteRepository> repositories = Lists.newArrayList();
 
     // QUESTION can we determine the profiles that are relevant or just keep on using all profile settings?
@@ -84,7 +84,11 @@ public class MavenSettingsUtil {
       }
     }
 
-    // TODO add the project repositories here!
+    if (customRepositories != null) {
+      for (Repository repository : customRepositories) {
+        repositories.add(toRemoteRepository(repository));
+      }
+    }
 
     // default repository if no other is available
     if (repositories.isEmpty()) {

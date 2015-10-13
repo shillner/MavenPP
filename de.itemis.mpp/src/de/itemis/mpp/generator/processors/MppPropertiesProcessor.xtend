@@ -17,9 +17,11 @@ class MppPropertiesProcessor implements MppModelProcessor {
   @Inject
   var extension MppModelUtil modelUtil
   var Model model
+  var POM pom
 
   override process(POM pom, Model model) {
     this.model = model
+    this.pom = pom
 
     // Property inclusions have to be processed before the properties since local properties must override included ones.
     // TODO maybe preprocess properties and inclusions (create a map) and resolve overriding this way before adding the properties to the model
@@ -47,7 +49,7 @@ class MppPropertiesProcessor implements MppModelProcessor {
   //TODO Needs to be refactored because fo really bad structure!
   def private void includeProperties(String groupId, String artifactId, String version) {
     val Optional<File> resolvedArtifact = ArtifactResolver.resolveArtifact(groupId, artifactId, version,
-      Optional.of("pom"), Optional.<String>absent())
+      Optional.of("pom"), Optional.<String>absent(), Optional.of(pom.projectRepositories))
     if(resolvedArtifact.present) {
       val Optional<Model> importedModel = MavenModelUtil.loadModel(resolvedArtifact.get.absolutePath)
       if(importedModel.present) {

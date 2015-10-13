@@ -1,7 +1,9 @@
 package de.itemis.mpp.aether;
 
 import java.io.File;
+import java.util.List;
 
+import org.apache.maven.settings.Repository;
 import org.eclipse.aether.RepositorySystem;
 import org.eclipse.aether.RepositorySystemSession;
 import org.eclipse.aether.artifact.Artifact;
@@ -18,7 +20,7 @@ import de.itemis.mpp.aether.internal.util.MavenSettingsUtil;
 
 public class ArtifactResolver {
   public static Optional<File> resolveArtifact(String groupId, String artifactId, String version, Optional<String> type,
-      Optional<String> classifier) {
+      Optional<String> classifier, Optional<List<Repository>> customRepositories) {
     Optional<File> result;
 
     LocalRepository localRepository = MavenSettingsUtil.getLocalRepository(MavenSettingsUtil.loadSettings());
@@ -29,7 +31,8 @@ public class ArtifactResolver {
     Artifact artifact = new DefaultArtifact(groupId, artifactId, classifier.orNull(), type.orNull(), version);
     ArtifactRequest artifactRequest = new ArtifactRequest();
     artifactRequest.setArtifact(artifact);
-    artifactRequest.setRepositories(MavenSettingsUtil.getRemoteRepositories(MavenSettingsUtil.loadSettings()));
+    artifactRequest.setRepositories(
+        MavenSettingsUtil.getRemoteRepositories(MavenSettingsUtil.loadSettings(), customRepositories.orNull()));
 
     try {
       ArtifactResult artifactResult = system.resolveArtifact(session, artifactRequest);
