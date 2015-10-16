@@ -7,8 +7,7 @@ POM:
   parent=ParentRef?
   artifactDefinition=ArtifactDefinition
   modules=Modules?
-  (propertyInclusions+=PropertyInclusion* &
-  properties+=Property* &
+  (properties=Properties &
   dependencies=Dependencies? &
   scm=SCM? &
   repositories+=Repository*)
@@ -74,7 +73,7 @@ IDOrPropteryRef:
 ;
 
 IDOrKW:
-  ID | 'test' | 'parent' | 'version' | 'exec' | 'clean' | 'plugin' | 'compile' //TODO continue the list of keywords!
+  ID | 'test' | 'parent' | 'version' | 'exec' | 'clean' | 'plugin' | 'compile' | 'file' | 'from' | 'include' //TODO continue the list of keywords!
 ;
 
 Version:
@@ -85,12 +84,27 @@ Version:
   (major=Number ('.' minor=Number ('.' incremental=Number)?)? ('-' qualifier=Text)?) | (propertyRef=PropertyRef)
 ;
 
+Properties:
+  'properties' '{'
+    properties+=Property*
+    inclusions+=PropertyInclusion*
+  '}'
+;
+
 Property:
-  'property' name=PropertyName '=' value=STRING
+  name=PropertyName '=' value=STRING
+;
+
+ImportPropertyInclusion:
+  'include' 'from' pomRef=[POMImport]
+;
+
+FilePropertyInclusion:
+  'include' 'from' 'file' path=STRING
 ;
 
 PropertyInclusion:
-  'include' pomRef=[POMImport] '.' 'properties'
+  ImportPropertyInclusion | FilePropertyInclusion
 ;
 
 Dependencies:

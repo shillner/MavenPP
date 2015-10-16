@@ -12,6 +12,8 @@ import de.itemis.mpp.pom.DependencyGroup;
 import de.itemis.mpp.pom.DependencyInclusion;
 import de.itemis.mpp.pom.DependencyScope;
 import de.itemis.mpp.pom.ExtendedCoordinates;
+import de.itemis.mpp.pom.FilePropertyInclusion;
+import de.itemis.mpp.pom.ImportPropertyInclusion;
 import de.itemis.mpp.pom.Modules;
 import de.itemis.mpp.pom.POMImport;
 import de.itemis.mpp.pom.ParentRef;
@@ -29,6 +31,7 @@ import de.itemis.mpp.pom.PluginExecution;
 import de.itemis.mpp.pom.PluginInclusion;
 import de.itemis.mpp.pom.PomFactory;
 import de.itemis.mpp.pom.PomPackage;
+import de.itemis.mpp.pom.Properties;
 import de.itemis.mpp.pom.Property;
 import de.itemis.mpp.pom.PropertyInclusion;
 import de.itemis.mpp.pom.Repository;
@@ -93,7 +96,28 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass propertiesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass propertyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass importPropertyInclusionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass filePropertyInclusionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -409,7 +433,7 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPOM_PropertyInclusions()
+  public EReference getPOM_Properties()
   {
     return (EReference)pomEClass.getEStructuralFeatures().get(4);
   }
@@ -419,7 +443,7 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPOM_Properties()
+  public EReference getPOM_Dependencies()
   {
     return (EReference)pomEClass.getEStructuralFeatures().get(5);
   }
@@ -429,7 +453,7 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPOM_Dependencies()
+  public EReference getPOM_Scm()
   {
     return (EReference)pomEClass.getEStructuralFeatures().get(6);
   }
@@ -439,7 +463,7 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPOM_Scm()
+  public EReference getPOM_Repositories()
   {
     return (EReference)pomEClass.getEStructuralFeatures().get(7);
   }
@@ -449,19 +473,9 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPOM_Repositories()
-  {
-    return (EReference)pomEClass.getEStructuralFeatures().get(8);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getPOM_BuildSteps()
   {
-    return (EReference)pomEClass.getEStructuralFeatures().get(9);
+    return (EReference)pomEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -649,6 +663,36 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getProperties()
+  {
+    return propertiesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProperties_Properties()
+  {
+    return (EReference)propertiesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProperties_Inclusions()
+  {
+    return (EReference)propertiesEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getProperty()
   {
     return propertyEClass;
@@ -679,9 +723,9 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPropertyInclusion()
+  public EClass getImportPropertyInclusion()
   {
-    return propertyInclusionEClass;
+    return importPropertyInclusionEClass;
   }
 
   /**
@@ -689,9 +733,39 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPropertyInclusion_PomRef()
+  public EReference getImportPropertyInclusion_PomRef()
   {
-    return (EReference)propertyInclusionEClass.getEStructuralFeatures().get(0);
+    return (EReference)importPropertyInclusionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFilePropertyInclusion()
+  {
+    return filePropertyInclusionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFilePropertyInclusion_Path()
+  {
+    return (EAttribute)filePropertyInclusionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPropertyInclusion()
+  {
+    return propertyInclusionEClass;
   }
 
   /**
@@ -1599,7 +1673,6 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     createEReference(pomEClass, POM__PARENT);
     createEReference(pomEClass, POM__ARTIFACT_DEFINITION);
     createEReference(pomEClass, POM__MODULES);
-    createEReference(pomEClass, POM__PROPERTY_INCLUSIONS);
     createEReference(pomEClass, POM__PROPERTIES);
     createEReference(pomEClass, POM__DEPENDENCIES);
     createEReference(pomEClass, POM__SCM);
@@ -1628,12 +1701,21 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     createEAttribute(versionEClass, VERSION__QUALIFIER);
     createEAttribute(versionEClass, VERSION__PROPERTY_REF);
 
+    propertiesEClass = createEClass(PROPERTIES);
+    createEReference(propertiesEClass, PROPERTIES__PROPERTIES);
+    createEReference(propertiesEClass, PROPERTIES__INCLUSIONS);
+
     propertyEClass = createEClass(PROPERTY);
     createEAttribute(propertyEClass, PROPERTY__NAME);
     createEAttribute(propertyEClass, PROPERTY__VALUE);
 
+    importPropertyInclusionEClass = createEClass(IMPORT_PROPERTY_INCLUSION);
+    createEReference(importPropertyInclusionEClass, IMPORT_PROPERTY_INCLUSION__POM_REF);
+
+    filePropertyInclusionEClass = createEClass(FILE_PROPERTY_INCLUSION);
+    createEAttribute(filePropertyInclusionEClass, FILE_PROPERTY_INCLUSION__PATH);
+
     propertyInclusionEClass = createEClass(PROPERTY_INCLUSION);
-    createEReference(propertyInclusionEClass, PROPERTY_INCLUSION__POM_REF);
 
     dependenciesEClass = createEClass(DEPENDENCIES);
     createEReference(dependenciesEClass, DEPENDENCIES__INCLUDES);
@@ -1777,6 +1859,8 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    importPropertyInclusionEClass.getESuperTypes().add(this.getPropertyInclusion());
+    filePropertyInclusionEClass.getESuperTypes().add(this.getPropertyInclusion());
     pluginEClass.getESuperTypes().add(this.getBuildStep());
     pluginConfigurationParameterEClass.getESuperTypes().add(this.getPluginConfigurationItem());
     pluginConfigurationParameterListEClass.getESuperTypes().add(this.getPluginConfigurationItem());
@@ -1790,8 +1874,7 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     initEReference(getPOM_Parent(), this.getParentRef(), null, "parent", null, 0, 1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPOM_ArtifactDefinition(), this.getArtifactDefinition(), null, "artifactDefinition", null, 0, 1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPOM_Modules(), this.getModules(), null, "modules", null, 0, 1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPOM_PropertyInclusions(), this.getPropertyInclusion(), null, "propertyInclusions", null, 0, -1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPOM_Properties(), this.getProperty(), null, "properties", null, 0, -1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPOM_Properties(), this.getProperties(), null, "properties", null, 0, 1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPOM_Dependencies(), this.getDependencies(), null, "dependencies", null, 0, 1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPOM_Scm(), this.getSCM(), null, "scm", null, 0, 1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPOM_Repositories(), this.getRepository(), null, "repositories", null, 0, -1, de.itemis.mpp.pom.POM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1819,12 +1902,21 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     initEAttribute(getVersion_Qualifier(), ecorePackage.getEString(), "qualifier", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVersion_PropertyRef(), ecorePackage.getEString(), "propertyRef", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(propertiesEClass, Properties.class, "Properties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getProperties_Properties(), this.getProperty(), null, "properties", null, 0, -1, Properties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProperties_Inclusions(), this.getPropertyInclusion(), null, "inclusions", null, 0, -1, Properties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProperty_Name(), ecorePackage.getEString(), "name", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProperty_Value(), ecorePackage.getEString(), "value", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(importPropertyInclusionEClass, ImportPropertyInclusion.class, "ImportPropertyInclusion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getImportPropertyInclusion_PomRef(), this.getPOMImport(), null, "pomRef", null, 0, 1, ImportPropertyInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(filePropertyInclusionEClass, FilePropertyInclusion.class, "FilePropertyInclusion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFilePropertyInclusion_Path(), ecorePackage.getEString(), "path", null, 0, 1, FilePropertyInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(propertyInclusionEClass, PropertyInclusion.class, "PropertyInclusion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPropertyInclusion_PomRef(), this.getPOMImport(), null, "pomRef", null, 0, 1, PropertyInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dependenciesEClass, Dependencies.class, "Dependencies", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDependencies_Includes(), this.getDependencyInclusion(), null, "includes", null, 0, -1, Dependencies.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

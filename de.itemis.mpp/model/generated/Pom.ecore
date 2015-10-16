@@ -10,10 +10,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modules" eType="#//Modules"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyInclusions" upperBound="-1"
-        eType="#//PropertyInclusion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//Property" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" eType="#//Properties"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dependencies" eType="#//Dependencies"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scm" eType="#//SCM" containment="true"/>
@@ -47,13 +45,23 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyRef" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Properties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Property" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inclusions" upperBound="-1"
+        eType="#//PropertyInclusion" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PropertyInclusion">
+  <eClassifiers xsi:type="ecore:EClass" name="ImportPropertyInclusion" eSuperTypes="#//PropertyInclusion">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pomRef" eType="#//POMImport"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FilePropertyInclusion" eSuperTypes="#//PropertyInclusion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyInclusion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Dependencies">
     <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
         eType="#//DependencyInclusion" containment="true"/>

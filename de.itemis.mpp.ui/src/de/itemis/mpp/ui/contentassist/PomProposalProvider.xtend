@@ -3,17 +3,15 @@
  */
 package de.itemis.mpp.ui.contentassist
 
-import de.itemis.mpp.ui.contentassist.AbstractPomProposalProvider
-import org.eclipse.emf.ecore.EObject
-import org.eclipse.xtext.Assignment
-import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext
-import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
-import org.eclipse.xtext.RuleCall
 import de.itemis.mpp.pom.POM
 import de.itemis.mpp.pom.Property
-import org.eclipse.jface.text.contentassist.ICompletionProposal
+import org.eclipse.emf.ecore.EObject
 import org.eclipse.jface.text.BadLocationException
-import de.itemis.mpp.aether.AetherQueries
+import org.eclipse.jface.text.contentassist.ICompletionProposal
+import org.eclipse.xtext.Assignment
+import org.eclipse.xtext.RuleCall
+import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext
+import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
 
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
@@ -39,7 +37,7 @@ class PomProposalProvider extends AbstractPomProposalProvider {
 
     val String prefix = context.prefix
     if(prefix.endsWith(PREFIX_PROPERTY_REF)) {
-      for (Property p : pom.properties) {
+      for (Property p : pom.properties.properties) {
         acceptor.accept(createPropertyRefCompletionProposal(p, context))
       }
     //TODO add proposals from imported poms

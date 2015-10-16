@@ -100,9 +100,24 @@ public class PomAdapterFactory extends AdapterFactoryImpl
         return createVersionAdapter();
       }
       @Override
+      public Adapter caseProperties(Properties object)
+      {
+        return createPropertiesAdapter();
+      }
+      @Override
       public Adapter caseProperty(Property object)
       {
         return createPropertyAdapter();
+      }
+      @Override
+      public Adapter caseImportPropertyInclusion(ImportPropertyInclusion object)
+      {
+        return createImportPropertyInclusionAdapter();
+      }
+      @Override
+      public Adapter caseFilePropertyInclusion(FilePropertyInclusion object)
+      {
+        return createFilePropertyInclusionAdapter();
       }
       @Override
       public Adapter casePropertyInclusion(PropertyInclusion object)
@@ -322,6 +337,21 @@ public class PomAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link de.itemis.mpp.pom.Properties <em>Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.itemis.mpp.pom.Properties
+   * @generated
+   */
+  public Adapter createPropertiesAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link de.itemis.mpp.pom.Property <em>Property</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -332,6 +362,36 @@ public class PomAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPropertyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.itemis.mpp.pom.ImportPropertyInclusion <em>Import Property Inclusion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.itemis.mpp.pom.ImportPropertyInclusion
+   * @generated
+   */
+  public Adapter createImportPropertyInclusionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.itemis.mpp.pom.FilePropertyInclusion <em>File Property Inclusion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.itemis.mpp.pom.FilePropertyInclusion
+   * @generated
+   */
+  public Adapter createFilePropertyInclusionAdapter()
   {
     return null;
   }

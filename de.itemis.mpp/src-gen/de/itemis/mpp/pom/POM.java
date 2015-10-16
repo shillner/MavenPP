@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.itemis.mpp.pom.POM#getParent <em>Parent</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.POM#getArtifactDefinition <em>Artifact Definition</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.POM#getModules <em>Modules</em>}</li>
- *   <li>{@link de.itemis.mpp.pom.POM#getPropertyInclusions <em>Property Inclusions</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.POM#getProperties <em>Properties</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.POM#getDependencies <em>Dependencies</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.POM#getScm <em>Scm</em>}</li>
@@ -128,36 +127,30 @@ public interface POM extends EObject
   void setModules(Modules value);
 
   /**
-   * Returns the value of the '<em><b>Property Inclusions</b></em>' containment reference list.
-   * The list contents are of type {@link de.itemis.mpp.pom.PropertyInclusion}.
+   * Returns the value of the '<em><b>Properties</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Property Inclusions</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Properties</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Property Inclusions</em>' containment reference list.
-   * @see de.itemis.mpp.pom.PomPackage#getPOM_PropertyInclusions()
-   * @model containment="true"
-   * @generated
-   */
-  EList<PropertyInclusion> getPropertyInclusions();
-
-  /**
-   * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
-   * The list contents are of type {@link de.itemis.mpp.pom.Property}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Properties</em>' containment reference list.
+   * @return the value of the '<em>Properties</em>' containment reference.
+   * @see #setProperties(Properties)
    * @see de.itemis.mpp.pom.PomPackage#getPOM_Properties()
    * @model containment="true"
    * @generated
    */
-  EList<Property> getProperties();
+  Properties getProperties();
+
+  /**
+   * Sets the value of the '{@link de.itemis.mpp.pom.POM#getProperties <em>Properties</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Properties</em>' containment reference.
+   * @see #getProperties()
+   * @generated
+   */
+  void setProperties(Properties value);
 
   /**
    * Returns the value of the '<em><b>Dependencies</b></em>' containment reference.

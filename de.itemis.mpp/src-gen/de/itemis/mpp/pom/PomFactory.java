@@ -68,6 +68,15 @@ public interface PomFactory extends EFactory
   Version createVersion();
 
   /**
+   * Returns a new object of class '<em>Properties</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Properties</em>'.
+   * @generated
+   */
+  Properties createProperties();
+
+  /**
    * Returns a new object of class '<em>Property</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -75,6 +84,24 @@ public interface PomFactory extends EFactory
    * @generated
    */
   Property createProperty();
+
+  /**
+   * Returns a new object of class '<em>Import Property Inclusion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Import Property Inclusion</em>'.
+   * @generated
+   */
+  ImportPropertyInclusion createImportPropertyInclusion();
+
+  /**
+   * Returns a new object of class '<em>File Property Inclusion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>File Property Inclusion</em>'.
+   * @generated
+   */
+  FilePropertyInclusion createFilePropertyInclusion();
 
   /**
    * Returns a new object of class '<em>Property Inclusion</em>'.

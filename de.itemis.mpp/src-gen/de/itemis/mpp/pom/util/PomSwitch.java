@@ -107,10 +107,33 @@ public class PomSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PomPackage.PROPERTIES:
+      {
+        Properties properties = (Properties)theEObject;
+        T result = caseProperties(properties);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case PomPackage.PROPERTY:
       {
         Property property = (Property)theEObject;
         T result = caseProperty(property);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PomPackage.IMPORT_PROPERTY_INCLUSION:
+      {
+        ImportPropertyInclusion importPropertyInclusion = (ImportPropertyInclusion)theEObject;
+        T result = caseImportPropertyInclusion(importPropertyInclusion);
+        if (result == null) result = casePropertyInclusion(importPropertyInclusion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PomPackage.FILE_PROPERTY_INCLUSION:
+      {
+        FilePropertyInclusion filePropertyInclusion = (FilePropertyInclusion)theEObject;
+        T result = caseFilePropertyInclusion(filePropertyInclusion);
+        if (result == null) result = casePropertyInclusion(filePropertyInclusion);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -373,6 +396,22 @@ public class PomSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Properties</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Properties</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseProperties(Properties object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Property</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -384,6 +423,38 @@ public class PomSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseProperty(Property object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Import Property Inclusion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Import Property Inclusion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImportPropertyInclusion(ImportPropertyInclusion object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>File Property Inclusion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>File Property Inclusion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFilePropertyInclusion(FilePropertyInclusion object)
   {
     return null;
   }

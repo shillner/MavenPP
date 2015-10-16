@@ -70,7 +70,10 @@ public class PomFactoryImpl extends EFactoryImpl implements PomFactory
       case PomPackage.MODULES: return createModules();
       case PomPackage.ARTIFACT_DEFINITION: return createArtifactDefinition();
       case PomPackage.VERSION: return createVersion();
+      case PomPackage.PROPERTIES: return createProperties();
       case PomPackage.PROPERTY: return createProperty();
+      case PomPackage.IMPORT_PROPERTY_INCLUSION: return createImportPropertyInclusion();
+      case PomPackage.FILE_PROPERTY_INCLUSION: return createFilePropertyInclusion();
       case PomPackage.PROPERTY_INCLUSION: return createPropertyInclusion();
       case PomPackage.DEPENDENCIES: return createDependencies();
       case PomPackage.DEPENDENCY_GROUP: return createDependencyGroup();
@@ -206,10 +209,43 @@ public class PomFactoryImpl extends EFactoryImpl implements PomFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Properties createProperties()
+  {
+    PropertiesImpl properties = new PropertiesImpl();
+    return properties;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Property createProperty()
   {
     PropertyImpl property = new PropertyImpl();
     return property;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImportPropertyInclusion createImportPropertyInclusion()
+  {
+    ImportPropertyInclusionImpl importPropertyInclusion = new ImportPropertyInclusionImpl();
+    return importPropertyInclusion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FilePropertyInclusion createFilePropertyInclusion()
+  {
+    FilePropertyInclusionImpl filePropertyInclusion = new FilePropertyInclusionImpl();
+    return filePropertyInclusion;
   }
 
   /**

@@ -1,14 +1,42 @@
 package de.itemis.mpp.util
 
-import org.eclipse.emf.ecore.resource.Resource
 import de.itemis.mpp.generator.MppMultiOutputConfigurationProvider
+import de.itemis.mpp.pom.POM
+import java.io.InputStream
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.emf.ecore.resource.URIConverter
+import java.io.IOException
+import com.google.common.base.Optional
 
 class EMFUtil {
   def static String getOutputFileName(Resource resource) {
     val uri = resource.URI
-    if (uri != null) {
+    if(uri != null) {
       val inputFileName = uri.segment(uri.segmentCount() - 1)
-      return inputFileName.replace("."+MppMultiOutputConfigurationProvider.FILE_EXTENSION_MPP, "."+MppMultiOutputConfigurationProvider.FILE_EXTENSION_MAVEN)
+      return inputFileName.replace("." + MppMultiOutputConfigurationProvider.FILE_EXTENSION_MPP,
+        "." + MppMultiOutputConfigurationProvider.FILE_EXTENSION_MAVEN)
     }
     return "pom.xml"
-  }}
+  }
+
+  def public static Optional<InputStream> createInputStream(String path, POM pom) {
+    var InputStream is
+    var URI uri
+    val uriConverter = pom.eResource.resourceSet.getURIConverter
+    try {
+      uri = URI.createFileURI(path);
+      is = uriConverter.createInputStream(uri)
+    } catch(IOException e) {
+      //TODO handle!
+    }
+    
+    if(is == null) {
+      var baseUri = pom.eResource.URI.trimSegments(1).toPlatformString(false)
+      uri = URI.createPlatformResourceURI(baseUri + "/" + path, false)
+      is = uriConverter.createInputStream(uri)
+    }
+    
+    return Optional.fromNullable(is)
+  }
+}

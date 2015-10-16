@@ -30,28 +30,24 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cModulesAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cModulesModulesParserRuleCall_3_0 = (RuleCall)cModulesAssignment_3.eContents().get(0);
 		private final UnorderedGroup cUnorderedGroup_4 = (UnorderedGroup)cGroup.eContents().get(4);
-		private final Assignment cPropertyInclusionsAssignment_4_0 = (Assignment)cUnorderedGroup_4.eContents().get(0);
-		private final RuleCall cPropertyInclusionsPropertyInclusionParserRuleCall_4_0_0 = (RuleCall)cPropertyInclusionsAssignment_4_0.eContents().get(0);
-		private final Assignment cPropertiesAssignment_4_1 = (Assignment)cUnorderedGroup_4.eContents().get(1);
-		private final RuleCall cPropertiesPropertyParserRuleCall_4_1_0 = (RuleCall)cPropertiesAssignment_4_1.eContents().get(0);
-		private final Assignment cDependenciesAssignment_4_2 = (Assignment)cUnorderedGroup_4.eContents().get(2);
-		private final RuleCall cDependenciesDependenciesParserRuleCall_4_2_0 = (RuleCall)cDependenciesAssignment_4_2.eContents().get(0);
-		private final Assignment cScmAssignment_4_3 = (Assignment)cUnorderedGroup_4.eContents().get(3);
-		private final RuleCall cScmSCMParserRuleCall_4_3_0 = (RuleCall)cScmAssignment_4_3.eContents().get(0);
-		private final Assignment cRepositoriesAssignment_4_4 = (Assignment)cUnorderedGroup_4.eContents().get(4);
-		private final RuleCall cRepositoriesRepositoryParserRuleCall_4_4_0 = (RuleCall)cRepositoriesAssignment_4_4.eContents().get(0);
+		private final Assignment cPropertiesAssignment_4_0 = (Assignment)cUnorderedGroup_4.eContents().get(0);
+		private final RuleCall cPropertiesPropertiesParserRuleCall_4_0_0 = (RuleCall)cPropertiesAssignment_4_0.eContents().get(0);
+		private final Assignment cDependenciesAssignment_4_1 = (Assignment)cUnorderedGroup_4.eContents().get(1);
+		private final RuleCall cDependenciesDependenciesParserRuleCall_4_1_0 = (RuleCall)cDependenciesAssignment_4_1.eContents().get(0);
+		private final Assignment cScmAssignment_4_2 = (Assignment)cUnorderedGroup_4.eContents().get(2);
+		private final RuleCall cScmSCMParserRuleCall_4_2_0 = (RuleCall)cScmAssignment_4_2.eContents().get(0);
+		private final Assignment cRepositoriesAssignment_4_3 = (Assignment)cUnorderedGroup_4.eContents().get(3);
+		private final RuleCall cRepositoriesRepositoryParserRuleCall_4_3_0 = (RuleCall)cRepositoriesAssignment_4_3.eContents().get(0);
 		private final Assignment cBuildStepsAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cBuildStepsBuildStepParserRuleCall_5_0 = (RuleCall)cBuildStepsAssignment_5.eContents().get(0);
 		
 		//POM:
-		//	imports+=POMImport* parent=ParentRef? artifactDefinition=ArtifactDefinition modules=Modules?
-		//	(propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM? &
-		//	repositories+=Repository*) buildSteps+=BuildStep*;
+		//	imports+=POMImport* parent=ParentRef? artifactDefinition=ArtifactDefinition modules=Modules? (properties=Properties &
+		//	dependencies=Dependencies? & scm=SCM? & repositories+=Repository*) buildSteps+=BuildStep*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//imports+=POMImport* parent=ParentRef? artifactDefinition=ArtifactDefinition modules=Modules?
-		//(propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM? &
-		//repositories+=Repository*) buildSteps+=BuildStep*
+		//imports+=POMImport* parent=ParentRef? artifactDefinition=ArtifactDefinition modules=Modules? (properties=Properties &
+		//dependencies=Dependencies? & scm=SCM? & repositories+=Repository*) buildSteps+=BuildStep*
 		public Group getGroup() { return cGroup; }
 
 		//imports+=POMImport*
@@ -78,39 +74,32 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		//Modules
 		public RuleCall getModulesModulesParserRuleCall_3_0() { return cModulesModulesParserRuleCall_3_0; }
 
-		//propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM? &
-		//repositories+=Repository*
+		//properties=Properties & dependencies=Dependencies? & scm=SCM? & repositories+=Repository*
 		public UnorderedGroup getUnorderedGroup_4() { return cUnorderedGroup_4; }
 
-		//propertyInclusions+=PropertyInclusion*
-		public Assignment getPropertyInclusionsAssignment_4_0() { return cPropertyInclusionsAssignment_4_0; }
+		//properties=Properties
+		public Assignment getPropertiesAssignment_4_0() { return cPropertiesAssignment_4_0; }
 
-		//PropertyInclusion
-		public RuleCall getPropertyInclusionsPropertyInclusionParserRuleCall_4_0_0() { return cPropertyInclusionsPropertyInclusionParserRuleCall_4_0_0; }
-
-		//properties+=Property*
-		public Assignment getPropertiesAssignment_4_1() { return cPropertiesAssignment_4_1; }
-
-		//Property
-		public RuleCall getPropertiesPropertyParserRuleCall_4_1_0() { return cPropertiesPropertyParserRuleCall_4_1_0; }
+		//Properties
+		public RuleCall getPropertiesPropertiesParserRuleCall_4_0_0() { return cPropertiesPropertiesParserRuleCall_4_0_0; }
 
 		//dependencies=Dependencies?
-		public Assignment getDependenciesAssignment_4_2() { return cDependenciesAssignment_4_2; }
+		public Assignment getDependenciesAssignment_4_1() { return cDependenciesAssignment_4_1; }
 
 		//Dependencies
-		public RuleCall getDependenciesDependenciesParserRuleCall_4_2_0() { return cDependenciesDependenciesParserRuleCall_4_2_0; }
+		public RuleCall getDependenciesDependenciesParserRuleCall_4_1_0() { return cDependenciesDependenciesParserRuleCall_4_1_0; }
 
 		//scm=SCM?
-		public Assignment getScmAssignment_4_3() { return cScmAssignment_4_3; }
+		public Assignment getScmAssignment_4_2() { return cScmAssignment_4_2; }
 
 		//SCM
-		public RuleCall getScmSCMParserRuleCall_4_3_0() { return cScmSCMParserRuleCall_4_3_0; }
+		public RuleCall getScmSCMParserRuleCall_4_2_0() { return cScmSCMParserRuleCall_4_2_0; }
 
 		//repositories+=Repository*
-		public Assignment getRepositoriesAssignment_4_4() { return cRepositoriesAssignment_4_4; }
+		public Assignment getRepositoriesAssignment_4_3() { return cRepositoriesAssignment_4_3; }
 
 		//Repository
-		public RuleCall getRepositoriesRepositoryParserRuleCall_4_4_0() { return cRepositoriesRepositoryParserRuleCall_4_4_0; }
+		public RuleCall getRepositoriesRepositoryParserRuleCall_4_3_0() { return cRepositoriesRepositoryParserRuleCall_4_3_0; }
 
 		//buildSteps+=BuildStep*
 		public Assignment getBuildStepsAssignment_5() { return cBuildStepsAssignment_5; }
@@ -565,14 +554,17 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCleanKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
 		private final Keyword cPluginKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
 		private final Keyword cCompileKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
+		private final Keyword cFileKeyword_8 = (Keyword)cAlternatives.eContents().get(8);
+		private final Keyword cFromKeyword_9 = (Keyword)cAlternatives.eContents().get(9);
+		private final Keyword cIncludeKeyword_10 = (Keyword)cAlternatives.eContents().get(10);
 		
 		//IDOrKW:
-		//	ID | "test" | "parent" | "version" | "exec" | "clean" | "plugin" | //TODO continue the list of keywords!
-		//	"compile";
+		//	ID | "test" | "parent" | "version" | "exec" | "clean" | "plugin" | "compile" | "file" | "from" | //TODO continue the list of keywords!
+		//	"include";
 		@Override public ParserRule getRule() { return rule; }
 
-		//ID | "test" | "parent" | "version" | "exec" | "clean" | "plugin" | //TODO continue the list of keywords!
-		//"compile"
+		//ID | "test" | "parent" | "version" | "exec" | "clean" | "plugin" | "compile" | "file" | "from" | //TODO continue the list of keywords!
+		//"include"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ID
@@ -596,9 +588,18 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		//"plugin"
 		public Keyword getPluginKeyword_6() { return cPluginKeyword_6; }
 
-		////TODO continue the list of keywords!
 		//"compile"
 		public Keyword getCompileKeyword_7() { return cCompileKeyword_7; }
+
+		//"file"
+		public Keyword getFileKeyword_8() { return cFileKeyword_8; }
+
+		//"from"
+		public Keyword getFromKeyword_9() { return cFromKeyword_9; }
+
+		////TODO continue the list of keywords!
+		//"include"
+		public Keyword getIncludeKeyword_10() { return cIncludeKeyword_10; }
 	}
 
 	public class VersionElements extends AbstractParserRuleElementFinder {
@@ -689,76 +690,160 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getPropertyRefPropertyRefParserRuleCall_1_0() { return cPropertyRefPropertyRefParserRuleCall_1_0; }
 	}
 
+	public class PropertiesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Properties");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPropertiesKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cPropertiesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cPropertiesPropertyParserRuleCall_2_0 = (RuleCall)cPropertiesAssignment_2.eContents().get(0);
+		private final Assignment cInclusionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cInclusionsPropertyInclusionParserRuleCall_3_0 = (RuleCall)cInclusionsAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//Properties:
+		//	"properties" "{" properties+=Property* inclusions+=PropertyInclusion* "}";
+		@Override public ParserRule getRule() { return rule; }
+
+		//"properties" "{" properties+=Property* inclusions+=PropertyInclusion* "}"
+		public Group getGroup() { return cGroup; }
+
+		//"properties"
+		public Keyword getPropertiesKeyword_0() { return cPropertiesKeyword_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
+		//properties+=Property*
+		public Assignment getPropertiesAssignment_2() { return cPropertiesAssignment_2; }
+
+		//Property
+		public RuleCall getPropertiesPropertyParserRuleCall_2_0() { return cPropertiesPropertyParserRuleCall_2_0; }
+
+		//inclusions+=PropertyInclusion*
+		public Assignment getInclusionsAssignment_3() { return cInclusionsAssignment_3; }
+
+		//PropertyInclusion
+		public RuleCall getInclusionsPropertyInclusionParserRuleCall_3_0() { return cInclusionsPropertyInclusionParserRuleCall_3_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+
 	public class PropertyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Property");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cPropertyKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNamePropertyNameParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cValueSTRINGTerminalRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNamePropertyNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueSTRINGTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
 		//Property:
-		//	"property" name=PropertyName "=" value=STRING;
+		//	name=PropertyName "=" value=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"property" name=PropertyName "=" value=STRING
+		//name=PropertyName "=" value=STRING
 		public Group getGroup() { return cGroup; }
 
-		//"property"
-		public Keyword getPropertyKeyword_0() { return cPropertyKeyword_0; }
-
 		//name=PropertyName
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//PropertyName
-		public RuleCall getNamePropertyNameParserRuleCall_1_0() { return cNamePropertyNameParserRuleCall_1_0; }
+		public RuleCall getNamePropertyNameParserRuleCall_0_0() { return cNamePropertyNameParserRuleCall_0_0; }
 
 		//"="
-		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 
 		//value=STRING
-		public Assignment getValueAssignment_3() { return cValueAssignment_3; }
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
 
 		//STRING
-		public RuleCall getValueSTRINGTerminalRuleCall_3_0() { return cValueSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getValueSTRINGTerminalRuleCall_2_0() { return cValueSTRINGTerminalRuleCall_2_0; }
 	}
 
-	public class PropertyInclusionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PropertyInclusion");
+	public class ImportPropertyInclusionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ImportPropertyInclusion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIncludeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cPomRefAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cPomRefPOMImportCrossReference_1_0 = (CrossReference)cPomRefAssignment_1.eContents().get(0);
-		private final RuleCall cPomRefPOMImportIDTerminalRuleCall_1_0_1 = (RuleCall)cPomRefPOMImportCrossReference_1_0.eContents().get(1);
-		private final Keyword cFullStopKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cPropertiesKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cFromKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cPomRefAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cPomRefPOMImportCrossReference_2_0 = (CrossReference)cPomRefAssignment_2.eContents().get(0);
+		private final RuleCall cPomRefPOMImportIDTerminalRuleCall_2_0_1 = (RuleCall)cPomRefPOMImportCrossReference_2_0.eContents().get(1);
 		
-		//PropertyInclusion:
-		//	"include" pomRef=[POMImport] "." "properties";
+		//ImportPropertyInclusion:
+		//	"include" "from" pomRef=[POMImport];
 		@Override public ParserRule getRule() { return rule; }
 
-		//"include" pomRef=[POMImport] "." "properties"
+		//"include" "from" pomRef=[POMImport]
 		public Group getGroup() { return cGroup; }
 
 		//"include"
 		public Keyword getIncludeKeyword_0() { return cIncludeKeyword_0; }
 
+		//"from"
+		public Keyword getFromKeyword_1() { return cFromKeyword_1; }
+
 		//pomRef=[POMImport]
-		public Assignment getPomRefAssignment_1() { return cPomRefAssignment_1; }
+		public Assignment getPomRefAssignment_2() { return cPomRefAssignment_2; }
 
 		//[POMImport]
-		public CrossReference getPomRefPOMImportCrossReference_1_0() { return cPomRefPOMImportCrossReference_1_0; }
+		public CrossReference getPomRefPOMImportCrossReference_2_0() { return cPomRefPOMImportCrossReference_2_0; }
 
 		//ID
-		public RuleCall getPomRefPOMImportIDTerminalRuleCall_1_0_1() { return cPomRefPOMImportIDTerminalRuleCall_1_0_1; }
+		public RuleCall getPomRefPOMImportIDTerminalRuleCall_2_0_1() { return cPomRefPOMImportIDTerminalRuleCall_2_0_1; }
+	}
 
-		//"."
-		public Keyword getFullStopKeyword_2() { return cFullStopKeyword_2; }
+	public class FilePropertyInclusionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FilePropertyInclusion");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cIncludeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFromKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cFileKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPathAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPathSTRINGTerminalRuleCall_3_0 = (RuleCall)cPathAssignment_3.eContents().get(0);
+		
+		//FilePropertyInclusion:
+		//	"include" "from" "file" path=STRING;
+		@Override public ParserRule getRule() { return rule; }
 
-		//"properties"
-		public Keyword getPropertiesKeyword_3() { return cPropertiesKeyword_3; }
+		//"include" "from" "file" path=STRING
+		public Group getGroup() { return cGroup; }
+
+		//"include"
+		public Keyword getIncludeKeyword_0() { return cIncludeKeyword_0; }
+
+		//"from"
+		public Keyword getFromKeyword_1() { return cFromKeyword_1; }
+
+		//"file"
+		public Keyword getFileKeyword_2() { return cFileKeyword_2; }
+
+		//path=STRING
+		public Assignment getPathAssignment_3() { return cPathAssignment_3; }
+
+		//STRING
+		public RuleCall getPathSTRINGTerminalRuleCall_3_0() { return cPathSTRINGTerminalRuleCall_3_0; }
+	}
+
+	public class PropertyInclusionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PropertyInclusion");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cImportPropertyInclusionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cFilePropertyInclusionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//PropertyInclusion:
+		//	ImportPropertyInclusion | FilePropertyInclusion;
+		@Override public ParserRule getRule() { return rule; }
+
+		//ImportPropertyInclusion | FilePropertyInclusion
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ImportPropertyInclusion
+		public RuleCall getImportPropertyInclusionParserRuleCall_0() { return cImportPropertyInclusionParserRuleCall_0; }
+
+		//FilePropertyInclusion
+		public RuleCall getFilePropertyInclusionParserRuleCall_1() { return cFilePropertyInclusionParserRuleCall_1; }
 	}
 
 	public class DependenciesElements extends AbstractParserRuleElementFinder {
@@ -2422,7 +2507,10 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	private final IDOrPropteryRefElements pIDOrPropteryRef;
 	private final IDOrKWElements pIDOrKW;
 	private final VersionElements pVersion;
+	private final PropertiesElements pProperties;
 	private final PropertyElements pProperty;
+	private final ImportPropertyInclusionElements pImportPropertyInclusion;
+	private final FilePropertyInclusionElements pFilePropertyInclusion;
 	private final PropertyInclusionElements pPropertyInclusion;
 	private final DependenciesElements pDependencies;
 	private final DependencyGroupElements pDependencyGroup;
@@ -2478,7 +2566,10 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		this.pIDOrPropteryRef = new IDOrPropteryRefElements();
 		this.pIDOrKW = new IDOrKWElements();
 		this.pVersion = new VersionElements();
+		this.pProperties = new PropertiesElements();
 		this.pProperty = new PropertyElements();
+		this.pImportPropertyInclusion = new ImportPropertyInclusionElements();
+		this.pFilePropertyInclusion = new FilePropertyInclusionElements();
 		this.pPropertyInclusion = new PropertyInclusionElements();
 		this.pDependencies = new DependenciesElements();
 		this.pDependencyGroup = new DependencyGroupElements();
@@ -2538,9 +2629,8 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//POM:
-	//	imports+=POMImport* parent=ParentRef? artifactDefinition=ArtifactDefinition modules=Modules?
-	//	(propertyInclusions+=PropertyInclusion* & properties+=Property* & dependencies=Dependencies? & scm=SCM? &
-	//	repositories+=Repository*) buildSteps+=BuildStep*;
+	//	imports+=POMImport* parent=ParentRef? artifactDefinition=ArtifactDefinition modules=Modules? (properties=Properties &
+	//	dependencies=Dependencies? & scm=SCM? & repositories+=Repository*) buildSteps+=BuildStep*;
 	public POMElements getPOMAccess() {
 		return pPOM;
 	}
@@ -2682,8 +2772,8 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//IDOrKW:
-	//	ID | "test" | "parent" | "version" | "exec" | "clean" | "plugin" | //TODO continue the list of keywords!
-	//	"compile";
+	//	ID | "test" | "parent" | "version" | "exec" | "clean" | "plugin" | "compile" | "file" | "from" | //TODO continue the list of keywords!
+	//	"include";
 	public IDOrKWElements getIDOrKWAccess() {
 		return pIDOrKW;
 	}
@@ -2706,8 +2796,18 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		return getVersionAccess().getRule();
 	}
 
+	//Properties:
+	//	"properties" "{" properties+=Property* inclusions+=PropertyInclusion* "}";
+	public PropertiesElements getPropertiesAccess() {
+		return pProperties;
+	}
+	
+	public ParserRule getPropertiesRule() {
+		return getPropertiesAccess().getRule();
+	}
+
 	//Property:
-	//	"property" name=PropertyName "=" value=STRING;
+	//	name=PropertyName "=" value=STRING;
 	public PropertyElements getPropertyAccess() {
 		return pProperty;
 	}
@@ -2716,8 +2816,28 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		return getPropertyAccess().getRule();
 	}
 
+	//ImportPropertyInclusion:
+	//	"include" "from" pomRef=[POMImport];
+	public ImportPropertyInclusionElements getImportPropertyInclusionAccess() {
+		return pImportPropertyInclusion;
+	}
+	
+	public ParserRule getImportPropertyInclusionRule() {
+		return getImportPropertyInclusionAccess().getRule();
+	}
+
+	//FilePropertyInclusion:
+	//	"include" "from" "file" path=STRING;
+	public FilePropertyInclusionElements getFilePropertyInclusionAccess() {
+		return pFilePropertyInclusion;
+	}
+	
+	public ParserRule getFilePropertyInclusionRule() {
+		return getFilePropertyInclusionAccess().getRule();
+	}
+
 	//PropertyInclusion:
-	//	"include" pomRef=[POMImport] "." "properties";
+	//	ImportPropertyInclusion | FilePropertyInclusion;
 	public PropertyInclusionElements getPropertyInclusionAccess() {
 		return pPropertyInclusion;
 	}

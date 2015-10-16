@@ -104,22 +104,13 @@ public interface PomPackage extends EPackage
   int POM__MODULES = 3;
 
   /**
-   * The feature id for the '<em><b>Property Inclusions</b></em>' containment reference list.
+   * The feature id for the '<em><b>Properties</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int POM__PROPERTY_INCLUSIONS = 4;
-
-  /**
-   * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POM__PROPERTIES = 5;
+  int POM__PROPERTIES = 4;
 
   /**
    * The feature id for the '<em><b>Dependencies</b></em>' containment reference.
@@ -128,7 +119,7 @@ public interface PomPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POM__DEPENDENCIES = 6;
+  int POM__DEPENDENCIES = 5;
 
   /**
    * The feature id for the '<em><b>Scm</b></em>' containment reference.
@@ -137,7 +128,7 @@ public interface PomPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POM__SCM = 7;
+  int POM__SCM = 6;
 
   /**
    * The feature id for the '<em><b>Repositories</b></em>' containment reference list.
@@ -146,7 +137,7 @@ public interface PomPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POM__REPOSITORIES = 8;
+  int POM__REPOSITORIES = 7;
 
   /**
    * The feature id for the '<em><b>Build Steps</b></em>' containment reference list.
@@ -155,7 +146,7 @@ public interface PomPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POM__BUILD_STEPS = 9;
+  int POM__BUILD_STEPS = 8;
 
   /**
    * The number of structural features of the '<em>POM</em>' class.
@@ -164,7 +155,7 @@ public interface PomPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POM_FEATURE_COUNT = 10;
+  int POM_FEATURE_COUNT = 9;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.impl.ParentRefImpl <em>Parent Ref</em>}' class.
@@ -369,6 +360,43 @@ public interface PomPackage extends EPackage
   int VERSION_FEATURE_COUNT = 5;
 
   /**
+   * The meta object id for the '{@link de.itemis.mpp.pom.impl.PropertiesImpl <em>Properties</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.itemis.mpp.pom.impl.PropertiesImpl
+   * @see de.itemis.mpp.pom.impl.PomPackageImpl#getProperties()
+   * @generated
+   */
+  int PROPERTIES = 5;
+
+  /**
+   * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES__PROPERTIES = 0;
+
+  /**
+   * The feature id for the '<em><b>Inclusions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES__INCLUSIONS = 1;
+
+  /**
+   * The number of structural features of the '<em>Properties</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link de.itemis.mpp.pom.impl.PropertyImpl <em>Property</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -376,7 +404,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getProperty()
    * @generated
    */
-  int PROPERTY = 5;
+  int PROPERTY = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -413,16 +441,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPropertyInclusion()
    * @generated
    */
-  int PROPERTY_INCLUSION = 6;
-
-  /**
-   * The feature id for the '<em><b>Pom Ref</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROPERTY_INCLUSION__POM_REF = 0;
+  int PROPERTY_INCLUSION = 9;
 
   /**
    * The number of structural features of the '<em>Property Inclusion</em>' class.
@@ -431,7 +450,63 @@ public interface PomPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY_INCLUSION_FEATURE_COUNT = 1;
+  int PROPERTY_INCLUSION_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link de.itemis.mpp.pom.impl.ImportPropertyInclusionImpl <em>Import Property Inclusion</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.itemis.mpp.pom.impl.ImportPropertyInclusionImpl
+   * @see de.itemis.mpp.pom.impl.PomPackageImpl#getImportPropertyInclusion()
+   * @generated
+   */
+  int IMPORT_PROPERTY_INCLUSION = 7;
+
+  /**
+   * The feature id for the '<em><b>Pom Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMPORT_PROPERTY_INCLUSION__POM_REF = PROPERTY_INCLUSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Import Property Inclusion</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMPORT_PROPERTY_INCLUSION_FEATURE_COUNT = PROPERTY_INCLUSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link de.itemis.mpp.pom.impl.FilePropertyInclusionImpl <em>File Property Inclusion</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.itemis.mpp.pom.impl.FilePropertyInclusionImpl
+   * @see de.itemis.mpp.pom.impl.PomPackageImpl#getFilePropertyInclusion()
+   * @generated
+   */
+  int FILE_PROPERTY_INCLUSION = 8;
+
+  /**
+   * The feature id for the '<em><b>Path</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FILE_PROPERTY_INCLUSION__PATH = PROPERTY_INCLUSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>File Property Inclusion</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FILE_PROPERTY_INCLUSION_FEATURE_COUNT = PROPERTY_INCLUSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.impl.DependenciesImpl <em>Dependencies</em>}' class.
@@ -441,7 +516,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getDependencies()
    * @generated
    */
-  int DEPENDENCIES = 7;
+  int DEPENDENCIES = 10;
 
   /**
    * The feature id for the '<em><b>Includes</b></em>' containment reference list.
@@ -487,7 +562,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getDependencyGroup()
    * @generated
    */
-  int DEPENDENCY_GROUP = 8;
+  int DEPENDENCY_GROUP = 11;
 
   /**
    * The feature id for the '<em><b>Scope</b></em>' attribute.
@@ -524,7 +599,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getUngroupedDependency()
    * @generated
    */
-  int UNGROUPED_DEPENDENCY = 9;
+  int UNGROUPED_DEPENDENCY = 12;
 
   /**
    * The feature id for the '<em><b>Scope</b></em>' attribute.
@@ -561,7 +636,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getDependency()
    * @generated
    */
-  int DEPENDENCY = 10;
+  int DEPENDENCY = 13;
 
   /**
    * The feature id for the '<em><b>Optional</b></em>' attribute.
@@ -598,7 +673,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getDependencyInclusion()
    * @generated
    */
-  int DEPENDENCY_INCLUSION = 11;
+  int DEPENDENCY_INCLUSION = 14;
 
   /**
    * The feature id for the '<em><b>Pom Ref</b></em>' reference.
@@ -635,7 +710,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getSCM()
    * @generated
    */
-  int SCM = 12;
+  int SCM = 15;
 
   /**
    * The feature id for the '<em><b>Connection</b></em>' attribute.
@@ -690,7 +765,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getBuildStep()
    * @generated
    */
-  int BUILD_STEP = 24;
+  int BUILD_STEP = 27;
 
   /**
    * The number of structural features of the '<em>Build Step</em>' class.
@@ -709,7 +784,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPlugin()
    * @generated
    */
-  int PLUGIN = 13;
+  int PLUGIN = 16;
 
   /**
    * The feature id for the '<em><b>Coordinates</b></em>' containment reference.
@@ -755,7 +830,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPluginConfiguration()
    * @generated
    */
-  int PLUGIN_CONFIGURATION = 14;
+  int PLUGIN_CONFIGURATION = 17;
 
   /**
    * The feature id for the '<em><b>Configuration Items</b></em>' containment reference list.
@@ -783,7 +858,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPluginConfigurationItem()
    * @generated
    */
-  int PLUGIN_CONFIGURATION_ITEM = 15;
+  int PLUGIN_CONFIGURATION_ITEM = 18;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -811,7 +886,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPluginConfigurationParameter()
    * @generated
    */
-  int PLUGIN_CONFIGURATION_PARAMETER = 16;
+  int PLUGIN_CONFIGURATION_PARAMETER = 19;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -857,7 +932,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPluginConfigurationParameterList()
    * @generated
    */
-  int PLUGIN_CONFIGURATION_PARAMETER_LIST = 17;
+  int PLUGIN_CONFIGURATION_PARAMETER_LIST = 20;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -894,7 +969,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPluginConfigurationParameterMap()
    * @generated
    */
-  int PLUGIN_CONFIGURATION_PARAMETER_MAP = 18;
+  int PLUGIN_CONFIGURATION_PARAMETER_MAP = 21;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -931,7 +1006,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPluginConfigurationParameterMapEntry()
    * @generated
    */
-  int PLUGIN_CONFIGURATION_PARAMETER_MAP_ENTRY = 19;
+  int PLUGIN_CONFIGURATION_PARAMETER_MAP_ENTRY = 22;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -968,7 +1043,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPluginConfigurationParameterProperties()
    * @generated
    */
-  int PLUGIN_CONFIGURATION_PARAMETER_PROPERTIES = 20;
+  int PLUGIN_CONFIGURATION_PARAMETER_PROPERTIES = 23;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1005,7 +1080,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPluginConfigurationParameterPropertyEntry()
    * @generated
    */
-  int PLUGIN_CONFIGURATION_PARAMETER_PROPERTY_ENTRY = 21;
+  int PLUGIN_CONFIGURATION_PARAMETER_PROPERTY_ENTRY = 24;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1042,7 +1117,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPluginExecution()
    * @generated
    */
-  int PLUGIN_EXECUTION = 22;
+  int PLUGIN_EXECUTION = 25;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1106,7 +1181,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPluginInclusion()
    * @generated
    */
-  int PLUGIN_INCLUSION = 23;
+  int PLUGIN_INCLUSION = 26;
 
   /**
    * The feature id for the '<em><b>Pom Ref</b></em>' reference.
@@ -1161,7 +1236,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getCoordinates()
    * @generated
    */
-  int COORDINATES = 25;
+  int COORDINATES = 28;
 
   /**
    * The feature id for the '<em><b>Group Id</b></em>' attribute.
@@ -1207,7 +1282,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getExtendedCoordinates()
    * @generated
    */
-  int EXTENDED_COORDINATES = 26;
+  int EXTENDED_COORDINATES = 29;
 
   /**
    * The feature id for the '<em><b>Group Id</b></em>' attribute.
@@ -1271,7 +1346,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPOMImport()
    * @generated
    */
-  int POM_IMPORT = 27;
+  int POM_IMPORT = 30;
 
   /**
    * The feature id for the '<em><b>Coordinates</b></em>' containment reference.
@@ -1308,7 +1383,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepository()
    * @generated
    */
-  int REPOSITORY = 28;
+  int REPOSITORY = 31;
 
   /**
    * The feature id for the '<em><b>Plugin Repositroy</b></em>' attribute.
@@ -1381,7 +1456,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepositoryPolicy()
    * @generated
    */
-  int REPOSITORY_POLICY = 29;
+  int REPOSITORY_POLICY = 32;
 
   /**
    * The feature id for the '<em><b>Disabled</b></em>' attribute.
@@ -1454,7 +1529,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getDependencyScope()
    * @generated
    */
-  int DEPENDENCY_SCOPE = 30;
+  int DEPENDENCY_SCOPE = 33;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.Phase <em>Phase</em>}' enum.
@@ -1464,7 +1539,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPhase()
    * @generated
    */
-  int PHASE = 31;
+  int PHASE = 34;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.RepositoryUpdatePolicy <em>Repository Update Policy</em>}' enum.
@@ -1474,7 +1549,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepositoryUpdatePolicy()
    * @generated
    */
-  int REPOSITORY_UPDATE_POLICY = 32;
+  int REPOSITORY_UPDATE_POLICY = 35;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.ChecksumPolicy <em>Checksum Policy</em>}' enum.
@@ -1484,7 +1559,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getChecksumPolicy()
    * @generated
    */
-  int CHECKSUM_POLICY = 33;
+  int CHECKSUM_POLICY = 36;
 
 
   /**
@@ -1542,21 +1617,10 @@ public interface PomPackage extends EPackage
   EReference getPOM_Modules();
 
   /**
-   * Returns the meta object for the containment reference list '{@link de.itemis.mpp.pom.POM#getPropertyInclusions <em>Property Inclusions</em>}'.
+   * Returns the meta object for the containment reference '{@link de.itemis.mpp.pom.POM#getProperties <em>Properties</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Property Inclusions</em>'.
-   * @see de.itemis.mpp.pom.POM#getPropertyInclusions()
-   * @see #getPOM()
-   * @generated
-   */
-  EReference getPOM_PropertyInclusions();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link de.itemis.mpp.pom.POM#getProperties <em>Properties</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Properties</em>'.
+   * @return the meta object for the containment reference '<em>Properties</em>'.
    * @see de.itemis.mpp.pom.POM#getProperties()
    * @see #getPOM()
    * @generated
@@ -1802,6 +1866,38 @@ public interface PomPackage extends EPackage
   EAttribute getVersion_PropertyRef();
 
   /**
+   * Returns the meta object for class '{@link de.itemis.mpp.pom.Properties <em>Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Properties</em>'.
+   * @see de.itemis.mpp.pom.Properties
+   * @generated
+   */
+  EClass getProperties();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.itemis.mpp.pom.Properties#getProperties <em>Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Properties</em>'.
+   * @see de.itemis.mpp.pom.Properties#getProperties()
+   * @see #getProperties()
+   * @generated
+   */
+  EReference getProperties_Properties();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.itemis.mpp.pom.Properties#getInclusions <em>Inclusions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Inclusions</em>'.
+   * @see de.itemis.mpp.pom.Properties#getInclusions()
+   * @see #getProperties()
+   * @generated
+   */
+  EReference getProperties_Inclusions();
+
+  /**
    * Returns the meta object for class '{@link de.itemis.mpp.pom.Property <em>Property</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1834,6 +1930,48 @@ public interface PomPackage extends EPackage
   EAttribute getProperty_Value();
 
   /**
+   * Returns the meta object for class '{@link de.itemis.mpp.pom.ImportPropertyInclusion <em>Import Property Inclusion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Import Property Inclusion</em>'.
+   * @see de.itemis.mpp.pom.ImportPropertyInclusion
+   * @generated
+   */
+  EClass getImportPropertyInclusion();
+
+  /**
+   * Returns the meta object for the reference '{@link de.itemis.mpp.pom.ImportPropertyInclusion#getPomRef <em>Pom Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Pom Ref</em>'.
+   * @see de.itemis.mpp.pom.ImportPropertyInclusion#getPomRef()
+   * @see #getImportPropertyInclusion()
+   * @generated
+   */
+  EReference getImportPropertyInclusion_PomRef();
+
+  /**
+   * Returns the meta object for class '{@link de.itemis.mpp.pom.FilePropertyInclusion <em>File Property Inclusion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>File Property Inclusion</em>'.
+   * @see de.itemis.mpp.pom.FilePropertyInclusion
+   * @generated
+   */
+  EClass getFilePropertyInclusion();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.FilePropertyInclusion#getPath <em>Path</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Path</em>'.
+   * @see de.itemis.mpp.pom.FilePropertyInclusion#getPath()
+   * @see #getFilePropertyInclusion()
+   * @generated
+   */
+  EAttribute getFilePropertyInclusion_Path();
+
+  /**
    * Returns the meta object for class '{@link de.itemis.mpp.pom.PropertyInclusion <em>Property Inclusion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1842,17 +1980,6 @@ public interface PomPackage extends EPackage
    * @generated
    */
   EClass getPropertyInclusion();
-
-  /**
-   * Returns the meta object for the reference '{@link de.itemis.mpp.pom.PropertyInclusion#getPomRef <em>Pom Ref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Pom Ref</em>'.
-   * @see de.itemis.mpp.pom.PropertyInclusion#getPomRef()
-   * @see #getPropertyInclusion()
-   * @generated
-   */
-  EReference getPropertyInclusion_PomRef();
 
   /**
    * Returns the meta object for class '{@link de.itemis.mpp.pom.Dependencies <em>Dependencies</em>}'.
@@ -2850,15 +2977,7 @@ public interface PomPackage extends EPackage
     EReference POM__MODULES = eINSTANCE.getPOM_Modules();
 
     /**
-     * The meta object literal for the '<em><b>Property Inclusions</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference POM__PROPERTY_INCLUSIONS = eINSTANCE.getPOM_PropertyInclusions();
-
-    /**
-     * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Properties</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3050,6 +3169,32 @@ public interface PomPackage extends EPackage
     EAttribute VERSION__PROPERTY_REF = eINSTANCE.getVersion_PropertyRef();
 
     /**
+     * The meta object literal for the '{@link de.itemis.mpp.pom.impl.PropertiesImpl <em>Properties</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.itemis.mpp.pom.impl.PropertiesImpl
+     * @see de.itemis.mpp.pom.impl.PomPackageImpl#getProperties()
+     * @generated
+     */
+    EClass PROPERTIES = eINSTANCE.getProperties();
+
+    /**
+     * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROPERTIES__PROPERTIES = eINSTANCE.getProperties_Properties();
+
+    /**
+     * The meta object literal for the '<em><b>Inclusions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROPERTIES__INCLUSIONS = eINSTANCE.getProperties_Inclusions();
+
+    /**
      * The meta object literal for the '{@link de.itemis.mpp.pom.impl.PropertyImpl <em>Property</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3076,6 +3221,42 @@ public interface PomPackage extends EPackage
     EAttribute PROPERTY__VALUE = eINSTANCE.getProperty_Value();
 
     /**
+     * The meta object literal for the '{@link de.itemis.mpp.pom.impl.ImportPropertyInclusionImpl <em>Import Property Inclusion</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.itemis.mpp.pom.impl.ImportPropertyInclusionImpl
+     * @see de.itemis.mpp.pom.impl.PomPackageImpl#getImportPropertyInclusion()
+     * @generated
+     */
+    EClass IMPORT_PROPERTY_INCLUSION = eINSTANCE.getImportPropertyInclusion();
+
+    /**
+     * The meta object literal for the '<em><b>Pom Ref</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IMPORT_PROPERTY_INCLUSION__POM_REF = eINSTANCE.getImportPropertyInclusion_PomRef();
+
+    /**
+     * The meta object literal for the '{@link de.itemis.mpp.pom.impl.FilePropertyInclusionImpl <em>File Property Inclusion</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.itemis.mpp.pom.impl.FilePropertyInclusionImpl
+     * @see de.itemis.mpp.pom.impl.PomPackageImpl#getFilePropertyInclusion()
+     * @generated
+     */
+    EClass FILE_PROPERTY_INCLUSION = eINSTANCE.getFilePropertyInclusion();
+
+    /**
+     * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FILE_PROPERTY_INCLUSION__PATH = eINSTANCE.getFilePropertyInclusion_Path();
+
+    /**
      * The meta object literal for the '{@link de.itemis.mpp.pom.impl.PropertyInclusionImpl <em>Property Inclusion</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3084,14 +3265,6 @@ public interface PomPackage extends EPackage
      * @generated
      */
     EClass PROPERTY_INCLUSION = eINSTANCE.getPropertyInclusion();
-
-    /**
-     * The meta object literal for the '<em><b>Pom Ref</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PROPERTY_INCLUSION__POM_REF = eINSTANCE.getPropertyInclusion_PomRef();
 
     /**
      * The meta object literal for the '{@link de.itemis.mpp.pom.impl.DependenciesImpl <em>Dependencies</em>}' class.

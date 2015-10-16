@@ -10,8 +10,7 @@ import de.itemis.mpp.pom.POM;
 import de.itemis.mpp.pom.POMImport;
 import de.itemis.mpp.pom.ParentRef;
 import de.itemis.mpp.pom.PomPackage;
-import de.itemis.mpp.pom.Property;
-import de.itemis.mpp.pom.PropertyInclusion;
+import de.itemis.mpp.pom.Properties;
 import de.itemis.mpp.pom.Repository;
 import de.itemis.mpp.pom.SCM;
 
@@ -43,7 +42,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getArtifactDefinition <em>Artifact Definition</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getModules <em>Modules</em>}</li>
- *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getPropertyInclusions <em>Property Inclusions</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getDependencies <em>Dependencies</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.POMImpl#getScm <em>Scm</em>}</li>
@@ -96,24 +94,14 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
   protected Modules modules;
 
   /**
-   * The cached value of the '{@link #getPropertyInclusions() <em>Property Inclusions</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPropertyInclusions()
-   * @generated
-   * @ordered
-   */
-  protected EList<PropertyInclusion> propertyInclusions;
-
-  /**
-   * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
+   * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getProperties()
    * @generated
    * @ordered
    */
-  protected EList<Property> properties;
+  protected Properties properties;
 
   /**
    * The cached value of the '{@link #getDependencies() <em>Dependencies</em>}' containment reference.
@@ -339,13 +327,9 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<PropertyInclusion> getPropertyInclusions()
+  public Properties getProperties()
   {
-    if (propertyInclusions == null)
-    {
-      propertyInclusions = new EObjectContainmentEList<PropertyInclusion>(PropertyInclusion.class, this, PomPackage.POM__PROPERTY_INCLUSIONS);
-    }
-    return propertyInclusions;
+    return properties;
   }
 
   /**
@@ -353,13 +337,37 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Property> getProperties()
+  public NotificationChain basicSetProperties(Properties newProperties, NotificationChain msgs)
   {
-    if (properties == null)
+    Properties oldProperties = properties;
+    properties = newProperties;
+    if (eNotificationRequired())
     {
-      properties = new EObjectContainmentEList<Property>(Property.class, this, PomPackage.POM__PROPERTIES);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PomPackage.POM__PROPERTIES, oldProperties, newProperties);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return properties;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setProperties(Properties newProperties)
+  {
+    if (newProperties != properties)
+    {
+      NotificationChain msgs = null;
+      if (properties != null)
+        msgs = ((InternalEObject)properties).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PomPackage.POM__PROPERTIES, null, msgs);
+      if (newProperties != null)
+        msgs = ((InternalEObject)newProperties).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PomPackage.POM__PROPERTIES, null, msgs);
+      msgs = basicSetProperties(newProperties, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PomPackage.POM__PROPERTIES, newProperties, newProperties));
   }
 
   /**
@@ -504,10 +512,8 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
         return basicSetArtifactDefinition(null, msgs);
       case PomPackage.POM__MODULES:
         return basicSetModules(null, msgs);
-      case PomPackage.POM__PROPERTY_INCLUSIONS:
-        return ((InternalEList<?>)getPropertyInclusions()).basicRemove(otherEnd, msgs);
       case PomPackage.POM__PROPERTIES:
-        return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+        return basicSetProperties(null, msgs);
       case PomPackage.POM__DEPENDENCIES:
         return basicSetDependencies(null, msgs);
       case PomPackage.POM__SCM:
@@ -538,8 +544,6 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
         return getArtifactDefinition();
       case PomPackage.POM__MODULES:
         return getModules();
-      case PomPackage.POM__PROPERTY_INCLUSIONS:
-        return getPropertyInclusions();
       case PomPackage.POM__PROPERTIES:
         return getProperties();
       case PomPackage.POM__DEPENDENCIES:
@@ -578,13 +582,8 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
       case PomPackage.POM__MODULES:
         setModules((Modules)newValue);
         return;
-      case PomPackage.POM__PROPERTY_INCLUSIONS:
-        getPropertyInclusions().clear();
-        getPropertyInclusions().addAll((Collection<? extends PropertyInclusion>)newValue);
-        return;
       case PomPackage.POM__PROPERTIES:
-        getProperties().clear();
-        getProperties().addAll((Collection<? extends Property>)newValue);
+        setProperties((Properties)newValue);
         return;
       case PomPackage.POM__DEPENDENCIES:
         setDependencies((Dependencies)newValue);
@@ -626,11 +625,8 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
       case PomPackage.POM__MODULES:
         setModules((Modules)null);
         return;
-      case PomPackage.POM__PROPERTY_INCLUSIONS:
-        getPropertyInclusions().clear();
-        return;
       case PomPackage.POM__PROPERTIES:
-        getProperties().clear();
+        setProperties((Properties)null);
         return;
       case PomPackage.POM__DEPENDENCIES:
         setDependencies((Dependencies)null);
@@ -666,10 +662,8 @@ public class POMImpl extends MinimalEObjectImpl.Container implements POM
         return artifactDefinition != null;
       case PomPackage.POM__MODULES:
         return modules != null;
-      case PomPackage.POM__PROPERTY_INCLUSIONS:
-        return propertyInclusions != null && !propertyInclusions.isEmpty();
       case PomPackage.POM__PROPERTIES:
-        return properties != null && !properties.isEmpty();
+        return properties != null;
       case PomPackage.POM__DEPENDENCIES:
         return dependencies != null;
       case PomPackage.POM__SCM:

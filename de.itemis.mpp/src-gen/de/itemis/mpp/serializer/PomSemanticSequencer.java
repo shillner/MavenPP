@@ -12,6 +12,8 @@ import de.itemis.mpp.pom.Dependency;
 import de.itemis.mpp.pom.DependencyGroup;
 import de.itemis.mpp.pom.DependencyInclusion;
 import de.itemis.mpp.pom.ExtendedCoordinates;
+import de.itemis.mpp.pom.FilePropertyInclusion;
+import de.itemis.mpp.pom.ImportPropertyInclusion;
 import de.itemis.mpp.pom.Modules;
 import de.itemis.mpp.pom.POM;
 import de.itemis.mpp.pom.POMImport;
@@ -27,8 +29,8 @@ import de.itemis.mpp.pom.PluginConfigurationParameterPropertyEntry;
 import de.itemis.mpp.pom.PluginExecution;
 import de.itemis.mpp.pom.PluginInclusion;
 import de.itemis.mpp.pom.PomPackage;
+import de.itemis.mpp.pom.Properties;
 import de.itemis.mpp.pom.Property;
-import de.itemis.mpp.pom.PropertyInclusion;
 import de.itemis.mpp.pom.Repository;
 import de.itemis.mpp.pom.RepositoryPolicy;
 import de.itemis.mpp.pom.SCM;
@@ -77,6 +79,12 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case PomPackage.EXTENDED_COORDINATES:
 				sequence_ExtendedCoordinates(context, (ExtendedCoordinates) semanticObject); 
 				return; 
+			case PomPackage.FILE_PROPERTY_INCLUSION:
+				sequence_FilePropertyInclusion(context, (FilePropertyInclusion) semanticObject); 
+				return; 
+			case PomPackage.IMPORT_PROPERTY_INCLUSION:
+				sequence_ImportPropertyInclusion(context, (ImportPropertyInclusion) semanticObject); 
+				return; 
 			case PomPackage.MODULES:
 				sequence_Modules(context, (Modules) semanticObject); 
 				return; 
@@ -119,11 +127,11 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case PomPackage.PLUGIN_INCLUSION:
 				sequence_PluginInclusion(context, (PluginInclusion) semanticObject); 
 				return; 
+			case PomPackage.PROPERTIES:
+				sequence_Properties(context, (Properties) semanticObject); 
+				return; 
 			case PomPackage.PROPERTY:
 				sequence_Property(context, (Property) semanticObject); 
-				return; 
-			case PomPackage.PROPERTY_INCLUSION:
-				sequence_PropertyInclusion(context, (PropertyInclusion) semanticObject); 
 				return; 
 			case PomPackage.REPOSITORY:
 				sequence_Repository(context, (Repository) semanticObject); 
@@ -239,6 +247,38 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     path=STRING
+	 */
+	protected void sequence_FilePropertyInclusion(EObject context, FilePropertyInclusion semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, PomPackage.Literals.FILE_PROPERTY_INCLUSION__PATH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PomPackage.Literals.FILE_PROPERTY_INCLUSION__PATH));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getFilePropertyInclusionAccess().getPathSTRINGTerminalRuleCall_3_0(), semanticObject.getPath());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     pomRef=[POMImport|ID]
+	 */
+	protected void sequence_ImportPropertyInclusion(EObject context, ImportPropertyInclusion semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, PomPackage.Literals.IMPORT_PROPERTY_INCLUSION__POM_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PomPackage.Literals.IMPORT_PROPERTY_INCLUSION__POM_REF));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getImportPropertyInclusionAccess().getPomRefPOMImportIDTerminalRuleCall_2_0_1(), semanticObject.getPomRef());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (names+=STRING names+=STRING*)
 	 */
 	protected void sequence_Modules(EObject context, Modules semanticObject) {
@@ -272,8 +312,7 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         parent=ParentRef? 
 	 *         artifactDefinition=ArtifactDefinition 
 	 *         modules=Modules? 
-	 *         propertyInclusions+=PropertyInclusion* 
-	 *         properties+=Property* 
+	 *         properties=Properties 
 	 *         dependencies=Dependencies? 
 	 *         scm=SCM? 
 	 *         repositories+=Repository* 
@@ -406,17 +445,10 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     pomRef=[POMImport|ID]
+	 *     (properties+=Property* inclusions+=PropertyInclusion*)
 	 */
-	protected void sequence_PropertyInclusion(EObject context, PropertyInclusion semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, PomPackage.Literals.PROPERTY_INCLUSION__POM_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PomPackage.Literals.PROPERTY_INCLUSION__POM_REF));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getPropertyInclusionAccess().getPomRefPOMImportIDTerminalRuleCall_1_0_1(), semanticObject.getPomRef());
-		feeder.finish();
+	protected void sequence_Properties(EObject context, Properties semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -433,8 +465,8 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getPropertyAccess().getNamePropertyNameParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getPropertyAccess().getValueSTRINGTerminalRuleCall_3_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getPropertyAccess().getNamePropertyNameParserRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getPropertyAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	

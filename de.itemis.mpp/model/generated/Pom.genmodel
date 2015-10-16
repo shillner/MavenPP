@@ -64,7 +64,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/parent"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/artifactDefinition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/modules"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/propertyInclusions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/properties"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/dependencies"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POM/scm"/>
@@ -93,13 +92,21 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Version/qualifier"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Version/propertyRef"/>
     </genClasses>
+    <genClasses ecoreClass="Pom.ecore#//Properties">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//Properties/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//Properties/inclusions"/>
+    </genClasses>
     <genClasses ecoreClass="Pom.ecore#//Property">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Property/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//Property/value"/>
     </genClasses>
-    <genClasses ecoreClass="Pom.ecore#//PropertyInclusion">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pom.ecore#//PropertyInclusion/pomRef"/>
+    <genClasses ecoreClass="Pom.ecore#//ImportPropertyInclusion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pom.ecore#//ImportPropertyInclusion/pomRef"/>
     </genClasses>
+    <genClasses ecoreClass="Pom.ecore#//FilePropertyInclusion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//FilePropertyInclusion/path"/>
+    </genClasses>
+    <genClasses ecoreClass="Pom.ecore#//PropertyInclusion"/>
     <genClasses ecoreClass="Pom.ecore#//Dependencies">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//Dependencies/includes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//Dependencies/dependencyGroups"/>
