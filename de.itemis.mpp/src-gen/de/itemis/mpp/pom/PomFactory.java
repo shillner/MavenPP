@@ -293,6 +293,15 @@ public interface PomFactory extends EFactory
   ExtendedCoordinates createExtendedCoordinates();
 
   /**
+   * Returns a new object of class '<em>Non Versioned Coordinates</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Non Versioned Coordinates</em>'.
+   * @generated
+   */
+  NonVersionedCoordinates createNonVersionedCoordinates();
+
+  /**
    * Returns a new object of class '<em>POM Import</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

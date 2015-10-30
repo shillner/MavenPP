@@ -15,6 +15,7 @@ import de.itemis.mpp.pom.ExtendedCoordinates;
 import de.itemis.mpp.pom.FilePropertyInclusion;
 import de.itemis.mpp.pom.ImportPropertyInclusion;
 import de.itemis.mpp.pom.Modules;
+import de.itemis.mpp.pom.NonVersionedCoordinates;
 import de.itemis.mpp.pom.POM;
 import de.itemis.mpp.pom.POMImport;
 import de.itemis.mpp.pom.ParentRef;
@@ -87,6 +88,9 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case PomPackage.MODULES:
 				sequence_Modules(context, (Modules) semanticObject); 
+				return; 
+			case PomPackage.NON_VERSIONED_COORDINATES:
+				sequence_NonVersionedCoordinates(context, (NonVersionedCoordinates) semanticObject); 
 				return; 
 			case PomPackage.POM:
 				sequence_POM(context, (POM) semanticObject); 
@@ -210,19 +214,19 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (pomRef=[POMImport|ID] scope=DependencyScope)
+	 *     (scope=DependencyScope pomRef=[POMImport|ID])
 	 */
 	protected void sequence_DependencyInclusion(EObject context, DependencyInclusion semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, PomPackage.Literals.DEPENDENCY_INCLUSION__POM_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PomPackage.Literals.DEPENDENCY_INCLUSION__POM_REF));
 			if(transientValues.isValueTransient(semanticObject, PomPackage.Literals.DEPENDENCY_INCLUSION__SCOPE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PomPackage.Literals.DEPENDENCY_INCLUSION__SCOPE));
+			if(transientValues.isValueTransient(semanticObject, PomPackage.Literals.DEPENDENCY_INCLUSION__POM_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PomPackage.Literals.DEPENDENCY_INCLUSION__POM_REF));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getDependencyInclusionAccess().getPomRefPOMImportIDTerminalRuleCall_1_0_1(), semanticObject.getPomRef());
-		feeder.accept(grammarAccess.getDependencyInclusionAccess().getScopeDependencyScopeEnumRuleCall_3_0(), semanticObject.getScope());
+		feeder.accept(grammarAccess.getDependencyInclusionAccess().getScopeDependencyScopeEnumRuleCall_1_0(), semanticObject.getScope());
+		feeder.accept(grammarAccess.getDependencyInclusionAccess().getPomRefPOMImportIDTerminalRuleCall_3_0_1(), semanticObject.getPomRef());
 		feeder.finish();
 	}
 	
@@ -283,6 +287,25 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Modules(EObject context, Modules semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (groupId=IDAndSpecialCharacters artifactId=IDAndSpecialCharacters)
+	 */
+	protected void sequence_NonVersionedCoordinates(EObject context, NonVersionedCoordinates semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, PomPackage.Literals.NON_VERSIONED_COORDINATES__GROUP_ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PomPackage.Literals.NON_VERSIONED_COORDINATES__GROUP_ID));
+			if(transientValues.isValueTransient(semanticObject, PomPackage.Literals.NON_VERSIONED_COORDINATES__ARTIFACT_ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PomPackage.Literals.NON_VERSIONED_COORDINATES__ARTIFACT_ID));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getNonVersionedCoordinatesAccess().getGroupIdIDAndSpecialCharactersParserRuleCall_0_0(), semanticObject.getGroupId());
+		feeder.accept(grammarAccess.getNonVersionedCoordinatesAccess().getArtifactIdIDAndSpecialCharactersParserRuleCall_2_0(), semanticObject.getArtifactId());
+		feeder.finish();
 	}
 	
 	
@@ -427,7 +450,7 @@ public class PomSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (pomRef=[POMImport|ID] pluginCoordinates=Coordinates (executionId=IDAndDash | config?='config')?)
+	 *     ((executionId=IDAndDash | config?='config')? pluginCoordinates=NonVersionedCoordinates pomRef=[POMImport|ID])
 	 */
 	protected void sequence_PluginInclusion(EObject context, PluginInclusion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

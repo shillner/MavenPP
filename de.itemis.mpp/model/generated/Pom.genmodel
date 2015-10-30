@@ -125,8 +125,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//Dependency/coordinates"/>
     </genClasses>
     <genClasses ecoreClass="Pom.ecore#//DependencyInclusion">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pom.ecore#//DependencyInclusion/pomRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//DependencyInclusion/scope"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pom.ecore#//DependencyInclusion/pomRef"/>
     </genClasses>
     <genClasses ecoreClass="Pom.ecore#//SCM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//SCM/connection"/>
@@ -174,10 +174,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//PluginExecution/default"/>
     </genClasses>
     <genClasses ecoreClass="Pom.ecore#//PluginInclusion">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pom.ecore#//PluginInclusion/pomRef"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//PluginInclusion/pluginCoordinates"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//PluginInclusion/executionId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//PluginInclusion/config"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//PluginInclusion/pluginCoordinates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pom.ecore#//PluginInclusion/pomRef"/>
     </genClasses>
     <genClasses ecoreClass="Pom.ecore#//BuildStep"/>
     <genClasses ecoreClass="Pom.ecore#//Coordinates">
@@ -191,6 +191,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//ExtendedCoordinates/version"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//ExtendedCoordinates/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//ExtendedCoordinates/classifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Pom.ecore#//NonVersionedCoordinates">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//NonVersionedCoordinates/groupId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pom.ecore#//NonVersionedCoordinates/artifactId"/>
     </genClasses>
     <genClasses ecoreClass="Pom.ecore#//POMImport">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pom.ecore#//POMImport/coordinates"/>

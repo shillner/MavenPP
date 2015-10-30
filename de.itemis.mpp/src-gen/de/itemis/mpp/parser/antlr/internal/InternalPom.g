@@ -1773,37 +1773,37 @@ ruleDependencyInclusion returns [EObject current=null]
     }
 (
 (
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getDependencyInclusionRule());
-	        }
-        }
-	otherlv_1=RULE_ID
-	{
-		newLeafNode(otherlv_1, grammarAccess.getDependencyInclusionAccess().getPomRefPOMImportCrossReference_1_0()); 
-	}
-
-)
-)	otherlv_2='.' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getDependencyInclusionAccess().getFullStopKeyword_2());
-    }
-(
-(
 		{ 
-	        newCompositeNode(grammarAccess.getDependencyInclusionAccess().getScopeDependencyScopeEnumRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getDependencyInclusionAccess().getScopeDependencyScopeEnumRuleCall_1_0()); 
 	    }
-		lv_scope_3_0=ruleDependencyScope		{
+		lv_scope_1_0=ruleDependencyScope		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getDependencyInclusionRule());
 	        }
        		set(
        			$current, 
        			"scope",
-        		lv_scope_3_0, 
+        		lv_scope_1_0, 
         		"DependencyScope");
 	        afterParserOrEnumRuleCall();
 	    }
+
+)
+)	otherlv_2='from' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDependencyInclusionAccess().getFromKeyword_2());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDependencyInclusionRule());
+	        }
+        }
+	otherlv_3=RULE_ID
+	{
+		newLeafNode(otherlv_3, grammarAccess.getDependencyInclusionAccess().getPomRefPOMImportCrossReference_3_0()); 
+	}
 
 )
 ))
@@ -2837,58 +2837,19 @@ rulePluginInclusion returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getPluginInclusionAccess().getIncludeKeyword_0());
     }
-(
-(
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getPluginInclusionRule());
-	        }
-        }
-	otherlv_1=RULE_ID
-	{
-		newLeafNode(otherlv_1, grammarAccess.getPluginInclusionAccess().getPomRefPOMImportCrossReference_1_0()); 
-	}
-
-)
-)	otherlv_2='.' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getPluginInclusionAccess().getFullStopKeyword_2());
-    }
-(
+(((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPluginInclusionAccess().getPluginCoordinatesCoordinatesParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getPluginInclusionAccess().getExecutionIdIDAndDashParserRuleCall_1_0_0_0()); 
 	    }
-		lv_pluginCoordinates_3_0=ruleCoordinates		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getPluginInclusionRule());
-	        }
-       		set(
-       			$current, 
-       			"pluginCoordinates",
-        		lv_pluginCoordinates_3_0, 
-        		"Coordinates");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(	otherlv_4='.' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getPluginInclusionAccess().getFullStopKeyword_4_0());
-    }
-((
-(
-		{ 
-	        newCompositeNode(grammarAccess.getPluginInclusionAccess().getExecutionIdIDAndDashParserRuleCall_4_1_0_0()); 
-	    }
-		lv_executionId_5_0=ruleIDAndDash		{
+		lv_executionId_1_0=ruleIDAndDash		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPluginInclusionRule());
 	        }
        		set(
        			$current, 
        			"executionId",
-        		lv_executionId_5_0, 
+        		lv_executionId_1_0, 
         		"IDAndDash");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -2897,9 +2858,9 @@ rulePluginInclusion returns [EObject current=null]
 )
     |(
 (
-		lv_config_6_0=	'config' 
+		lv_config_2_0=	'config' 
     {
-        newLeafNode(lv_config_6_0, grammarAccess.getPluginInclusionAccess().getConfigConfigKeyword_4_1_1_0());
+        newLeafNode(lv_config_2_0, grammarAccess.getPluginInclusionAccess().getConfigConfigKeyword_1_0_1_0());
     }
  
 	    {
@@ -2910,7 +2871,46 @@ rulePluginInclusion returns [EObject current=null]
 	    }
 
 )
-)))?)
+))	otherlv_3='of' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getPluginInclusionAccess().getOfKeyword_1_1());
+    }
+)?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getPluginInclusionAccess().getPluginCoordinatesNonVersionedCoordinatesParserRuleCall_2_0()); 
+	    }
+		lv_pluginCoordinates_4_0=ruleNonVersionedCoordinates		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPluginInclusionRule());
+	        }
+       		set(
+       			$current, 
+       			"pluginCoordinates",
+        		lv_pluginCoordinates_4_0, 
+        		"NonVersionedCoordinates");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_5='from' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getPluginInclusionAccess().getFromKeyword_3());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPluginInclusionRule());
+	        }
+        }
+	otherlv_6=RULE_ID
+	{
+		newLeafNode(otherlv_6, grammarAccess.getPluginInclusionAccess().getPomRefPOMImportCrossReference_4_0()); 
+	}
+
+)
+))
 ;
 
 
@@ -3161,6 +3161,67 @@ ruleExtendedCoordinates returns [EObject current=null]
 
 )
 ))?)?)
+;
+
+
+
+
+
+// Entry rule entryRuleNonVersionedCoordinates
+entryRuleNonVersionedCoordinates returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getNonVersionedCoordinatesRule()); }
+	 iv_ruleNonVersionedCoordinates=ruleNonVersionedCoordinates 
+	 { $current=$iv_ruleNonVersionedCoordinates.current; } 
+	 EOF 
+;
+
+// Rule NonVersionedCoordinates
+ruleNonVersionedCoordinates returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getNonVersionedCoordinatesAccess().getGroupIdIDAndSpecialCharactersParserRuleCall_0_0()); 
+	    }
+		lv_groupId_0_0=ruleIDAndSpecialCharacters		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getNonVersionedCoordinatesRule());
+	        }
+       		set(
+       			$current, 
+       			"groupId",
+        		lv_groupId_0_0, 
+        		"IDAndSpecialCharacters");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_1=':' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getNonVersionedCoordinatesAccess().getColonKeyword_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getNonVersionedCoordinatesAccess().getArtifactIdIDAndSpecialCharactersParserRuleCall_2_0()); 
+	    }
+		lv_artifactId_2_0=ruleIDAndSpecialCharacters		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getNonVersionedCoordinatesRule());
+	        }
+       		set(
+       			$current, 
+       			"artifactId",
+        		lv_artifactId_2_0, 
+        		"IDAndSpecialCharacters");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
 ;
 
 

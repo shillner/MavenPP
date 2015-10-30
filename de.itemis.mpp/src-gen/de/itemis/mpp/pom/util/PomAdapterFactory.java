@@ -225,6 +225,11 @@ public class PomAdapterFactory extends AdapterFactoryImpl
         return createExtendedCoordinatesAdapter();
       }
       @Override
+      public Adapter caseNonVersionedCoordinates(NonVersionedCoordinates object)
+      {
+        return createNonVersionedCoordinatesAdapter();
+      }
+      @Override
       public Adapter casePOMImport(POMImport object)
       {
         return createPOMImportAdapter();
@@ -707,6 +712,21 @@ public class PomAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExtendedCoordinatesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.itemis.mpp.pom.NonVersionedCoordinates <em>Non Versioned Coordinates</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.itemis.mpp.pom.NonVersionedCoordinates
+   * @generated
+   */
+  public Adapter createNonVersionedCoordinatesAdapter()
   {
     return null;
   }

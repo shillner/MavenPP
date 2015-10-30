@@ -86,8 +86,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DependencyInclusion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pomRef" eType="#//POMImport"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scope" eType="#//DependencyScope"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pomRef" eType="#//POMImport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SCM">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="connection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -146,11 +146,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="default" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PluginInclusion" eSuperTypes="#//BuildStep">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pomRef" eType="#//POMImport"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pluginCoordinates" eType="#//Coordinates"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="executionId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="config" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pluginCoordinates" eType="#//NonVersionedCoordinates"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pomRef" eType="#//POMImport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BuildStep"/>
   <eClassifiers xsi:type="ecore:EClass" name="Coordinates">
@@ -166,6 +166,10 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NonVersionedCoordinates">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifactId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="POMImport">
     <eStructuralFeatures xsi:type="ecore:EReference" name="coordinates" eType="#//Coordinates"

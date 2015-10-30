@@ -1,13 +1,12 @@
 package de.itemis.mpp.util
 
+import com.google.common.base.Optional
 import de.itemis.mpp.generator.MppMultiOutputConfigurationProvider
 import de.itemis.mpp.pom.POM
+import java.io.IOException
 import java.io.InputStream
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.emf.ecore.resource.URIConverter
-import java.io.IOException
-import com.google.common.base.Optional
 
 class EMFUtil {
   def static String getOutputFileName(Resource resource) {

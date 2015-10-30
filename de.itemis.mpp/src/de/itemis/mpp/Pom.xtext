@@ -73,7 +73,7 @@ IDOrPropteryRef:
 ;
 
 IDOrKW:
-  ID | 'test' | 'parent' | 'version' | 'exec' | 'clean' | 'plugin' | 'compile' | 'file' | 'from' | 'include' //TODO continue the list of keywords!
+  ID | 'test' | 'parent' | 'version' | 'exec' | 'clean' | 'plugin' | 'compile' | 'file' | 'from' | 'include'//TODO continue the list of keywords!
 ;
 
 Version:
@@ -131,7 +131,7 @@ Dependency:
 ;
 
 DependencyInclusion:
-  'include' pomRef=[POMImport] '.' scope=DependencyScope
+  'include' scope=DependencyScope 'from' pomRef=[POMImport]
 ;
 
 SCM:
@@ -191,7 +191,7 @@ PluginExecution:
 ;
 
 PluginInclusion:
-  'include' pomRef=[POMImport] '.' pluginCoordinates=Coordinates ('.' (executionId=IDAndDash | config?='config'))?
+  'include' ((executionId=IDAndDash | config?='config') 'of')? pluginCoordinates=NonVersionedCoordinates 'from' pomRef=[POMImport]
 ;
 
 BuildStep:
@@ -204,6 +204,10 @@ Coordinates:
 
 ExtendedCoordinates:
   groupId=IDAndSpecialCharacters ':' artifactId=IDAndSpecialCharacters ':' version=Version (':' type=ID (':' classifier=Classifier)?)?
+;
+
+NonVersionedCoordinates:
+  groupId=IDAndSpecialCharacters ':' artifactId=IDAndSpecialCharacters
 ;
 
 POMImport:

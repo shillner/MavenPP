@@ -23,24 +23,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.itemis.mpp.pom.impl.DependencyInclusionImpl#getPomRef <em>Pom Ref</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.DependencyInclusionImpl#getScope <em>Scope</em>}</li>
+ *   <li>{@link de.itemis.mpp.pom.impl.DependencyInclusionImpl#getPomRef <em>Pom Ref</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DependencyInclusionImpl extends MinimalEObjectImpl.Container implements DependencyInclusion
 {
-  /**
-   * The cached value of the '{@link #getPomRef() <em>Pom Ref</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPomRef()
-   * @generated
-   * @ordered
-   */
-  protected POMImport pomRef;
-
   /**
    * The default value of the '{@link #getScope() <em>Scope</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -62,6 +52,16 @@ public class DependencyInclusionImpl extends MinimalEObjectImpl.Container implem
   protected DependencyScope scope = SCOPE_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getPomRef() <em>Pom Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPomRef()
+   * @generated
+   * @ordered
+   */
+  protected POMImport pomRef;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -80,6 +80,29 @@ public class DependencyInclusionImpl extends MinimalEObjectImpl.Container implem
   protected EClass eStaticClass()
   {
     return PomPackage.Literals.DEPENDENCY_INCLUSION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DependencyScope getScope()
+  {
+    return scope;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setScope(DependencyScope newScope)
+  {
+    DependencyScope oldScope = scope;
+    scope = newScope == null ? SCOPE_EDEFAULT : newScope;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PomPackage.DEPENDENCY_INCLUSION__SCOPE, oldScope, scope));
   }
 
   /**
@@ -130,39 +153,16 @@ public class DependencyInclusionImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public DependencyScope getScope()
-  {
-    return scope;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setScope(DependencyScope newScope)
-  {
-    DependencyScope oldScope = scope;
-    scope = newScope == null ? SCOPE_EDEFAULT : newScope;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PomPackage.DEPENDENCY_INCLUSION__SCOPE, oldScope, scope));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
+      case PomPackage.DEPENDENCY_INCLUSION__SCOPE:
+        return getScope();
       case PomPackage.DEPENDENCY_INCLUSION__POM_REF:
         if (resolve) return getPomRef();
         return basicGetPomRef();
-      case PomPackage.DEPENDENCY_INCLUSION__SCOPE:
-        return getScope();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -177,11 +177,11 @@ public class DependencyInclusionImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case PomPackage.DEPENDENCY_INCLUSION__POM_REF:
-        setPomRef((POMImport)newValue);
-        return;
       case PomPackage.DEPENDENCY_INCLUSION__SCOPE:
         setScope((DependencyScope)newValue);
+        return;
+      case PomPackage.DEPENDENCY_INCLUSION__POM_REF:
+        setPomRef((POMImport)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -197,11 +197,11 @@ public class DependencyInclusionImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case PomPackage.DEPENDENCY_INCLUSION__POM_REF:
-        setPomRef((POMImport)null);
-        return;
       case PomPackage.DEPENDENCY_INCLUSION__SCOPE:
         setScope(SCOPE_EDEFAULT);
+        return;
+      case PomPackage.DEPENDENCY_INCLUSION__POM_REF:
+        setPomRef((POMImport)null);
         return;
     }
     super.eUnset(featureID);
@@ -217,10 +217,10 @@ public class DependencyInclusionImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case PomPackage.DEPENDENCY_INCLUSION__POM_REF:
-        return pomRef != null;
       case PomPackage.DEPENDENCY_INCLUSION__SCOPE:
         return scope != SCOPE_EDEFAULT;
+      case PomPackage.DEPENDENCY_INCLUSION__POM_REF:
+        return pomRef != null;
     }
     return super.eIsSet(featureID);
   }

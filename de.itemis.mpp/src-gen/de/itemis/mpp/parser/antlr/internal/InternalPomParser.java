@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalPomParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ANY_OTHER", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "'parent'", "'modules'", "','", "'group'", "'artifact'", "'version'", "'type'", "'name'", "'description'", "'-'", "'.'", "'_'", "'${'", "'}'", "'test'", "'exec'", "'clean'", "'plugin'", "'compile'", "'file'", "'from'", "'include'", "'properties'", "'{'", "'='", "'dependencies'", "'optional'", "'scm'", "'con'", "'dev'", "'url'", "'tag'", "'config'", "'['", "']'", "'->'", "'in'", "'phase'", "'with'", "'goals'", "'default'", "':'", "'import'", "'as'", "'repository'", "'plugin-repository'", "'at'", "'layout'", "'do not'", "'fetch'", "'releases'", "'snapshots'", "'update'", "'interval'", "'checksumPolicy'", "'provided'", "'runtime'", "'system'", "'pre-clean'", "'post-clean'", "'validate'", "'initialize'", "'generate-sources'", "'process-sources'", "'generate-resources'", "'process-resources'", "'process-classes'", "'generate-test-sources'", "'process-test-sources'", "'generate-test-resources'", "'process-test-resources'", "'test-compile'", "'process-test-classes'", "'prepare-package'", "'package'", "'pre-integration-test'", "'integration-test'", "'post-integration-test'", "'verify'", "'install'", "'deploy'", "'pre-site'", "'site'", "'post-site'", "'site-deploy'", "'daily'", "'always'", "'never'", "'ignore'", "'warn'", "'fail'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ANY_OTHER", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "'parent'", "'modules'", "','", "'group'", "'artifact'", "'version'", "'type'", "'name'", "'description'", "'-'", "'.'", "'_'", "'${'", "'}'", "'test'", "'exec'", "'clean'", "'plugin'", "'compile'", "'file'", "'from'", "'include'", "'properties'", "'{'", "'='", "'dependencies'", "'optional'", "'scm'", "'con'", "'dev'", "'url'", "'tag'", "'config'", "'['", "']'", "'->'", "'in'", "'phase'", "'with'", "'goals'", "'default'", "'of'", "':'", "'import'", "'as'", "'repository'", "'plugin-repository'", "'at'", "'layout'", "'do not'", "'fetch'", "'releases'", "'snapshots'", "'update'", "'interval'", "'checksumPolicy'", "'provided'", "'runtime'", "'system'", "'pre-clean'", "'post-clean'", "'validate'", "'initialize'", "'generate-sources'", "'process-sources'", "'generate-resources'", "'process-resources'", "'process-classes'", "'generate-test-sources'", "'process-test-sources'", "'generate-test-resources'", "'process-test-resources'", "'test-compile'", "'process-test-classes'", "'prepare-package'", "'package'", "'pre-integration-test'", "'integration-test'", "'post-integration-test'", "'verify'", "'install'", "'deploy'", "'pre-site'", "'site'", "'post-site'", "'site-deploy'", "'daily'", "'always'", "'never'", "'ignore'", "'warn'", "'fail'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -72,6 +72,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
     public static final int T__100=100;
     public static final int T__92=92;
     public static final int T__93=93;
+    public static final int T__102=102;
     public static final int T__94=94;
     public static final int T__101=101;
     public static final int T__90=90;
@@ -242,7 +243,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==53) ) {
+                if ( (LA1_0==54) ) {
                     alt1=1;
                 }
 
@@ -442,7 +443,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                 else if ( (LA5_0==24||LA5_0==38|| LA5_0 >=40 && LA5_0<=42) && getUnorderedGroupHelper().canSelect(grammarAccess.getPOMAccess().getUnorderedGroup_4(), 2) ) {
                     alt5=3;
                 }
-                else if ( LA5_0 >=55 && LA5_0<=56 && getUnorderedGroupHelper().canSelect(grammarAccess.getPOMAccess().getUnorderedGroup_4(), 3) ) {
+                else if ( LA5_0 >=56 && LA5_0<=57 && getUnorderedGroupHelper().canSelect(grammarAccess.getPOMAccess().getUnorderedGroup_4(), 3) ) {
                     alt5=4;
                 }
 
@@ -676,7 +677,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             	        int alt4=2;
             	        int LA4_0 = input.LA(1);
 
-            	        if ( (LA4_0==55) ) {
+            	        if ( (LA4_0==56) ) {
             	            int LA4_2 = input.LA(2);
 
             	            if ( ((true)) ) {
@@ -685,7 +686,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
             	        }
-            	        else if ( (LA4_0==56) ) {
+            	        else if ( (LA4_0==57) ) {
             	            int LA4_3 = input.LA(2);
 
             	            if ( ((true)) ) {
@@ -2340,7 +2341,55 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             loop17:
             do {
                 int alt17=4;
-                alt17 = dfa17.predict(input);
+                switch ( input.LA(1) ) {
+                case RULE_ID:
+                    {
+                    int LA17_2 = input.LA(2);
+
+                    if ( (LA17_2==EOF||(LA17_2>=RULE_STRING && LA17_2<=RULE_ANY_OTHER)||(LA17_2>=11 && LA17_2<=12)||(LA17_2>=14 && LA17_2<=19)||(LA17_2>=24 && LA17_2<=34)||(LA17_2>=36 && LA17_2<=38)||(LA17_2>=40 && LA17_2<=42)||(LA17_2>=54 && LA17_2<=57)||(LA17_2>=67 && LA17_2<=69)) ) {
+                        alt17=1;
+                    }
+                    else if ( (LA17_2==53) ) {
+                        int LA17_6 = input.LA(3);
+
+                        if ( (LA17_6==RULE_ID) ) {
+                            int LA17_7 = input.LA(4);
+
+                            if ( (LA17_7==53) ) {
+                                int LA17_8 = input.LA(5);
+
+                                if ( (LA17_8==RULE_ID) ) {
+                                    alt17=1;
+                                }
+
+
+                            }
+                            else if ( (LA17_7==EOF||LA17_7==RULE_ID||LA17_7==11||LA17_7==16||(LA17_7>=24 && LA17_7<=32)||LA17_7==37||LA17_7==54||(LA17_7>=67 && LA17_7<=69)) ) {
+                                alt17=1;
+                            }
+
+
+                        }
+
+
+                    }
+
+
+                    }
+                    break;
+                case RULE_INT:
+                    {
+                    alt17=2;
+                    }
+                    break;
+                case RULE_ANY_OTHER:
+                    {
+                    alt17=3;
+                    }
+                    break;
+
+                }
+
                 switch (alt17) {
             	case 1 :
             	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:846:6: this_ID_0= RULE_ID
@@ -3201,11 +3250,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     int LA21_0 = input.LA(1);
 
                     if ( (LA21_0==21) ) {
-                        int LA21_1 = input.LA(2);
-
-                        if ( (LA21_1==RULE_INT) ) {
-                            alt21=1;
-                        }
+                        alt21=1;
                     }
                     switch (alt21) {
                         case 1 :
@@ -3257,11 +3302,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                             int LA20_0 = input.LA(1);
 
                             if ( (LA20_0==21) ) {
-                                int LA20_1 = input.LA(2);
-
-                                if ( (LA20_1==RULE_INT) ) {
-                                    alt20=1;
-                                }
+                                alt20=1;
                             }
                             switch (alt20) {
                                 case 1 :
@@ -4128,11 +4169,11 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                 if ( (LA26_1==31) ) {
                     int LA26_2 = input.LA(3);
 
-                    if ( (LA26_2==30) ) {
-                        alt26=2;
-                    }
-                    else if ( (LA26_2==RULE_ID) ) {
+                    if ( (LA26_2==RULE_ID) ) {
                         alt26=1;
+                    }
+                    else if ( (LA26_2==30) ) {
+                        alt26=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
@@ -4742,10 +4783,10 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     }
                     break;
-                case 53:
-                case 66:
+                case 54:
                 case 67:
                 case 68:
+                case 69:
                     {
                     alt29=1;
                     }
@@ -5050,24 +5091,24 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDependencyInclusion"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1766:1: ruleDependencyInclusion returns [EObject current=null] : (otherlv_0= 'include' ( (otherlv_1= RULE_ID ) ) otherlv_2= '.' ( (lv_scope_3_0= ruleDependencyScope ) ) ) ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1766:1: ruleDependencyInclusion returns [EObject current=null] : (otherlv_0= 'include' ( (lv_scope_1_0= ruleDependencyScope ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) ) ;
     public final EObject ruleDependencyInclusion() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token otherlv_1=null;
         Token otherlv_2=null;
-        Enumerator lv_scope_3_0 = null;
+        Token otherlv_3=null;
+        Enumerator lv_scope_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1769:28: ( (otherlv_0= 'include' ( (otherlv_1= RULE_ID ) ) otherlv_2= '.' ( (lv_scope_3_0= ruleDependencyScope ) ) ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1770:1: (otherlv_0= 'include' ( (otherlv_1= RULE_ID ) ) otherlv_2= '.' ( (lv_scope_3_0= ruleDependencyScope ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1769:28: ( (otherlv_0= 'include' ( (lv_scope_1_0= ruleDependencyScope ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1770:1: (otherlv_0= 'include' ( (lv_scope_1_0= ruleDependencyScope ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1770:1: (otherlv_0= 'include' ( (otherlv_1= RULE_ID ) ) otherlv_2= '.' ( (lv_scope_3_0= ruleDependencyScope ) ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1770:3: otherlv_0= 'include' ( (otherlv_1= RULE_ID ) ) otherlv_2= '.' ( (lv_scope_3_0= ruleDependencyScope ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1770:1: (otherlv_0= 'include' ( (lv_scope_1_0= ruleDependencyScope ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1770:3: otherlv_0= 'include' ( (lv_scope_1_0= ruleDependencyScope ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,32,FOLLOW_32_in_ruleDependencyInclusion4172); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5075,50 +5116,19 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_0, grammarAccess.getDependencyInclusionAccess().getIncludeKeyword_0());
                   
             }
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1774:1: ( (otherlv_1= RULE_ID ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1775:1: (otherlv_1= RULE_ID )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1774:1: ( (lv_scope_1_0= ruleDependencyScope ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1775:1: (lv_scope_1_0= ruleDependencyScope )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1775:1: (otherlv_1= RULE_ID )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1776:3: otherlv_1= RULE_ID
-            {
-            if ( state.backtracking==0 ) {
-
-              			if (current==null) {
-              	            current = createModelElement(grammarAccess.getDependencyInclusionRule());
-              	        }
-                      
-            }
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDependencyInclusion4192); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              		newLeafNode(otherlv_1, grammarAccess.getDependencyInclusionAccess().getPomRefPOMImportCrossReference_1_0()); 
-              	
-            }
-
-            }
-
-
-            }
-
-            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleDependencyInclusion4204); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                  	newLeafNode(otherlv_2, grammarAccess.getDependencyInclusionAccess().getFullStopKeyword_2());
-                  
-            }
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1791:1: ( (lv_scope_3_0= ruleDependencyScope ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1792:1: (lv_scope_3_0= ruleDependencyScope )
-            {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1792:1: (lv_scope_3_0= ruleDependencyScope )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1793:3: lv_scope_3_0= ruleDependencyScope
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1775:1: (lv_scope_1_0= ruleDependencyScope )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1776:3: lv_scope_1_0= ruleDependencyScope
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getDependencyInclusionAccess().getScopeDependencyScopeEnumRuleCall_3_0()); 
+              	        newCompositeNode(grammarAccess.getDependencyInclusionAccess().getScopeDependencyScopeEnumRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleDependencyScope_in_ruleDependencyInclusion4225);
-            lv_scope_3_0=ruleDependencyScope();
+            pushFollow(FOLLOW_ruleDependencyScope_in_ruleDependencyInclusion4193);
+            lv_scope_1_0=ruleDependencyScope();
 
             state._fsp--;
             if (state.failed) return current;
@@ -5130,10 +5140,41 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                      		set(
                      			current, 
                      			"scope",
-                      		lv_scope_3_0, 
+                      		lv_scope_1_0, 
                       		"DependencyScope");
               	        afterParserOrEnumRuleCall();
               	    
+            }
+
+            }
+
+
+            }
+
+            otherlv_2=(Token)match(input,31,FOLLOW_31_in_ruleDependencyInclusion4205); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+                  	newLeafNode(otherlv_2, grammarAccess.getDependencyInclusionAccess().getFromKeyword_2());
+                  
+            }
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1796:1: ( (otherlv_3= RULE_ID ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1797:1: (otherlv_3= RULE_ID )
+            {
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1797:1: (otherlv_3= RULE_ID )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:1798:3: otherlv_3= RULE_ID
+            {
+            if ( state.backtracking==0 ) {
+
+              			if (current==null) {
+              	            current = createModelElement(grammarAccess.getDependencyInclusionRule());
+              	        }
+                      
+            }
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDependencyInclusion4225); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              		newLeafNode(otherlv_3, grammarAccess.getDependencyInclusionAccess().getPomRefPOMImportCrossReference_3_0()); 
+              	
             }
 
             }
@@ -6216,6 +6257,11 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             if ( (LA37_0==RULE_ID) ) {
                 switch ( input.LA(2) ) {
+                case 44:
+                    {
+                    alt37=2;
+                    }
+                    break;
                 case EOF:
                 case RULE_STRING:
                 case RULE_ID:
@@ -6226,15 +6272,10 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     break;
                 case 34:
                     {
-                    int LA37_3 = input.LA(3);
+                    int LA37_4 = input.LA(3);
 
-                    if ( (LA37_3==RULE_ID) ) {
+                    if ( (LA37_4==RULE_ID) ) {
                         switch ( input.LA(4) ) {
-                        case 35:
-                            {
-                            alt37=4;
-                            }
-                            break;
                         case RULE_STRING:
                         case RULE_ID:
                         case 24:
@@ -6249,6 +6290,11 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                             alt37=3;
                             }
                             break;
+                        case 35:
+                            {
+                            alt37=4;
+                            }
+                            break;
                         default:
                             if (state.backtracking>0) {state.failed=true; return current;}
                             NoViableAltException nvae =
@@ -6261,15 +6307,10 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 37, 3, input);
+                            new NoViableAltException("", 37, 4, input);
 
                         throw nvae;
                     }
-                    }
-                    break;
-                case 44:
-                    {
-                    alt37=2;
                     }
                     break;
                 default:
@@ -8012,28 +8053,28 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePluginInclusion"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2832:1: rulePluginInclusion returns [EObject current=null] : (otherlv_0= 'include' ( (otherlv_1= RULE_ID ) ) otherlv_2= '.' ( (lv_pluginCoordinates_3_0= ruleCoordinates ) ) (otherlv_4= '.' ( ( (lv_executionId_5_0= ruleIDAndDash ) ) | ( (lv_config_6_0= 'config' ) ) ) )? ) ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2832:1: rulePluginInclusion returns [EObject current=null] : (otherlv_0= 'include' ( ( ( (lv_executionId_1_0= ruleIDAndDash ) ) | ( (lv_config_2_0= 'config' ) ) ) otherlv_3= 'of' )? ( (lv_pluginCoordinates_4_0= ruleNonVersionedCoordinates ) ) otherlv_5= 'from' ( (otherlv_6= RULE_ID ) ) ) ;
     public final EObject rulePluginInclusion() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token otherlv_1=null;
-        Token otherlv_2=null;
-        Token otherlv_4=null;
-        Token lv_config_6_0=null;
-        EObject lv_pluginCoordinates_3_0 = null;
+        Token lv_config_2_0=null;
+        Token otherlv_3=null;
+        Token otherlv_5=null;
+        Token otherlv_6=null;
+        AntlrDatatypeRuleToken lv_executionId_1_0 = null;
 
-        AntlrDatatypeRuleToken lv_executionId_5_0 = null;
+        EObject lv_pluginCoordinates_4_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2835:28: ( (otherlv_0= 'include' ( (otherlv_1= RULE_ID ) ) otherlv_2= '.' ( (lv_pluginCoordinates_3_0= ruleCoordinates ) ) (otherlv_4= '.' ( ( (lv_executionId_5_0= ruleIDAndDash ) ) | ( (lv_config_6_0= 'config' ) ) ) )? ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2836:1: (otherlv_0= 'include' ( (otherlv_1= RULE_ID ) ) otherlv_2= '.' ( (lv_pluginCoordinates_3_0= ruleCoordinates ) ) (otherlv_4= '.' ( ( (lv_executionId_5_0= ruleIDAndDash ) ) | ( (lv_config_6_0= 'config' ) ) ) )? )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2835:28: ( (otherlv_0= 'include' ( ( ( (lv_executionId_1_0= ruleIDAndDash ) ) | ( (lv_config_2_0= 'config' ) ) ) otherlv_3= 'of' )? ( (lv_pluginCoordinates_4_0= ruleNonVersionedCoordinates ) ) otherlv_5= 'from' ( (otherlv_6= RULE_ID ) ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2836:1: (otherlv_0= 'include' ( ( ( (lv_executionId_1_0= ruleIDAndDash ) ) | ( (lv_config_2_0= 'config' ) ) ) otherlv_3= 'of' )? ( (lv_pluginCoordinates_4_0= ruleNonVersionedCoordinates ) ) otherlv_5= 'from' ( (otherlv_6= RULE_ID ) ) )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2836:1: (otherlv_0= 'include' ( (otherlv_1= RULE_ID ) ) otherlv_2= '.' ( (lv_pluginCoordinates_3_0= ruleCoordinates ) ) (otherlv_4= '.' ( ( (lv_executionId_5_0= ruleIDAndDash ) ) | ( (lv_config_6_0= 'config' ) ) ) )? )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2836:3: otherlv_0= 'include' ( (otherlv_1= RULE_ID ) ) otherlv_2= '.' ( (lv_pluginCoordinates_3_0= ruleCoordinates ) ) (otherlv_4= '.' ( ( (lv_executionId_5_0= ruleIDAndDash ) ) | ( (lv_config_6_0= 'config' ) ) ) )?
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2836:1: (otherlv_0= 'include' ( ( ( (lv_executionId_1_0= ruleIDAndDash ) ) | ( (lv_config_2_0= 'config' ) ) ) otherlv_3= 'of' )? ( (lv_pluginCoordinates_4_0= ruleNonVersionedCoordinates ) ) otherlv_5= 'from' ( (otherlv_6= RULE_ID ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2836:3: otherlv_0= 'include' ( ( ( (lv_executionId_1_0= ruleIDAndDash ) ) | ( (lv_config_2_0= 'config' ) ) ) otherlv_3= 'of' )? ( (lv_pluginCoordinates_4_0= ruleNonVersionedCoordinates ) ) otherlv_5= 'from' ( (otherlv_6= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,32,FOLLOW_32_in_rulePluginInclusion6631); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8041,90 +8082,14 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_0, grammarAccess.getPluginInclusionAccess().getIncludeKeyword_0());
                   
             }
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2840:1: ( (otherlv_1= RULE_ID ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2841:1: (otherlv_1= RULE_ID )
-            {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2841:1: (otherlv_1= RULE_ID )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2842:3: otherlv_1= RULE_ID
-            {
-            if ( state.backtracking==0 ) {
-
-              			if (current==null) {
-              	            current = createModelElement(grammarAccess.getPluginInclusionRule());
-              	        }
-                      
-            }
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePluginInclusion6651); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              		newLeafNode(otherlv_1, grammarAccess.getPluginInclusionAccess().getPomRefPOMImportCrossReference_1_0()); 
-              	
-            }
-
-            }
-
-
-            }
-
-            otherlv_2=(Token)match(input,21,FOLLOW_21_in_rulePluginInclusion6663); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                  	newLeafNode(otherlv_2, grammarAccess.getPluginInclusionAccess().getFullStopKeyword_2());
-                  
-            }
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2857:1: ( (lv_pluginCoordinates_3_0= ruleCoordinates ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2858:1: (lv_pluginCoordinates_3_0= ruleCoordinates )
-            {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2858:1: (lv_pluginCoordinates_3_0= ruleCoordinates )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2859:3: lv_pluginCoordinates_3_0= ruleCoordinates
-            {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getPluginInclusionAccess().getPluginCoordinatesCoordinatesParserRuleCall_3_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleCoordinates_in_rulePluginInclusion6684);
-            lv_pluginCoordinates_3_0=ruleCoordinates();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getPluginInclusionRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"pluginCoordinates",
-                      		lv_pluginCoordinates_3_0, 
-                      		"Coordinates");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
-
-            }
-
-
-            }
-
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2875:2: (otherlv_4= '.' ( ( (lv_executionId_5_0= ruleIDAndDash ) ) | ( (lv_config_6_0= 'config' ) ) ) )?
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2840:1: ( ( ( (lv_executionId_1_0= ruleIDAndDash ) ) | ( (lv_config_2_0= 'config' ) ) ) otherlv_3= 'of' )?
             int alt49=2;
-            int LA49_0 = input.LA(1);
-
-            if ( (LA49_0==21) ) {
-                alt49=1;
-            }
+            alt49 = dfa49.predict(input);
             switch (alt49) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2875:4: otherlv_4= '.' ( ( (lv_executionId_5_0= ruleIDAndDash ) ) | ( (lv_config_6_0= 'config' ) ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2840:2: ( ( (lv_executionId_1_0= ruleIDAndDash ) ) | ( (lv_config_2_0= 'config' ) ) ) otherlv_3= 'of'
                     {
-                    otherlv_4=(Token)match(input,21,FOLLOW_21_in_rulePluginInclusion6697); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                          	newLeafNode(otherlv_4, grammarAccess.getPluginInclusionAccess().getFullStopKeyword_4_0());
-                          
-                    }
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2879:1: ( ( (lv_executionId_5_0= ruleIDAndDash ) ) | ( (lv_config_6_0= 'config' ) ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2840:2: ( ( (lv_executionId_1_0= ruleIDAndDash ) ) | ( (lv_config_2_0= 'config' ) ) )
                     int alt48=2;
                     int LA48_0 = input.LA(1);
 
@@ -8143,21 +8108,21 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt48) {
                         case 1 :
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2879:2: ( (lv_executionId_5_0= ruleIDAndDash ) )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2840:3: ( (lv_executionId_1_0= ruleIDAndDash ) )
                             {
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2879:2: ( (lv_executionId_5_0= ruleIDAndDash ) )
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2880:1: (lv_executionId_5_0= ruleIDAndDash )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2840:3: ( (lv_executionId_1_0= ruleIDAndDash ) )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2841:1: (lv_executionId_1_0= ruleIDAndDash )
                             {
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2880:1: (lv_executionId_5_0= ruleIDAndDash )
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2881:3: lv_executionId_5_0= ruleIDAndDash
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2841:1: (lv_executionId_1_0= ruleIDAndDash )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2842:3: lv_executionId_1_0= ruleIDAndDash
                             {
                             if ( state.backtracking==0 ) {
                                
-                              	        newCompositeNode(grammarAccess.getPluginInclusionAccess().getExecutionIdIDAndDashParserRuleCall_4_1_0_0()); 
+                              	        newCompositeNode(grammarAccess.getPluginInclusionAccess().getExecutionIdIDAndDashParserRuleCall_1_0_0_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_ruleIDAndDash_in_rulePluginInclusion6719);
-                            lv_executionId_5_0=ruleIDAndDash();
+                            pushFollow(FOLLOW_ruleIDAndDash_in_rulePluginInclusion6654);
+                            lv_executionId_1_0=ruleIDAndDash();
 
                             state._fsp--;
                             if (state.failed) return current;
@@ -8169,7 +8134,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                                      		set(
                                      			current, 
                                      			"executionId",
-                                      		lv_executionId_5_0, 
+                                      		lv_executionId_1_0, 
                                       		"IDAndDash");
                               	        afterParserOrEnumRuleCall();
                               	    
@@ -8184,18 +8149,18 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2898:6: ( (lv_config_6_0= 'config' ) )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2859:6: ( (lv_config_2_0= 'config' ) )
                             {
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2898:6: ( (lv_config_6_0= 'config' ) )
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2899:1: (lv_config_6_0= 'config' )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2859:6: ( (lv_config_2_0= 'config' ) )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2860:1: (lv_config_2_0= 'config' )
                             {
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2899:1: (lv_config_6_0= 'config' )
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2900:3: lv_config_6_0= 'config'
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2860:1: (lv_config_2_0= 'config' )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2861:3: lv_config_2_0= 'config'
                             {
-                            lv_config_6_0=(Token)match(input,43,FOLLOW_43_in_rulePluginInclusion6743); if (state.failed) return current;
+                            lv_config_2_0=(Token)match(input,43,FOLLOW_43_in_rulePluginInclusion6678); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                                      newLeafNode(lv_config_6_0, grammarAccess.getPluginInclusionAccess().getConfigConfigKeyword_4_1_1_0());
+                                      newLeafNode(lv_config_2_0, grammarAccess.getPluginInclusionAccess().getConfigConfigKeyword_1_0_1_0());
                                   
                             }
                             if ( state.backtracking==0 ) {
@@ -8218,9 +8183,81 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
                     }
 
+                    otherlv_3=(Token)match(input,52,FOLLOW_52_in_rulePluginInclusion6704); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_3, grammarAccess.getPluginInclusionAccess().getOfKeyword_1_1());
+                          
+                    }
 
                     }
                     break;
+
+            }
+
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2878:3: ( (lv_pluginCoordinates_4_0= ruleNonVersionedCoordinates ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2879:1: (lv_pluginCoordinates_4_0= ruleNonVersionedCoordinates )
+            {
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2879:1: (lv_pluginCoordinates_4_0= ruleNonVersionedCoordinates )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2880:3: lv_pluginCoordinates_4_0= ruleNonVersionedCoordinates
+            {
+            if ( state.backtracking==0 ) {
+               
+              	        newCompositeNode(grammarAccess.getPluginInclusionAccess().getPluginCoordinatesNonVersionedCoordinatesParserRuleCall_2_0()); 
+              	    
+            }
+            pushFollow(FOLLOW_ruleNonVersionedCoordinates_in_rulePluginInclusion6727);
+            lv_pluginCoordinates_4_0=ruleNonVersionedCoordinates();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getPluginInclusionRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"pluginCoordinates",
+                      		lv_pluginCoordinates_4_0, 
+                      		"NonVersionedCoordinates");
+              	        afterParserOrEnumRuleCall();
+              	    
+            }
+
+            }
+
+
+            }
+
+            otherlv_5=(Token)match(input,31,FOLLOW_31_in_rulePluginInclusion6739); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+                  	newLeafNode(otherlv_5, grammarAccess.getPluginInclusionAccess().getFromKeyword_3());
+                  
+            }
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2900:1: ( (otherlv_6= RULE_ID ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2901:1: (otherlv_6= RULE_ID )
+            {
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2901:1: (otherlv_6= RULE_ID )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:2902:3: otherlv_6= RULE_ID
+            {
+            if ( state.backtracking==0 ) {
+
+              			if (current==null) {
+              	            current = createModelElement(grammarAccess.getPluginInclusionRule());
+              	        }
+                      
+            }
+            otherlv_6=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePluginInclusion6759); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              		newLeafNode(otherlv_6, grammarAccess.getPluginInclusionAccess().getPomRefPOMImportCrossReference_4_0()); 
+              	
+            }
+
+            }
+
 
             }
 
@@ -8484,7 +8521,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,52,FOLLOW_52_in_ruleCoordinates6982); if (state.failed) return current;
+            otherlv_1=(Token)match(input,53,FOLLOW_53_in_ruleCoordinates6982); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCoordinatesAccess().getColonKeyword_1());
@@ -8525,7 +8562,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,52,FOLLOW_52_in_ruleCoordinates7015); if (state.failed) return current;
+            otherlv_3=(Token)match(input,53,FOLLOW_53_in_ruleCoordinates7015); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getCoordinatesAccess().getColonKeyword_3());
@@ -8691,7 +8728,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,52,FOLLOW_52_in_ruleExtendedCoordinates7140); if (state.failed) return current;
+            otherlv_1=(Token)match(input,53,FOLLOW_53_in_ruleExtendedCoordinates7140); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getExtendedCoordinatesAccess().getColonKeyword_1());
@@ -8732,7 +8769,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,52,FOLLOW_52_in_ruleExtendedCoordinates7173); if (state.failed) return current;
+            otherlv_3=(Token)match(input,53,FOLLOW_53_in_ruleExtendedCoordinates7173); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getExtendedCoordinatesAccess().getColonKeyword_3());
@@ -8777,14 +8814,14 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             int alt52=2;
             int LA52_0 = input.LA(1);
 
-            if ( (LA52_0==52) ) {
+            if ( (LA52_0==53) ) {
                 alt52=1;
             }
             switch (alt52) {
                 case 1 :
                     // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3119:4: otherlv_5= ':' ( (lv_type_6_0= RULE_ID ) ) (otherlv_7= ':' ( (lv_classifier_8_0= ruleClassifier ) ) )?
                     {
-                    otherlv_5=(Token)match(input,52,FOLLOW_52_in_ruleExtendedCoordinates7207); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,53,FOLLOW_53_in_ruleExtendedCoordinates7207); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getExtendedCoordinatesAccess().getColonKeyword_5_0());
@@ -8824,14 +8861,14 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     int alt51=2;
                     int LA51_0 = input.LA(1);
 
-                    if ( (LA51_0==52) ) {
+                    if ( (LA51_0==53) ) {
                         alt51=1;
                     }
                     switch (alt51) {
                         case 1 :
                             // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3141:4: otherlv_7= ':' ( (lv_classifier_8_0= ruleClassifier ) )
                             {
-                            otherlv_7=(Token)match(input,52,FOLLOW_52_in_ruleExtendedCoordinates7242); if (state.failed) return current;
+                            otherlv_7=(Token)match(input,53,FOLLOW_53_in_ruleExtendedCoordinates7242); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_7, grammarAccess.getExtendedCoordinatesAccess().getColonKeyword_5_2_0());
@@ -8906,8 +8943,166 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleExtendedCoordinates"
 
 
+    // $ANTLR start "entryRuleNonVersionedCoordinates"
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3171:1: entryRuleNonVersionedCoordinates returns [EObject current=null] : iv_ruleNonVersionedCoordinates= ruleNonVersionedCoordinates EOF ;
+    public final EObject entryRuleNonVersionedCoordinates() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleNonVersionedCoordinates = null;
+
+
+        try {
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3172:2: (iv_ruleNonVersionedCoordinates= ruleNonVersionedCoordinates EOF )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3173:2: iv_ruleNonVersionedCoordinates= ruleNonVersionedCoordinates EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getNonVersionedCoordinatesRule()); 
+            }
+            pushFollow(FOLLOW_ruleNonVersionedCoordinates_in_entryRuleNonVersionedCoordinates7303);
+            iv_ruleNonVersionedCoordinates=ruleNonVersionedCoordinates();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleNonVersionedCoordinates; 
+            }
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNonVersionedCoordinates7313); if (state.failed) return current;
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleNonVersionedCoordinates"
+
+
+    // $ANTLR start "ruleNonVersionedCoordinates"
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3180:1: ruleNonVersionedCoordinates returns [EObject current=null] : ( ( (lv_groupId_0_0= ruleIDAndSpecialCharacters ) ) otherlv_1= ':' ( (lv_artifactId_2_0= ruleIDAndSpecialCharacters ) ) ) ;
+    public final EObject ruleNonVersionedCoordinates() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_1=null;
+        AntlrDatatypeRuleToken lv_groupId_0_0 = null;
+
+        AntlrDatatypeRuleToken lv_artifactId_2_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3183:28: ( ( ( (lv_groupId_0_0= ruleIDAndSpecialCharacters ) ) otherlv_1= ':' ( (lv_artifactId_2_0= ruleIDAndSpecialCharacters ) ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3184:1: ( ( (lv_groupId_0_0= ruleIDAndSpecialCharacters ) ) otherlv_1= ':' ( (lv_artifactId_2_0= ruleIDAndSpecialCharacters ) ) )
+            {
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3184:1: ( ( (lv_groupId_0_0= ruleIDAndSpecialCharacters ) ) otherlv_1= ':' ( (lv_artifactId_2_0= ruleIDAndSpecialCharacters ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3184:2: ( (lv_groupId_0_0= ruleIDAndSpecialCharacters ) ) otherlv_1= ':' ( (lv_artifactId_2_0= ruleIDAndSpecialCharacters ) )
+            {
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3184:2: ( (lv_groupId_0_0= ruleIDAndSpecialCharacters ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3185:1: (lv_groupId_0_0= ruleIDAndSpecialCharacters )
+            {
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3185:1: (lv_groupId_0_0= ruleIDAndSpecialCharacters )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3186:3: lv_groupId_0_0= ruleIDAndSpecialCharacters
+            {
+            if ( state.backtracking==0 ) {
+               
+              	        newCompositeNode(grammarAccess.getNonVersionedCoordinatesAccess().getGroupIdIDAndSpecialCharactersParserRuleCall_0_0()); 
+              	    
+            }
+            pushFollow(FOLLOW_ruleIDAndSpecialCharacters_in_ruleNonVersionedCoordinates7359);
+            lv_groupId_0_0=ruleIDAndSpecialCharacters();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getNonVersionedCoordinatesRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"groupId",
+                      		lv_groupId_0_0, 
+                      		"IDAndSpecialCharacters");
+              	        afterParserOrEnumRuleCall();
+              	    
+            }
+
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,53,FOLLOW_53_in_ruleNonVersionedCoordinates7371); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+                  	newLeafNode(otherlv_1, grammarAccess.getNonVersionedCoordinatesAccess().getColonKeyword_1());
+                  
+            }
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3206:1: ( (lv_artifactId_2_0= ruleIDAndSpecialCharacters ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3207:1: (lv_artifactId_2_0= ruleIDAndSpecialCharacters )
+            {
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3207:1: (lv_artifactId_2_0= ruleIDAndSpecialCharacters )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3208:3: lv_artifactId_2_0= ruleIDAndSpecialCharacters
+            {
+            if ( state.backtracking==0 ) {
+               
+              	        newCompositeNode(grammarAccess.getNonVersionedCoordinatesAccess().getArtifactIdIDAndSpecialCharactersParserRuleCall_2_0()); 
+              	    
+            }
+            pushFollow(FOLLOW_ruleIDAndSpecialCharacters_in_ruleNonVersionedCoordinates7392);
+            lv_artifactId_2_0=ruleIDAndSpecialCharacters();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getNonVersionedCoordinatesRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"artifactId",
+                      		lv_artifactId_2_0, 
+                      		"IDAndSpecialCharacters");
+              	        afterParserOrEnumRuleCall();
+              	    
+            }
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+               leaveRule(); 
+            }
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleNonVersionedCoordinates"
+
+
     // $ANTLR start "entryRulePOMImport"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3171:1: entryRulePOMImport returns [EObject current=null] : iv_rulePOMImport= rulePOMImport EOF ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3232:1: entryRulePOMImport returns [EObject current=null] : iv_rulePOMImport= rulePOMImport EOF ;
     public final EObject entryRulePOMImport() throws RecognitionException {
         EObject current = null;
 
@@ -8915,13 +9110,13 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3172:2: (iv_rulePOMImport= rulePOMImport EOF )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3173:2: iv_rulePOMImport= rulePOMImport EOF
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3233:2: (iv_rulePOMImport= rulePOMImport EOF )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3234:2: iv_rulePOMImport= rulePOMImport EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPOMImportRule()); 
             }
-            pushFollow(FOLLOW_rulePOMImport_in_entryRulePOMImport7303);
+            pushFollow(FOLLOW_rulePOMImport_in_entryRulePOMImport7428);
             iv_rulePOMImport=rulePOMImport();
 
             state._fsp--;
@@ -8929,7 +9124,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulePOMImport; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulePOMImport7313); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulePOMImport7438); if (state.failed) return current;
 
             }
 
@@ -8947,7 +9142,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePOMImport"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3180:1: rulePOMImport returns [EObject current=null] : (otherlv_0= 'import' ( (lv_coordinates_1_0= ruleCoordinates ) ) otherlv_2= 'as' ( (lv_name_3_0= RULE_ID ) ) ) ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3241:1: rulePOMImport returns [EObject current=null] : (otherlv_0= 'import' ( (lv_coordinates_1_0= ruleCoordinates ) ) otherlv_2= 'as' ( (lv_name_3_0= RULE_ID ) ) ) ;
     public final EObject rulePOMImport() throws RecognitionException {
         EObject current = null;
 
@@ -8960,30 +9155,30 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3183:28: ( (otherlv_0= 'import' ( (lv_coordinates_1_0= ruleCoordinates ) ) otherlv_2= 'as' ( (lv_name_3_0= RULE_ID ) ) ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3184:1: (otherlv_0= 'import' ( (lv_coordinates_1_0= ruleCoordinates ) ) otherlv_2= 'as' ( (lv_name_3_0= RULE_ID ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3244:28: ( (otherlv_0= 'import' ( (lv_coordinates_1_0= ruleCoordinates ) ) otherlv_2= 'as' ( (lv_name_3_0= RULE_ID ) ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3245:1: (otherlv_0= 'import' ( (lv_coordinates_1_0= ruleCoordinates ) ) otherlv_2= 'as' ( (lv_name_3_0= RULE_ID ) ) )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3184:1: (otherlv_0= 'import' ( (lv_coordinates_1_0= ruleCoordinates ) ) otherlv_2= 'as' ( (lv_name_3_0= RULE_ID ) ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3184:3: otherlv_0= 'import' ( (lv_coordinates_1_0= ruleCoordinates ) ) otherlv_2= 'as' ( (lv_name_3_0= RULE_ID ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3245:1: (otherlv_0= 'import' ( (lv_coordinates_1_0= ruleCoordinates ) ) otherlv_2= 'as' ( (lv_name_3_0= RULE_ID ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3245:3: otherlv_0= 'import' ( (lv_coordinates_1_0= ruleCoordinates ) ) otherlv_2= 'as' ( (lv_name_3_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,53,FOLLOW_53_in_rulePOMImport7350); if (state.failed) return current;
+            otherlv_0=(Token)match(input,54,FOLLOW_54_in_rulePOMImport7475); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getPOMImportAccess().getImportKeyword_0());
                   
             }
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3188:1: ( (lv_coordinates_1_0= ruleCoordinates ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3189:1: (lv_coordinates_1_0= ruleCoordinates )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3249:1: ( (lv_coordinates_1_0= ruleCoordinates ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3250:1: (lv_coordinates_1_0= ruleCoordinates )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3189:1: (lv_coordinates_1_0= ruleCoordinates )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3190:3: lv_coordinates_1_0= ruleCoordinates
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3250:1: (lv_coordinates_1_0= ruleCoordinates )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3251:3: lv_coordinates_1_0= ruleCoordinates
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getPOMImportAccess().getCoordinatesCoordinatesParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleCoordinates_in_rulePOMImport7371);
+            pushFollow(FOLLOW_ruleCoordinates_in_rulePOMImport7496);
             lv_coordinates_1_0=ruleCoordinates();
 
             state._fsp--;
@@ -9007,19 +9202,19 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,54,FOLLOW_54_in_rulePOMImport7383); if (state.failed) return current;
+            otherlv_2=(Token)match(input,55,FOLLOW_55_in_rulePOMImport7508); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getPOMImportAccess().getAsKeyword_2());
                   
             }
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3210:1: ( (lv_name_3_0= RULE_ID ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3211:1: (lv_name_3_0= RULE_ID )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3271:1: ( (lv_name_3_0= RULE_ID ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3272:1: (lv_name_3_0= RULE_ID )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3211:1: (lv_name_3_0= RULE_ID )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3212:3: lv_name_3_0= RULE_ID
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3272:1: (lv_name_3_0= RULE_ID )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3273:3: lv_name_3_0= RULE_ID
             {
-            lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePOMImport7400); if (state.failed) return current;
+            lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePOMImport7525); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_name_3_0, grammarAccess.getPOMImportAccess().getNameIDTerminalRuleCall_3_0()); 
@@ -9066,7 +9261,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRepository"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3236:1: entryRuleRepository returns [EObject current=null] : iv_ruleRepository= ruleRepository EOF ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3297:1: entryRuleRepository returns [EObject current=null] : iv_ruleRepository= ruleRepository EOF ;
     public final EObject entryRuleRepository() throws RecognitionException {
         EObject current = null;
 
@@ -9074,13 +9269,13 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3237:2: (iv_ruleRepository= ruleRepository EOF )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3238:2: iv_ruleRepository= ruleRepository EOF
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3298:2: (iv_ruleRepository= ruleRepository EOF )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3299:2: iv_ruleRepository= ruleRepository EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRepositoryRule()); 
             }
-            pushFollow(FOLLOW_ruleRepository_in_entryRuleRepository7441);
+            pushFollow(FOLLOW_ruleRepository_in_entryRuleRepository7566);
             iv_ruleRepository=ruleRepository();
 
             state._fsp--;
@@ -9088,7 +9283,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleRepository; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRepository7451); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRepository7576); if (state.failed) return current;
 
             }
 
@@ -9106,7 +9301,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRepository"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3245:1: ruleRepository returns [EObject current=null] : ( (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) ) ( (lv_id_2_0= ruleIDAndSpecialCharacters ) ) otherlv_3= 'at' ( (lv_url_4_0= RULE_STRING ) ) (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )? ) ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3306:1: ruleRepository returns [EObject current=null] : ( (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) ) ( (lv_id_2_0= ruleIDAndSpecialCharacters ) ) otherlv_3= 'at' ( (lv_url_4_0= RULE_STRING ) ) (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )? ) ;
     public final EObject ruleRepository() throws RecognitionException {
         EObject current = null;
 
@@ -9128,20 +9323,20 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3248:28: ( ( (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) ) ( (lv_id_2_0= ruleIDAndSpecialCharacters ) ) otherlv_3= 'at' ( (lv_url_4_0= RULE_STRING ) ) (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )? ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3249:1: ( (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) ) ( (lv_id_2_0= ruleIDAndSpecialCharacters ) ) otherlv_3= 'at' ( (lv_url_4_0= RULE_STRING ) ) (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )? )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3309:28: ( ( (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) ) ( (lv_id_2_0= ruleIDAndSpecialCharacters ) ) otherlv_3= 'at' ( (lv_url_4_0= RULE_STRING ) ) (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )? ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3310:1: ( (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) ) ( (lv_id_2_0= ruleIDAndSpecialCharacters ) ) otherlv_3= 'at' ( (lv_url_4_0= RULE_STRING ) ) (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )? )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3249:1: ( (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) ) ( (lv_id_2_0= ruleIDAndSpecialCharacters ) ) otherlv_3= 'at' ( (lv_url_4_0= RULE_STRING ) ) (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )? )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3249:2: (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) ) ( (lv_id_2_0= ruleIDAndSpecialCharacters ) ) otherlv_3= 'at' ( (lv_url_4_0= RULE_STRING ) ) (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )?
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3310:1: ( (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) ) ( (lv_id_2_0= ruleIDAndSpecialCharacters ) ) otherlv_3= 'at' ( (lv_url_4_0= RULE_STRING ) ) (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )? )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3310:2: (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) ) ( (lv_id_2_0= ruleIDAndSpecialCharacters ) ) otherlv_3= 'at' ( (lv_url_4_0= RULE_STRING ) ) (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )?
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3249:2: (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3310:2: (otherlv_0= 'repository' | ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) ) )
             int alt53=2;
             int LA53_0 = input.LA(1);
 
-            if ( (LA53_0==55) ) {
+            if ( (LA53_0==56) ) {
                 alt53=1;
             }
-            else if ( (LA53_0==56) ) {
+            else if ( (LA53_0==57) ) {
                 alt53=2;
             }
             else {
@@ -9153,9 +9348,9 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             }
             switch (alt53) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3249:4: otherlv_0= 'repository'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3310:4: otherlv_0= 'repository'
                     {
-                    otherlv_0=(Token)match(input,55,FOLLOW_55_in_ruleRepository7489); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,56,FOLLOW_56_in_ruleRepository7614); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_0, grammarAccess.getRepositoryAccess().getRepositoryKeyword_0_0());
@@ -9165,15 +9360,15 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3254:6: ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3315:6: ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3254:6: ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3255:1: (lv_pluginRepositroy_1_0= 'plugin-repository' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3315:6: ( (lv_pluginRepositroy_1_0= 'plugin-repository' ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3316:1: (lv_pluginRepositroy_1_0= 'plugin-repository' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3255:1: (lv_pluginRepositroy_1_0= 'plugin-repository' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3256:3: lv_pluginRepositroy_1_0= 'plugin-repository'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3316:1: (lv_pluginRepositroy_1_0= 'plugin-repository' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3317:3: lv_pluginRepositroy_1_0= 'plugin-repository'
                     {
-                    lv_pluginRepositroy_1_0=(Token)match(input,56,FOLLOW_56_in_ruleRepository7513); if (state.failed) return current;
+                    lv_pluginRepositroy_1_0=(Token)match(input,57,FOLLOW_57_in_ruleRepository7638); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_pluginRepositroy_1_0, grammarAccess.getRepositoryAccess().getPluginRepositroyPluginRepositoryKeyword_0_1_0());
@@ -9199,18 +9394,18 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3269:3: ( (lv_id_2_0= ruleIDAndSpecialCharacters ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3270:1: (lv_id_2_0= ruleIDAndSpecialCharacters )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3330:3: ( (lv_id_2_0= ruleIDAndSpecialCharacters ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3331:1: (lv_id_2_0= ruleIDAndSpecialCharacters )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3270:1: (lv_id_2_0= ruleIDAndSpecialCharacters )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3271:3: lv_id_2_0= ruleIDAndSpecialCharacters
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3331:1: (lv_id_2_0= ruleIDAndSpecialCharacters )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3332:3: lv_id_2_0= ruleIDAndSpecialCharacters
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getRepositoryAccess().getIdIDAndSpecialCharactersParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleIDAndSpecialCharacters_in_ruleRepository7548);
+            pushFollow(FOLLOW_ruleIDAndSpecialCharacters_in_ruleRepository7673);
             lv_id_2_0=ruleIDAndSpecialCharacters();
 
             state._fsp--;
@@ -9234,19 +9429,19 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,57,FOLLOW_57_in_ruleRepository7560); if (state.failed) return current;
+            otherlv_3=(Token)match(input,58,FOLLOW_58_in_ruleRepository7685); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getRepositoryAccess().getAtKeyword_2());
                   
             }
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3291:1: ( (lv_url_4_0= RULE_STRING ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3292:1: (lv_url_4_0= RULE_STRING )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3352:1: ( (lv_url_4_0= RULE_STRING ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3353:1: (lv_url_4_0= RULE_STRING )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3292:1: (lv_url_4_0= RULE_STRING )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3293:3: lv_url_4_0= RULE_STRING
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3353:1: (lv_url_4_0= RULE_STRING )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3354:3: lv_url_4_0= RULE_STRING
             {
-            lv_url_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRepository7577); if (state.failed) return current;
+            lv_url_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRepository7702); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_url_4_0, grammarAccess.getRepositoryAccess().getUrlSTRINGTerminalRuleCall_3_0()); 
@@ -9270,7 +9465,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3309:2: (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )?
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3370:2: (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}' )?
             int alt56=2;
             int LA56_0 = input.LA(1);
 
@@ -9279,25 +9474,25 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             }
             switch (alt56) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3309:4: otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3370:4: otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) ) ( (lv_policies_11_0= ruleRepositoryPolicy ) )+ otherlv_12= '}'
                     {
-                    otherlv_5=(Token)match(input,34,FOLLOW_34_in_ruleRepository7595); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,34,FOLLOW_34_in_ruleRepository7720); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getRepositoryAccess().getLeftCurlyBracketKeyword_4_0());
                           
                     }
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3313:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3315:1: ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3374:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3376:1: ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3315:1: ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3316:2: ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3376:1: ( ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3377:2: ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* )
                     {
                     getUnorderedGroupHelper().enter(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1());
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3319:2: ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3320:3: ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )*
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3380:2: ( ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )* )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3381:3: ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )*
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3320:3: ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )*
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3381:3: ( ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) ) )*
                     loop54:
                     do {
                         int alt54=3;
@@ -9306,49 +9501,49 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                         if ( LA54_0 ==18 && getUnorderedGroupHelper().canSelect(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 0) ) {
                             alt54=1;
                         }
-                        else if ( LA54_0 ==58 && getUnorderedGroupHelper().canSelect(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 1) ) {
+                        else if ( LA54_0 ==59 && getUnorderedGroupHelper().canSelect(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 1) ) {
                             alt54=2;
                         }
 
 
                         switch (alt54) {
                     	case 1 :
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3322:4: ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3383:4: ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) )
                     	    {
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3322:4: ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3323:5: {...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3383:4: ({...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3384:5: {...}? => ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) )
                     	    {
                     	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 0) ) {
                     	        if (state.backtracking>0) {state.failed=true; return current;}
                     	        throw new FailedPredicateException(input, "ruleRepository", "getUnorderedGroupHelper().canSelect(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 0)");
                     	    }
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3323:109: ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3324:6: ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3384:109: ( ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3385:6: ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) )
                     	    {
                     	    getUnorderedGroupHelper().select(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 0);
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3327:6: ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3327:7: {...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3388:6: ({...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3388:7: {...}? => (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) )
                     	    {
                     	    if ( !((true)) ) {
                     	        if (state.backtracking>0) {state.failed=true; return current;}
                     	        throw new FailedPredicateException(input, "ruleRepository", "true");
                     	    }
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3327:16: (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3327:18: otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3388:16: (otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3388:18: otherlv_7= 'name' ( (lv_name_8_0= RULE_STRING ) )
                     	    {
-                    	    otherlv_7=(Token)match(input,18,FOLLOW_18_in_ruleRepository7653); if (state.failed) return current;
+                    	    otherlv_7=(Token)match(input,18,FOLLOW_18_in_ruleRepository7778); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_7, grammarAccess.getRepositoryAccess().getNameKeyword_4_1_0_0());
                     	          
                     	    }
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3331:1: ( (lv_name_8_0= RULE_STRING ) )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3332:1: (lv_name_8_0= RULE_STRING )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3392:1: ( (lv_name_8_0= RULE_STRING ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3393:1: (lv_name_8_0= RULE_STRING )
                     	    {
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3332:1: (lv_name_8_0= RULE_STRING )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3333:3: lv_name_8_0= RULE_STRING
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3393:1: (lv_name_8_0= RULE_STRING )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3394:3: lv_name_8_0= RULE_STRING
                     	    {
-                    	    lv_name_8_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRepository7670); if (state.failed) return current;
+                    	    lv_name_8_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRepository7795); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	      			newLeafNode(lv_name_8_0, grammarAccess.getRepositoryAccess().getNameSTRINGTerminalRuleCall_4_1_0_1_0()); 
@@ -9389,42 +9584,42 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3356:4: ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3417:4: ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) )
                     	    {
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3356:4: ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3357:5: {...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3417:4: ({...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3418:5: {...}? => ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) )
                     	    {
                     	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 1) ) {
                     	        if (state.backtracking>0) {state.failed=true; return current;}
                     	        throw new FailedPredicateException(input, "ruleRepository", "getUnorderedGroupHelper().canSelect(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 1)");
                     	    }
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3357:109: ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3358:6: ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3418:109: ( ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3419:6: ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) )
                     	    {
                     	    getUnorderedGroupHelper().select(grammarAccess.getRepositoryAccess().getUnorderedGroup_4_1(), 1);
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3361:6: ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3361:7: {...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3422:6: ({...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3422:7: {...}? => (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) )
                     	    {
                     	    if ( !((true)) ) {
                     	        if (state.backtracking>0) {state.failed=true; return current;}
                     	        throw new FailedPredicateException(input, "ruleRepository", "true");
                     	    }
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3361:16: (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3361:18: otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3422:16: (otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3422:18: otherlv_9= 'layout' ( (lv_layout_10_0= RULE_STRING ) )
                     	    {
-                    	    otherlv_9=(Token)match(input,58,FOLLOW_58_in_ruleRepository7743); if (state.failed) return current;
+                    	    otherlv_9=(Token)match(input,59,FOLLOW_59_in_ruleRepository7868); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_9, grammarAccess.getRepositoryAccess().getLayoutKeyword_4_1_1_0());
                     	          
                     	    }
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3365:1: ( (lv_layout_10_0= RULE_STRING ) )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3366:1: (lv_layout_10_0= RULE_STRING )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3426:1: ( (lv_layout_10_0= RULE_STRING ) )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3427:1: (lv_layout_10_0= RULE_STRING )
                     	    {
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3366:1: (lv_layout_10_0= RULE_STRING )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3367:3: lv_layout_10_0= RULE_STRING
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3427:1: (lv_layout_10_0= RULE_STRING )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3428:3: lv_layout_10_0= RULE_STRING
                     	    {
-                    	    lv_layout_10_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRepository7760); if (state.failed) return current;
+                    	    lv_layout_10_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRepository7885); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	      			newLeafNode(lv_layout_10_0, grammarAccess.getRepositoryAccess().getLayoutSTRINGTerminalRuleCall_4_1_1_1_0()); 
@@ -9480,31 +9675,31 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3397:2: ( (lv_policies_11_0= ruleRepositoryPolicy ) )+
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3458:2: ( (lv_policies_11_0= ruleRepositoryPolicy ) )+
                     int cnt55=0;
                     loop55:
                     do {
                         int alt55=2;
                         int LA55_0 = input.LA(1);
 
-                        if ( ((LA55_0>=59 && LA55_0<=60)) ) {
+                        if ( ((LA55_0>=60 && LA55_0<=61)) ) {
                             alt55=1;
                         }
 
 
                         switch (alt55) {
                     	case 1 :
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3398:1: (lv_policies_11_0= ruleRepositoryPolicy )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3459:1: (lv_policies_11_0= ruleRepositoryPolicy )
                     	    {
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3398:1: (lv_policies_11_0= ruleRepositoryPolicy )
-                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3399:3: lv_policies_11_0= ruleRepositoryPolicy
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3459:1: (lv_policies_11_0= ruleRepositoryPolicy )
+                    	    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3460:3: lv_policies_11_0= ruleRepositoryPolicy
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getRepositoryAccess().getPoliciesRepositoryPolicyParserRuleCall_4_2_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleRepositoryPolicy_in_ruleRepository7827);
+                    	    pushFollow(FOLLOW_ruleRepositoryPolicy_in_ruleRepository7952);
                     	    lv_policies_11_0=ruleRepositoryPolicy();
 
                     	    state._fsp--;
@@ -9539,7 +9734,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                         cnt55++;
                     } while (true);
 
-                    otherlv_12=(Token)match(input,24,FOLLOW_24_in_ruleRepository7840); if (state.failed) return current;
+                    otherlv_12=(Token)match(input,24,FOLLOW_24_in_ruleRepository7965); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_12, grammarAccess.getRepositoryAccess().getRightCurlyBracketKeyword_4_3());
@@ -9574,7 +9769,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRepositoryPolicy"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3427:1: entryRuleRepositoryPolicy returns [EObject current=null] : iv_ruleRepositoryPolicy= ruleRepositoryPolicy EOF ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3488:1: entryRuleRepositoryPolicy returns [EObject current=null] : iv_ruleRepositoryPolicy= ruleRepositoryPolicy EOF ;
     public final EObject entryRuleRepositoryPolicy() throws RecognitionException {
         EObject current = null;
 
@@ -9582,13 +9777,13 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3428:2: (iv_ruleRepositoryPolicy= ruleRepositoryPolicy EOF )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3429:2: iv_ruleRepositoryPolicy= ruleRepositoryPolicy EOF
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3489:2: (iv_ruleRepositoryPolicy= ruleRepositoryPolicy EOF )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3490:2: iv_ruleRepositoryPolicy= ruleRepositoryPolicy EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRepositoryPolicyRule()); 
             }
-            pushFollow(FOLLOW_ruleRepositoryPolicy_in_entryRuleRepositoryPolicy7878);
+            pushFollow(FOLLOW_ruleRepositoryPolicy_in_entryRuleRepositoryPolicy8003);
             iv_ruleRepositoryPolicy=ruleRepositoryPolicy();
 
             state._fsp--;
@@ -9596,7 +9791,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleRepositoryPolicy; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRepositoryPolicy7888); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRepositoryPolicy8013); if (state.failed) return current;
 
             }
 
@@ -9614,7 +9809,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRepositoryPolicy"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3436:1: ruleRepositoryPolicy returns [EObject current=null] : ( ( (lv_disabled_0_0= 'do not' ) )? otherlv_1= 'fetch' ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) ) (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )? (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )? ) ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3497:1: ruleRepositoryPolicy returns [EObject current=null] : ( ( (lv_disabled_0_0= 'do not' ) )? otherlv_1= 'fetch' ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) ) (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )? (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )? ) ;
     public final EObject ruleRepositoryPolicy() throws RecognitionException {
         EObject current = null;
 
@@ -9638,27 +9833,27 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3439:28: ( ( ( (lv_disabled_0_0= 'do not' ) )? otherlv_1= 'fetch' ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) ) (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )? (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )? ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3440:1: ( ( (lv_disabled_0_0= 'do not' ) )? otherlv_1= 'fetch' ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) ) (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )? (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )? )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3500:28: ( ( ( (lv_disabled_0_0= 'do not' ) )? otherlv_1= 'fetch' ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) ) (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )? (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )? ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3501:1: ( ( (lv_disabled_0_0= 'do not' ) )? otherlv_1= 'fetch' ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) ) (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )? (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )? )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3440:1: ( ( (lv_disabled_0_0= 'do not' ) )? otherlv_1= 'fetch' ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) ) (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )? (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )? )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3440:2: ( (lv_disabled_0_0= 'do not' ) )? otherlv_1= 'fetch' ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) ) (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )? (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )?
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3501:1: ( ( (lv_disabled_0_0= 'do not' ) )? otherlv_1= 'fetch' ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) ) (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )? (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )? )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3501:2: ( (lv_disabled_0_0= 'do not' ) )? otherlv_1= 'fetch' ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) ) (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )? (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )?
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3440:2: ( (lv_disabled_0_0= 'do not' ) )?
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3501:2: ( (lv_disabled_0_0= 'do not' ) )?
             int alt57=2;
             int LA57_0 = input.LA(1);
 
-            if ( (LA57_0==59) ) {
+            if ( (LA57_0==60) ) {
                 alt57=1;
             }
             switch (alt57) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3441:1: (lv_disabled_0_0= 'do not' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3502:1: (lv_disabled_0_0= 'do not' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3441:1: (lv_disabled_0_0= 'do not' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3442:3: lv_disabled_0_0= 'do not'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3502:1: (lv_disabled_0_0= 'do not' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3503:3: lv_disabled_0_0= 'do not'
                     {
-                    lv_disabled_0_0=(Token)match(input,59,FOLLOW_59_in_ruleRepositoryPolicy7931); if (state.failed) return current;
+                    lv_disabled_0_0=(Token)match(input,60,FOLLOW_60_in_ruleRepositoryPolicy8056); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_disabled_0_0, grammarAccess.getRepositoryPolicyAccess().getDisabledDoNotKeyword_0_0());
@@ -9681,20 +9876,20 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,60,FOLLOW_60_in_ruleRepositoryPolicy7957); if (state.failed) return current;
+            otherlv_1=(Token)match(input,61,FOLLOW_61_in_ruleRepositoryPolicy8082); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getRepositoryPolicyAccess().getFetchKeyword_1());
                   
             }
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3459:1: ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3520:1: ( ( (lv_releases_2_0= 'releases' ) ) | ( (lv_snapshots_3_0= 'snapshots' ) ) )
             int alt58=2;
             int LA58_0 = input.LA(1);
 
-            if ( (LA58_0==61) ) {
+            if ( (LA58_0==62) ) {
                 alt58=1;
             }
-            else if ( (LA58_0==62) ) {
+            else if ( (LA58_0==63) ) {
                 alt58=2;
             }
             else {
@@ -9706,15 +9901,15 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             }
             switch (alt58) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3459:2: ( (lv_releases_2_0= 'releases' ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3520:2: ( (lv_releases_2_0= 'releases' ) )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3459:2: ( (lv_releases_2_0= 'releases' ) )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3460:1: (lv_releases_2_0= 'releases' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3520:2: ( (lv_releases_2_0= 'releases' ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3521:1: (lv_releases_2_0= 'releases' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3460:1: (lv_releases_2_0= 'releases' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3461:3: lv_releases_2_0= 'releases'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3521:1: (lv_releases_2_0= 'releases' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3522:3: lv_releases_2_0= 'releases'
                     {
-                    lv_releases_2_0=(Token)match(input,61,FOLLOW_61_in_ruleRepositoryPolicy7976); if (state.failed) return current;
+                    lv_releases_2_0=(Token)match(input,62,FOLLOW_62_in_ruleRepositoryPolicy8101); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_releases_2_0, grammarAccess.getRepositoryPolicyAccess().getReleasesReleasesKeyword_2_0_0());
@@ -9738,15 +9933,15 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3475:6: ( (lv_snapshots_3_0= 'snapshots' ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3536:6: ( (lv_snapshots_3_0= 'snapshots' ) )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3475:6: ( (lv_snapshots_3_0= 'snapshots' ) )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3476:1: (lv_snapshots_3_0= 'snapshots' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3536:6: ( (lv_snapshots_3_0= 'snapshots' ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3537:1: (lv_snapshots_3_0= 'snapshots' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3476:1: (lv_snapshots_3_0= 'snapshots' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3477:3: lv_snapshots_3_0= 'snapshots'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3537:1: (lv_snapshots_3_0= 'snapshots' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3538:3: lv_snapshots_3_0= 'snapshots'
                     {
-                    lv_snapshots_3_0=(Token)match(input,62,FOLLOW_62_in_ruleRepositoryPolicy8013); if (state.failed) return current;
+                    lv_snapshots_3_0=(Token)match(input,63,FOLLOW_63_in_ruleRepositoryPolicy8138); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_snapshots_3_0, grammarAccess.getRepositoryPolicyAccess().getSnapshotsSnapshotsKeyword_2_1_0());
@@ -9772,45 +9967,45 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3490:3: (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )?
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3551:3: (otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )? )?
             int alt60=2;
             int LA60_0 = input.LA(1);
 
             if ( (LA60_0==13) ) {
                 int LA60_1 = input.LA(2);
 
-                if ( (LA60_1==63) ) {
+                if ( (LA60_1==64) ) {
                     alt60=1;
                 }
             }
             switch (alt60) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3490:5: otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )?
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3551:5: otherlv_4= ',' otherlv_5= 'update' ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) ) (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )?
                     {
-                    otherlv_4=(Token)match(input,13,FOLLOW_13_in_ruleRepositoryPolicy8040); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,13,FOLLOW_13_in_ruleRepositoryPolicy8165); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getRepositoryPolicyAccess().getCommaKeyword_3_0());
                           
                     }
-                    otherlv_5=(Token)match(input,63,FOLLOW_63_in_ruleRepositoryPolicy8052); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,64,FOLLOW_64_in_ruleRepositoryPolicy8177); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getRepositoryPolicyAccess().getUpdateKeyword_3_1());
                           
                     }
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3498:1: ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3499:1: (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3559:1: ( (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3560:1: (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3499:1: (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3500:3: lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3560:1: (lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3561:3: lv_updatePolicy_6_0= ruleRepositoryUpdatePolicy
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getRepositoryPolicyAccess().getUpdatePolicyRepositoryUpdatePolicyEnumRuleCall_3_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleRepositoryUpdatePolicy_in_ruleRepositoryPolicy8073);
+                    pushFollow(FOLLOW_ruleRepositoryUpdatePolicy_in_ruleRepositoryPolicy8198);
                     lv_updatePolicy_6_0=ruleRepositoryUpdatePolicy();
 
                     state._fsp--;
@@ -9834,7 +10029,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3516:2: (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )?
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3577:2: (otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) ) )?
                     int alt59=2;
                     int LA59_0 = input.LA(1);
 
@@ -9843,33 +10038,33 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt59) {
                         case 1 :
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3516:4: otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3577:4: otherlv_7= 'with' otherlv_8= 'interval' otherlv_9= '=' ( (lv_updateInterval_10_0= RULE_INT ) )
                             {
-                            otherlv_7=(Token)match(input,49,FOLLOW_49_in_ruleRepositoryPolicy8086); if (state.failed) return current;
+                            otherlv_7=(Token)match(input,49,FOLLOW_49_in_ruleRepositoryPolicy8211); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_7, grammarAccess.getRepositoryPolicyAccess().getWithKeyword_3_3_0());
                                   
                             }
-                            otherlv_8=(Token)match(input,64,FOLLOW_64_in_ruleRepositoryPolicy8098); if (state.failed) return current;
+                            otherlv_8=(Token)match(input,65,FOLLOW_65_in_ruleRepositoryPolicy8223); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_8, grammarAccess.getRepositoryPolicyAccess().getIntervalKeyword_3_3_1());
                                   
                             }
-                            otherlv_9=(Token)match(input,35,FOLLOW_35_in_ruleRepositoryPolicy8110); if (state.failed) return current;
+                            otherlv_9=(Token)match(input,35,FOLLOW_35_in_ruleRepositoryPolicy8235); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_9, grammarAccess.getRepositoryPolicyAccess().getEqualsSignKeyword_3_3_2());
                                   
                             }
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3528:1: ( (lv_updateInterval_10_0= RULE_INT ) )
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3529:1: (lv_updateInterval_10_0= RULE_INT )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3589:1: ( (lv_updateInterval_10_0= RULE_INT ) )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3590:1: (lv_updateInterval_10_0= RULE_INT )
                             {
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3529:1: (lv_updateInterval_10_0= RULE_INT )
-                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3530:3: lv_updateInterval_10_0= RULE_INT
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3590:1: (lv_updateInterval_10_0= RULE_INT )
+                            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3591:3: lv_updateInterval_10_0= RULE_INT
                             {
-                            lv_updateInterval_10_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleRepositoryPolicy8127); if (state.failed) return current;
+                            lv_updateInterval_10_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleRepositoryPolicy8252); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               			newLeafNode(lv_updateInterval_10_0, grammarAccess.getRepositoryPolicyAccess().getUpdateIntervalINTTerminalRuleCall_3_3_3_0()); 
@@ -9905,7 +10100,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3546:6: (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )?
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3607:6: (otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) ) )?
             int alt61=2;
             int LA61_0 = input.LA(1);
 
@@ -9914,32 +10109,32 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             }
             switch (alt61) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3546:8: otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3607:8: otherlv_11= ',' otherlv_12= 'checksumPolicy' ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) )
                     {
-                    otherlv_11=(Token)match(input,13,FOLLOW_13_in_ruleRepositoryPolicy8149); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,13,FOLLOW_13_in_ruleRepositoryPolicy8274); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_11, grammarAccess.getRepositoryPolicyAccess().getCommaKeyword_4_0());
                           
                     }
-                    otherlv_12=(Token)match(input,65,FOLLOW_65_in_ruleRepositoryPolicy8161); if (state.failed) return current;
+                    otherlv_12=(Token)match(input,66,FOLLOW_66_in_ruleRepositoryPolicy8286); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_12, grammarAccess.getRepositoryPolicyAccess().getChecksumPolicyKeyword_4_1());
                           
                     }
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3554:1: ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3555:1: (lv_checksumPolicy_13_0= ruleChecksumPolicy )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3615:1: ( (lv_checksumPolicy_13_0= ruleChecksumPolicy ) )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3616:1: (lv_checksumPolicy_13_0= ruleChecksumPolicy )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3555:1: (lv_checksumPolicy_13_0= ruleChecksumPolicy )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3556:3: lv_checksumPolicy_13_0= ruleChecksumPolicy
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3616:1: (lv_checksumPolicy_13_0= ruleChecksumPolicy )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3617:3: lv_checksumPolicy_13_0= ruleChecksumPolicy
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getRepositoryPolicyAccess().getChecksumPolicyChecksumPolicyEnumRuleCall_4_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleChecksumPolicy_in_ruleRepositoryPolicy8182);
+                    pushFollow(FOLLOW_ruleChecksumPolicy_in_ruleRepositoryPolicy8307);
                     lv_checksumPolicy_13_0=ruleChecksumPolicy();
 
                     state._fsp--;
@@ -9992,7 +10187,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDependencyScope"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3580:1: ruleDependencyScope returns [Enumerator current=null] : ( (enumLiteral_0= 'compile' ) | (enumLiteral_1= 'provided' ) | (enumLiteral_2= 'runtime' ) | (enumLiteral_3= 'system' ) | (enumLiteral_4= 'test' ) | (enumLiteral_5= 'import' ) ) ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3641:1: ruleDependencyScope returns [Enumerator current=null] : ( (enumLiteral_0= 'compile' ) | (enumLiteral_1= 'provided' ) | (enumLiteral_2= 'runtime' ) | (enumLiteral_3= 'system' ) | (enumLiteral_4= 'test' ) | (enumLiteral_5= 'import' ) ) ;
     public final Enumerator ruleDependencyScope() throws RecognitionException {
         Enumerator current = null;
 
@@ -10005,10 +10200,10 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3582:28: ( ( (enumLiteral_0= 'compile' ) | (enumLiteral_1= 'provided' ) | (enumLiteral_2= 'runtime' ) | (enumLiteral_3= 'system' ) | (enumLiteral_4= 'test' ) | (enumLiteral_5= 'import' ) ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3583:1: ( (enumLiteral_0= 'compile' ) | (enumLiteral_1= 'provided' ) | (enumLiteral_2= 'runtime' ) | (enumLiteral_3= 'system' ) | (enumLiteral_4= 'test' ) | (enumLiteral_5= 'import' ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3643:28: ( ( (enumLiteral_0= 'compile' ) | (enumLiteral_1= 'provided' ) | (enumLiteral_2= 'runtime' ) | (enumLiteral_3= 'system' ) | (enumLiteral_4= 'test' ) | (enumLiteral_5= 'import' ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3644:1: ( (enumLiteral_0= 'compile' ) | (enumLiteral_1= 'provided' ) | (enumLiteral_2= 'runtime' ) | (enumLiteral_3= 'system' ) | (enumLiteral_4= 'test' ) | (enumLiteral_5= 'import' ) )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3583:1: ( (enumLiteral_0= 'compile' ) | (enumLiteral_1= 'provided' ) | (enumLiteral_2= 'runtime' ) | (enumLiteral_3= 'system' ) | (enumLiteral_4= 'test' ) | (enumLiteral_5= 'import' ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3644:1: ( (enumLiteral_0= 'compile' ) | (enumLiteral_1= 'provided' ) | (enumLiteral_2= 'runtime' ) | (enumLiteral_3= 'system' ) | (enumLiteral_4= 'test' ) | (enumLiteral_5= 'import' ) )
             int alt62=6;
             switch ( input.LA(1) ) {
             case 29:
@@ -10016,17 +10211,17 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                 alt62=1;
                 }
                 break;
-            case 66:
+            case 67:
                 {
                 alt62=2;
                 }
                 break;
-            case 67:
+            case 68:
                 {
                 alt62=3;
                 }
                 break;
-            case 68:
+            case 69:
                 {
                 alt62=4;
                 }
@@ -10036,7 +10231,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                 alt62=5;
                 }
                 break;
-            case 53:
+            case 54:
                 {
                 alt62=6;
                 }
@@ -10051,12 +10246,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             switch (alt62) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3583:2: (enumLiteral_0= 'compile' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3644:2: (enumLiteral_0= 'compile' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3583:2: (enumLiteral_0= 'compile' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3583:4: enumLiteral_0= 'compile'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3644:2: (enumLiteral_0= 'compile' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3644:4: enumLiteral_0= 'compile'
                     {
-                    enumLiteral_0=(Token)match(input,29,FOLLOW_29_in_ruleDependencyScope8234); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,29,FOLLOW_29_in_ruleDependencyScope8359); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getDependencyScopeAccess().getCOMPILEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -10070,12 +10265,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3589:6: (enumLiteral_1= 'provided' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3650:6: (enumLiteral_1= 'provided' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3589:6: (enumLiteral_1= 'provided' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3589:8: enumLiteral_1= 'provided'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3650:6: (enumLiteral_1= 'provided' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3650:8: enumLiteral_1= 'provided'
                     {
-                    enumLiteral_1=(Token)match(input,66,FOLLOW_66_in_ruleDependencyScope8251); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,67,FOLLOW_67_in_ruleDependencyScope8376); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getDependencyScopeAccess().getPROVIDEDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -10089,12 +10284,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3595:6: (enumLiteral_2= 'runtime' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3656:6: (enumLiteral_2= 'runtime' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3595:6: (enumLiteral_2= 'runtime' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3595:8: enumLiteral_2= 'runtime'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3656:6: (enumLiteral_2= 'runtime' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3656:8: enumLiteral_2= 'runtime'
                     {
-                    enumLiteral_2=(Token)match(input,67,FOLLOW_67_in_ruleDependencyScope8268); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,68,FOLLOW_68_in_ruleDependencyScope8393); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getDependencyScopeAccess().getRUNTIMEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -10108,12 +10303,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3601:6: (enumLiteral_3= 'system' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3662:6: (enumLiteral_3= 'system' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3601:6: (enumLiteral_3= 'system' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3601:8: enumLiteral_3= 'system'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3662:6: (enumLiteral_3= 'system' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3662:8: enumLiteral_3= 'system'
                     {
-                    enumLiteral_3=(Token)match(input,68,FOLLOW_68_in_ruleDependencyScope8285); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,69,FOLLOW_69_in_ruleDependencyScope8410); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getDependencyScopeAccess().getSYSTEMEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -10127,12 +10322,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3607:6: (enumLiteral_4= 'test' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3668:6: (enumLiteral_4= 'test' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3607:6: (enumLiteral_4= 'test' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3607:8: enumLiteral_4= 'test'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3668:6: (enumLiteral_4= 'test' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3668:8: enumLiteral_4= 'test'
                     {
-                    enumLiteral_4=(Token)match(input,25,FOLLOW_25_in_ruleDependencyScope8302); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,25,FOLLOW_25_in_ruleDependencyScope8427); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getDependencyScopeAccess().getTESTEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -10146,12 +10341,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3613:6: (enumLiteral_5= 'import' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3674:6: (enumLiteral_5= 'import' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3613:6: (enumLiteral_5= 'import' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3613:8: enumLiteral_5= 'import'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3674:6: (enumLiteral_5= 'import' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3674:8: enumLiteral_5= 'import'
                     {
-                    enumLiteral_5=(Token)match(input,53,FOLLOW_53_in_ruleDependencyScope8319); if (state.failed) return current;
+                    enumLiteral_5=(Token)match(input,54,FOLLOW_54_in_ruleDependencyScope8444); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getDependencyScopeAccess().getIMPORTEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
@@ -10187,7 +10382,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePhase"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3623:1: rulePhase returns [Enumerator current=null] : ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'pre-clean' ) | (enumLiteral_2= 'clean' ) | (enumLiteral_3= 'post-clean' ) | (enumLiteral_4= 'validate' ) | (enumLiteral_5= 'initialize' ) | (enumLiteral_6= 'generate-sources' ) | (enumLiteral_7= 'process-sources' ) | (enumLiteral_8= 'generate-resources' ) | (enumLiteral_9= 'process-resources' ) | (enumLiteral_10= 'compile' ) | (enumLiteral_11= 'process-classes' ) | (enumLiteral_12= 'generate-test-sources' ) | (enumLiteral_13= 'process-test-sources' ) | (enumLiteral_14= 'generate-test-resources' ) | (enumLiteral_15= 'process-test-resources' ) | (enumLiteral_16= 'test-compile' ) | (enumLiteral_17= 'process-test-classes' ) | (enumLiteral_18= 'test' ) | (enumLiteral_19= 'prepare-package' ) | (enumLiteral_20= 'package' ) | (enumLiteral_21= 'pre-integration-test' ) | (enumLiteral_22= 'integration-test' ) | (enumLiteral_23= 'post-integration-test' ) | (enumLiteral_24= 'verify' ) | (enumLiteral_25= 'install' ) | (enumLiteral_26= 'deploy' ) | (enumLiteral_27= 'pre-site' ) | (enumLiteral_28= 'site' ) | (enumLiteral_29= 'post-site' ) | (enumLiteral_30= 'site-deploy' ) ) ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3684:1: rulePhase returns [Enumerator current=null] : ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'pre-clean' ) | (enumLiteral_2= 'clean' ) | (enumLiteral_3= 'post-clean' ) | (enumLiteral_4= 'validate' ) | (enumLiteral_5= 'initialize' ) | (enumLiteral_6= 'generate-sources' ) | (enumLiteral_7= 'process-sources' ) | (enumLiteral_8= 'generate-resources' ) | (enumLiteral_9= 'process-resources' ) | (enumLiteral_10= 'compile' ) | (enumLiteral_11= 'process-classes' ) | (enumLiteral_12= 'generate-test-sources' ) | (enumLiteral_13= 'process-test-sources' ) | (enumLiteral_14= 'generate-test-resources' ) | (enumLiteral_15= 'process-test-resources' ) | (enumLiteral_16= 'test-compile' ) | (enumLiteral_17= 'process-test-classes' ) | (enumLiteral_18= 'test' ) | (enumLiteral_19= 'prepare-package' ) | (enumLiteral_20= 'package' ) | (enumLiteral_21= 'pre-integration-test' ) | (enumLiteral_22= 'integration-test' ) | (enumLiteral_23= 'post-integration-test' ) | (enumLiteral_24= 'verify' ) | (enumLiteral_25= 'install' ) | (enumLiteral_26= 'deploy' ) | (enumLiteral_27= 'pre-site' ) | (enumLiteral_28= 'site' ) | (enumLiteral_29= 'post-site' ) | (enumLiteral_30= 'site-deploy' ) ) ;
     public final Enumerator rulePhase() throws RecognitionException {
         Enumerator current = null;
 
@@ -10225,10 +10420,10 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3625:28: ( ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'pre-clean' ) | (enumLiteral_2= 'clean' ) | (enumLiteral_3= 'post-clean' ) | (enumLiteral_4= 'validate' ) | (enumLiteral_5= 'initialize' ) | (enumLiteral_6= 'generate-sources' ) | (enumLiteral_7= 'process-sources' ) | (enumLiteral_8= 'generate-resources' ) | (enumLiteral_9= 'process-resources' ) | (enumLiteral_10= 'compile' ) | (enumLiteral_11= 'process-classes' ) | (enumLiteral_12= 'generate-test-sources' ) | (enumLiteral_13= 'process-test-sources' ) | (enumLiteral_14= 'generate-test-resources' ) | (enumLiteral_15= 'process-test-resources' ) | (enumLiteral_16= 'test-compile' ) | (enumLiteral_17= 'process-test-classes' ) | (enumLiteral_18= 'test' ) | (enumLiteral_19= 'prepare-package' ) | (enumLiteral_20= 'package' ) | (enumLiteral_21= 'pre-integration-test' ) | (enumLiteral_22= 'integration-test' ) | (enumLiteral_23= 'post-integration-test' ) | (enumLiteral_24= 'verify' ) | (enumLiteral_25= 'install' ) | (enumLiteral_26= 'deploy' ) | (enumLiteral_27= 'pre-site' ) | (enumLiteral_28= 'site' ) | (enumLiteral_29= 'post-site' ) | (enumLiteral_30= 'site-deploy' ) ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3626:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'pre-clean' ) | (enumLiteral_2= 'clean' ) | (enumLiteral_3= 'post-clean' ) | (enumLiteral_4= 'validate' ) | (enumLiteral_5= 'initialize' ) | (enumLiteral_6= 'generate-sources' ) | (enumLiteral_7= 'process-sources' ) | (enumLiteral_8= 'generate-resources' ) | (enumLiteral_9= 'process-resources' ) | (enumLiteral_10= 'compile' ) | (enumLiteral_11= 'process-classes' ) | (enumLiteral_12= 'generate-test-sources' ) | (enumLiteral_13= 'process-test-sources' ) | (enumLiteral_14= 'generate-test-resources' ) | (enumLiteral_15= 'process-test-resources' ) | (enumLiteral_16= 'test-compile' ) | (enumLiteral_17= 'process-test-classes' ) | (enumLiteral_18= 'test' ) | (enumLiteral_19= 'prepare-package' ) | (enumLiteral_20= 'package' ) | (enumLiteral_21= 'pre-integration-test' ) | (enumLiteral_22= 'integration-test' ) | (enumLiteral_23= 'post-integration-test' ) | (enumLiteral_24= 'verify' ) | (enumLiteral_25= 'install' ) | (enumLiteral_26= 'deploy' ) | (enumLiteral_27= 'pre-site' ) | (enumLiteral_28= 'site' ) | (enumLiteral_29= 'post-site' ) | (enumLiteral_30= 'site-deploy' ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3686:28: ( ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'pre-clean' ) | (enumLiteral_2= 'clean' ) | (enumLiteral_3= 'post-clean' ) | (enumLiteral_4= 'validate' ) | (enumLiteral_5= 'initialize' ) | (enumLiteral_6= 'generate-sources' ) | (enumLiteral_7= 'process-sources' ) | (enumLiteral_8= 'generate-resources' ) | (enumLiteral_9= 'process-resources' ) | (enumLiteral_10= 'compile' ) | (enumLiteral_11= 'process-classes' ) | (enumLiteral_12= 'generate-test-sources' ) | (enumLiteral_13= 'process-test-sources' ) | (enumLiteral_14= 'generate-test-resources' ) | (enumLiteral_15= 'process-test-resources' ) | (enumLiteral_16= 'test-compile' ) | (enumLiteral_17= 'process-test-classes' ) | (enumLiteral_18= 'test' ) | (enumLiteral_19= 'prepare-package' ) | (enumLiteral_20= 'package' ) | (enumLiteral_21= 'pre-integration-test' ) | (enumLiteral_22= 'integration-test' ) | (enumLiteral_23= 'post-integration-test' ) | (enumLiteral_24= 'verify' ) | (enumLiteral_25= 'install' ) | (enumLiteral_26= 'deploy' ) | (enumLiteral_27= 'pre-site' ) | (enumLiteral_28= 'site' ) | (enumLiteral_29= 'post-site' ) | (enumLiteral_30= 'site-deploy' ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3687:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'pre-clean' ) | (enumLiteral_2= 'clean' ) | (enumLiteral_3= 'post-clean' ) | (enumLiteral_4= 'validate' ) | (enumLiteral_5= 'initialize' ) | (enumLiteral_6= 'generate-sources' ) | (enumLiteral_7= 'process-sources' ) | (enumLiteral_8= 'generate-resources' ) | (enumLiteral_9= 'process-resources' ) | (enumLiteral_10= 'compile' ) | (enumLiteral_11= 'process-classes' ) | (enumLiteral_12= 'generate-test-sources' ) | (enumLiteral_13= 'process-test-sources' ) | (enumLiteral_14= 'generate-test-resources' ) | (enumLiteral_15= 'process-test-resources' ) | (enumLiteral_16= 'test-compile' ) | (enumLiteral_17= 'process-test-classes' ) | (enumLiteral_18= 'test' ) | (enumLiteral_19= 'prepare-package' ) | (enumLiteral_20= 'package' ) | (enumLiteral_21= 'pre-integration-test' ) | (enumLiteral_22= 'integration-test' ) | (enumLiteral_23= 'post-integration-test' ) | (enumLiteral_24= 'verify' ) | (enumLiteral_25= 'install' ) | (enumLiteral_26= 'deploy' ) | (enumLiteral_27= 'pre-site' ) | (enumLiteral_28= 'site' ) | (enumLiteral_29= 'post-site' ) | (enumLiteral_30= 'site-deploy' ) )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3626:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'pre-clean' ) | (enumLiteral_2= 'clean' ) | (enumLiteral_3= 'post-clean' ) | (enumLiteral_4= 'validate' ) | (enumLiteral_5= 'initialize' ) | (enumLiteral_6= 'generate-sources' ) | (enumLiteral_7= 'process-sources' ) | (enumLiteral_8= 'generate-resources' ) | (enumLiteral_9= 'process-resources' ) | (enumLiteral_10= 'compile' ) | (enumLiteral_11= 'process-classes' ) | (enumLiteral_12= 'generate-test-sources' ) | (enumLiteral_13= 'process-test-sources' ) | (enumLiteral_14= 'generate-test-resources' ) | (enumLiteral_15= 'process-test-resources' ) | (enumLiteral_16= 'test-compile' ) | (enumLiteral_17= 'process-test-classes' ) | (enumLiteral_18= 'test' ) | (enumLiteral_19= 'prepare-package' ) | (enumLiteral_20= 'package' ) | (enumLiteral_21= 'pre-integration-test' ) | (enumLiteral_22= 'integration-test' ) | (enumLiteral_23= 'post-integration-test' ) | (enumLiteral_24= 'verify' ) | (enumLiteral_25= 'install' ) | (enumLiteral_26= 'deploy' ) | (enumLiteral_27= 'pre-site' ) | (enumLiteral_28= 'site' ) | (enumLiteral_29= 'post-site' ) | (enumLiteral_30= 'site-deploy' ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3687:1: ( (enumLiteral_0= 'default' ) | (enumLiteral_1= 'pre-clean' ) | (enumLiteral_2= 'clean' ) | (enumLiteral_3= 'post-clean' ) | (enumLiteral_4= 'validate' ) | (enumLiteral_5= 'initialize' ) | (enumLiteral_6= 'generate-sources' ) | (enumLiteral_7= 'process-sources' ) | (enumLiteral_8= 'generate-resources' ) | (enumLiteral_9= 'process-resources' ) | (enumLiteral_10= 'compile' ) | (enumLiteral_11= 'process-classes' ) | (enumLiteral_12= 'generate-test-sources' ) | (enumLiteral_13= 'process-test-sources' ) | (enumLiteral_14= 'generate-test-resources' ) | (enumLiteral_15= 'process-test-resources' ) | (enumLiteral_16= 'test-compile' ) | (enumLiteral_17= 'process-test-classes' ) | (enumLiteral_18= 'test' ) | (enumLiteral_19= 'prepare-package' ) | (enumLiteral_20= 'package' ) | (enumLiteral_21= 'pre-integration-test' ) | (enumLiteral_22= 'integration-test' ) | (enumLiteral_23= 'post-integration-test' ) | (enumLiteral_24= 'verify' ) | (enumLiteral_25= 'install' ) | (enumLiteral_26= 'deploy' ) | (enumLiteral_27= 'pre-site' ) | (enumLiteral_28= 'site' ) | (enumLiteral_29= 'post-site' ) | (enumLiteral_30= 'site-deploy' ) )
             int alt63=31;
             switch ( input.LA(1) ) {
             case 51:
@@ -10236,7 +10431,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                 alt63=1;
                 }
                 break;
-            case 69:
+            case 70:
                 {
                 alt63=2;
                 }
@@ -10246,37 +10441,37 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                 alt63=3;
                 }
                 break;
-            case 70:
+            case 71:
                 {
                 alt63=4;
                 }
                 break;
-            case 71:
+            case 72:
                 {
                 alt63=5;
                 }
                 break;
-            case 72:
+            case 73:
                 {
                 alt63=6;
                 }
                 break;
-            case 73:
+            case 74:
                 {
                 alt63=7;
                 }
                 break;
-            case 74:
+            case 75:
                 {
                 alt63=8;
                 }
                 break;
-            case 75:
+            case 76:
                 {
                 alt63=9;
                 }
                 break;
-            case 76:
+            case 77:
                 {
                 alt63=10;
                 }
@@ -10286,37 +10481,37 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                 alt63=11;
                 }
                 break;
-            case 77:
+            case 78:
                 {
                 alt63=12;
                 }
                 break;
-            case 78:
+            case 79:
                 {
                 alt63=13;
                 }
                 break;
-            case 79:
+            case 80:
                 {
                 alt63=14;
                 }
                 break;
-            case 80:
+            case 81:
                 {
                 alt63=15;
                 }
                 break;
-            case 81:
+            case 82:
                 {
                 alt63=16;
                 }
                 break;
-            case 82:
+            case 83:
                 {
                 alt63=17;
                 }
                 break;
-            case 83:
+            case 84:
                 {
                 alt63=18;
                 }
@@ -10326,62 +10521,62 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                 alt63=19;
                 }
                 break;
-            case 84:
+            case 85:
                 {
                 alt63=20;
                 }
                 break;
-            case 85:
+            case 86:
                 {
                 alt63=21;
                 }
                 break;
-            case 86:
+            case 87:
                 {
                 alt63=22;
                 }
                 break;
-            case 87:
+            case 88:
                 {
                 alt63=23;
                 }
                 break;
-            case 88:
+            case 89:
                 {
                 alt63=24;
                 }
                 break;
-            case 89:
+            case 90:
                 {
                 alt63=25;
                 }
                 break;
-            case 90:
+            case 91:
                 {
                 alt63=26;
                 }
                 break;
-            case 91:
+            case 92:
                 {
                 alt63=27;
                 }
                 break;
-            case 92:
+            case 93:
                 {
                 alt63=28;
                 }
                 break;
-            case 93:
+            case 94:
                 {
                 alt63=29;
                 }
                 break;
-            case 94:
+            case 95:
                 {
                 alt63=30;
                 }
                 break;
-            case 95:
+            case 96:
                 {
                 alt63=31;
                 }
@@ -10396,12 +10591,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             switch (alt63) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3626:2: (enumLiteral_0= 'default' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3687:2: (enumLiteral_0= 'default' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3626:2: (enumLiteral_0= 'default' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3626:4: enumLiteral_0= 'default'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3687:2: (enumLiteral_0= 'default' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3687:4: enumLiteral_0= 'default'
                     {
-                    enumLiteral_0=(Token)match(input,51,FOLLOW_51_in_rulePhase8364); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,51,FOLLOW_51_in_rulePhase8489); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getDEFAULTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -10415,12 +10610,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3632:6: (enumLiteral_1= 'pre-clean' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3693:6: (enumLiteral_1= 'pre-clean' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3632:6: (enumLiteral_1= 'pre-clean' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3632:8: enumLiteral_1= 'pre-clean'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3693:6: (enumLiteral_1= 'pre-clean' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3693:8: enumLiteral_1= 'pre-clean'
                     {
-                    enumLiteral_1=(Token)match(input,69,FOLLOW_69_in_rulePhase8381); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,70,FOLLOW_70_in_rulePhase8506); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPRE_CLEANEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -10434,12 +10629,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3638:6: (enumLiteral_2= 'clean' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3699:6: (enumLiteral_2= 'clean' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3638:6: (enumLiteral_2= 'clean' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3638:8: enumLiteral_2= 'clean'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3699:6: (enumLiteral_2= 'clean' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3699:8: enumLiteral_2= 'clean'
                     {
-                    enumLiteral_2=(Token)match(input,27,FOLLOW_27_in_rulePhase8398); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,27,FOLLOW_27_in_rulePhase8523); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getCLEANEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -10453,12 +10648,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3644:6: (enumLiteral_3= 'post-clean' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3705:6: (enumLiteral_3= 'post-clean' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3644:6: (enumLiteral_3= 'post-clean' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3644:8: enumLiteral_3= 'post-clean'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3705:6: (enumLiteral_3= 'post-clean' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3705:8: enumLiteral_3= 'post-clean'
                     {
-                    enumLiteral_3=(Token)match(input,70,FOLLOW_70_in_rulePhase8415); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,71,FOLLOW_71_in_rulePhase8540); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPOST_CLEANEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -10472,12 +10667,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3650:6: (enumLiteral_4= 'validate' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3711:6: (enumLiteral_4= 'validate' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3650:6: (enumLiteral_4= 'validate' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3650:8: enumLiteral_4= 'validate'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3711:6: (enumLiteral_4= 'validate' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3711:8: enumLiteral_4= 'validate'
                     {
-                    enumLiteral_4=(Token)match(input,71,FOLLOW_71_in_rulePhase8432); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,72,FOLLOW_72_in_rulePhase8557); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getVALIDATEEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -10491,12 +10686,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3656:6: (enumLiteral_5= 'initialize' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3717:6: (enumLiteral_5= 'initialize' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3656:6: (enumLiteral_5= 'initialize' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3656:8: enumLiteral_5= 'initialize'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3717:6: (enumLiteral_5= 'initialize' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3717:8: enumLiteral_5= 'initialize'
                     {
-                    enumLiteral_5=(Token)match(input,72,FOLLOW_72_in_rulePhase8449); if (state.failed) return current;
+                    enumLiteral_5=(Token)match(input,73,FOLLOW_73_in_rulePhase8574); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getINITIALIZEEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
@@ -10510,12 +10705,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3662:6: (enumLiteral_6= 'generate-sources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3723:6: (enumLiteral_6= 'generate-sources' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3662:6: (enumLiteral_6= 'generate-sources' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3662:8: enumLiteral_6= 'generate-sources'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3723:6: (enumLiteral_6= 'generate-sources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3723:8: enumLiteral_6= 'generate-sources'
                     {
-                    enumLiteral_6=(Token)match(input,73,FOLLOW_73_in_rulePhase8466); if (state.failed) return current;
+                    enumLiteral_6=(Token)match(input,74,FOLLOW_74_in_rulePhase8591); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getGENERATE_SOURCESEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
@@ -10529,12 +10724,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3668:6: (enumLiteral_7= 'process-sources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3729:6: (enumLiteral_7= 'process-sources' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3668:6: (enumLiteral_7= 'process-sources' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3668:8: enumLiteral_7= 'process-sources'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3729:6: (enumLiteral_7= 'process-sources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3729:8: enumLiteral_7= 'process-sources'
                     {
-                    enumLiteral_7=(Token)match(input,74,FOLLOW_74_in_rulePhase8483); if (state.failed) return current;
+                    enumLiteral_7=(Token)match(input,75,FOLLOW_75_in_rulePhase8608); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPROCESS_SOURCESEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
@@ -10548,12 +10743,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3674:6: (enumLiteral_8= 'generate-resources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3735:6: (enumLiteral_8= 'generate-resources' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3674:6: (enumLiteral_8= 'generate-resources' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3674:8: enumLiteral_8= 'generate-resources'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3735:6: (enumLiteral_8= 'generate-resources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3735:8: enumLiteral_8= 'generate-resources'
                     {
-                    enumLiteral_8=(Token)match(input,75,FOLLOW_75_in_rulePhase8500); if (state.failed) return current;
+                    enumLiteral_8=(Token)match(input,76,FOLLOW_76_in_rulePhase8625); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getGENERATE_RESOURCESEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
@@ -10567,12 +10762,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3680:6: (enumLiteral_9= 'process-resources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3741:6: (enumLiteral_9= 'process-resources' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3680:6: (enumLiteral_9= 'process-resources' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3680:8: enumLiteral_9= 'process-resources'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3741:6: (enumLiteral_9= 'process-resources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3741:8: enumLiteral_9= 'process-resources'
                     {
-                    enumLiteral_9=(Token)match(input,76,FOLLOW_76_in_rulePhase8517); if (state.failed) return current;
+                    enumLiteral_9=(Token)match(input,77,FOLLOW_77_in_rulePhase8642); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPROCESS_RESOURCESEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
@@ -10586,12 +10781,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3686:6: (enumLiteral_10= 'compile' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3747:6: (enumLiteral_10= 'compile' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3686:6: (enumLiteral_10= 'compile' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3686:8: enumLiteral_10= 'compile'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3747:6: (enumLiteral_10= 'compile' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3747:8: enumLiteral_10= 'compile'
                     {
-                    enumLiteral_10=(Token)match(input,29,FOLLOW_29_in_rulePhase8534); if (state.failed) return current;
+                    enumLiteral_10=(Token)match(input,29,FOLLOW_29_in_rulePhase8659); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getCOMPILEEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
@@ -10605,12 +10800,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3692:6: (enumLiteral_11= 'process-classes' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3753:6: (enumLiteral_11= 'process-classes' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3692:6: (enumLiteral_11= 'process-classes' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3692:8: enumLiteral_11= 'process-classes'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3753:6: (enumLiteral_11= 'process-classes' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3753:8: enumLiteral_11= 'process-classes'
                     {
-                    enumLiteral_11=(Token)match(input,77,FOLLOW_77_in_rulePhase8551); if (state.failed) return current;
+                    enumLiteral_11=(Token)match(input,78,FOLLOW_78_in_rulePhase8676); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPROCESS_CLASSESEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
@@ -10624,12 +10819,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3698:6: (enumLiteral_12= 'generate-test-sources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3759:6: (enumLiteral_12= 'generate-test-sources' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3698:6: (enumLiteral_12= 'generate-test-sources' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3698:8: enumLiteral_12= 'generate-test-sources'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3759:6: (enumLiteral_12= 'generate-test-sources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3759:8: enumLiteral_12= 'generate-test-sources'
                     {
-                    enumLiteral_12=(Token)match(input,78,FOLLOW_78_in_rulePhase8568); if (state.failed) return current;
+                    enumLiteral_12=(Token)match(input,79,FOLLOW_79_in_rulePhase8693); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getGENERATE_TEST_SOURCESEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
@@ -10643,12 +10838,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3704:6: (enumLiteral_13= 'process-test-sources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3765:6: (enumLiteral_13= 'process-test-sources' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3704:6: (enumLiteral_13= 'process-test-sources' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3704:8: enumLiteral_13= 'process-test-sources'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3765:6: (enumLiteral_13= 'process-test-sources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3765:8: enumLiteral_13= 'process-test-sources'
                     {
-                    enumLiteral_13=(Token)match(input,79,FOLLOW_79_in_rulePhase8585); if (state.failed) return current;
+                    enumLiteral_13=(Token)match(input,80,FOLLOW_80_in_rulePhase8710); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPROCESS_TEST_SOURCESEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
@@ -10662,12 +10857,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3710:6: (enumLiteral_14= 'generate-test-resources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3771:6: (enumLiteral_14= 'generate-test-resources' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3710:6: (enumLiteral_14= 'generate-test-resources' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3710:8: enumLiteral_14= 'generate-test-resources'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3771:6: (enumLiteral_14= 'generate-test-resources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3771:8: enumLiteral_14= 'generate-test-resources'
                     {
-                    enumLiteral_14=(Token)match(input,80,FOLLOW_80_in_rulePhase8602); if (state.failed) return current;
+                    enumLiteral_14=(Token)match(input,81,FOLLOW_81_in_rulePhase8727); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getGENERATE_TEST_RESOURCESEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
@@ -10681,12 +10876,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3716:6: (enumLiteral_15= 'process-test-resources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3777:6: (enumLiteral_15= 'process-test-resources' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3716:6: (enumLiteral_15= 'process-test-resources' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3716:8: enumLiteral_15= 'process-test-resources'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3777:6: (enumLiteral_15= 'process-test-resources' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3777:8: enumLiteral_15= 'process-test-resources'
                     {
-                    enumLiteral_15=(Token)match(input,81,FOLLOW_81_in_rulePhase8619); if (state.failed) return current;
+                    enumLiteral_15=(Token)match(input,82,FOLLOW_82_in_rulePhase8744); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPROCESS_TEST_RESOURCESEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
@@ -10700,12 +10895,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3722:6: (enumLiteral_16= 'test-compile' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3783:6: (enumLiteral_16= 'test-compile' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3722:6: (enumLiteral_16= 'test-compile' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3722:8: enumLiteral_16= 'test-compile'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3783:6: (enumLiteral_16= 'test-compile' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3783:8: enumLiteral_16= 'test-compile'
                     {
-                    enumLiteral_16=(Token)match(input,82,FOLLOW_82_in_rulePhase8636); if (state.failed) return current;
+                    enumLiteral_16=(Token)match(input,83,FOLLOW_83_in_rulePhase8761); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getTEST_COMPILEEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
@@ -10719,12 +10914,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3728:6: (enumLiteral_17= 'process-test-classes' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3789:6: (enumLiteral_17= 'process-test-classes' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3728:6: (enumLiteral_17= 'process-test-classes' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3728:8: enumLiteral_17= 'process-test-classes'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3789:6: (enumLiteral_17= 'process-test-classes' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3789:8: enumLiteral_17= 'process-test-classes'
                     {
-                    enumLiteral_17=(Token)match(input,83,FOLLOW_83_in_rulePhase8653); if (state.failed) return current;
+                    enumLiteral_17=(Token)match(input,84,FOLLOW_84_in_rulePhase8778); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPROCESS_TEST_CLASSESEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
@@ -10738,12 +10933,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 19 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3734:6: (enumLiteral_18= 'test' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3795:6: (enumLiteral_18= 'test' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3734:6: (enumLiteral_18= 'test' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3734:8: enumLiteral_18= 'test'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3795:6: (enumLiteral_18= 'test' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3795:8: enumLiteral_18= 'test'
                     {
-                    enumLiteral_18=(Token)match(input,25,FOLLOW_25_in_rulePhase8670); if (state.failed) return current;
+                    enumLiteral_18=(Token)match(input,25,FOLLOW_25_in_rulePhase8795); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getTESTEnumLiteralDeclaration_18().getEnumLiteral().getInstance();
@@ -10757,12 +10952,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 20 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3740:6: (enumLiteral_19= 'prepare-package' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3801:6: (enumLiteral_19= 'prepare-package' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3740:6: (enumLiteral_19= 'prepare-package' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3740:8: enumLiteral_19= 'prepare-package'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3801:6: (enumLiteral_19= 'prepare-package' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3801:8: enumLiteral_19= 'prepare-package'
                     {
-                    enumLiteral_19=(Token)match(input,84,FOLLOW_84_in_rulePhase8687); if (state.failed) return current;
+                    enumLiteral_19=(Token)match(input,85,FOLLOW_85_in_rulePhase8812); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPREPARE_PACKAGEEnumLiteralDeclaration_19().getEnumLiteral().getInstance();
@@ -10776,12 +10971,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 21 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3746:6: (enumLiteral_20= 'package' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3807:6: (enumLiteral_20= 'package' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3746:6: (enumLiteral_20= 'package' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3746:8: enumLiteral_20= 'package'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3807:6: (enumLiteral_20= 'package' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3807:8: enumLiteral_20= 'package'
                     {
-                    enumLiteral_20=(Token)match(input,85,FOLLOW_85_in_rulePhase8704); if (state.failed) return current;
+                    enumLiteral_20=(Token)match(input,86,FOLLOW_86_in_rulePhase8829); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPACKAGEEnumLiteralDeclaration_20().getEnumLiteral().getInstance();
@@ -10795,12 +10990,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 22 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3752:6: (enumLiteral_21= 'pre-integration-test' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3813:6: (enumLiteral_21= 'pre-integration-test' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3752:6: (enumLiteral_21= 'pre-integration-test' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3752:8: enumLiteral_21= 'pre-integration-test'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3813:6: (enumLiteral_21= 'pre-integration-test' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3813:8: enumLiteral_21= 'pre-integration-test'
                     {
-                    enumLiteral_21=(Token)match(input,86,FOLLOW_86_in_rulePhase8721); if (state.failed) return current;
+                    enumLiteral_21=(Token)match(input,87,FOLLOW_87_in_rulePhase8846); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPRE_INTEGRATION_TESTEnumLiteralDeclaration_21().getEnumLiteral().getInstance();
@@ -10814,12 +11009,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 23 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3758:6: (enumLiteral_22= 'integration-test' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3819:6: (enumLiteral_22= 'integration-test' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3758:6: (enumLiteral_22= 'integration-test' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3758:8: enumLiteral_22= 'integration-test'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3819:6: (enumLiteral_22= 'integration-test' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3819:8: enumLiteral_22= 'integration-test'
                     {
-                    enumLiteral_22=(Token)match(input,87,FOLLOW_87_in_rulePhase8738); if (state.failed) return current;
+                    enumLiteral_22=(Token)match(input,88,FOLLOW_88_in_rulePhase8863); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getINTEGRATION_TESTEnumLiteralDeclaration_22().getEnumLiteral().getInstance();
@@ -10833,12 +11028,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 24 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3764:6: (enumLiteral_23= 'post-integration-test' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3825:6: (enumLiteral_23= 'post-integration-test' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3764:6: (enumLiteral_23= 'post-integration-test' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3764:8: enumLiteral_23= 'post-integration-test'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3825:6: (enumLiteral_23= 'post-integration-test' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3825:8: enumLiteral_23= 'post-integration-test'
                     {
-                    enumLiteral_23=(Token)match(input,88,FOLLOW_88_in_rulePhase8755); if (state.failed) return current;
+                    enumLiteral_23=(Token)match(input,89,FOLLOW_89_in_rulePhase8880); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPOST_INTEGRATION_TESTEnumLiteralDeclaration_23().getEnumLiteral().getInstance();
@@ -10852,12 +11047,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 25 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3770:6: (enumLiteral_24= 'verify' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3831:6: (enumLiteral_24= 'verify' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3770:6: (enumLiteral_24= 'verify' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3770:8: enumLiteral_24= 'verify'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3831:6: (enumLiteral_24= 'verify' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3831:8: enumLiteral_24= 'verify'
                     {
-                    enumLiteral_24=(Token)match(input,89,FOLLOW_89_in_rulePhase8772); if (state.failed) return current;
+                    enumLiteral_24=(Token)match(input,90,FOLLOW_90_in_rulePhase8897); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getVERIFYEnumLiteralDeclaration_24().getEnumLiteral().getInstance();
@@ -10871,12 +11066,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 26 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3776:6: (enumLiteral_25= 'install' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3837:6: (enumLiteral_25= 'install' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3776:6: (enumLiteral_25= 'install' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3776:8: enumLiteral_25= 'install'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3837:6: (enumLiteral_25= 'install' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3837:8: enumLiteral_25= 'install'
                     {
-                    enumLiteral_25=(Token)match(input,90,FOLLOW_90_in_rulePhase8789); if (state.failed) return current;
+                    enumLiteral_25=(Token)match(input,91,FOLLOW_91_in_rulePhase8914); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getINSTALLEnumLiteralDeclaration_25().getEnumLiteral().getInstance();
@@ -10890,12 +11085,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 27 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3782:6: (enumLiteral_26= 'deploy' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3843:6: (enumLiteral_26= 'deploy' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3782:6: (enumLiteral_26= 'deploy' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3782:8: enumLiteral_26= 'deploy'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3843:6: (enumLiteral_26= 'deploy' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3843:8: enumLiteral_26= 'deploy'
                     {
-                    enumLiteral_26=(Token)match(input,91,FOLLOW_91_in_rulePhase8806); if (state.failed) return current;
+                    enumLiteral_26=(Token)match(input,92,FOLLOW_92_in_rulePhase8931); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getDEPLOYEnumLiteralDeclaration_26().getEnumLiteral().getInstance();
@@ -10909,12 +11104,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 28 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3788:6: (enumLiteral_27= 'pre-site' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3849:6: (enumLiteral_27= 'pre-site' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3788:6: (enumLiteral_27= 'pre-site' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3788:8: enumLiteral_27= 'pre-site'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3849:6: (enumLiteral_27= 'pre-site' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3849:8: enumLiteral_27= 'pre-site'
                     {
-                    enumLiteral_27=(Token)match(input,92,FOLLOW_92_in_rulePhase8823); if (state.failed) return current;
+                    enumLiteral_27=(Token)match(input,93,FOLLOW_93_in_rulePhase8948); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPRE_SITEEnumLiteralDeclaration_27().getEnumLiteral().getInstance();
@@ -10928,12 +11123,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 29 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3794:6: (enumLiteral_28= 'site' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3855:6: (enumLiteral_28= 'site' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3794:6: (enumLiteral_28= 'site' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3794:8: enumLiteral_28= 'site'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3855:6: (enumLiteral_28= 'site' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3855:8: enumLiteral_28= 'site'
                     {
-                    enumLiteral_28=(Token)match(input,93,FOLLOW_93_in_rulePhase8840); if (state.failed) return current;
+                    enumLiteral_28=(Token)match(input,94,FOLLOW_94_in_rulePhase8965); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getSITEEnumLiteralDeclaration_28().getEnumLiteral().getInstance();
@@ -10947,12 +11142,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 30 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3800:6: (enumLiteral_29= 'post-site' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3861:6: (enumLiteral_29= 'post-site' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3800:6: (enumLiteral_29= 'post-site' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3800:8: enumLiteral_29= 'post-site'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3861:6: (enumLiteral_29= 'post-site' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3861:8: enumLiteral_29= 'post-site'
                     {
-                    enumLiteral_29=(Token)match(input,94,FOLLOW_94_in_rulePhase8857); if (state.failed) return current;
+                    enumLiteral_29=(Token)match(input,95,FOLLOW_95_in_rulePhase8982); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getPOST_SITEEnumLiteralDeclaration_29().getEnumLiteral().getInstance();
@@ -10966,12 +11161,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 31 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3806:6: (enumLiteral_30= 'site-deploy' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3867:6: (enumLiteral_30= 'site-deploy' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3806:6: (enumLiteral_30= 'site-deploy' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3806:8: enumLiteral_30= 'site-deploy'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3867:6: (enumLiteral_30= 'site-deploy' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3867:8: enumLiteral_30= 'site-deploy'
                     {
-                    enumLiteral_30=(Token)match(input,95,FOLLOW_95_in_rulePhase8874); if (state.failed) return current;
+                    enumLiteral_30=(Token)match(input,96,FOLLOW_96_in_rulePhase8999); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getPhaseAccess().getSITE_DEPLOYEnumLiteralDeclaration_30().getEnumLiteral().getInstance();
@@ -11007,7 +11202,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRepositoryUpdatePolicy"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3816:1: ruleRepositoryUpdatePolicy returns [Enumerator current=null] : ( (enumLiteral_0= 'daily' ) | (enumLiteral_1= 'always' ) | (enumLiteral_2= 'never' ) | (enumLiteral_3= 'interval' ) ) ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3877:1: ruleRepositoryUpdatePolicy returns [Enumerator current=null] : ( (enumLiteral_0= 'daily' ) | (enumLiteral_1= 'always' ) | (enumLiteral_2= 'never' ) | (enumLiteral_3= 'interval' ) ) ;
     public final Enumerator ruleRepositoryUpdatePolicy() throws RecognitionException {
         Enumerator current = null;
 
@@ -11018,28 +11213,28 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3818:28: ( ( (enumLiteral_0= 'daily' ) | (enumLiteral_1= 'always' ) | (enumLiteral_2= 'never' ) | (enumLiteral_3= 'interval' ) ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3819:1: ( (enumLiteral_0= 'daily' ) | (enumLiteral_1= 'always' ) | (enumLiteral_2= 'never' ) | (enumLiteral_3= 'interval' ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3879:28: ( ( (enumLiteral_0= 'daily' ) | (enumLiteral_1= 'always' ) | (enumLiteral_2= 'never' ) | (enumLiteral_3= 'interval' ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3880:1: ( (enumLiteral_0= 'daily' ) | (enumLiteral_1= 'always' ) | (enumLiteral_2= 'never' ) | (enumLiteral_3= 'interval' ) )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3819:1: ( (enumLiteral_0= 'daily' ) | (enumLiteral_1= 'always' ) | (enumLiteral_2= 'never' ) | (enumLiteral_3= 'interval' ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3880:1: ( (enumLiteral_0= 'daily' ) | (enumLiteral_1= 'always' ) | (enumLiteral_2= 'never' ) | (enumLiteral_3= 'interval' ) )
             int alt64=4;
             switch ( input.LA(1) ) {
-            case 96:
+            case 97:
                 {
                 alt64=1;
                 }
                 break;
-            case 97:
+            case 98:
                 {
                 alt64=2;
                 }
                 break;
-            case 98:
+            case 99:
                 {
                 alt64=3;
                 }
                 break;
-            case 64:
+            case 65:
                 {
                 alt64=4;
                 }
@@ -11054,12 +11249,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             switch (alt64) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3819:2: (enumLiteral_0= 'daily' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3880:2: (enumLiteral_0= 'daily' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3819:2: (enumLiteral_0= 'daily' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3819:4: enumLiteral_0= 'daily'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3880:2: (enumLiteral_0= 'daily' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3880:4: enumLiteral_0= 'daily'
                     {
-                    enumLiteral_0=(Token)match(input,96,FOLLOW_96_in_ruleRepositoryUpdatePolicy8919); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,97,FOLLOW_97_in_ruleRepositoryUpdatePolicy9044); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getRepositoryUpdatePolicyAccess().getDAILYEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -11073,12 +11268,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3825:6: (enumLiteral_1= 'always' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3886:6: (enumLiteral_1= 'always' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3825:6: (enumLiteral_1= 'always' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3825:8: enumLiteral_1= 'always'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3886:6: (enumLiteral_1= 'always' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3886:8: enumLiteral_1= 'always'
                     {
-                    enumLiteral_1=(Token)match(input,97,FOLLOW_97_in_ruleRepositoryUpdatePolicy8936); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,98,FOLLOW_98_in_ruleRepositoryUpdatePolicy9061); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getRepositoryUpdatePolicyAccess().getALWAYSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -11092,12 +11287,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3831:6: (enumLiteral_2= 'never' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3892:6: (enumLiteral_2= 'never' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3831:6: (enumLiteral_2= 'never' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3831:8: enumLiteral_2= 'never'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3892:6: (enumLiteral_2= 'never' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3892:8: enumLiteral_2= 'never'
                     {
-                    enumLiteral_2=(Token)match(input,98,FOLLOW_98_in_ruleRepositoryUpdatePolicy8953); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,99,FOLLOW_99_in_ruleRepositoryUpdatePolicy9078); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getRepositoryUpdatePolicyAccess().getNEVEREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -11111,12 +11306,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3837:6: (enumLiteral_3= 'interval' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3898:6: (enumLiteral_3= 'interval' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3837:6: (enumLiteral_3= 'interval' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3837:8: enumLiteral_3= 'interval'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3898:6: (enumLiteral_3= 'interval' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3898:8: enumLiteral_3= 'interval'
                     {
-                    enumLiteral_3=(Token)match(input,64,FOLLOW_64_in_ruleRepositoryUpdatePolicy8970); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,65,FOLLOW_65_in_ruleRepositoryUpdatePolicy9095); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getRepositoryUpdatePolicyAccess().getINTERVALEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -11152,7 +11347,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleChecksumPolicy"
-    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3847:1: ruleChecksumPolicy returns [Enumerator current=null] : ( (enumLiteral_0= 'ignore' ) | (enumLiteral_1= 'warn' ) | (enumLiteral_2= 'fail' ) ) ;
+    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3908:1: ruleChecksumPolicy returns [Enumerator current=null] : ( (enumLiteral_0= 'ignore' ) | (enumLiteral_1= 'warn' ) | (enumLiteral_2= 'fail' ) ) ;
     public final Enumerator ruleChecksumPolicy() throws RecognitionException {
         Enumerator current = null;
 
@@ -11162,23 +11357,23 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3849:28: ( ( (enumLiteral_0= 'ignore' ) | (enumLiteral_1= 'warn' ) | (enumLiteral_2= 'fail' ) ) )
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3850:1: ( (enumLiteral_0= 'ignore' ) | (enumLiteral_1= 'warn' ) | (enumLiteral_2= 'fail' ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3910:28: ( ( (enumLiteral_0= 'ignore' ) | (enumLiteral_1= 'warn' ) | (enumLiteral_2= 'fail' ) ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3911:1: ( (enumLiteral_0= 'ignore' ) | (enumLiteral_1= 'warn' ) | (enumLiteral_2= 'fail' ) )
             {
-            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3850:1: ( (enumLiteral_0= 'ignore' ) | (enumLiteral_1= 'warn' ) | (enumLiteral_2= 'fail' ) )
+            // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3911:1: ( (enumLiteral_0= 'ignore' ) | (enumLiteral_1= 'warn' ) | (enumLiteral_2= 'fail' ) )
             int alt65=3;
             switch ( input.LA(1) ) {
-            case 99:
+            case 100:
                 {
                 alt65=1;
                 }
                 break;
-            case 100:
+            case 101:
                 {
                 alt65=2;
                 }
                 break;
-            case 101:
+            case 102:
                 {
                 alt65=3;
                 }
@@ -11193,12 +11388,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
 
             switch (alt65) {
                 case 1 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3850:2: (enumLiteral_0= 'ignore' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3911:2: (enumLiteral_0= 'ignore' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3850:2: (enumLiteral_0= 'ignore' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3850:4: enumLiteral_0= 'ignore'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3911:2: (enumLiteral_0= 'ignore' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3911:4: enumLiteral_0= 'ignore'
                     {
-                    enumLiteral_0=(Token)match(input,99,FOLLOW_99_in_ruleChecksumPolicy9015); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,100,FOLLOW_100_in_ruleChecksumPolicy9140); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getChecksumPolicyAccess().getIGNOREEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -11212,12 +11407,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3856:6: (enumLiteral_1= 'warn' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3917:6: (enumLiteral_1= 'warn' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3856:6: (enumLiteral_1= 'warn' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3856:8: enumLiteral_1= 'warn'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3917:6: (enumLiteral_1= 'warn' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3917:8: enumLiteral_1= 'warn'
                     {
-                    enumLiteral_1=(Token)match(input,100,FOLLOW_100_in_ruleChecksumPolicy9032); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,101,FOLLOW_101_in_ruleChecksumPolicy9157); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getChecksumPolicyAccess().getWARNEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -11231,12 +11426,12 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3862:6: (enumLiteral_2= 'fail' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3923:6: (enumLiteral_2= 'fail' )
                     {
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3862:6: (enumLiteral_2= 'fail' )
-                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3862:8: enumLiteral_2= 'fail'
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3923:6: (enumLiteral_2= 'fail' )
+                    // ../de.itemis.mpp/src-gen/de/itemis/mpp/parser/antlr/internal/InternalPom.g:3923:8: enumLiteral_2= 'fail'
                     {
-                    enumLiteral_2=(Token)match(input,101,FOLLOW_101_in_ruleChecksumPolicy9049); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,102,FOLLOW_102_in_ruleChecksumPolicy9174); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getChecksumPolicyAccess().getFAILEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -11308,93 +11503,29 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
     }
 
 
-    protected DFA17 dfa17 = new DFA17(this);
     protected DFA27 dfa27 = new DFA27(this);
     protected DFA33 dfa33 = new DFA33(this);
-    static final String DFA17_eotS =
-        "\15\uffff";
-    static final String DFA17_eofS =
-        "\1\1\1\uffff\1\7\5\uffff\2\7\2\uffff\1\7";
-    static final String DFA17_minS =
-        "\1\4\1\uffff\1\4\2\uffff\2\5\1\uffff\1\24\3\5\1\24";
-    static final String DFA17_maxS =
-        "\1\104\1\uffff\1\104\2\uffff\1\53\1\40\1\uffff\1\64\1\104\1\40"+
-        "\1\27\1\64";
-    static final String DFA17_acceptS =
-        "\1\uffff\1\4\1\uffff\1\2\1\3\2\uffff\1\1\5\uffff";
-    static final String DFA17_specialS =
-        "\15\uffff}>";
-    static final String[] DFA17_transitionS = {
-            "\1\1\1\2\1\3\1\4\3\uffff\2\1\1\uffff\6\1\1\uffff\1\1\2\uffff"+
-            "\13\1\1\uffff\3\1\1\uffff\3\1\11\uffff\5\1\11\uffff\3\1",
-            "",
-            "\4\7\3\uffff\2\7\1\uffff\6\7\1\1\1\5\1\1\1\uffff\13\7\1\uffff"+
-            "\3\7\1\uffff\3\7\11\uffff\1\6\4\7\11\uffff\3\7",
-            "",
-            "",
-            "\1\10\5\uffff\1\1\4\uffff\1\1\10\uffff\10\1\12\uffff\1\7",
-            "\1\11\5\uffff\1\1\4\uffff\1\1\10\uffff\10\1",
-            "",
-            "\1\12\2\1\5\uffff\1\7\3\uffff\1\7\23\uffff\1\1",
-            "\1\7\5\uffff\1\7\4\uffff\1\7\3\uffff\3\1\1\uffff\11\7\4\uffff"+
-            "\1\7\16\uffff\1\13\1\7\14\uffff\3\7",
-            "\1\14\5\uffff\1\1\4\uffff\1\1\10\uffff\10\1",
-            "\1\7\1\1\20\uffff\1\1",
-            "\1\12\2\1\5\uffff\1\7\3\uffff\1\7\23\uffff\1\1"
-    };
-
-    static final short[] DFA17_eot = DFA.unpackEncodedString(DFA17_eotS);
-    static final short[] DFA17_eof = DFA.unpackEncodedString(DFA17_eofS);
-    static final char[] DFA17_min = DFA.unpackEncodedStringToUnsignedChars(DFA17_minS);
-    static final char[] DFA17_max = DFA.unpackEncodedStringToUnsignedChars(DFA17_maxS);
-    static final short[] DFA17_accept = DFA.unpackEncodedString(DFA17_acceptS);
-    static final short[] DFA17_special = DFA.unpackEncodedString(DFA17_specialS);
-    static final short[][] DFA17_transition;
-
-    static {
-        int numStates = DFA17_transitionS.length;
-        DFA17_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA17_transition[i] = DFA.unpackEncodedString(DFA17_transitionS[i]);
-        }
-    }
-
-    class DFA17 extends DFA {
-
-        public DFA17(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 17;
-            this.eot = DFA17_eot;
-            this.eof = DFA17_eof;
-            this.min = DFA17_min;
-            this.max = DFA17_max;
-            this.accept = DFA17_accept;
-            this.special = DFA17_special;
-            this.transition = DFA17_transition;
-        }
-        public String getDescription() {
-            return "()* loopback of 846:1: (this_ID_0= RULE_ID | this_Number_1= ruleNumber | this_ANY_OTHER_2= RULE_ANY_OTHER )*";
-        }
-    }
+    protected DFA49 dfa49 = new DFA49(this);
     static final String DFA27_eotS =
         "\14\uffff";
     static final String DFA27_eofS =
         "\14\uffff";
     static final String DFA27_minS =
-        "\1\5\1\uffff\7\5\3\uffff";
+        "\1\5\1\uffff\1\24\6\5\3\uffff";
     static final String DFA27_maxS =
-        "\1\104\1\uffff\2\64\3\45\1\64\1\45\3\uffff";
+        "\1\105\1\uffff\1\105\1\65\3\45\1\65\1\45\3\uffff";
     static final String DFA27_acceptS =
         "\1\uffff\1\4\7\uffff\1\3\1\1\1\2";
     static final String DFA27_specialS =
         "\14\uffff}>";
     static final String[] DFA27_transitionS = {
             "\1\11\5\uffff\1\11\4\uffff\1\11\7\uffff\1\1\1\7\3\11\1\3\2"+
-            "\11\1\2\4\uffff\1\11\17\uffff\1\10\14\uffff\1\4\1\5\1\6",
+            "\11\1\2\4\uffff\1\11\20\uffff\1\10\14\uffff\1\4\1\5\1\6",
             "",
-            "\1\12\16\uffff\3\11\35\uffff\1\11",
+            "\3\11\2\uffff\1\12\3\uffff\1\12\27\uffff\1\11\1\12\14\uffff"+
+            "\3\12",
             "\1\11\5\uffff\1\11\4\uffff\1\11\3\uffff\3\11\2\uffff\10\11"+
-            "\1\uffff\1\13\2\uffff\1\11\16\uffff\1\11",
+            "\1\uffff\1\13\2\uffff\1\11\17\uffff\1\11",
             "\1\11\5\uffff\1\11\4\uffff\1\11\10\uffff\10\11\1\uffff\1\13"+
             "\2\uffff\1\11",
             "\1\11\5\uffff\1\11\4\uffff\1\11\10\uffff\10\11\1\uffff\1\13"+
@@ -11402,7 +11533,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             "\1\11\5\uffff\1\11\4\uffff\1\11\10\uffff\10\11\1\uffff\1\13"+
             "\2\uffff\1\11",
             "\1\11\5\uffff\1\11\4\uffff\1\11\3\uffff\3\11\2\uffff\10\11"+
-            "\1\uffff\1\13\2\uffff\1\11\16\uffff\1\11",
+            "\1\uffff\1\13\2\uffff\1\11\17\uffff\1\11",
             "\1\11\5\uffff\1\11\4\uffff\1\11\10\uffff\10\11\1\uffff\1\13"+
             "\2\uffff\1\11",
             "",
@@ -11450,14 +11581,14 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
     static final String DFA33_minS =
         "\1\30\1\uffff\5\0\4\uffff";
     static final String DFA33_maxS =
-        "\1\70\1\uffff\5\0\4\uffff";
+        "\1\71\1\uffff\5\0\4\uffff";
     static final String DFA33_acceptS =
         "\1\uffff\1\5\5\uffff\1\1\1\2\1\3\1\4";
     static final String DFA33_specialS =
-        "\2\uffff\1\0\1\3\1\1\1\2\1\4\4\uffff}>";
+        "\2\uffff\1\0\1\4\1\1\1\3\1\2\4\uffff}>";
     static final String[] DFA33_transitionS = {
             "\1\6\3\uffff\1\1\3\uffff\2\1\2\uffff\1\1\1\uffff\1\2\1\uffff"+
-            "\1\3\1\4\1\5\14\uffff\2\1",
+            "\1\3\1\4\1\5\15\uffff\2\1",
             "",
             "\1\uffff",
             "\1\uffff",
@@ -11537,36 +11668,6 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA33_5 = input.LA(1);
-
-                         
-                        int index33_5 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getSCMAccess().getUnorderedGroup(), 3) ) {s = 10;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getSCMAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index33_5);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
-                        int LA33_3 = input.LA(1);
-
-                         
-                        int index33_3 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getSCMAccess().getUnorderedGroup(), 1) ) {s = 8;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getSCMAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index33_3);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
                         int LA33_6 = input.LA(1);
 
                          
@@ -11581,6 +11682,36 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
                         input.seek(index33_6);
                         if ( s>=0 ) return s;
                         break;
+                    case 3 : 
+                        int LA33_5 = input.LA(1);
+
+                         
+                        int index33_5 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getSCMAccess().getUnorderedGroup(), 3) ) {s = 10;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getSCMAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index33_5);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA33_3 = input.LA(1);
+
+                         
+                        int index33_3 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getSCMAccess().getUnorderedGroup(), 1) ) {s = 8;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getSCMAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index33_3);
+                        if ( s>=0 ) return s;
+                        break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
@@ -11589,18 +11720,72 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
             throw nvae;
         }
     }
+    static final String DFA49_eotS =
+        "\6\uffff";
+    static final String DFA49_eofS =
+        "\6\uffff";
+    static final String DFA49_minS =
+        "\1\5\1\24\2\uffff\1\5\1\24";
+    static final String DFA49_maxS =
+        "\1\53\1\65\2\uffff\1\40\1\65";
+    static final String DFA49_acceptS =
+        "\2\uffff\1\1\1\2\2\uffff";
+    static final String DFA49_specialS =
+        "\6\uffff}>";
+    static final String[] DFA49_transitionS = {
+            "\1\1\5\uffff\1\3\4\uffff\1\3\10\uffff\10\3\12\uffff\1\2",
+            "\1\4\2\3\35\uffff\1\2\1\3",
+            "",
+            "",
+            "\1\5\5\uffff\1\3\4\uffff\1\3\10\uffff\10\3",
+            "\1\4\2\3\35\uffff\1\2\1\3"
+    };
+
+    static final short[] DFA49_eot = DFA.unpackEncodedString(DFA49_eotS);
+    static final short[] DFA49_eof = DFA.unpackEncodedString(DFA49_eofS);
+    static final char[] DFA49_min = DFA.unpackEncodedStringToUnsignedChars(DFA49_minS);
+    static final char[] DFA49_max = DFA.unpackEncodedStringToUnsignedChars(DFA49_maxS);
+    static final short[] DFA49_accept = DFA.unpackEncodedString(DFA49_acceptS);
+    static final short[] DFA49_special = DFA.unpackEncodedString(DFA49_specialS);
+    static final short[][] DFA49_transition;
+
+    static {
+        int numStates = DFA49_transitionS.length;
+        DFA49_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA49_transition[i] = DFA.unpackEncodedString(DFA49_transitionS[i]);
+        }
+    }
+
+    class DFA49 extends DFA {
+
+        public DFA49(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 49;
+            this.eot = DFA49_eot;
+            this.eof = DFA49_eof;
+            this.min = DFA49_min;
+            this.max = DFA49_max;
+            this.accept = DFA49_accept;
+            this.special = DFA49_special;
+            this.transition = DFA49_transition;
+        }
+        public String getDescription() {
+            return "2840:1: ( ( ( (lv_executionId_1_0= ruleIDAndDash ) ) | ( (lv_config_2_0= 'config' ) ) ) otherlv_3= 'of' )?";
+        }
+    }
  
 
     public static final BitSet FOLLOW_rulePOM_in_entryRulePOM75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePOM85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePOMImport_in_rulePOM131 = new BitSet(new long[]{0x01A00752010FD800L});
-    public static final BitSet FOLLOW_ruleParentRef_in_rulePOM153 = new BitSet(new long[]{0x01800752010FD800L});
-    public static final BitSet FOLLOW_ruleArtifactDefinition_in_rulePOM175 = new BitSet(new long[]{0x01800752010FD800L});
-    public static final BitSet FOLLOW_ruleModules_in_rulePOM196 = new BitSet(new long[]{0x01800752010FD800L});
-    public static final BitSet FOLLOW_ruleProperties_in_rulePOM263 = new BitSet(new long[]{0x01800753110FD802L});
-    public static final BitSet FOLLOW_ruleDependencies_in_rulePOM338 = new BitSet(new long[]{0x01800753110FD802L});
-    public static final BitSet FOLLOW_ruleSCM_in_rulePOM413 = new BitSet(new long[]{0x01800753110FD802L});
-    public static final BitSet FOLLOW_ruleRepository_in_rulePOM488 = new BitSet(new long[]{0x01800753110FD802L});
+    public static final BitSet FOLLOW_rulePOMImport_in_rulePOM131 = new BitSet(new long[]{0x03400752010FD800L});
+    public static final BitSet FOLLOW_ruleParentRef_in_rulePOM153 = new BitSet(new long[]{0x03000752010FD800L});
+    public static final BitSet FOLLOW_ruleArtifactDefinition_in_rulePOM175 = new BitSet(new long[]{0x03000752010FD800L});
+    public static final BitSet FOLLOW_ruleModules_in_rulePOM196 = new BitSet(new long[]{0x03000752010FD800L});
+    public static final BitSet FOLLOW_ruleProperties_in_rulePOM263 = new BitSet(new long[]{0x03000753110FD802L});
+    public static final BitSet FOLLOW_ruleDependencies_in_rulePOM338 = new BitSet(new long[]{0x03000753110FD802L});
+    public static final BitSet FOLLOW_ruleSCM_in_rulePOM413 = new BitSet(new long[]{0x03000753110FD802L});
+    public static final BitSet FOLLOW_ruleRepository_in_rulePOM488 = new BitSet(new long[]{0x03000753110FD802L});
     public static final BitSet FOLLOW_ruleBuildStep_in_rulePOM556 = new BitSet(new long[]{0x0000000110000002L});
     public static final BitSet FOLLOW_ruleParentRef_in_entryRuleParentRef593 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleParentRef603 = new BitSet(new long[]{0x0000000000000002L});
@@ -11715,31 +11900,31 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleDependencies_in_entryRuleDependencies3555 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDependencies3565 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_36_in_ruleDependencies3611 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleDependencies3623 = new BitSet(new long[]{0x00200021FE010820L,0x000000000000001CL});
-    public static final BitSet FOLLOW_ruleDependencyInclusion_in_ruleDependencies3645 = new BitSet(new long[]{0x00200021FF010820L,0x000000000000001CL});
-    public static final BitSet FOLLOW_ruleDependencyGroup_in_ruleDependencies3672 = new BitSet(new long[]{0x00200021FF010820L,0x000000000000001CL});
-    public static final BitSet FOLLOW_ruleUngroupedDependency_in_ruleDependencies3699 = new BitSet(new long[]{0x00200021FF010820L,0x000000000000001CL});
+    public static final BitSet FOLLOW_34_in_ruleDependencies3623 = new BitSet(new long[]{0x00400021FE010820L,0x0000000000000038L});
+    public static final BitSet FOLLOW_ruleDependencyInclusion_in_ruleDependencies3645 = new BitSet(new long[]{0x00400021FF010820L,0x0000000000000038L});
+    public static final BitSet FOLLOW_ruleDependencyGroup_in_ruleDependencies3672 = new BitSet(new long[]{0x00400021FF010820L,0x0000000000000038L});
+    public static final BitSet FOLLOW_ruleUngroupedDependency_in_ruleDependencies3699 = new BitSet(new long[]{0x00400021FF010820L,0x0000000000000038L});
     public static final BitSet FOLLOW_24_in_ruleDependencies3713 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDependencyGroup_in_entryRuleDependencyGroup3749 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDependencyGroup3759 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDependencyScope_in_ruleDependencyGroup3805 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleDependencyGroup3817 = new BitSet(new long[]{0x00200021FE010820L,0x000000000000001CL});
-    public static final BitSet FOLLOW_ruleDependency_in_ruleDependencyGroup3838 = new BitSet(new long[]{0x00200021FF010820L,0x000000000000001CL});
+    public static final BitSet FOLLOW_34_in_ruleDependencyGroup3817 = new BitSet(new long[]{0x00400021FE010820L,0x0000000000000038L});
+    public static final BitSet FOLLOW_ruleDependency_in_ruleDependencyGroup3838 = new BitSet(new long[]{0x00400021FF010820L,0x0000000000000038L});
     public static final BitSet FOLLOW_24_in_ruleDependencyGroup3851 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleUngroupedDependency_in_entryRuleUngroupedDependency3887 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleUngroupedDependency3897 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDependencyScope_in_ruleUngroupedDependency3943 = new BitSet(new long[]{0x00200021FE010820L,0x000000000000001CL});
+    public static final BitSet FOLLOW_ruleDependencyScope_in_ruleUngroupedDependency3943 = new BitSet(new long[]{0x00400021FE010820L,0x0000000000000038L});
     public static final BitSet FOLLOW_ruleDependency_in_ruleUngroupedDependency3965 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDependency_in_entryRuleDependency4001 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDependency4011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleDependency4054 = new BitSet(new long[]{0x00200021FE010820L,0x000000000000001CL});
+    public static final BitSet FOLLOW_37_in_ruleDependency4054 = new BitSet(new long[]{0x00400021FE010820L,0x0000000000000038L});
     public static final BitSet FOLLOW_ruleExtendedCoordinates_in_ruleDependency4089 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDependencyInclusion_in_entryRuleDependencyInclusion4125 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDependencyInclusion4135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleDependencyInclusion4172 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDependencyInclusion4192 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDependencyInclusion4204 = new BitSet(new long[]{0x0020000022000000L,0x000000000000001CL});
-    public static final BitSet FOLLOW_ruleDependencyScope_in_ruleDependencyInclusion4225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleDependencyInclusion4172 = new BitSet(new long[]{0x0040000022000000L,0x0000000000000038L});
+    public static final BitSet FOLLOW_ruleDependencyScope_in_ruleDependencyInclusion4193 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleDependencyInclusion4205 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDependencyInclusion4225 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSCM_in_entryRuleSCM4261 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSCM4271 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_38_in_ruleSCM4353 = new BitSet(new long[]{0x0000000400000000L});
@@ -11815,7 +12000,7 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_26_in_rulePluginExecution6308 = new BitSet(new long[]{0x000A800000000020L});
     public static final BitSet FOLLOW_ruleIDAndDash_in_rulePluginExecution6331 = new BitSet(new long[]{0x0002800000000000L});
     public static final BitSet FOLLOW_47_in_rulePluginExecution6345 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_rulePluginExecution6357 = new BitSet(new long[]{0x000800002A000000L,0x00000000FFFFFFE0L});
+    public static final BitSet FOLLOW_48_in_rulePluginExecution6357 = new BitSet(new long[]{0x000800002A000000L,0x00000001FFFFFFC0L});
     public static final BitSet FOLLOW_rulePhase_in_rulePluginExecution6378 = new BitSet(new long[]{0x0002000000000000L});
     public static final BitSet FOLLOW_49_in_rulePluginExecution6392 = new BitSet(new long[]{0x0004000000000000L});
     public static final BitSet FOLLOW_50_in_rulePluginExecution6404 = new BitSet(new long[]{0x00000001FE010820L});
@@ -11828,115 +12013,120 @@ public class InternalPomParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_51_in_rulePluginExecution6534 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePluginInclusion_in_entryRulePluginInclusion6584 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePluginInclusion6594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rulePluginInclusion6631 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePluginInclusion6651 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_rulePluginInclusion6663 = new BitSet(new long[]{0x00000001FE010820L});
-    public static final BitSet FOLLOW_ruleCoordinates_in_rulePluginInclusion6684 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_21_in_rulePluginInclusion6697 = new BitSet(new long[]{0x0000080000000020L});
-    public static final BitSet FOLLOW_ruleIDAndDash_in_rulePluginInclusion6719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rulePluginInclusion6743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rulePluginInclusion6631 = new BitSet(new long[]{0x00000801FE010820L});
+    public static final BitSet FOLLOW_ruleIDAndDash_in_rulePluginInclusion6654 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_43_in_rulePluginInclusion6678 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_rulePluginInclusion6704 = new BitSet(new long[]{0x00000801FE010820L});
+    public static final BitSet FOLLOW_ruleNonVersionedCoordinates_in_rulePluginInclusion6727 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_rulePluginInclusion6739 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePluginInclusion6759 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBuildStep_in_entryRuleBuildStep6795 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBuildStep6805 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePlugin_in_ruleBuildStep6852 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePluginInclusion_in_ruleBuildStep6879 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCoordinates_in_entryRuleCoordinates6914 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCoordinates6924 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleCoordinates6970 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_ruleCoordinates6982 = new BitSet(new long[]{0x00000001FE010820L});
-    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleCoordinates7003 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_ruleCoordinates7015 = new BitSet(new long[]{0x0000000000800040L});
+    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleCoordinates6970 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_53_in_ruleCoordinates6982 = new BitSet(new long[]{0x00000001FE010820L});
+    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleCoordinates7003 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_53_in_ruleCoordinates7015 = new BitSet(new long[]{0x0000000000800040L});
     public static final BitSet FOLLOW_ruleVersion_in_ruleCoordinates7036 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExtendedCoordinates_in_entryRuleExtendedCoordinates7072 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExtendedCoordinates7082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleExtendedCoordinates7128 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_ruleExtendedCoordinates7140 = new BitSet(new long[]{0x00000001FE010820L});
-    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleExtendedCoordinates7161 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_ruleExtendedCoordinates7173 = new BitSet(new long[]{0x0000000000800040L});
-    public static final BitSet FOLLOW_ruleVersion_in_ruleExtendedCoordinates7194 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleExtendedCoordinates7207 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExtendedCoordinates7224 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleExtendedCoordinates7242 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleExtendedCoordinates7128 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_53_in_ruleExtendedCoordinates7140 = new BitSet(new long[]{0x00000001FE010820L});
+    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleExtendedCoordinates7161 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_53_in_ruleExtendedCoordinates7173 = new BitSet(new long[]{0x0000000000800040L});
+    public static final BitSet FOLLOW_ruleVersion_in_ruleExtendedCoordinates7194 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_53_in_ruleExtendedCoordinates7207 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExtendedCoordinates7224 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_53_in_ruleExtendedCoordinates7242 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_ruleClassifier_in_ruleExtendedCoordinates7263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePOMImport_in_entryRulePOMImport7303 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePOMImport7313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rulePOMImport7350 = new BitSet(new long[]{0x00000001FE010820L});
-    public static final BitSet FOLLOW_ruleCoordinates_in_rulePOMImport7371 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_54_in_rulePOMImport7383 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePOMImport7400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRepository_in_entryRuleRepository7441 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRepository7451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleRepository7489 = new BitSet(new long[]{0x00000001FE010820L});
-    public static final BitSet FOLLOW_56_in_ruleRepository7513 = new BitSet(new long[]{0x00000001FE010820L});
-    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleRepository7548 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_57_in_ruleRepository7560 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleRepository7577 = new BitSet(new long[]{0x0000000400000002L});
-    public static final BitSet FOLLOW_34_in_ruleRepository7595 = new BitSet(new long[]{0x1C00000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleRepository7653 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleRepository7670 = new BitSet(new long[]{0x1C00000000040000L});
-    public static final BitSet FOLLOW_58_in_ruleRepository7743 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleRepository7760 = new BitSet(new long[]{0x1C00000000040000L});
-    public static final BitSet FOLLOW_ruleRepositoryPolicy_in_ruleRepository7827 = new BitSet(new long[]{0x1C00000001040000L});
-    public static final BitSet FOLLOW_24_in_ruleRepository7840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRepositoryPolicy_in_entryRuleRepositoryPolicy7878 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRepositoryPolicy7888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleRepositoryPolicy7931 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_60_in_ruleRepositoryPolicy7957 = new BitSet(new long[]{0x6000000000000000L});
-    public static final BitSet FOLLOW_61_in_ruleRepositoryPolicy7976 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_62_in_ruleRepositoryPolicy8013 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_13_in_ruleRepositoryPolicy8040 = new BitSet(new long[]{0x8000000000000000L});
-    public static final BitSet FOLLOW_63_in_ruleRepositoryPolicy8052 = new BitSet(new long[]{0x0000000000000000L,0x0000000700000001L});
-    public static final BitSet FOLLOW_ruleRepositoryUpdatePolicy_in_ruleRepositoryPolicy8073 = new BitSet(new long[]{0x0002000000002002L});
-    public static final BitSet FOLLOW_49_in_ruleRepositoryPolicy8086 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_ruleRepositoryPolicy8098 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleRepositoryPolicy8110 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleRepositoryPolicy8127 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_13_in_ruleRepositoryPolicy8149 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleRepositoryPolicy8161 = new BitSet(new long[]{0x0000000000000000L,0x0000003800000000L});
-    public static final BitSet FOLLOW_ruleChecksumPolicy_in_ruleRepositoryPolicy8182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleDependencyScope8234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleDependencyScope8251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_ruleDependencyScope8268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleDependencyScope8285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleDependencyScope8302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleDependencyScope8319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_rulePhase8364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_rulePhase8381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rulePhase8398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_rulePhase8415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_rulePhase8432 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_rulePhase8449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_rulePhase8466 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_rulePhase8483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_rulePhase8500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_rulePhase8517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rulePhase8534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_rulePhase8551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_rulePhase8568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_rulePhase8585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_rulePhase8602 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_rulePhase8619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_rulePhase8636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rulePhase8653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rulePhase8670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_rulePhase8687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_rulePhase8704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_86_in_rulePhase8721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_87_in_rulePhase8738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_88_in_rulePhase8755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_rulePhase8772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_rulePhase8789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_91_in_rulePhase8806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_92_in_rulePhase8823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_93_in_rulePhase8840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_rulePhase8857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_95_in_rulePhase8874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_96_in_ruleRepositoryUpdatePolicy8919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_97_in_ruleRepositoryUpdatePolicy8936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_98_in_ruleRepositoryUpdatePolicy8953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_ruleRepositoryUpdatePolicy8970 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_99_in_ruleChecksumPolicy9015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_100_in_ruleChecksumPolicy9032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_101_in_ruleChecksumPolicy9049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNonVersionedCoordinates_in_entryRuleNonVersionedCoordinates7303 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNonVersionedCoordinates7313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleNonVersionedCoordinates7359 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_53_in_ruleNonVersionedCoordinates7371 = new BitSet(new long[]{0x00000001FE010820L});
+    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleNonVersionedCoordinates7392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePOMImport_in_entryRulePOMImport7428 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePOMImport7438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_rulePOMImport7475 = new BitSet(new long[]{0x00000001FE010820L});
+    public static final BitSet FOLLOW_ruleCoordinates_in_rulePOMImport7496 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_rulePOMImport7508 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePOMImport7525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRepository_in_entryRuleRepository7566 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRepository7576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleRepository7614 = new BitSet(new long[]{0x00000001FE010820L});
+    public static final BitSet FOLLOW_57_in_ruleRepository7638 = new BitSet(new long[]{0x00000001FE010820L});
+    public static final BitSet FOLLOW_ruleIDAndSpecialCharacters_in_ruleRepository7673 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_58_in_ruleRepository7685 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleRepository7702 = new BitSet(new long[]{0x0000000400000002L});
+    public static final BitSet FOLLOW_34_in_ruleRepository7720 = new BitSet(new long[]{0x3800000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleRepository7778 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleRepository7795 = new BitSet(new long[]{0x3800000000040000L});
+    public static final BitSet FOLLOW_59_in_ruleRepository7868 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleRepository7885 = new BitSet(new long[]{0x3800000000040000L});
+    public static final BitSet FOLLOW_ruleRepositoryPolicy_in_ruleRepository7952 = new BitSet(new long[]{0x3800000001040000L});
+    public static final BitSet FOLLOW_24_in_ruleRepository7965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRepositoryPolicy_in_entryRuleRepositoryPolicy8003 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRepositoryPolicy8013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_ruleRepositoryPolicy8056 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_61_in_ruleRepositoryPolicy8082 = new BitSet(new long[]{0xC000000000000000L});
+    public static final BitSet FOLLOW_62_in_ruleRepositoryPolicy8101 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_63_in_ruleRepositoryPolicy8138 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_13_in_ruleRepositoryPolicy8165 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_ruleRepositoryPolicy8177 = new BitSet(new long[]{0x0000000000000000L,0x0000000E00000002L});
+    public static final BitSet FOLLOW_ruleRepositoryUpdatePolicy_in_ruleRepositoryPolicy8198 = new BitSet(new long[]{0x0002000000002002L});
+    public static final BitSet FOLLOW_49_in_ruleRepositoryPolicy8211 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleRepositoryPolicy8223 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleRepositoryPolicy8235 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleRepositoryPolicy8252 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_13_in_ruleRepositoryPolicy8274 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_66_in_ruleRepositoryPolicy8286 = new BitSet(new long[]{0x0000000000000000L,0x0000007000000000L});
+    public static final BitSet FOLLOW_ruleChecksumPolicy_in_ruleRepositoryPolicy8307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleDependencyScope8359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_ruleDependencyScope8376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleDependencyScope8393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_ruleDependencyScope8410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleDependencyScope8427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_ruleDependencyScope8444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_rulePhase8489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_rulePhase8506 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rulePhase8523 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_rulePhase8540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_rulePhase8557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_rulePhase8574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_rulePhase8591 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_rulePhase8608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_rulePhase8625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_rulePhase8642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rulePhase8659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_rulePhase8676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_rulePhase8693 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_rulePhase8710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_rulePhase8727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_82_in_rulePhase8744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rulePhase8761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_rulePhase8778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rulePhase8795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_rulePhase8812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_86_in_rulePhase8829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_rulePhase8846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_88_in_rulePhase8863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_rulePhase8880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_rulePhase8897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_91_in_rulePhase8914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_92_in_rulePhase8931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_93_in_rulePhase8948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_rulePhase8965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_95_in_rulePhase8982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_96_in_rulePhase8999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_97_in_ruleRepositoryUpdatePolicy9044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_98_in_ruleRepositoryUpdatePolicy9061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_99_in_ruleRepositoryUpdatePolicy9078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleRepositoryUpdatePolicy9095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_100_in_ruleChecksumPolicy9140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_101_in_ruleChecksumPolicy9157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_102_in_ruleChecksumPolicy9174 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_synpred1_InternalPom1532 = new BitSet(new long[]{0x0000000000000002L});
 
 }

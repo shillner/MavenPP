@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.itemis.mpp.pom.DependencyInclusion#getPomRef <em>Pom Ref</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.DependencyInclusion#getScope <em>Scope</em>}</li>
+ *   <li>{@link de.itemis.mpp.pom.DependencyInclusion#getPomRef <em>Pom Ref</em>}</li>
  * </ul>
  *
  * @see de.itemis.mpp.pom.PomPackage#getDependencyInclusion()
@@ -23,32 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface DependencyInclusion extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Pom Ref</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Pom Ref</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Pom Ref</em>' reference.
-   * @see #setPomRef(POMImport)
-   * @see de.itemis.mpp.pom.PomPackage#getDependencyInclusion_PomRef()
-   * @model
-   * @generated
-   */
-  POMImport getPomRef();
-
-  /**
-   * Sets the value of the '{@link de.itemis.mpp.pom.DependencyInclusion#getPomRef <em>Pom Ref</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Pom Ref</em>' reference.
-   * @see #getPomRef()
-   * @generated
-   */
-  void setPomRef(POMImport value);
-
   /**
    * Returns the value of the '<em><b>Scope</b></em>' attribute.
    * The literals are from the enumeration {@link de.itemis.mpp.pom.DependencyScope}.
@@ -77,5 +51,31 @@ public interface DependencyInclusion extends EObject
    * @generated
    */
   void setScope(DependencyScope value);
+
+  /**
+   * Returns the value of the '<em><b>Pom Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Pom Ref</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Pom Ref</em>' reference.
+   * @see #setPomRef(POMImport)
+   * @see de.itemis.mpp.pom.PomPackage#getDependencyInclusion_PomRef()
+   * @model
+   * @generated
+   */
+  POMImport getPomRef();
+
+  /**
+   * Sets the value of the '{@link de.itemis.mpp.pom.DependencyInclusion#getPomRef <em>Pom Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Pom Ref</em>' reference.
+   * @see #getPomRef()
+   * @generated
+   */
+  void setPomRef(POMImport value);
 
 } // DependencyInclusion

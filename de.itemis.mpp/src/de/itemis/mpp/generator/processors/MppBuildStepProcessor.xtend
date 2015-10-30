@@ -76,7 +76,8 @@ class MppBuildStepProcessor implements MppModelProcessor {
         val managedPlugin = MavenModelUtil.getManagedPlugin(importedModel.get, pluginCoordinates.groupId,
           pluginCoordinates.artifactId);
         val plugin = MavenModelUtil.getPlugin(importedModel.get, pluginCoordinates.groupId,
-          pluginCoordinates.artifactId, pluginCoordinates.version.convertToString)
+          pluginCoordinates.artifactId)
+        val pluginVersion = MavenModelUtil.getPluginVersion(plugin, managedPlugin)
         // global config is always included
         // TODO do not merge pluginManagement config with plugin config but include management and plugin
         val config = MavenModelUtil.getMergedPluginConfiguration(managedPlugin, plugin)
@@ -85,7 +86,7 @@ class MppBuildStepProcessor implements MppModelProcessor {
           val mavenPlugin = new org.apache.maven.model.Plugin => [
             groupId = pluginCoordinates.groupId
             artifactId = pluginCoordinates.artifactId
-            version = pluginCoordinates.version.convertToString
+            version = pluginVersion
             configuration = config.get
           ]
           pluginManagement.addPlugin(mavenPlugin)

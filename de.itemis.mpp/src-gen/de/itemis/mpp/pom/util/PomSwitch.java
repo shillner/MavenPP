@@ -290,6 +290,13 @@ public class PomSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PomPackage.NON_VERSIONED_COORDINATES:
+      {
+        NonVersionedCoordinates nonVersionedCoordinates = (NonVersionedCoordinates)theEObject;
+        T result = caseNonVersionedCoordinates(nonVersionedCoordinates);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case PomPackage.POM_IMPORT:
       {
         POMImport pomImport = (POMImport)theEObject;
@@ -791,6 +798,22 @@ public class PomSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExtendedCoordinates(ExtendedCoordinates object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Non Versioned Coordinates</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Non Versioned Coordinates</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNonVersionedCoordinates(NonVersionedCoordinates object)
   {
     return null;
   }

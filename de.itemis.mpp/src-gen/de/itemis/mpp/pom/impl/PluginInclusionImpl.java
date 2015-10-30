@@ -2,7 +2,7 @@
  */
 package de.itemis.mpp.pom.impl;
 
-import de.itemis.mpp.pom.Coordinates;
+import de.itemis.mpp.pom.NonVersionedCoordinates;
 import de.itemis.mpp.pom.POMImport;
 import de.itemis.mpp.pom.PluginInclusion;
 import de.itemis.mpp.pom.PomPackage;
@@ -23,36 +23,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.itemis.mpp.pom.impl.PluginInclusionImpl#getPomRef <em>Pom Ref</em>}</li>
- *   <li>{@link de.itemis.mpp.pom.impl.PluginInclusionImpl#getPluginCoordinates <em>Plugin Coordinates</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.PluginInclusionImpl#getExecutionId <em>Execution Id</em>}</li>
  *   <li>{@link de.itemis.mpp.pom.impl.PluginInclusionImpl#isConfig <em>Config</em>}</li>
+ *   <li>{@link de.itemis.mpp.pom.impl.PluginInclusionImpl#getPluginCoordinates <em>Plugin Coordinates</em>}</li>
+ *   <li>{@link de.itemis.mpp.pom.impl.PluginInclusionImpl#getPomRef <em>Pom Ref</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PluginInclusionImpl extends BuildStepImpl implements PluginInclusion
 {
-  /**
-   * The cached value of the '{@link #getPomRef() <em>Pom Ref</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPomRef()
-   * @generated
-   * @ordered
-   */
-  protected POMImport pomRef;
-
-  /**
-   * The cached value of the '{@link #getPluginCoordinates() <em>Plugin Coordinates</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPluginCoordinates()
-   * @generated
-   * @ordered
-   */
-  protected Coordinates pluginCoordinates;
-
   /**
    * The default value of the '{@link #getExecutionId() <em>Execution Id</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -94,6 +74,26 @@ public class PluginInclusionImpl extends BuildStepImpl implements PluginInclusio
   protected boolean config = CONFIG_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getPluginCoordinates() <em>Plugin Coordinates</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPluginCoordinates()
+   * @generated
+   * @ordered
+   */
+  protected NonVersionedCoordinates pluginCoordinates;
+
+  /**
+   * The cached value of the '{@link #getPomRef() <em>Pom Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPomRef()
+   * @generated
+   * @ordered
+   */
+  protected POMImport pomRef;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -112,97 +112,6 @@ public class PluginInclusionImpl extends BuildStepImpl implements PluginInclusio
   protected EClass eStaticClass()
   {
     return PomPackage.Literals.PLUGIN_INCLUSION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public POMImport getPomRef()
-  {
-    if (pomRef != null && pomRef.eIsProxy())
-    {
-      InternalEObject oldPomRef = (InternalEObject)pomRef;
-      pomRef = (POMImport)eResolveProxy(oldPomRef);
-      if (pomRef != oldPomRef)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, PomPackage.PLUGIN_INCLUSION__POM_REF, oldPomRef, pomRef));
-      }
-    }
-    return pomRef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public POMImport basicGetPomRef()
-  {
-    return pomRef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPomRef(POMImport newPomRef)
-  {
-    POMImport oldPomRef = pomRef;
-    pomRef = newPomRef;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PomPackage.PLUGIN_INCLUSION__POM_REF, oldPomRef, pomRef));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Coordinates getPluginCoordinates()
-  {
-    return pluginCoordinates;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetPluginCoordinates(Coordinates newPluginCoordinates, NotificationChain msgs)
-  {
-    Coordinates oldPluginCoordinates = pluginCoordinates;
-    pluginCoordinates = newPluginCoordinates;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES, oldPluginCoordinates, newPluginCoordinates);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPluginCoordinates(Coordinates newPluginCoordinates)
-  {
-    if (newPluginCoordinates != pluginCoordinates)
-    {
-      NotificationChain msgs = null;
-      if (pluginCoordinates != null)
-        msgs = ((InternalEObject)pluginCoordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES, null, msgs);
-      if (newPluginCoordinates != null)
-        msgs = ((InternalEObject)newPluginCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES, null, msgs);
-      msgs = basicSetPluginCoordinates(newPluginCoordinates, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES, newPluginCoordinates, newPluginCoordinates));
   }
 
   /**
@@ -256,6 +165,97 @@ public class PluginInclusionImpl extends BuildStepImpl implements PluginInclusio
    * <!-- end-user-doc -->
    * @generated
    */
+  public NonVersionedCoordinates getPluginCoordinates()
+  {
+    return pluginCoordinates;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPluginCoordinates(NonVersionedCoordinates newPluginCoordinates, NotificationChain msgs)
+  {
+    NonVersionedCoordinates oldPluginCoordinates = pluginCoordinates;
+    pluginCoordinates = newPluginCoordinates;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES, oldPluginCoordinates, newPluginCoordinates);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPluginCoordinates(NonVersionedCoordinates newPluginCoordinates)
+  {
+    if (newPluginCoordinates != pluginCoordinates)
+    {
+      NotificationChain msgs = null;
+      if (pluginCoordinates != null)
+        msgs = ((InternalEObject)pluginCoordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES, null, msgs);
+      if (newPluginCoordinates != null)
+        msgs = ((InternalEObject)newPluginCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES, null, msgs);
+      msgs = basicSetPluginCoordinates(newPluginCoordinates, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES, newPluginCoordinates, newPluginCoordinates));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public POMImport getPomRef()
+  {
+    if (pomRef != null && pomRef.eIsProxy())
+    {
+      InternalEObject oldPomRef = (InternalEObject)pomRef;
+      pomRef = (POMImport)eResolveProxy(oldPomRef);
+      if (pomRef != oldPomRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, PomPackage.PLUGIN_INCLUSION__POM_REF, oldPomRef, pomRef));
+      }
+    }
+    return pomRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public POMImport basicGetPomRef()
+  {
+    return pomRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPomRef(POMImport newPomRef)
+  {
+    POMImport oldPomRef = pomRef;
+    pomRef = newPomRef;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PomPackage.PLUGIN_INCLUSION__POM_REF, oldPomRef, pomRef));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -277,15 +277,15 @@ public class PluginInclusionImpl extends BuildStepImpl implements PluginInclusio
   {
     switch (featureID)
     {
-      case PomPackage.PLUGIN_INCLUSION__POM_REF:
-        if (resolve) return getPomRef();
-        return basicGetPomRef();
-      case PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES:
-        return getPluginCoordinates();
       case PomPackage.PLUGIN_INCLUSION__EXECUTION_ID:
         return getExecutionId();
       case PomPackage.PLUGIN_INCLUSION__CONFIG:
         return isConfig();
+      case PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES:
+        return getPluginCoordinates();
+      case PomPackage.PLUGIN_INCLUSION__POM_REF:
+        if (resolve) return getPomRef();
+        return basicGetPomRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -300,17 +300,17 @@ public class PluginInclusionImpl extends BuildStepImpl implements PluginInclusio
   {
     switch (featureID)
     {
-      case PomPackage.PLUGIN_INCLUSION__POM_REF:
-        setPomRef((POMImport)newValue);
-        return;
-      case PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES:
-        setPluginCoordinates((Coordinates)newValue);
-        return;
       case PomPackage.PLUGIN_INCLUSION__EXECUTION_ID:
         setExecutionId((String)newValue);
         return;
       case PomPackage.PLUGIN_INCLUSION__CONFIG:
         setConfig((Boolean)newValue);
+        return;
+      case PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES:
+        setPluginCoordinates((NonVersionedCoordinates)newValue);
+        return;
+      case PomPackage.PLUGIN_INCLUSION__POM_REF:
+        setPomRef((POMImport)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -326,17 +326,17 @@ public class PluginInclusionImpl extends BuildStepImpl implements PluginInclusio
   {
     switch (featureID)
     {
-      case PomPackage.PLUGIN_INCLUSION__POM_REF:
-        setPomRef((POMImport)null);
-        return;
-      case PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES:
-        setPluginCoordinates((Coordinates)null);
-        return;
       case PomPackage.PLUGIN_INCLUSION__EXECUTION_ID:
         setExecutionId(EXECUTION_ID_EDEFAULT);
         return;
       case PomPackage.PLUGIN_INCLUSION__CONFIG:
         setConfig(CONFIG_EDEFAULT);
+        return;
+      case PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES:
+        setPluginCoordinates((NonVersionedCoordinates)null);
+        return;
+      case PomPackage.PLUGIN_INCLUSION__POM_REF:
+        setPomRef((POMImport)null);
         return;
     }
     super.eUnset(featureID);
@@ -352,14 +352,14 @@ public class PluginInclusionImpl extends BuildStepImpl implements PluginInclusio
   {
     switch (featureID)
     {
-      case PomPackage.PLUGIN_INCLUSION__POM_REF:
-        return pomRef != null;
-      case PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES:
-        return pluginCoordinates != null;
       case PomPackage.PLUGIN_INCLUSION__EXECUTION_ID:
         return EXECUTION_ID_EDEFAULT == null ? executionId != null : !EXECUTION_ID_EDEFAULT.equals(executionId);
       case PomPackage.PLUGIN_INCLUSION__CONFIG:
         return config != CONFIG_EDEFAULT;
+      case PomPackage.PLUGIN_INCLUSION__PLUGIN_COORDINATES:
+        return pluginCoordinates != null;
+      case PomPackage.PLUGIN_INCLUSION__POM_REF:
+        return pomRef != null;
     }
     return super.eIsSet(featureID);
   }

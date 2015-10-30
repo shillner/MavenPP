@@ -15,6 +15,7 @@ import de.itemis.mpp.pom.ExtendedCoordinates;
 import de.itemis.mpp.pom.FilePropertyInclusion;
 import de.itemis.mpp.pom.ImportPropertyInclusion;
 import de.itemis.mpp.pom.Modules;
+import de.itemis.mpp.pom.NonVersionedCoordinates;
 import de.itemis.mpp.pom.POMImport;
 import de.itemis.mpp.pom.ParentRef;
 import de.itemis.mpp.pom.Phase;
@@ -265,6 +266,13 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * @generated
    */
   private EClass extendedCoordinatesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass nonVersionedCoordinatesEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -913,9 +921,9 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDependencyInclusion_PomRef()
+  public EAttribute getDependencyInclusion_Scope()
   {
-    return (EReference)dependencyInclusionEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)dependencyInclusionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -923,9 +931,9 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDependencyInclusion_Scope()
+  public EReference getDependencyInclusion_PomRef()
   {
-    return (EAttribute)dependencyInclusionEClass.getEStructuralFeatures().get(1);
+    return (EReference)dependencyInclusionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1283,29 +1291,9 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPluginInclusion_PomRef()
-  {
-    return (EReference)pluginInclusionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPluginInclusion_PluginCoordinates()
-  {
-    return (EReference)pluginInclusionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getPluginInclusion_ExecutionId()
   {
-    return (EAttribute)pluginInclusionEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)pluginInclusionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1315,7 +1303,27 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
    */
   public EAttribute getPluginInclusion_Config()
   {
-    return (EAttribute)pluginInclusionEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)pluginInclusionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPluginInclusion_PluginCoordinates()
+  {
+    return (EReference)pluginInclusionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPluginInclusion_PomRef()
+  {
+    return (EReference)pluginInclusionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1426,6 +1434,36 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
   public EAttribute getExtendedCoordinates_Classifier()
   {
     return (EAttribute)extendedCoordinatesEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNonVersionedCoordinates()
+  {
+    return nonVersionedCoordinatesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNonVersionedCoordinates_GroupId()
+  {
+    return (EAttribute)nonVersionedCoordinatesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNonVersionedCoordinates_ArtifactId()
+  {
+    return (EAttribute)nonVersionedCoordinatesEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1735,8 +1773,8 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     createEReference(dependencyEClass, DEPENDENCY__COORDINATES);
 
     dependencyInclusionEClass = createEClass(DEPENDENCY_INCLUSION);
-    createEReference(dependencyInclusionEClass, DEPENDENCY_INCLUSION__POM_REF);
     createEAttribute(dependencyInclusionEClass, DEPENDENCY_INCLUSION__SCOPE);
+    createEReference(dependencyInclusionEClass, DEPENDENCY_INCLUSION__POM_REF);
 
     scmEClass = createEClass(SCM);
     createEAttribute(scmEClass, SCM__CONNECTION);
@@ -1784,10 +1822,10 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     createEAttribute(pluginExecutionEClass, PLUGIN_EXECUTION__DEFAULT);
 
     pluginInclusionEClass = createEClass(PLUGIN_INCLUSION);
-    createEReference(pluginInclusionEClass, PLUGIN_INCLUSION__POM_REF);
-    createEReference(pluginInclusionEClass, PLUGIN_INCLUSION__PLUGIN_COORDINATES);
     createEAttribute(pluginInclusionEClass, PLUGIN_INCLUSION__EXECUTION_ID);
     createEAttribute(pluginInclusionEClass, PLUGIN_INCLUSION__CONFIG);
+    createEReference(pluginInclusionEClass, PLUGIN_INCLUSION__PLUGIN_COORDINATES);
+    createEReference(pluginInclusionEClass, PLUGIN_INCLUSION__POM_REF);
 
     buildStepEClass = createEClass(BUILD_STEP);
 
@@ -1802,6 +1840,10 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     createEReference(extendedCoordinatesEClass, EXTENDED_COORDINATES__VERSION);
     createEAttribute(extendedCoordinatesEClass, EXTENDED_COORDINATES__TYPE);
     createEAttribute(extendedCoordinatesEClass, EXTENDED_COORDINATES__CLASSIFIER);
+
+    nonVersionedCoordinatesEClass = createEClass(NON_VERSIONED_COORDINATES);
+    createEAttribute(nonVersionedCoordinatesEClass, NON_VERSIONED_COORDINATES__GROUP_ID);
+    createEAttribute(nonVersionedCoordinatesEClass, NON_VERSIONED_COORDINATES__ARTIFACT_ID);
 
     pomImportEClass = createEClass(POM_IMPORT);
     createEReference(pomImportEClass, POM_IMPORT__COORDINATES);
@@ -1936,8 +1978,8 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     initEReference(getDependency_Coordinates(), this.getExtendedCoordinates(), null, "coordinates", null, 0, 1, Dependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dependencyInclusionEClass, DependencyInclusion.class, "DependencyInclusion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDependencyInclusion_PomRef(), this.getPOMImport(), null, "pomRef", null, 0, 1, DependencyInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDependencyInclusion_Scope(), this.getDependencyScope(), "scope", null, 0, 1, DependencyInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDependencyInclusion_PomRef(), this.getPOMImport(), null, "pomRef", null, 0, 1, DependencyInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(scmEClass, de.itemis.mpp.pom.SCM.class, "SCM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSCM_Connection(), ecorePackage.getEString(), "connection", null, 0, 1, de.itemis.mpp.pom.SCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1985,10 +2027,10 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     initEAttribute(getPluginExecution_Default(), ecorePackage.getEBoolean(), "default", null, 0, 1, PluginExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pluginInclusionEClass, PluginInclusion.class, "PluginInclusion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPluginInclusion_PomRef(), this.getPOMImport(), null, "pomRef", null, 0, 1, PluginInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPluginInclusion_PluginCoordinates(), this.getCoordinates(), null, "pluginCoordinates", null, 0, 1, PluginInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPluginInclusion_ExecutionId(), ecorePackage.getEString(), "executionId", null, 0, 1, PluginInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPluginInclusion_Config(), ecorePackage.getEBoolean(), "config", null, 0, 1, PluginInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPluginInclusion_PluginCoordinates(), this.getNonVersionedCoordinates(), null, "pluginCoordinates", null, 0, 1, PluginInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPluginInclusion_PomRef(), this.getPOMImport(), null, "pomRef", null, 0, 1, PluginInclusion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(buildStepEClass, BuildStep.class, "BuildStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2003,6 +2045,10 @@ public class PomPackageImpl extends EPackageImpl implements PomPackage
     initEReference(getExtendedCoordinates_Version(), this.getVersion(), null, "version", null, 0, 1, ExtendedCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExtendedCoordinates_Type(), ecorePackage.getEString(), "type", null, 0, 1, ExtendedCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExtendedCoordinates_Classifier(), ecorePackage.getEString(), "classifier", null, 0, 1, ExtendedCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(nonVersionedCoordinatesEClass, NonVersionedCoordinates.class, "NonVersionedCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getNonVersionedCoordinates_GroupId(), ecorePackage.getEString(), "groupId", null, 0, 1, NonVersionedCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNonVersionedCoordinates_ArtifactId(), ecorePackage.getEString(), "artifactId", null, 0, 1, NonVersionedCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pomImportEClass, POMImport.class, "POMImport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getPOMImport_Coordinates(), this.getCoordinates(), null, "coordinates", null, 0, 1, POMImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

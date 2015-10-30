@@ -76,7 +76,7 @@ class MavenModelUtil {
     return MoreObjects.firstNonNull(scope, DependencyScope.COMPILE.literal)
   }
 
-  def public static Optional<Plugin> getPlugin(Model model, String groupId, String artifactId, String version) {
+  def public static Optional<Plugin> getPlugin(Model model, String groupId, String artifactId) {
     val Optional<Build> build = getBuildConfig(model)
     if(build.present) {
       val plugins = build.get().plugins
@@ -86,7 +86,6 @@ class MavenModelUtil {
           if(Objects.equal(artifactId, plugin.artifactId)) {
             // TODO need to handle default groups such as the default maven plugins (are groups null there?)
             if(Objects.equal(groupId, plugin.groupId)) {
-              // TODO check version?
               return Optional.of(plugin)
             }
           }
@@ -94,6 +93,20 @@ class MavenModelUtil {
       }
     }
     return Optional.absent()
+  }
+  
+  def public static String getPluginVersion(Optional<Plugin> plugin, Optional<Plugin> managedPlugin) {
+    var String version
+    
+    if(managedPlugin.present) {
+      version = managedPlugin.get.version
+    }
+    
+    if(version == null && plugin.present) {
+      version = plugin.get.version
+    }
+    
+    return version
   }
 
   def public static Optional<Plugin> getManagedPlugin(Model model, String groupId, String artifactId) {

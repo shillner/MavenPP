@@ -676,22 +676,22 @@ public interface PomPackage extends EPackage
   int DEPENDENCY_INCLUSION = 14;
 
   /**
-   * The feature id for the '<em><b>Pom Ref</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DEPENDENCY_INCLUSION__POM_REF = 0;
-
-  /**
    * The feature id for the '<em><b>Scope</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DEPENDENCY_INCLUSION__SCOPE = 1;
+  int DEPENDENCY_INCLUSION__SCOPE = 0;
+
+  /**
+   * The feature id for the '<em><b>Pom Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEPENDENCY_INCLUSION__POM_REF = 1;
 
   /**
    * The number of structural features of the '<em>Dependency Inclusion</em>' class.
@@ -1184,31 +1184,13 @@ public interface PomPackage extends EPackage
   int PLUGIN_INCLUSION = 26;
 
   /**
-   * The feature id for the '<em><b>Pom Ref</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUGIN_INCLUSION__POM_REF = BUILD_STEP_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Plugin Coordinates</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUGIN_INCLUSION__PLUGIN_COORDINATES = BUILD_STEP_FEATURE_COUNT + 1;
-
-  /**
    * The feature id for the '<em><b>Execution Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PLUGIN_INCLUSION__EXECUTION_ID = BUILD_STEP_FEATURE_COUNT + 2;
+  int PLUGIN_INCLUSION__EXECUTION_ID = BUILD_STEP_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Config</b></em>' attribute.
@@ -1217,7 +1199,25 @@ public interface PomPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PLUGIN_INCLUSION__CONFIG = BUILD_STEP_FEATURE_COUNT + 3;
+  int PLUGIN_INCLUSION__CONFIG = BUILD_STEP_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Plugin Coordinates</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUGIN_INCLUSION__PLUGIN_COORDINATES = BUILD_STEP_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Pom Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUGIN_INCLUSION__POM_REF = BUILD_STEP_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Plugin Inclusion</em>' class.
@@ -1339,6 +1339,43 @@ public interface PomPackage extends EPackage
   int EXTENDED_COORDINATES_FEATURE_COUNT = 5;
 
   /**
+   * The meta object id for the '{@link de.itemis.mpp.pom.impl.NonVersionedCoordinatesImpl <em>Non Versioned Coordinates</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.itemis.mpp.pom.impl.NonVersionedCoordinatesImpl
+   * @see de.itemis.mpp.pom.impl.PomPackageImpl#getNonVersionedCoordinates()
+   * @generated
+   */
+  int NON_VERSIONED_COORDINATES = 30;
+
+  /**
+   * The feature id for the '<em><b>Group Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NON_VERSIONED_COORDINATES__GROUP_ID = 0;
+
+  /**
+   * The feature id for the '<em><b>Artifact Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NON_VERSIONED_COORDINATES__ARTIFACT_ID = 1;
+
+  /**
+   * The number of structural features of the '<em>Non Versioned Coordinates</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NON_VERSIONED_COORDINATES_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link de.itemis.mpp.pom.impl.POMImportImpl <em>POM Import</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1346,7 +1383,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPOMImport()
    * @generated
    */
-  int POM_IMPORT = 30;
+  int POM_IMPORT = 31;
 
   /**
    * The feature id for the '<em><b>Coordinates</b></em>' containment reference.
@@ -1383,7 +1420,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepository()
    * @generated
    */
-  int REPOSITORY = 31;
+  int REPOSITORY = 32;
 
   /**
    * The feature id for the '<em><b>Plugin Repositroy</b></em>' attribute.
@@ -1456,7 +1493,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepositoryPolicy()
    * @generated
    */
-  int REPOSITORY_POLICY = 32;
+  int REPOSITORY_POLICY = 33;
 
   /**
    * The feature id for the '<em><b>Disabled</b></em>' attribute.
@@ -1529,7 +1566,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getDependencyScope()
    * @generated
    */
-  int DEPENDENCY_SCOPE = 33;
+  int DEPENDENCY_SCOPE = 34;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.Phase <em>Phase</em>}' enum.
@@ -1539,7 +1576,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getPhase()
    * @generated
    */
-  int PHASE = 34;
+  int PHASE = 35;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.RepositoryUpdatePolicy <em>Repository Update Policy</em>}' enum.
@@ -1549,7 +1586,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getRepositoryUpdatePolicy()
    * @generated
    */
-  int REPOSITORY_UPDATE_POLICY = 35;
+  int REPOSITORY_UPDATE_POLICY = 36;
 
   /**
    * The meta object id for the '{@link de.itemis.mpp.pom.ChecksumPolicy <em>Checksum Policy</em>}' enum.
@@ -1559,7 +1596,7 @@ public interface PomPackage extends EPackage
    * @see de.itemis.mpp.pom.impl.PomPackageImpl#getChecksumPolicy()
    * @generated
    */
-  int CHECKSUM_POLICY = 36;
+  int CHECKSUM_POLICY = 37;
 
 
   /**
@@ -2131,17 +2168,6 @@ public interface PomPackage extends EPackage
   EClass getDependencyInclusion();
 
   /**
-   * Returns the meta object for the reference '{@link de.itemis.mpp.pom.DependencyInclusion#getPomRef <em>Pom Ref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Pom Ref</em>'.
-   * @see de.itemis.mpp.pom.DependencyInclusion#getPomRef()
-   * @see #getDependencyInclusion()
-   * @generated
-   */
-  EReference getDependencyInclusion_PomRef();
-
-  /**
    * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.DependencyInclusion#getScope <em>Scope</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2151,6 +2177,17 @@ public interface PomPackage extends EPackage
    * @generated
    */
   EAttribute getDependencyInclusion_Scope();
+
+  /**
+   * Returns the meta object for the reference '{@link de.itemis.mpp.pom.DependencyInclusion#getPomRef <em>Pom Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Pom Ref</em>'.
+   * @see de.itemis.mpp.pom.DependencyInclusion#getPomRef()
+   * @see #getDependencyInclusion()
+   * @generated
+   */
+  EReference getDependencyInclusion_PomRef();
 
   /**
    * Returns the meta object for class '{@link de.itemis.mpp.pom.SCM <em>SCM</em>}'.
@@ -2526,28 +2563,6 @@ public interface PomPackage extends EPackage
   EClass getPluginInclusion();
 
   /**
-   * Returns the meta object for the reference '{@link de.itemis.mpp.pom.PluginInclusion#getPomRef <em>Pom Ref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Pom Ref</em>'.
-   * @see de.itemis.mpp.pom.PluginInclusion#getPomRef()
-   * @see #getPluginInclusion()
-   * @generated
-   */
-  EReference getPluginInclusion_PomRef();
-
-  /**
-   * Returns the meta object for the containment reference '{@link de.itemis.mpp.pom.PluginInclusion#getPluginCoordinates <em>Plugin Coordinates</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Plugin Coordinates</em>'.
-   * @see de.itemis.mpp.pom.PluginInclusion#getPluginCoordinates()
-   * @see #getPluginInclusion()
-   * @generated
-   */
-  EReference getPluginInclusion_PluginCoordinates();
-
-  /**
    * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.PluginInclusion#getExecutionId <em>Execution Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2568,6 +2583,28 @@ public interface PomPackage extends EPackage
    * @generated
    */
   EAttribute getPluginInclusion_Config();
+
+  /**
+   * Returns the meta object for the containment reference '{@link de.itemis.mpp.pom.PluginInclusion#getPluginCoordinates <em>Plugin Coordinates</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Plugin Coordinates</em>'.
+   * @see de.itemis.mpp.pom.PluginInclusion#getPluginCoordinates()
+   * @see #getPluginInclusion()
+   * @generated
+   */
+  EReference getPluginInclusion_PluginCoordinates();
+
+  /**
+   * Returns the meta object for the reference '{@link de.itemis.mpp.pom.PluginInclusion#getPomRef <em>Pom Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Pom Ref</em>'.
+   * @see de.itemis.mpp.pom.PluginInclusion#getPomRef()
+   * @see #getPluginInclusion()
+   * @generated
+   */
+  EReference getPluginInclusion_PomRef();
 
   /**
    * Returns the meta object for class '{@link de.itemis.mpp.pom.BuildStep <em>Build Step</em>}'.
@@ -2686,6 +2723,38 @@ public interface PomPackage extends EPackage
    * @generated
    */
   EAttribute getExtendedCoordinates_Classifier();
+
+  /**
+   * Returns the meta object for class '{@link de.itemis.mpp.pom.NonVersionedCoordinates <em>Non Versioned Coordinates</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Non Versioned Coordinates</em>'.
+   * @see de.itemis.mpp.pom.NonVersionedCoordinates
+   * @generated
+   */
+  EClass getNonVersionedCoordinates();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.NonVersionedCoordinates#getGroupId <em>Group Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Group Id</em>'.
+   * @see de.itemis.mpp.pom.NonVersionedCoordinates#getGroupId()
+   * @see #getNonVersionedCoordinates()
+   * @generated
+   */
+  EAttribute getNonVersionedCoordinates_GroupId();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.itemis.mpp.pom.NonVersionedCoordinates#getArtifactId <em>Artifact Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Artifact Id</em>'.
+   * @see de.itemis.mpp.pom.NonVersionedCoordinates#getArtifactId()
+   * @see #getNonVersionedCoordinates()
+   * @generated
+   */
+  EAttribute getNonVersionedCoordinates_ArtifactId();
 
   /**
    * Returns the meta object for class '{@link de.itemis.mpp.pom.POMImport <em>POM Import</em>}'.
@@ -3389,20 +3458,20 @@ public interface PomPackage extends EPackage
     EClass DEPENDENCY_INCLUSION = eINSTANCE.getDependencyInclusion();
 
     /**
-     * The meta object literal for the '<em><b>Pom Ref</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DEPENDENCY_INCLUSION__POM_REF = eINSTANCE.getDependencyInclusion_PomRef();
-
-    /**
      * The meta object literal for the '<em><b>Scope</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute DEPENDENCY_INCLUSION__SCOPE = eINSTANCE.getDependencyInclusion_Scope();
+
+    /**
+     * The meta object literal for the '<em><b>Pom Ref</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEPENDENCY_INCLUSION__POM_REF = eINSTANCE.getDependencyInclusion_PomRef();
 
     /**
      * The meta object literal for the '{@link de.itemis.mpp.pom.impl.SCMImpl <em>SCM</em>}' class.
@@ -3709,22 +3778,6 @@ public interface PomPackage extends EPackage
     EClass PLUGIN_INCLUSION = eINSTANCE.getPluginInclusion();
 
     /**
-     * The meta object literal for the '<em><b>Pom Ref</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PLUGIN_INCLUSION__POM_REF = eINSTANCE.getPluginInclusion_PomRef();
-
-    /**
-     * The meta object literal for the '<em><b>Plugin Coordinates</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PLUGIN_INCLUSION__PLUGIN_COORDINATES = eINSTANCE.getPluginInclusion_PluginCoordinates();
-
-    /**
      * The meta object literal for the '<em><b>Execution Id</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3739,6 +3792,22 @@ public interface PomPackage extends EPackage
      * @generated
      */
     EAttribute PLUGIN_INCLUSION__CONFIG = eINSTANCE.getPluginInclusion_Config();
+
+    /**
+     * The meta object literal for the '<em><b>Plugin Coordinates</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PLUGIN_INCLUSION__PLUGIN_COORDINATES = eINSTANCE.getPluginInclusion_PluginCoordinates();
+
+    /**
+     * The meta object literal for the '<em><b>Pom Ref</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PLUGIN_INCLUSION__POM_REF = eINSTANCE.getPluginInclusion_PomRef();
 
     /**
      * The meta object literal for the '{@link de.itemis.mpp.pom.impl.BuildStepImpl <em>Build Step</em>}' class.
@@ -3833,6 +3902,32 @@ public interface PomPackage extends EPackage
      * @generated
      */
     EAttribute EXTENDED_COORDINATES__CLASSIFIER = eINSTANCE.getExtendedCoordinates_Classifier();
+
+    /**
+     * The meta object literal for the '{@link de.itemis.mpp.pom.impl.NonVersionedCoordinatesImpl <em>Non Versioned Coordinates</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.itemis.mpp.pom.impl.NonVersionedCoordinatesImpl
+     * @see de.itemis.mpp.pom.impl.PomPackageImpl#getNonVersionedCoordinates()
+     * @generated
+     */
+    EClass NON_VERSIONED_COORDINATES = eINSTANCE.getNonVersionedCoordinates();
+
+    /**
+     * The meta object literal for the '<em><b>Group Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NON_VERSIONED_COORDINATES__GROUP_ID = eINSTANCE.getNonVersionedCoordinates_GroupId();
+
+    /**
+     * The meta object literal for the '<em><b>Artifact Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NON_VERSIONED_COORDINATES__ARTIFACT_ID = eINSTANCE.getNonVersionedCoordinates_ArtifactId();
 
     /**
      * The meta object literal for the '{@link de.itemis.mpp.pom.impl.POMImportImpl <em>POM Import</em>}' class.

@@ -95,6 +95,7 @@ public class PomFactoryImpl extends EFactoryImpl implements PomFactory
       case PomPackage.BUILD_STEP: return createBuildStep();
       case PomPackage.COORDINATES: return createCoordinates();
       case PomPackage.EXTENDED_COORDINATES: return createExtendedCoordinates();
+      case PomPackage.NON_VERSIONED_COORDINATES: return createNonVersionedCoordinates();
       case PomPackage.POM_IMPORT: return createPOMImport();
       case PomPackage.REPOSITORY: return createRepository();
       case PomPackage.REPOSITORY_POLICY: return createRepositoryPolicy();
@@ -477,6 +478,17 @@ public class PomFactoryImpl extends EFactoryImpl implements PomFactory
   {
     ExtendedCoordinatesImpl extendedCoordinates = new ExtendedCoordinatesImpl();
     return extendedCoordinates;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NonVersionedCoordinates createNonVersionedCoordinates()
+  {
+    NonVersionedCoordinatesImpl nonVersionedCoordinates = new NonVersionedCoordinatesImpl();
+    return nonVersionedCoordinates;
   }
 
   /**

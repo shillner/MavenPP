@@ -1000,40 +1000,40 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DependencyInclusion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIncludeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cPomRefAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cPomRefPOMImportCrossReference_1_0 = (CrossReference)cPomRefAssignment_1.eContents().get(0);
-		private final RuleCall cPomRefPOMImportIDTerminalRuleCall_1_0_1 = (RuleCall)cPomRefPOMImportCrossReference_1_0.eContents().get(1);
-		private final Keyword cFullStopKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cScopeAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cScopeDependencyScopeEnumRuleCall_3_0 = (RuleCall)cScopeAssignment_3.eContents().get(0);
+		private final Assignment cScopeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cScopeDependencyScopeEnumRuleCall_1_0 = (RuleCall)cScopeAssignment_1.eContents().get(0);
+		private final Keyword cFromKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPomRefAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cPomRefPOMImportCrossReference_3_0 = (CrossReference)cPomRefAssignment_3.eContents().get(0);
+		private final RuleCall cPomRefPOMImportIDTerminalRuleCall_3_0_1 = (RuleCall)cPomRefPOMImportCrossReference_3_0.eContents().get(1);
 		
 		//DependencyInclusion:
-		//	"include" pomRef=[POMImport] "." scope=DependencyScope;
+		//	"include" scope=DependencyScope "from" pomRef=[POMImport];
 		@Override public ParserRule getRule() { return rule; }
 
-		//"include" pomRef=[POMImport] "." scope=DependencyScope
+		//"include" scope=DependencyScope "from" pomRef=[POMImport]
 		public Group getGroup() { return cGroup; }
 
 		//"include"
 		public Keyword getIncludeKeyword_0() { return cIncludeKeyword_0; }
 
-		//pomRef=[POMImport]
-		public Assignment getPomRefAssignment_1() { return cPomRefAssignment_1; }
-
-		//[POMImport]
-		public CrossReference getPomRefPOMImportCrossReference_1_0() { return cPomRefPOMImportCrossReference_1_0; }
-
-		//ID
-		public RuleCall getPomRefPOMImportIDTerminalRuleCall_1_0_1() { return cPomRefPOMImportIDTerminalRuleCall_1_0_1; }
-
-		//"."
-		public Keyword getFullStopKeyword_2() { return cFullStopKeyword_2; }
-
 		//scope=DependencyScope
-		public Assignment getScopeAssignment_3() { return cScopeAssignment_3; }
+		public Assignment getScopeAssignment_1() { return cScopeAssignment_1; }
 
 		//DependencyScope
-		public RuleCall getScopeDependencyScopeEnumRuleCall_3_0() { return cScopeDependencyScopeEnumRuleCall_3_0; }
+		public RuleCall getScopeDependencyScopeEnumRuleCall_1_0() { return cScopeDependencyScopeEnumRuleCall_1_0; }
+
+		//"from"
+		public Keyword getFromKeyword_2() { return cFromKeyword_2; }
+
+		//pomRef=[POMImport]
+		public Assignment getPomRefAssignment_3() { return cPomRefAssignment_3; }
+
+		//[POMImport]
+		public CrossReference getPomRefPOMImportCrossReference_3_0() { return cPomRefPOMImportCrossReference_3_0; }
+
+		//ID
+		public RuleCall getPomRefPOMImportIDTerminalRuleCall_3_0_1() { return cPomRefPOMImportIDTerminalRuleCall_3_0_1; }
 	}
 
 	public class SCMElements extends AbstractParserRuleElementFinder {
@@ -1612,68 +1612,70 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PluginInclusion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIncludeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cPomRefAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cPomRefPOMImportCrossReference_1_0 = (CrossReference)cPomRefAssignment_1.eContents().get(0);
-		private final RuleCall cPomRefPOMImportIDTerminalRuleCall_1_0_1 = (RuleCall)cPomRefPOMImportCrossReference_1_0.eContents().get(1);
-		private final Keyword cFullStopKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cPluginCoordinatesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPluginCoordinatesCoordinatesParserRuleCall_3_0 = (RuleCall)cPluginCoordinatesAssignment_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cFullStopKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Alternatives cAlternatives_4_1 = (Alternatives)cGroup_4.eContents().get(1);
-		private final Assignment cExecutionIdAssignment_4_1_0 = (Assignment)cAlternatives_4_1.eContents().get(0);
-		private final RuleCall cExecutionIdIDAndDashParserRuleCall_4_1_0_0 = (RuleCall)cExecutionIdAssignment_4_1_0.eContents().get(0);
-		private final Assignment cConfigAssignment_4_1_1 = (Assignment)cAlternatives_4_1.eContents().get(1);
-		private final Keyword cConfigConfigKeyword_4_1_1_0 = (Keyword)cConfigAssignment_4_1_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives_1_0 = (Alternatives)cGroup_1.eContents().get(0);
+		private final Assignment cExecutionIdAssignment_1_0_0 = (Assignment)cAlternatives_1_0.eContents().get(0);
+		private final RuleCall cExecutionIdIDAndDashParserRuleCall_1_0_0_0 = (RuleCall)cExecutionIdAssignment_1_0_0.eContents().get(0);
+		private final Assignment cConfigAssignment_1_0_1 = (Assignment)cAlternatives_1_0.eContents().get(1);
+		private final Keyword cConfigConfigKeyword_1_0_1_0 = (Keyword)cConfigAssignment_1_0_1.eContents().get(0);
+		private final Keyword cOfKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cPluginCoordinatesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cPluginCoordinatesNonVersionedCoordinatesParserRuleCall_2_0 = (RuleCall)cPluginCoordinatesAssignment_2.eContents().get(0);
+		private final Keyword cFromKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cPomRefAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cPomRefPOMImportCrossReference_4_0 = (CrossReference)cPomRefAssignment_4.eContents().get(0);
+		private final RuleCall cPomRefPOMImportIDTerminalRuleCall_4_0_1 = (RuleCall)cPomRefPOMImportCrossReference_4_0.eContents().get(1);
 		
 		//PluginInclusion:
-		//	"include" pomRef=[POMImport] "." pluginCoordinates=Coordinates ("." (executionId=IDAndDash | config?="config"))?;
+		//	"include" ((executionId=IDAndDash | config?="config") "of")? pluginCoordinates=NonVersionedCoordinates "from"
+		//	pomRef=[POMImport];
 		@Override public ParserRule getRule() { return rule; }
 
-		//"include" pomRef=[POMImport] "." pluginCoordinates=Coordinates ("." (executionId=IDAndDash | config?="config"))?
+		//"include" ((executionId=IDAndDash | config?="config") "of")? pluginCoordinates=NonVersionedCoordinates "from"
+		//pomRef=[POMImport]
 		public Group getGroup() { return cGroup; }
 
 		//"include"
 		public Keyword getIncludeKeyword_0() { return cIncludeKeyword_0; }
 
-		//pomRef=[POMImport]
-		public Assignment getPomRefAssignment_1() { return cPomRefAssignment_1; }
-
-		//[POMImport]
-		public CrossReference getPomRefPOMImportCrossReference_1_0() { return cPomRefPOMImportCrossReference_1_0; }
-
-		//ID
-		public RuleCall getPomRefPOMImportIDTerminalRuleCall_1_0_1() { return cPomRefPOMImportIDTerminalRuleCall_1_0_1; }
-
-		//"."
-		public Keyword getFullStopKeyword_2() { return cFullStopKeyword_2; }
-
-		//pluginCoordinates=Coordinates
-		public Assignment getPluginCoordinatesAssignment_3() { return cPluginCoordinatesAssignment_3; }
-
-		//Coordinates
-		public RuleCall getPluginCoordinatesCoordinatesParserRuleCall_3_0() { return cPluginCoordinatesCoordinatesParserRuleCall_3_0; }
-
-		//("." (executionId=IDAndDash | config?="config"))?
-		public Group getGroup_4() { return cGroup_4; }
-
-		//"."
-		public Keyword getFullStopKeyword_4_0() { return cFullStopKeyword_4_0; }
+		//((executionId=IDAndDash | config?="config") "of")?
+		public Group getGroup_1() { return cGroup_1; }
 
 		//executionId=IDAndDash | config?="config"
-		public Alternatives getAlternatives_4_1() { return cAlternatives_4_1; }
+		public Alternatives getAlternatives_1_0() { return cAlternatives_1_0; }
 
 		//executionId=IDAndDash
-		public Assignment getExecutionIdAssignment_4_1_0() { return cExecutionIdAssignment_4_1_0; }
+		public Assignment getExecutionIdAssignment_1_0_0() { return cExecutionIdAssignment_1_0_0; }
 
 		//IDAndDash
-		public RuleCall getExecutionIdIDAndDashParserRuleCall_4_1_0_0() { return cExecutionIdIDAndDashParserRuleCall_4_1_0_0; }
+		public RuleCall getExecutionIdIDAndDashParserRuleCall_1_0_0_0() { return cExecutionIdIDAndDashParserRuleCall_1_0_0_0; }
 
 		//config?="config"
-		public Assignment getConfigAssignment_4_1_1() { return cConfigAssignment_4_1_1; }
+		public Assignment getConfigAssignment_1_0_1() { return cConfigAssignment_1_0_1; }
 
 		//"config"
-		public Keyword getConfigConfigKeyword_4_1_1_0() { return cConfigConfigKeyword_4_1_1_0; }
+		public Keyword getConfigConfigKeyword_1_0_1_0() { return cConfigConfigKeyword_1_0_1_0; }
+
+		//"of"
+		public Keyword getOfKeyword_1_1() { return cOfKeyword_1_1; }
+
+		//pluginCoordinates=NonVersionedCoordinates
+		public Assignment getPluginCoordinatesAssignment_2() { return cPluginCoordinatesAssignment_2; }
+
+		//NonVersionedCoordinates
+		public RuleCall getPluginCoordinatesNonVersionedCoordinatesParserRuleCall_2_0() { return cPluginCoordinatesNonVersionedCoordinatesParserRuleCall_2_0; }
+
+		//"from"
+		public Keyword getFromKeyword_3() { return cFromKeyword_3; }
+
+		//pomRef=[POMImport]
+		public Assignment getPomRefAssignment_4() { return cPomRefAssignment_4; }
+
+		//[POMImport]
+		public CrossReference getPomRefPOMImportCrossReference_4_0() { return cPomRefPOMImportCrossReference_4_0; }
+
+		//ID
+		public RuleCall getPomRefPOMImportIDTerminalRuleCall_4_0_1() { return cPomRefPOMImportIDTerminalRuleCall_4_0_1; }
 	}
 
 	public class BuildStepElements extends AbstractParserRuleElementFinder {
@@ -1816,6 +1818,38 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Classifier
 		public RuleCall getClassifierClassifierParserRuleCall_5_2_1_0() { return cClassifierClassifierParserRuleCall_5_2_1_0; }
+	}
+
+	public class NonVersionedCoordinatesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NonVersionedCoordinates");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cGroupIdAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cGroupIdIDAndSpecialCharactersParserRuleCall_0_0 = (RuleCall)cGroupIdAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cArtifactIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cArtifactIdIDAndSpecialCharactersParserRuleCall_2_0 = (RuleCall)cArtifactIdAssignment_2.eContents().get(0);
+		
+		//NonVersionedCoordinates:
+		//	groupId=IDAndSpecialCharacters ":" artifactId=IDAndSpecialCharacters;
+		@Override public ParserRule getRule() { return rule; }
+
+		//groupId=IDAndSpecialCharacters ":" artifactId=IDAndSpecialCharacters
+		public Group getGroup() { return cGroup; }
+
+		//groupId=IDAndSpecialCharacters
+		public Assignment getGroupIdAssignment_0() { return cGroupIdAssignment_0; }
+
+		//IDAndSpecialCharacters
+		public RuleCall getGroupIdIDAndSpecialCharactersParserRuleCall_0_0() { return cGroupIdIDAndSpecialCharactersParserRuleCall_0_0; }
+
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+
+		//artifactId=IDAndSpecialCharacters
+		public Assignment getArtifactIdAssignment_2() { return cArtifactIdAssignment_2; }
+
+		//IDAndSpecialCharacters
+		public RuleCall getArtifactIdIDAndSpecialCharactersParserRuleCall_2_0() { return cArtifactIdIDAndSpecialCharactersParserRuleCall_2_0; }
 	}
 
 	public class POMImportElements extends AbstractParserRuleElementFinder {
@@ -2532,6 +2566,7 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	private final BuildStepElements pBuildStep;
 	private final CoordinatesElements pCoordinates;
 	private final ExtendedCoordinatesElements pExtendedCoordinates;
+	private final NonVersionedCoordinatesElements pNonVersionedCoordinates;
 	private final POMImportElements pPOMImport;
 	private final RepositoryElements pRepository;
 	private final RepositoryPolicyElements pRepositoryPolicy;
@@ -2591,6 +2626,7 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 		this.pBuildStep = new BuildStepElements();
 		this.pCoordinates = new CoordinatesElements();
 		this.pExtendedCoordinates = new ExtendedCoordinatesElements();
+		this.pNonVersionedCoordinates = new NonVersionedCoordinatesElements();
 		this.pPOMImport = new POMImportElements();
 		this.pRepository = new RepositoryElements();
 		this.pRepositoryPolicy = new RepositoryPolicyElements();
@@ -2888,7 +2924,7 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DependencyInclusion:
-	//	"include" pomRef=[POMImport] "." scope=DependencyScope;
+	//	"include" scope=DependencyScope "from" pomRef=[POMImport];
 	public DependencyInclusionElements getDependencyInclusionAccess() {
 		return pDependencyInclusion;
 	}
@@ -3013,7 +3049,8 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//PluginInclusion:
-	//	"include" pomRef=[POMImport] "." pluginCoordinates=Coordinates ("." (executionId=IDAndDash | config?="config"))?;
+	//	"include" ((executionId=IDAndDash | config?="config") "of")? pluginCoordinates=NonVersionedCoordinates "from"
+	//	pomRef=[POMImport];
 	public PluginInclusionElements getPluginInclusionAccess() {
 		return pPluginInclusion;
 	}
@@ -3051,6 +3088,16 @@ public class PomGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getExtendedCoordinatesRule() {
 		return getExtendedCoordinatesAccess().getRule();
+	}
+
+	//NonVersionedCoordinates:
+	//	groupId=IDAndSpecialCharacters ":" artifactId=IDAndSpecialCharacters;
+	public NonVersionedCoordinatesElements getNonVersionedCoordinatesAccess() {
+		return pNonVersionedCoordinates;
+	}
+	
+	public ParserRule getNonVersionedCoordinatesRule() {
+		return getNonVersionedCoordinatesAccess().getRule();
 	}
 
 	//POMImport:
