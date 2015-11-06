@@ -32,8 +32,11 @@ class MppPropertiesProcessor implements MppModelProcessor {
 
     // Property inclusions have to be processed before the properties since local properties must override included ones.
     // TODO maybe preprocess properties and inclusions (create a map) and resolve overriding this way before adding the properties to the model
-    processPropertyInclusions(pom.properties.inclusions)
-    processProperties(pom.properties.properties)
+    val properties = pom.properties
+    if(properties != null) {
+      processPropertyInclusions(properties.inclusions)
+      processProperties(pom.properties.properties)
+    }
   }
 
   def private void processPropertyInclusions(List<PropertyInclusion> inclusions) {
@@ -56,8 +59,8 @@ class MppPropertiesProcessor implements MppModelProcessor {
         val props = new Properties
         props.load(is)
         props.entrySet.forEach[model.addProperty(it.key.toString, it.value.toString)]
-      }else {
-        //TODO log error!
+      } else {
+        // TODO log error!
       }
     } finally {
       Closeables.closeQuietly(is)
