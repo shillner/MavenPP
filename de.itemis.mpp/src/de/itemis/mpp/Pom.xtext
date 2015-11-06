@@ -7,7 +7,7 @@ POM:
   parent=ParentRef?
   artifactDefinition=ArtifactDefinition
   modules=Modules?
-  (properties=Properties &
+  (properties=Properties? &
   dependencies=Dependencies? &
   scm=SCM? &
   repositories+=Repository*)
@@ -156,32 +156,23 @@ PluginConfiguration:
 ;
 
 PluginConfigurationItem:
-  PluginConfigurationParameter | PluginConfigurationParameterList | PluginConfigurationParameterMap |
-  PluginConfigurationParameterProperties
+  PluginConfigurationParameter | PluginConfigurationParameterList | PluginConfigurationParameterProperties
 ;
 
 PluginConfigurationParameter:
-  key=ID (value=STRING | ('{' children+=PluginConfigurationItem+ '}'))?
+  key=IDAndSpecialCharacters (value=STRING | ('{' children+=PluginConfigurationItem+ '}'))?
 ;
 
 PluginConfigurationParameterList:
-  key=ID '[' values+=STRING (',' values+=STRING)* ']'
-;
-
-PluginConfigurationParameterMap:
-  key=ID '{' entries+=PluginConfigurationParameterMapEntry+ '}'
-;
-
-PluginConfigurationParameterMapEntry:
-  key=ID '->' value=STRING
+  key=IDAndSpecialCharacters '{' values+=STRING (',' values+=STRING)* '}'
 ;
 
 PluginConfigurationParameterProperties:
-  key=ID '{' entries+=PluginConfigurationParameterPropertyEntry+ '}'
+  key=IDAndSpecialCharacters '{' entries+=PluginConfigurationParameterPropertyEntry+ '}'
 ;
 
 PluginConfigurationParameterPropertyEntry:
-  key=ID '=' value=STRING
+  key=IDAndSpecialCharacters '=' value=STRING
 ;
 
 PluginExecution:

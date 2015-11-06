@@ -10,7 +10,6 @@ import de.itemis.mpp.pom.PluginConfiguration
 import de.itemis.mpp.pom.PluginConfigurationItem
 import de.itemis.mpp.pom.PluginConfigurationParameter
 import de.itemis.mpp.pom.PluginConfigurationParameterList
-import de.itemis.mpp.pom.PluginConfigurationParameterMap
 import de.itemis.mpp.pom.PluginConfigurationParameterProperties
 import java.io.FileInputStream
 import org.apache.maven.model.Build
@@ -217,15 +216,6 @@ class MavenModelUtil {
     val param = new Xpp3Dom(paramList.key) => [
       paramList.values.forEach [ v |
         addChild(new Xpp3Dom("value") => [value = v])
-      ]
-    ]
-    return Optional.of(param)
-  }
-
-  def private static dispatch Optional<Xpp3Dom> createPluginConfigParameter(PluginConfigurationParameterMap paramMap) {
-    val param = new Xpp3Dom(paramMap.key) => [
-      paramMap.entries.forEach [ e |
-        addChild(new Xpp3Dom(e.key) => [value = e.value])
       ]
     ]
     return Optional.of(param)

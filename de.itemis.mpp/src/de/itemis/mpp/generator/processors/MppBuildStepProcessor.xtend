@@ -37,7 +37,7 @@ class MppBuildStepProcessor implements MppModelProcessor {
     // TODO use cache to hold all plugins for further config
     val coordinates = plugin.coordinates
 
-    // commons plugin config -> into pluginManagement section
+    // common plugin config -> into pluginManagement section
     val pluginManagement = MavenModelUtil.getOrCreatePluginManagement(model)
     val managedPlugin = new org.apache.maven.model.Plugin => [
       groupId = coordinates.groupId
