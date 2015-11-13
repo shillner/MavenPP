@@ -18,6 +18,7 @@ import de.itemis.mpp.util.MppModelUtil
 import java.util.Set
 import org.apache.maven.model.Model
 
+//TODO preprocess first backed with a cache so that overrides can be achieved (locally specified dependencies should override imcluded ones!)
 class MppDependencyProcessor implements MppModelProcessor {
   @Inject
   var extension MppModelUtil modelUtil

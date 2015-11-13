@@ -11,16 +11,13 @@ POM:
   dependencies=Dependencies? &
   scm=SCM? &
   repositories+=Repository*)
-  buildSteps+=BuildStep*
-;
+  buildSteps+=BuildStep*;
 
 ParentRef:
-  'parent' coordinates=Coordinates relativePath=STRING?
-;
+  'parent' coordinates=Coordinates relativePath=STRING?;
 
 Modules:
-  'modules' names+=STRING (',' names+=STRING)*
-;
+  'modules' names+=STRING (',' names+=STRING)*;
 
 ArtifactDefinition:
   {ArtifactDefinition}
@@ -29,203 +26,162 @@ ArtifactDefinition:
   ('version' version=Version)?
   ('type' type=Text)?
   (('name' artifactName=STRING)? &
-  ('description' description=STRING)?)
-;
+  ('description' description=STRING)?);
 
 IDAndDot hidden():
-  IDOrPropteryRef ('.' IDOrPropteryRef)*
-;
+  IDOrPropteryRef ('.' IDOrPropteryRef)*;
 
 IDAndDash hidden():
-  ID ('-' ID)*
-;
+  ID ('-' ID)*;
 
 IDAndSpecialCharacters hidden():
-  IDOrKW (=>('-' | '.' | '_') IDOrKW)*
-;
+  IDOrKW (=> ('-' | '.' | '_') IDOrKW)*;
 
 IDOrPropteryRefAndSpecialCharacters hidden():
-  IDOrPropteryRef (('-' | '.' | '_')* IDOrPropteryRef)*
-;
+  IDOrPropteryRef (('-' | '.' | '_')* IDOrPropteryRef)*;
 
 Classifier:
-  ID
-;
+  ID;
 
 Number:
-  INT
-;
+  INT;
 
 Text:
-  (ID | Number | ANY_OTHER)*
-;
+  (ID | Number | ANY_OTHER)*;
 
 PropertyName:
-  IDAndSpecialCharacters
-;
+  IDAndSpecialCharacters;
 
 PropertyRef:
-  '${' PropertyName '}'
-;
+  '${' PropertyName '}';
 
 IDOrPropteryRef:
-  IDOrKW | PropertyRef
-;
+  IDOrKW | PropertyRef;
 
+  //IDOrKW:
+//  ID | 'test' | 'parent' | 'version' | 'exec' | 'clean' | 'plugin' | 'compile' | 'file' | 'from' | 'include'//TODO continue the list of keywords!
+//;
+
+//generated rule! See KeywordExtractor class in dev-helper project!
 IDOrKW:
-  ID | 'test' | 'parent' | 'version' | 'exec' | 'clean' | 'plugin' | 'compile' | 'file' | 'from' | 'include'//TODO continue the list of keywords!
-;
+  ID | 'always' | 'artifact' | 'as' | 'at' | 'checksumPolicy' | 'clean' | 'compile' | 'con' | 'config' | 'daily' |
+  'default' | 'dependencies' | 'deploy' | 'description' | 'dev' | 'do' | 'exec' | 'fail' | 'fetch' | 'file' | 'from' |
+  'generate-resources' | 'generate-sources' | 'generate-test-resources' | 'generate-test-sources' | 'goals' | 'group'
+  | 'ignore' | 'import' | 'in' | 'include' | 'initialize' | 'install' | 'integration-test' | 'interval' | 'layout' |
+  'modules' | 'name' | 'never' | 'not' | 'of' | 'optional' | 'package' | 'parent' | 'phase' | 'plugin' |
+  'plugin-repository' | 'post-clean' | 'post-integration-test' | 'post-site' | 'pre-clean' | 'pre-integration-test' |
+  'pre-site' | 'prepare-package' | 'process-classes' | 'process-resources' | 'process-sources' |
+  'process-test-classes' | 'process-test-resources' | 'process-test-sources' | 'properties' | 'provided' | 'releases'
+  | 'repository' | 'runtime' | 'scm' | 'site' | 'site-deploy' | 'snapshots' | 'system' | 'tag' | 'test' |
+  'test-compile' | 'type' | 'update' | 'url' | 'validate' | 'verify' | 'version' | 'warn' | 'with';
 
 Version:
 //  NumericVersion | IDAndSpecialCharacters
 //;
 //
 //NumericVersion:
-  (major=Number ('.' minor=Number ('.' incremental=Number)?)? ('-' qualifier=Text)?) | (propertyRef=PropertyRef)
-;
+  (major=Number ('.' minor=Number ('.' incremental=Number)?)? ('-' qualifier=Text)?) | (propertyRef=PropertyRef);
 
 Properties:
-  'properties' '{'
-    properties+=Property*
-    inclusions+=PropertyInclusion*
-  '}'
-;
+  'properties' '{' properties+=Property* inclusions+=PropertyInclusion* '}';
 
 Property:
-  name=PropertyName '=' value=STRING
-;
+  name=PropertyName '=' value=STRING;
 
 ImportPropertyInclusion:
-  'include' 'from' pomRef=[POMImport]
-;
+  'include' 'from' pomRef=[POMImport];
 
 FilePropertyInclusion:
-  'include' 'from' 'file' path=STRING
-;
+  'include' 'from' 'file' path=STRING;
 
 PropertyInclusion:
-  ImportPropertyInclusion | FilePropertyInclusion
-;
+  ImportPropertyInclusion | FilePropertyInclusion;
 
 Dependencies:
-  {Dependencies}
-  'dependencies' '{'
-    (includes+=DependencyInclusion |
-    dependencyGroups+=DependencyGroup |
-    ungroupedDependencies+=UngroupedDependency)+
-  '}'
-;
+  {Dependencies} 'dependencies' '{' (includes+=DependencyInclusion | dependencyGroups+=DependencyGroup |
+  ungroupedDependencies+=UngroupedDependency)+ '}';
 
 DependencyGroup:
-  scope=DependencyScope '{'
-    dependecies+=Dependency+
-  '}'
-;
+  scope=DependencyScope '{' dependecies+=Dependency+ '}';
 
 UngroupedDependency:
-  scope=DependencyScope? dependency=Dependency
-;
+  scope=DependencyScope? dependency=Dependency;
 
 Dependency:
-  (optional?='optional')? coordinates=ExtendedCoordinates
-;
+  (optional?='optional')? coordinates=ExtendedCoordinates;
 
 DependencyInclusion:
-  'include' scope=DependencyScope 'from' pomRef=[POMImport]
-;
+  'include' scope=DependencyScope 'from' pomRef=[POMImport];
 
 SCM:
-  'scm' '{'
-    ('con' connection=STRING)? &
-    'dev' developerConncetion=STRING &
-    ('url' url=STRING)? &
-    ('tag' tag=STRING)?
-  '}'
-;
+  'scm' '{' ('con' connection=STRING)? & 'dev' developerConncetion=STRING & ('url' url=STRING)? & ('tag' tag=STRING)?
+  '}';
 
 Plugin:
-  'plugin' coordinates=Coordinates '{'
-    (('config' '{' configuration=PluginConfiguration '}')? &
-    executions+=PluginExecution*)
-    //TODO add dependencies and extensions!
-  '}'
-;
+  'plugin' coordinates=Coordinates '{' (('config' '{' configuration=PluginConfiguration '}')? &
+  executions+=PluginExecution*)
+  //TODO add dependencies and extensions!
+  '}';
 
 PluginConfiguration:
-    configurationItems+=PluginConfigurationItem+
-;
+  configurationItems+=PluginConfigurationItem+;
 
 PluginConfigurationItem:
-  PluginConfigurationParameter | PluginConfigurationParameterList | PluginConfigurationParameterProperties
-;
+  PluginConfigurationParameter | PluginConfigurationParameterList | PluginConfigurationParameterProperties;
 
 PluginConfigurationParameter:
-  key=IDAndSpecialCharacters (value=STRING | ('{' children+=PluginConfigurationItem+ '}'))?
-;
+  key=IDAndSpecialCharacters (value=STRING | ('{' children+=PluginConfigurationItem+ '}'))?;
 
 PluginConfigurationParameterList:
-  key=IDAndSpecialCharacters '{' values+=STRING (',' values+=STRING)* '}'
-;
+  key=IDAndSpecialCharacters '{' values+=STRING (',' values+=STRING)* '}';
 
 PluginConfigurationParameterProperties:
-  key=IDAndSpecialCharacters '{' entries+=PluginConfigurationParameterPropertyEntry+ '}'
-;
+  key=IDAndSpecialCharacters '{' entries+=PluginConfigurationParameterPropertyEntry+ '}';
 
 PluginConfigurationParameterPropertyEntry:
-  key=IDAndSpecialCharacters '=' value=STRING
-;
+  key=IDAndSpecialCharacters '=' value=STRING;
 
 PluginExecution:
-  'exec' 
-  (id=IDAndDash? ('in' 'phase' phase=Phase)? 'with' 'goals' goals+=IDAndSpecialCharacters (',' goals+=IDAndDash)* ('{' configuration=PluginConfiguration '}')?
-  | default?='default')
-;
+  'exec' (id=IDAndSpecialCharacters? ('in' 'phase' phase=Phase)? 'with' 'goals' goals+=IDAndSpecialCharacters (','
+  goals+=IDAndSpecialCharacters)* ('{' configuration=PluginConfiguration '}')? | default?='default');
 
 PluginInclusion:
-  'include' ((executionId=IDAndDash | config?='config') 'of')? pluginCoordinates=NonVersionedCoordinates 'from' pomRef=[POMImport]
-;
+  //The syntactic predicate at the execution id has been set due to conflicts with the boolean attribute config (config will be added as a boolean to the metamodel but will never be set by the parser)
+  //see the de.itemis.mpp.linking.MppLazyLinker that sets this attribute depending on the value of the execution id!
+  'include' ((=> executionId=IDAndSpecialCharacters | config?='config') 'of')? pluginCoordinates=Coordinates 'from'
+  pomRef=[POMImport];
 
 BuildStep:
-  Plugin | PluginInclusion
-;
+  Plugin | PluginInclusion;
 
 Coordinates:
-  groupId=IDAndSpecialCharacters ':' artifactId=IDAndSpecialCharacters ':' version=Version
-;
+  groupId=IDAndSpecialCharacters ':' artifactId=IDAndSpecialCharacters (':' version=Version)?;
 
 ExtendedCoordinates:
-  groupId=IDAndSpecialCharacters ':' artifactId=IDAndSpecialCharacters ':' version=Version (':' type=ID (':' classifier=Classifier)?)?
-;
-
-NonVersionedCoordinates:
-  groupId=IDAndSpecialCharacters ':' artifactId=IDAndSpecialCharacters
-;
+  groupId=IDAndSpecialCharacters ':' artifactId=IDAndSpecialCharacters ':' version=Version (':' type=ID (':'
+  classifier=Classifier)?)?;
 
 POMImport:
-  'import' coordinates=Coordinates 'as' name=ID
-;
+  'import' coordinates=Coordinates 'as' name=ID;
 
 Repository:
   ('repository' | pluginRepositroy?='plugin-repository') id=IDAndSpecialCharacters 'at' url=STRING
   ('{'
-    (('name' name=STRING)? &
-    ('layout' layout=STRING)?) 
-    policies+=RepositoryPolicy+
-   '}'
-  )?
-;
+  (('name' name=STRING)? &
+  ('layout' layout=STRING)?)
+  policies+=RepositoryPolicy+
+  '}')?;
 
 RepositoryPolicy:
-  (disabled?='do not')? 'fetch' (releases?='releases' | snapshots?='snapshots') (',' 'update' updatePolicy=RepositoryUpdatePolicy ('with' 'interval' '=' updateInterval=INT)?)? (',' 'checksumPolicy' checksumPolicy=ChecksumPolicy)?
-;
+  (disabled?='do not')? 'fetch' (releases?='releases' | snapshots?='snapshots') (',' 'update'
+  updatePolicy=RepositoryUpdatePolicy ('with' 'interval' '=' updateInterval=INT)?)? (',' 'checksumPolicy'
+  checksumPolicy=ChecksumPolicy)?;
 
 terminal ID:
-  ('a'..'z' | 'A'..'Z') ('a'..'z' | 'A'..'Z')*
-;
+  ('a'..'z' | 'A'..'Z') ('a'..'z' | 'A'..'Z')*;
 
 enum DependencyScope:
-  COMPILE='compile' | PROVIDED='provided' | RUNTIME='runtime' | SYSTEM='system' | TEST='test' | IMPORT='import'
-;
+  COMPILE='compile' | PROVIDED='provided' | RUNTIME='runtime' | SYSTEM='system' | TEST='test' | IMPORT='import';
 
 enum Phase:
   DEFAULT='default' | PRE_CLEAN='pre-clean' | CLEAN='clean' | POST_CLEAN='post-clean' | VALIDATE='validate' |
@@ -237,13 +193,10 @@ enum Phase:
   PROCESS_TEST_CLASSES='process-test-classes' | TEST='test' | PREPARE_PACKAGE='prepare-package' | PACKAGE='package' |
   PRE_INTEGRATION_TEST='pre-integration-test' | INTEGRATION_TEST='integration-test' |
   POST_INTEGRATION_TEST='post-integration-test' | VERIFY='verify' | INSTALL='install' | DEPLOY='deploy' |
-  PRE_SITE='pre-site' | SITE='site' | POST_SITE='post-site' | SITE_DEPLOY='site-deploy'
-;
+  PRE_SITE='pre-site' | SITE='site' | POST_SITE='post-site' | SITE_DEPLOY='site-deploy';
 
 enum RepositoryUpdatePolicy:
-  DAILY='daily' | ALWAYS='always' | NEVER='never' | INTERVAL='interval'
-;
+  DAILY='daily' | ALWAYS='always' | NEVER='never' | INTERVAL='interval';
 
 enum ChecksumPolicy:
-  IGNORE='ignore' | WARN='warn' | FAIL='fail'
-;
+  IGNORE='ignore' | WARN='warn' | FAIL='fail';

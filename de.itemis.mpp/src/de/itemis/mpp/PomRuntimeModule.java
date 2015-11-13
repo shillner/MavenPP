@@ -5,6 +5,7 @@ package de.itemis.mpp;
 
 import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.generator.IOutputConfigurationProvider;
+import org.eclipse.xtext.linking.ILinker;
 
 import com.google.inject.Binder;
 import com.google.inject.Singleton;
@@ -18,6 +19,7 @@ import de.itemis.mpp.generator.processors.MppBuildStepProcessor;
 import de.itemis.mpp.generator.processors.MppDependencyProcessor;
 import de.itemis.mpp.generator.processors.MppPropertiesProcessor;
 import de.itemis.mpp.generator.processors.MppRepoProcessor;
+import de.itemis.mpp.linking.MppLazyLinker;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -44,5 +46,10 @@ public class PomRuntimeModule extends de.itemis.mpp.AbstractPomRuntimeModule {
         .to(MppDependencyProcessor.class);
     binder.bind(MppModelProcessor.class).annotatedWith(Names.named(MppModelProcessor.REPOSITORIES))
         .to(MppRepoProcessor.class);
+  }
+
+  @Override
+  public Class<? extends ILinker> bindILinker() {
+    return MppLazyLinker.class;
   }
 }
