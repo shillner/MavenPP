@@ -11,6 +11,7 @@ import de.itemis.mpp.pom.PluginConfigurationItem
 import de.itemis.mpp.pom.PluginConfigurationParameter
 import de.itemis.mpp.pom.PluginConfigurationParameterList
 import de.itemis.mpp.pom.PluginConfigurationParameterProperties
+import java.io.File
 import java.io.FileInputStream
 import org.apache.maven.model.Build
 import org.apache.maven.model.Dependency
@@ -18,8 +19,12 @@ import org.apache.maven.model.Model
 import org.apache.maven.model.Plugin
 import org.apache.maven.model.PluginExecution
 import org.apache.maven.model.PluginManagement
+import org.apache.maven.model.building.DefaultModelBuilderFactory
+import org.apache.maven.model.building.DefaultModelBuildingRequest
+import org.apache.maven.model.building.FileModelSource
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader
 import org.codehaus.plexus.util.xml.Xpp3Dom
+import de.itemis.mpp.aether.ModelResolver
 
 class MavenModelUtil {
   def public static Optional<Model> loadModel(String path) {
@@ -93,18 +98,18 @@ class MavenModelUtil {
     }
     return Optional.absent()
   }
-  
+
   def public static String getPluginVersion(Optional<Plugin> plugin, Optional<Plugin> managedPlugin) {
     var String version
-    
+
     if(managedPlugin.present) {
       version = managedPlugin.get.version
     }
-    
+
     if(version == null && plugin.present) {
       version = plugin.get.version
     }
-    
+
     return version
   }
 
@@ -238,10 +243,21 @@ class MavenModelUtil {
   def private static dispatch Optional<Xpp3Dom> createPluginConfigParameter(PluginConfigurationItem item) {
     return Optional.absent
   }
+
+  def public static Optional<Model> loadEffectiveModel(Optional<File> pomFile) {
+    var Model model = null
+    if(pomFile.isPresent) {
+      val request = new DefaultModelBuildingRequest => [
+        modelSource = new FileModelSource(pomFile.get)
+        modelResolver = new ModelResolver
+      ]
+      val result = new DefaultModelBuilderFactory().newInstance.build(request)
+      model = result.effectiveModel
+    }
+    return Optional.fromNullable(model)
+  }
 //
-//public
-//
-//static PluginExecution getPluginExecution(Plugin plugin, String executionId) {
+//public static PluginExecution getPluginExecution(Plugin plugin, String executionId) {
 //    for (PluginExecution execution : plugin.getExecutions()) {
 //      // TODO handle default ids!
 //      if (Objects.equal(executionId, execution.getId())) {
